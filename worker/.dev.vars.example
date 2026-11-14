@@ -1,0 +1,8 @@
+# Copy to .dev.vars for local development. Never commit .dev.vars.
+TWILIO_ACCOUNT_SID=AC_REPLACE_ME
+TWILIO_AUTH_TOKEN=REPLACE_ME
+TWILIO_PHONE_NUMBER=+15555550100
+# Exact public webhook URL configured in Twilio, including any query string.
+TWILIO_WEBHOOK_URL=https://farmline-messaging.YOUR-SUBDOMAIN.workers.dev/webhooks/sms
+# Generate a long random value and share privately with the engine teammate.
+ENGINE_REPLY_TOKEN=REPLACE_WITH_RANDOM_SECRET

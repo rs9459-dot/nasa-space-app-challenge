@@ -1,0 +1,19 @@
+{
+  "name": "farmline-messaging",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "check": "tsc --noEmit",
+    "test": "tsx --test test/*.test.ts"
+  },
+  "dependencies": { "twilio": "^5.0.0" },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^5.20261113.1",
+    "@types/node": "^22.0.0",
+    "tsx": "^4.0.0",
+    "typescript": "^5.0.0",
+    "wrangler": "^4.0.0"
+  }
+}

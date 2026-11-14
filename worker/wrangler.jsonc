@@ -1,0 +1,11 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "farmline-messaging",
+  "main": "src/index.ts",
+  "compatibility_date": "2026-11-14",
+  "compatibility_flags": ["nodejs_compat"],
+  "durable_objects": {
+    "bindings": [{ "name": "FARMERS", "class_name": "FarmerSession" }]
+  },
+  "migrations": [{ "tag": "v1", "new_sqlite_classes": ["FarmerSession"] }]
+}
