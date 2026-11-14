@@ -1,0 +1,20 @@
+{
+  // FarmLine Worker. Secrets (never in this file): `wrangler secret put GEMINI_API_KEY`,
+  // and AI_GATEWAY_TOKEN only if the gateway is set to authenticated.
+  // For local dev, put the same names in worker/.dev.vars (gitignored).
+  "name": "farmline-worker",
+  "main": "src/index.ts",
+  "compatibility_date": "2026-11-01",
+  "ai": { "binding": "AI" },
+  "vars": {
+    "GEMINI_MODEL": "gemini-3.5-flash-lite",
+    "GEMINI_TTS_MODEL": "gemini-3.8-flash-tts",
+    "FALLBACK_MODEL": "@cf/meta/llama-3.1-8b-instruct-fp8-fast",
+    // Fill these in once the team's AI Gateway exists; empty = call Gemini directly.
+    "CF_ACCOUNT_ID": "",
+    "AI_GATEWAY_ID": "",
+    // "1" turns on the /dev/* test routes. Set to "" before the demo.
+    "DEV_ROUTES": "1"
+  },
+  "observability": { "enabled": true }
+}
