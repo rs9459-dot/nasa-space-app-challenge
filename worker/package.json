@@ -6,7 +6,9 @@
     "dev": "wrangler dev",
     "deploy": "wrangler deploy",
     "check": "tsc --noEmit",
-    "test": "tsx --test test/*.test.ts"
+    "test": "npm run test:sms && npm run test:gemini",
+    "test:sms": "tsx --test test/messages.test.ts",
+    "test:gemini": "vitest run"
   },
   "dependencies": { "twilio": "^5.0.0" },
   "devDependencies": {
@@ -14,6 +16,7 @@
     "@types/node": "^22.0.0",
     "tsx": "^4.0.0",
     "typescript": "^5.0.0",
+    "vitest": "^5.1.0",
     "wrangler": "^4.0.0"
   }
 }

@@ -6,3 +6,10 @@ TWILIO_PHONE_NUMBER=+15555550100
 TWILIO_WEBHOOK_URL=https://farmline-messaging.YOUR-SUBDOMAIN.workers.dev/webhooks/sms
 # Generate a long random value and share privately with the engine teammate.
 ENGINE_REPLY_TOKEN=REPLACE_WITH_RANDOM_SECRET
+
+# Gemini layer (src/gemini)
+GEMINI_API_KEY=
+# Token for the team's authenticated AI Gateway ("default"); ask a teammate.
+AI_GATEWAY_TOKEN=
+# "1" turns on the /dev/* routes for local testing.
+DEV_ROUTES=1

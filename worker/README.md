@@ -13,6 +13,18 @@ Your part is the phone interface: an ordinary SMS enters Twilio, reaches a Cloud
 
 Not implemented: NASA fetches, rotation computation, automatic engine dispatch, proactive alert consent, delivery-status callbacks, voice or WhatsApp. The /health endpoint reports the standalone starter's crop engine as disconnected. This is a small prototype, not a bulk messaging service. Inbound carrier messages can still cost money; add account spend controls before sharing the number widely.
 
+## Gemini layer (src/gemini)
+
+This Worker also holds FarmLine's Gemini layer: it turns a farmer's message into JSON for the
+engine (`parseMessage`) and the engine's JSON into a checked reply (`composeReply`), plus Hindi
+speech (`speak`). Calls go through the team's AI Gateway "default" with a Workers AI fallback.
+It is not wired into `/webhooks/sms` yet; the webhook still sends the welcome above. Details,
+safety rules and how to try it: [src/gemini/README.md](src/gemini/README.md). Local test routes
+are `/dev/*` (src/dev-routes.ts), off unless `DEV_ROUTES=1` in `.dev.vars`.
+
+`npm test` runs both suites: `test:sms` (node:test, this module) and `test:gemini` (vitest).
+Deploying also needs `npx wrangler secret put GEMINI_API_KEY` and `AI_GATEWAY_TOKEN`.
+
 Validation: TypeScript check, four unit tests and Wrangler deployment dry-run passed. A full local Durable Object runtime check was attempted but the managed Windows sandbox blocked workerd's SQLite file access. No live Cloudflare deployment or Twilio handset delivery has been verified. Complete the phone demo below before claiming end-to-end success.
 
 ## 1. Install and check locally (PowerShell)

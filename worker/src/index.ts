@@ -1,8 +1,11 @@
 import { DurableObject } from "cloudflare:workers";
 import twilio from "twilio";
 import { messageFor, twiml } from "./messages";
+import type { Env as GeminiEnv } from "./env";
+import { handleDev } from "./dev-routes";
 
-interface Env {
+// Messaging settings plus the Gemini layer's (AI binding, Gemini key, gateway) from ./env.
+interface Env extends GeminiEnv {
   FARMERS: DurableObjectNamespace<FarmerSession>;
   TWILIO_ACCOUNT_SID: string;
   TWILIO_AUTH_TOKEN: string;
@@ -27,6 +30,8 @@ export default {
     if (url.pathname === "/health" && request.method === "GET") {
       return json({ service: "farmline-messaging", status: "ok", cropEngineConnected: false });
     }
+    // Gemini layer test routes; 404 unless DEV_ROUTES is "1" (local only).
+    if (url.pathname.startsWith("/dev/")) return handleDev(request, env);
     if (url.pathname === "/webhooks/sms" && request.method === "POST") {
       if (!env.TWILIO_AUTH_TOKEN || !env.TWILIO_WEBHOOK_URL) return json({ error: "Missing webhook configuration" }, 503);
       if (!(request.headers.get("content-type") || "").startsWith("application/x-www-form-urlencoded")) return json({ error: "Expected form data" }, 415);

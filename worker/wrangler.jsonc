@@ -1,11 +1,28 @@
 {
   "$schema": "node_modules/wrangler/config-schema.json",
   "name": "farmline-messaging",
+  // The team account (Rs9459@nyu.edu's Account), so wrangler never asks which one.
+  "account_id": "ea7a82d2fe0297879a0ad3b621dac5e7",
   "main": "src/index.ts",
   "compatibility_date": "2026-11-14",
   "compatibility_flags": ["nodejs_compat"],
   "durable_objects": {
     "bindings": [{ "name": "FARMERS", "class_name": "FarmerSession" }]
   },
-  "migrations": [{ "tag": "v1", "new_sqlite_classes": ["FarmerSession"] }]
+  "migrations": [{ "tag": "v1", "new_sqlite_classes": ["FarmerSession"] }],
+
+  // Gemini layer (src/gemini). Secrets are never in this file: set GEMINI_API_KEY and
+  // AI_GATEWAY_TOKEN with `wrangler secret put`, or in .dev.vars for local dev.
+  "ai": { "binding": "AI" },
+  "vars": {
+    "GEMINI_MODEL": "gemini-3.5-flash-lite",
+    "GEMINI_TTS_MODEL": "gemini-3.8-flash-tts",
+    "FALLBACK_MODEL": "@cf/meta/llama-3.1-8b-instruct-fp8-fast",
+    // Every model call goes through the team's AI Gateway "default" (authenticated).
+    "CF_ACCOUNT_ID": "ea7a82d2fe0297879a0ad3b621dac5e7",
+    "AI_GATEWAY_ID": "default",
+    // /dev/* test routes stay off when deployed; turn them on locally in .dev.vars.
+    "DEV_ROUTES": ""
+  },
+  "observability": { "enabled": true }
 }
