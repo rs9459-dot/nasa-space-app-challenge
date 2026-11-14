@@ -29,6 +29,8 @@ interface Strings {
 
 const sign = (pct: number) => (pct >= 0 ? "-" : "+");
 const abs = Math.abs;
+/** Dollars as a farmer reads them: $780, -$40 (never $-40). */
+const usd = (n: number) => (n < 0 ? `-$${-n}` : `$${n}`);
 
 const S: Record<BuiltInLang, Strings> = {
   en: {
@@ -36,8 +38,8 @@ const S: Record<BuiltInLang, Strings> = {
     labels: ["Save water", "Most income", "Drought-safe"],
     rotationSep: ", ",
     water: (s, p) => `water ${s}${p}%`,
-    income: (u) => `$${u}/ac`,
-    badYear: (u) => `(bad yr $${u})`,
+    income: (u) => `${usd(u)}/ac`,
+    badYear: (u) => `(bad yr ${usd(u)})`,
     footer: "Reply 1, 2 or 3 for details",
     voice: (r, n) => {
       const [a, b, c] = r.options;
@@ -49,7 +51,7 @@ const S: Record<BuiltInLang, Strings> = {
     },
     detail: (o, l, n, b) =>
       `Option ${o.rank} (${l}): ${n}. Water ${o.water_af_per_acre} AF/ac (now ${b.water_af_per_acre}). ` +
-      `Income $${o.income_usd_per_acre}/ac, $${o.bad_year_income_usd_per_acre} in a bad year (now $${b.income_usd_per_acre}, bad yr $${b.bad_year_income_usd_per_acre}). Soil health ${o.soil_score}/10.`,
+      `Income ${usd(o.income_usd_per_acre)}/ac, ${usd(o.bad_year_income_usd_per_acre)} in a bad year (now ${usd(b.income_usd_per_acre)}, bad yr ${usd(b.bad_year_income_usd_per_acre)}). Soil health ${o.soil_score}/10.`,
     errors: {
       field_not_found: "FarmLine: we couldn't find that place. Text your crop and ZIP code or nearest town, e.g. alfalfa 89406",
       other: "FarmLine: sorry, we couldn't check your field right now. Please try again in a few minutes.",
@@ -61,7 +63,7 @@ const S: Record<BuiltInLang, Strings> = {
     labels: ["पानी बचत", "अधिक कमाई", "सूखा-रोधी"],
     rotationSep: "-",
     water: (s, p) => `पानी ${s}${p}%`,
-    income: (u) => `$${u}`,
+    income: (u) => `${usd(u)}`,
     badYear: null,
     footer: "1/2/3 भेजें",
     voice: (r, n) => {
@@ -75,7 +77,7 @@ const S: Record<BuiltInLang, Strings> = {
         `फ़ैसला आपका।`;
     },
     detail: (o, l, n, b) =>
-      `योजना ${o.rank} (${l}): ${n}। पानी ${o.water_af_per_acre} AF/एकड़ (अभी ${b.water_af_per_acre})। कमाई $${o.income_usd_per_acre}, बुरे साल $${o.bad_year_income_usd_per_acre}। मिट्टी ${o.soil_score}/10`,
+      `योजना ${o.rank} (${l}): ${n}। पानी ${o.water_af_per_acre} AF/एकड़ (अभी ${b.water_af_per_acre})। कमाई ${usd(o.income_usd_per_acre)}, बुरे साल ${usd(o.bad_year_income_usd_per_acre)}। मिट्टी ${o.soil_score}/10`,
     errors: {
       field_not_found: "FarmLine: जगह नहीं मिली। अपनी फसल और पिन कोड या पास का शहर भेजें",
       other: "FarmLine: अभी जाँच नहीं हो पाई। कुछ मिनट बाद फिर भेजें।",
@@ -87,12 +89,12 @@ const S: Record<BuiltInLang, Strings> = {
     labels: ["Pani bachat", "Zyada kamai", "Sookhe mein surakshit"],
     rotationSep: ", ",
     water: (s, p) => `pani ${s}${p}%`,
-    income: (u) => `$${u}/acre`,
-    badYear: (u) => `(bura saal $${u})`,
+    income: (u) => `${usd(u)}/acre`,
+    badYear: (u) => `(bura saal ${usd(u)})`,
     footer: "Details ke liye 1, 2 ya 3 bhejein",
     voice: (r, n) => S.hi.voice(r, n),
     detail: (o, l, n, b) =>
-      `Plan ${o.rank} (${l}): ${n}. Pani ${o.water_af_per_acre} AF/acre (abhi ${b.water_af_per_acre}). Kamai $${o.income_usd_per_acre}, bura saal $${o.bad_year_income_usd_per_acre}. Mitti ${o.soil_score}/10`,
+      `Plan ${o.rank} (${l}): ${n}. Pani ${o.water_af_per_acre} AF/acre (abhi ${b.water_af_per_acre}). Kamai ${usd(o.income_usd_per_acre)}, bura saal ${usd(o.bad_year_income_usd_per_acre)}. Mitti ${o.soil_score}/10`,
     errors: {
       field_not_found: "FarmLine: jagah nahi mili. Apni fasal aur pin code ya paas ka shehar bhejein",
       other: "FarmLine: abhi jaanch nahi ho payi. Kuch minute baad phir bhejein.",
@@ -104,7 +106,7 @@ const S: Record<BuiltInLang, Strings> = {
     labels: ["پانی بچت", "زیادہ آمدنی", "سوکھے میں محفوظ"],
     rotationSep: "-",
     water: (s, p) => `پانی ${s}${p}%`,
-    income: (u) => `$${u}`,
+    income: (u) => `${usd(u)}`,
     badYear: null,
     footer: "1/2/3 بھیجیں",
     voice: (r, n) => {
@@ -116,7 +118,7 @@ const S: Record<BuiltInLang, Strings> = {
         `فیصلہ آپ کا ہے۔`;
     },
     detail: (o, l, n, b) =>
-      `منصوبہ ${o.rank} (${l}): ${n}۔ پانی ${o.water_af_per_acre} AF/ایکڑ (ابھی ${b.water_af_per_acre})۔ آمدنی $${o.income_usd_per_acre}، برا سال $${o.bad_year_income_usd_per_acre}۔ مٹی ${o.soil_score}/10`,
+      `منصوبہ ${o.rank} (${l}): ${n}۔ پانی ${o.water_af_per_acre} AF/ایکڑ (ابھی ${b.water_af_per_acre})۔ آمدنی ${usd(o.income_usd_per_acre)}، برا سال ${usd(o.bad_year_income_usd_per_acre)}۔ مٹی ${o.soil_score}/10`,
     errors: {
       field_not_found: "FarmLine: جگہ نہیں ملی۔ اپنی فصل اور قریبی شہر کا نام بھیجیں",
       other: "FarmLine: ابھی جانچ نہیں ہو سکی۔ چند منٹ بعد دوبارہ بھیجیں۔",
@@ -128,12 +130,12 @@ const S: Record<BuiltInLang, Strings> = {
     labels: ["Pani ki bachat", "Zyada aamdani", "Khushk saali mein mehfooz"],
     rotationSep: ", ",
     water: (s, p) => `pani ${s}${p}%`,
-    income: (u) => `$${u}/acre`,
-    badYear: (u) => `(bura saal $${u})`,
+    income: (u) => `${usd(u)}/acre`,
+    badYear: (u) => `(bura saal ${usd(u)})`,
     footer: "Tafseel ke liye 1, 2 ya 3 bhejein",
     voice: (r, n) => S.ur.voice(r, n),
     detail: (o, l, n, b) =>
-      `Mansooba ${o.rank} (${l}): ${n}. Pani ${o.water_af_per_acre} AF/acre (abhi ${b.water_af_per_acre}). Aamdani $${o.income_usd_per_acre}, bura saal $${o.bad_year_income_usd_per_acre}. Mitti ${o.soil_score}/10`,
+      `Mansooba ${o.rank} (${l}): ${n}. Pani ${o.water_af_per_acre} AF/acre (abhi ${b.water_af_per_acre}). Aamdani ${usd(o.income_usd_per_acre)}, bura saal ${usd(o.bad_year_income_usd_per_acre)}. Mitti ${o.soil_score}/10`,
     errors: {
       field_not_found: "FarmLine: jagah nahi mili. Apni fasal aur qareebi shehar ka naam bhejein",
       other: "FarmLine: abhi jaanch nahi ho saki. Chand minute baad dobara bhejein.",
@@ -145,8 +147,8 @@ const S: Record<BuiltInLang, Strings> = {
     labels: ["Okoa maji", "Mapato zaidi", "Salama kwenye ukame"],
     rotationSep: ", ",
     water: (s, p) => `maji ${s}${p}%`,
-    income: (u) => `$${u}/ekari`,
-    badYear: (u) => `(mwaka mbaya $${u})`,
+    income: (u) => `${usd(u)}/ekari`,
+    badYear: (u) => `(mwaka mbaya ${usd(u)})`,
     footer: "Jibu 1, 2 au 3 kwa maelezo",
     voice: (r, n) => {
       const [a, b, c] = r.options;
@@ -157,7 +159,7 @@ const S: Record<BuiltInLang, Strings> = {
         `Uamuzi ni wako.`;
     },
     detail: (o, l, n, b) =>
-      `Mpango ${o.rank} (${l}): ${n}. Maji ${o.water_af_per_acre} AF/ekari (sasa ${b.water_af_per_acre}). Mapato $${o.income_usd_per_acre}, mwaka mbaya $${o.bad_year_income_usd_per_acre}. Udongo ${o.soil_score}/10`,
+      `Mpango ${o.rank} (${l}): ${n}. Maji ${o.water_af_per_acre} AF/ekari (sasa ${b.water_af_per_acre}). Mapato ${usd(o.income_usd_per_acre)}, mwaka mbaya ${usd(o.bad_year_income_usd_per_acre)}. Udongo ${o.soil_score}/10`,
     errors: {
       field_not_found: "FarmLine: hatukupata mahali hapo. Tuma zao lako na jina la mji wa karibu, mfano mahindi Nakuru",
       other: "FarmLine: samahani, hatukuweza kuangalia shamba lako sasa. Jaribu tena baada ya dakika chache.",

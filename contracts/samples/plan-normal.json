@@ -1,0 +1,68 @@
+{
+  "_note": "SAMPLE. Made-up numbers in the real shape, for building against before the engine exists. Request: zip 89406, current_crop alfalfa, priorities water 0.5 / income 0.25 / drought 0.25.",
+  "field": {
+    "id": "nv-fallon-01",
+    "place": "Fallon, NV",
+    "current_rotation": ["alfalfa", "alfalfa", "alfalfa"]
+  },
+  "baseline": {
+    "water_af_per_acre": 5.2,
+    "income_usd_per_acre": 910,
+    "bad_year_income_usd_per_acre": 420
+  },
+  "options": [
+    {
+      "rank": 1,
+      "label": "most_water_saved",
+      "rotation": ["sorghum", "safflower", "barley"],
+      "water_af_per_acre": 3.5,
+      "water_saved_pct": 33,
+      "income_usd_per_acre": 780,
+      "bad_year_income_usd_per_acre": 610,
+      "soil_score": 7
+    },
+    {
+      "rank": 2,
+      "label": "most_income",
+      "rotation": ["alfalfa", "alfalfa", "wheat"],
+      "water_af_per_acre": 4.8,
+      "water_saved_pct": 8,
+      "income_usd_per_acre": 960,
+      "bad_year_income_usd_per_acre": 380,
+      "soil_score": 6
+    },
+    {
+      "rank": 3,
+      "label": "safest_in_drought",
+      "rotation": ["barley", "sorghum", "cover_crop"],
+      "water_af_per_acre": 3.1,
+      "water_saved_pct": 40,
+      "income_usd_per_acre": 640,
+      "bad_year_income_usd_per_acre": 590,
+      "soil_score": 8
+    }
+  ],
+  "years_tested": 25,
+  "data_sources": ["NASA POWER", "USDA CropScape", "USDA SSURGO", "USDA NASS QuickStats", "Newlands Project allocations"],
+  "sample_data": true,
+  "climate_2035": {
+    "temp_trend_c_per_decade": 0.4,
+    "temp_trend_significant": true,
+    "rain_trend_mm_per_decade": 12,
+    "rain_trend_significant": false,
+    "options": [
+      { "label": "most_water_saved", "water_af_per_acre": 3.7, "income_usd_per_acre": 750 },
+      { "label": "most_income", "water_af_per_acre": 5.1, "income_usd_per_acre": 900 },
+      { "label": "safest_in_drought", "water_af_per_acre": 3.2, "income_usd_per_acre": 630 }
+    ]
+  },
+  "hindcast": {
+    "weather_through": 2020,
+    "years": [2021, 2022],
+    "allocation_pct_by_year": { "2021": 56, "2022": 30 },
+    "safest_rotation": ["barley", "sorghum", "cover_crop"],
+    "safest_water_af_per_acre": 2.9,
+    "actual_crops": ["corn", "fallow"],
+    "summary": "Knowing only weather up to 2020, the drought-safe plan would have needed 2.9 acre-feet per acre when the 2021 allocation fell to 56%."
+  }
+}

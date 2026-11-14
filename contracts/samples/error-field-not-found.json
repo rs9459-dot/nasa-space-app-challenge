@@ -1,0 +1,5 @@
+{
+  "_note": "SAMPLE. What the engine returns when it can't place the farmer (e.g. zip 00000). The worker answers with renderError's 'we couldn't find that place' template.",
+  "error": "field_not_found",
+  "message": "No field near zip 00000 in data/reference/places.csv"
+}

@@ -1,0 +1,48 @@
+{
+  "_note": "SAMPLE. Made-up numbers in the real shape. Request: field_id nv-fallon-01, current_crop corn_silage, priorities water 0.2 / income 0.2 / drought 0.6. Shows an option that uses MORE water than the baseline (negative water_saved_pct) and a negative bad-year income.",
+  "field": {
+    "id": "nv-fallon-01",
+    "place": "Fallon, NV",
+    "current_rotation": ["corn_silage", "corn_silage", "corn_silage"]
+  },
+  "baseline": {
+    "water_af_per_acre": 3.9,
+    "income_usd_per_acre": 520,
+    "bad_year_income_usd_per_acre": -40
+  },
+  "options": [
+    {
+      "rank": 1,
+      "label": "most_water_saved",
+      "rotation": ["barley", "safflower", "cover_crop"],
+      "water_af_per_acre": 2.4,
+      "water_saved_pct": 38,
+      "income_usd_per_acre": 410,
+      "bad_year_income_usd_per_acre": 290,
+      "soil_score": 8
+    },
+    {
+      "rank": 2,
+      "label": "most_income",
+      "rotation": ["alfalfa", "alfalfa", "alfalfa"],
+      "water_af_per_acre": 4.1,
+      "water_saved_pct": -5,
+      "income_usd_per_acre": 870,
+      "bad_year_income_usd_per_acre": 150,
+      "soil_score": 7
+    },
+    {
+      "rank": 3,
+      "label": "safest_in_drought",
+      "rotation": ["sorghum", "barley", "safflower"],
+      "water_af_per_acre": 2.7,
+      "water_saved_pct": 31,
+      "income_usd_per_acre": 480,
+      "bad_year_income_usd_per_acre": 340,
+      "soil_score": 6
+    }
+  ],
+  "years_tested": 25,
+  "data_sources": ["NASA POWER", "USDA CropScape", "USDA SSURGO"],
+  "sample_data": true
+}

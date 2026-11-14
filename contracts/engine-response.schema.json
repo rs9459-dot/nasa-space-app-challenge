@@ -1,0 +1,137 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://farmline/contracts/engine-response.schema.json",
+  "title": "FarmLine engine response (POST /plan)",
+  "description": "Contract B, engine -> worker. Owner: Abdullah. Mirrors worker/src/gemini/engine-types.ts. ROUNDING IS THE ENGINE'S JOB, because the worker's number checker matches exactly: acre-feet to 1 decimal, percentages whole, dollars to the nearest 10, soil score whole 0-10. Keys starting with '_' are free-form notes (e.g. '_note' on samples) and are ignored.",
+  "oneOf": [{ "$ref": "#/$defs/engineResult" }, { "$ref": "#/$defs/engineError" }],
+  "$defs": {
+    "cropCode": {
+      "description": "Same codes as worker/src/gemini/crops.ts.",
+      "enum": [
+        "alfalfa", "wheat", "barley", "sorghum", "dry_beans", "safflower", "corn", "corn_silage",
+        "cover_crop", "fallow", "rice", "cotton", "mustard", "chickpea", "millet", "sugarcane"
+      ]
+    },
+    "label": { "enum": ["most_water_saved", "most_income", "safest_in_drought"] },
+    "acreFeet": { "type": "number", "minimum": 0, "maximum": 20, "description": "Acre-feet of water per acre per year, 1 decimal." },
+    "usd10": { "type": "integer", "multipleOf": 10, "description": "US dollars per acre per year, nearest 10. May be negative in a bad year." },
+
+    "engineResult": {
+      "type": "object",
+      "additionalProperties": false,
+      "patternProperties": { "^_": {} },
+      "required": ["field", "baseline", "options", "years_tested", "data_sources"],
+      "properties": {
+        "field": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["id", "place", "current_rotation"],
+          "properties": {
+            "id": { "type": "string", "minLength": 1 },
+            "place": { "type": "string", "minLength": 1, "description": "Display name, e.g. 'Fallon, NV'." },
+            "current_rotation": { "type": "array", "minItems": 1, "maxItems": 3, "items": { "$ref": "#/$defs/cropCode" } }
+          }
+        },
+        "baseline": {
+          "type": "object",
+          "description": "The farmer's current crop run through the same 25 weather sequences.",
+          "additionalProperties": false,
+          "required": ["water_af_per_acre", "income_usd_per_acre", "bad_year_income_usd_per_acre"],
+          "properties": {
+            "water_af_per_acre": { "$ref": "#/$defs/acreFeet" },
+            "income_usd_per_acre": { "$ref": "#/$defs/usd10" },
+            "bad_year_income_usd_per_acre": { "$ref": "#/$defs/usd10" }
+          }
+        },
+        "options": {
+          "type": "array",
+          "minItems": 3,
+          "maxItems": 3,
+          "description": "Exactly one option per label, all different rotations.",
+          "items": { "$ref": "#/$defs/rotationOption" }
+        },
+        "years_tested": { "type": "integer", "minimum": 1, "maximum": 100 },
+        "data_sources": { "type": "array", "minItems": 1, "uniqueItems": true, "items": { "type": "string", "minLength": 1 } },
+        "sample_data": { "type": "boolean", "description": "True if any input bundle had provenance 'sample'. The demo must never show one." },
+        "climate_2035": { "$ref": "#/$defs/climate2035" },
+        "hindcast": { "$ref": "#/$defs/hindcast" }
+      }
+    },
+
+    "rotationOption": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["rank", "label", "rotation", "water_af_per_acre", "water_saved_pct", "income_usd_per_acre", "bad_year_income_usd_per_acre", "soil_score"],
+      "properties": {
+        "rank": { "enum": [1, 2, 3] },
+        "label": { "$ref": "#/$defs/label" },
+        "rotation": { "type": "array", "minItems": 3, "maxItems": 3, "items": { "$ref": "#/$defs/cropCode" }, "description": "Crop per year, years 1-3." },
+        "water_af_per_acre": { "$ref": "#/$defs/acreFeet" },
+        "water_saved_pct": { "type": "integer", "minimum": -100, "maximum": 100, "description": "Against the baseline; negative = uses more water." },
+        "income_usd_per_acre": { "$ref": "#/$defs/usd10", "description": "Mean over the 25 weather sequences." },
+        "bad_year_income_usd_per_acre": { "$ref": "#/$defs/usd10", "description": "10th percentile over the 25 weather sequences." },
+        "soil_score": { "type": "integer", "minimum": 0, "maximum": 10 }
+      }
+    },
+
+    "climate2035": {
+      "type": "object",
+      "description": "E7: the 3 chosen options rerun on weather shifted by the 2001-2025 trend to 2035.",
+      "additionalProperties": false,
+      "required": ["temp_trend_c_per_decade", "temp_trend_significant", "rain_trend_mm_per_decade", "rain_trend_significant", "options"],
+      "properties": {
+        "temp_trend_c_per_decade": { "type": "number", "description": "Sen's slope, 1 decimal." },
+        "temp_trend_significant": { "type": "boolean", "description": "Mann-Kendall p < 0.05." },
+        "rain_trend_mm_per_decade": { "type": "integer" },
+        "rain_trend_significant": { "type": "boolean" },
+        "options": {
+          "type": "array",
+          "minItems": 3,
+          "maxItems": 3,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["label", "water_af_per_acre", "income_usd_per_acre"],
+            "properties": {
+              "label": { "$ref": "#/$defs/label" },
+              "water_af_per_acre": { "$ref": "#/$defs/acreFeet" },
+              "income_usd_per_acre": { "$ref": "#/$defs/usd10" }
+            }
+          }
+        }
+      }
+    },
+
+    "hindcast": {
+      "type": "object",
+      "description": "E8: the engine run with weather up to weather_through and the real allocation of the drought years, compared with what the field actually grew.",
+      "additionalProperties": false,
+      "required": ["weather_through", "years", "allocation_pct_by_year", "safest_rotation", "safest_water_af_per_acre", "actual_crops", "summary"],
+      "properties": {
+        "weather_through": { "type": "integer", "minimum": 2001, "maximum": 2100 },
+        "years": { "type": "array", "minItems": 1, "items": { "type": "integer" } },
+        "allocation_pct_by_year": {
+          "type": "object",
+          "description": "Whole percent of full water allocation, keyed by year.",
+          "patternProperties": { "^[0-9]{4}$": { "type": "integer", "minimum": 0, "maximum": 100 } },
+          "additionalProperties": false
+        },
+        "safest_rotation": { "type": "array", "minItems": 1, "items": { "$ref": "#/$defs/cropCode" } },
+        "safest_water_af_per_acre": { "$ref": "#/$defs/acreFeet" },
+        "actual_crops": { "type": "array", "items": { "anyOf": [{ "$ref": "#/$defs/cropCode" }, { "type": "null" }] } },
+        "summary": { "type": "string", "minLength": 1, "maxLength": 300, "description": "One sentence for the slide; only numbers that appear elsewhere in this object." }
+      }
+    },
+
+    "engineError": {
+      "type": "object",
+      "additionalProperties": false,
+      "patternProperties": { "^_": {} },
+      "required": ["error", "message"],
+      "properties": {
+        "error": { "enum": ["field_not_found", "no_data", "engine_failed", "bad_request", "unauthorized"] },
+        "message": { "type": "string", "minLength": 1 }
+      }
+    }
+  }
+}
