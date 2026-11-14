@@ -1,0 +1,13 @@
+# Secrets: API keys for Earthdata, NASS, AMS, OpenET, Tiger Data, engine token
+.env
+.env.*
+!.env.example
+
+# Python
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# Large raw downloads (rebuild with pipeline/ scripts)
+data/raw/
