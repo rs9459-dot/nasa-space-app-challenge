@@ -66,11 +66,13 @@ const S: Record<BuiltInLang, Strings> = {
     footer: "1/2/3 भेजें",
     voice: (r, n) => {
       const [a, b, c] = r.options;
-      return `आपके खेत के लिए 3 योजनाएँ, ${r.years_tested} साल के NASA मौसम पर जाँची गईं। ` +
-        `पहली, सबसे ज़्यादा पानी बचत: ${n(a)}। ${a.water_saved_pct} प्रतिशत कम पानी, आम साल में ${a.income_usd_per_acre} डॉलर प्रति एकड़, बुरे साल में ${a.bad_year_income_usd_per_acre}। ` +
-        `दूसरी, सबसे ज़्यादा कमाई: ${n(b)}। आम साल में ${b.income_usd_per_acre} डॉलर प्रति एकड़, बुरे साल में ${b.bad_year_income_usd_per_acre}। ` +
-        `तीसरी, सूखे में सबसे सुरक्षित: ${n(c)}। ${c.water_saved_pct} प्रतिशत कम पानी, बुरे साल में भी ${c.bad_year_income_usd_per_acre} डॉलर। ` +
-        `फ़ैसला आपका है।`;
+      // Kept to ~30 s spoken: Hindi numbers are long to say ("सात सौ अस्सी"), so only
+      // option 3 keeps its bad-year figure (the drought story); the SMS that follows has the rest.
+      return `${r.years_tested} साल के NASA मौसम पर 3 योजनाएँ। ` +
+        `पहली, पानी बचत: ${n(a)}, ${a.water_saved_pct} प्रतिशत कम पानी, ${a.income_usd_per_acre} डॉलर प्रति एकड़। ` +
+        `दूसरी, ज़्यादा कमाई: ${n(b)}, ${b.income_usd_per_acre} डॉलर। ` +
+        `तीसरी, सूखे में सुरक्षित: ${n(c)}, बुरे साल में भी ${c.bad_year_income_usd_per_acre} डॉलर। ` +
+        `फ़ैसला आपका।`;
     },
     detail: (o, l, n, b) =>
       `योजना ${o.rank} (${l}): ${n}। पानी ${o.water_af_per_acre} AF/एकड़ (अभी ${b.water_af_per_acre})। कमाई $${o.income_usd_per_acre}, बुरे साल $${o.bad_year_income_usd_per_acre}। मिट्टी ${o.soil_score}/10`,

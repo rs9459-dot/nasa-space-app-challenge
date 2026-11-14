@@ -17,7 +17,7 @@ export interface Speech {
 }
 
 /** Speak `text`. `style` is a short delivery note, e.g. "Say warmly and slowly, like a farm advisor". */
-export async function speak(env: Env, text: string, style = "Say warmly and clearly, at a calm pace, like a trusted farm advisor:"): Promise<Speech> {
+export async function speak(env: Env, text: string, style = "Say warmly and clearly, like a trusted farm advisor:"): Promise<Speech> {
   const model = env.GEMINI_TTS_MODEL || DEFAULT_TTS;
   const res = await fetch(`${geminiBase(env)}/v1beta/models/${model}:generateContent`, {
     method: "POST",
