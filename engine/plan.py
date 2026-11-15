@@ -15,7 +15,7 @@ import copy
 import importlib
 from dataclasses import replace
 
-from engine import bundle, contract, fakes, rank, water
+from engine import bundle, climate, contract, fakes, rank, water
 from engine.bundle import BundleError
 from engine.types import Field, Outcomes, Reference, Rotation, Signals, WaterResult
 
@@ -93,6 +93,10 @@ def make_plan(request: dict) -> dict:
     # The drought replay is an extra: if this field lacked what it needs, the plan still goes out.
     if prep.hindcast:
         result["hindcast"] = copy.deepcopy(prep.hindcast)
+    # So is the 2035 view: the 3 chosen options on weather shifted by the field's own trend.
+    outlook = climate.summary(prep.trends, prep.future, result["options"])
+    if outlook:
+        result["climate_2035"] = outlook
 
     used = stand_ins()
     if used:

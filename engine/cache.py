@@ -3,8 +3,8 @@
 What a /plan answer needs splits in two:
 
   * the same for everyone at a field: every rotation's water and yield outcomes over the
-    25 x 11 weather/allocation sequences, each crop's "carry on as before" baseline, and the
-    drought hindcast. This is nearly all of the work (tens of seconds with 8 crops).
+    25 x 11 weather/allocation sequences, each crop's "carry on as before" baseline, the
+    drought hindcast, and every rotation again on 2035 weather (climate.py). This is nearly all of the work (tens of seconds with 8 crops).
   * different per text: which baseline (the farmer's crop) and the ranking (their priorities).
     Milliseconds.
 
@@ -20,7 +20,7 @@ import hashlib
 import logging
 import pickle
 import threading
-from dataclasses import dataclass, field as dataclass_field
+from dataclasses import dataclass, field as dataclass_field, replace
 from pathlib import Path
 
 import numpy as np
@@ -32,7 +32,7 @@ from engine.types import Field, Outcomes, Reference, Rotation, Signals
 
 log = logging.getLogger("farmline.engine")
 ENGINE_DIR = Path(__file__).resolve().parent
-FORMAT = 1  # bump when Prepared changes shape
+FORMAT = 2  # bump when Prepared changes shape
 
 
 @dataclass
@@ -45,6 +45,8 @@ class Prepared:
     outcomes: Outcomes
     baselines: dict[str, Outcomes] = dataclass_field(default_factory=dict)  # crop -> (crop, crop, crop)
     hindcast: dict | None = None
+    trends: dict | None = None  # climate.trend(field)
+    future: Outcomes | None = None  # every rotation again, on the weather shifted to 2035
 
 
 _memory: dict[str, Prepared] = {}
@@ -92,7 +94,7 @@ def _complete(field: Field, ref: Reference, crop: str) -> bool:
 
 def compute(field_id: str) -> Prepared:
     """The heavy part, from scratch."""
-    from engine import hindcast, plan
+    from engine import climate, hindcast, plan
 
     key = key_for(field_id)
     field, ref = bundle.load(field_id)
@@ -117,7 +119,16 @@ def compute(field_id: str) -> Prepared:
         replay = hindcast.run(field, ref, signals, rotations=rotations)
     except BundleError:
         replay = None
-    return Prepared(key, field, ref, signals, rotations, outcomes, baselines, replay)
+    # The same rotations once more on the weather the field's own trend points to in 2035.
+    # An extra like the hindcast: if it can't be worked out, the plan still goes out.
+    trends, future = climate.trend(field), None
+    if trends:
+        try:
+            later = replace(field, weather=climate.shift_weather(field, trends=trends))
+            future = evaluate(later, water.simulate(later, rotations, ref, signals), ref, signals)
+        except BundleError:
+            future = None
+    return Prepared(key, field, ref, signals, rotations, outcomes, baselines, replay, trends, future)
 
 
 def prepared(field_id: str) -> Prepared:

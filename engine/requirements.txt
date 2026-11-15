@@ -7,4 +7,4 @@ jsonschema>=4.23
 # tests
 pytest>=8.3
 httpx>=0.27
-# A5 adds scipy; H8 adds pymannkendall
+# H8 (climate.py) writes Mann-Kendall out by hand, so no extra package
