@@ -1,0 +1,37 @@
+[
+  {
+    "file": "corn.csv",
+    "source": "https://www.ers.usda.gov/media/4962/corn.csv?v=95150",
+    "bytes": 926106,
+    "sha256": "a42362ce2c9b8f6a5992ae11ef6cb1ed12e25ec59b694782572daea646113951",
+    "status": "downloaded"
+  },
+  {
+    "file": "barley.csv",
+    "source": "https://www.ers.usda.gov/media/4966/barley.csv?v=59996",
+    "bytes": 549906,
+    "sha256": "c8d1c0cde0bbcb398ca52158941693a65bdb15c6380441d26049a94bba626bb7",
+    "status": "downloaded"
+  },
+  {
+    "file": "sorghum.csv",
+    "source": "https://www.ers.usda.gov/media/4972/sorghum.csv?v=85680",
+    "bytes": 585542,
+    "sha256": "5af85d43128fab49edc48e0bbaa30afdf0e4173970748b0a6ead6bba6873c7ee",
+    "status": "downloaded"
+  },
+  {
+    "file": "wheat.csv",
+    "source": "https://www.ers.usda.gov/media/4978/wheat.csv?v=19709",
+    "bytes": 1009366,
+    "sha256": "dcb104291c9f34c1b53292fb19ef27e32f9f51eed66915ab35ef6ec6020a8df5",
+    "status": "downloaded"
+  },
+  {
+    "file": "ams_2914.pdf",
+    "source": "https://www.ams.usda.gov/mnreports/AMS_2914.pdf",
+    "bytes": 299186,
+    "sha256": "9ed1c41eb7fa6c1762f2fa8655aae43fe7737ee43398208701d22c9d07fd9b40",
+    "status": "downloaded"
+  }
+]

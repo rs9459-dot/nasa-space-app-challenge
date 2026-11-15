@@ -1,0 +1,44 @@
+{
+  "dataset": "USDA AMS Nevada Direct Hay Report",
+  "report_id": "3926",
+  "report_date": "2026-11-13",
+  "source": "https://www.ams.usda.gov/mnreports/AMS_3926.pdf",
+  "source_page": 2,
+  "evidence_type": "official_pdf_text_extraction",
+  "not_automatically_applied_to_economics": true,
+  "observations": [
+    {
+      "region": "Central Nevada",
+      "commodity": "Alfalfa",
+      "quality": "Premium",
+      "package": "Large Square 3x4",
+      "quantity": 700,
+      "quantity_unit": "ton",
+      "price_range_low": 255.0,
+      "price_range_high": 255.0,
+      "weighted_average_price": 255.0,
+      "price_unit": "USD/ton as reported",
+      "freight_use": "F.O.B.-Dairy"
+    },
+    {
+      "region": "North Nevada",
+      "commodity": "Alfalfa",
+      "quality": "Supreme",
+      "package": "Small Square 3 Tie",
+      "quantity": 150,
+      "quantity_unit": "bale",
+      "price_range_low": 20.0,
+      "price_range_high": 20.0,
+      "weighted_average_price": 20.0,
+      "price_unit": "USD/bale",
+      "freight_use": "Delivered-Stables"
+    }
+  ],
+  "limitations": [
+    "Not a Churchill County quote.",
+    "A single report is not an annual average.",
+    "No conversion of bale price without verified bale weight.",
+    "Do not select a grade or delivery basis without farm and market matching.",
+    "Latest-report URL is mutable; archive source bytes before production ingestion."
+  ]
+}

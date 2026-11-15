@@ -1,0 +1,9 @@
+crop,region,years_averaged,yield_per_acre,unit,price_usd_per_unit,cost_usd_per_acre,source_yield,source_price,source_cost
+alfalfa,US-NV,"2021,2022,2023,2024,2025",4.7,short_ton,213.8,,"USDA NASS QuickStats; Nevada STATE; YEAR; years 2021,2022,2023,2024,2025; https://quickstats.nass.usda.gov/; raw quickstats-nevada-2021-2025.json","USDA NASS QuickStats; Nevada STATE; MARKETING YEAR; years 2021,2022,2023,2024,2025; https://quickstats.nass.usda.gov/; raw quickstats-nevada-2021-2025.json",UNAVAILABLE: no approved comparable cost and irrigation accounting
+wheat,US-NV,,,,,,UNAVAILABLE: no accepted matching observation,UNAVAILABLE: no accepted matching observation,UNAVAILABLE: no approved comparable cost and irrigation accounting
+barley,US-NV,,,,,,UNAVAILABLE: no accepted matching observation,UNAVAILABLE: no accepted matching observation,UNAVAILABLE: no approved comparable cost and irrigation accounting
+sorghum,US-NV,,,,,,UNAVAILABLE: no accepted matching observation,UNAVAILABLE: no accepted matching observation,UNAVAILABLE: no approved comparable cost and irrigation accounting
+dry_beans,US-NV,,,,,,UNAVAILABLE: no accepted matching observation,UNAVAILABLE: no accepted matching observation,UNAVAILABLE: no approved comparable cost and irrigation accounting
+safflower,US-NV,,,,,,UNAVAILABLE: no accepted matching observation,UNAVAILABLE: no accepted matching observation,UNAVAILABLE: no approved comparable cost and irrigation accounting
+corn_silage,US-NV,"2021,2022,2023,2024,2025",23.2,short_ton,,,"USDA NASS QuickStats; Nevada STATE; YEAR; years 2021,2022,2023,2024,2025; https://quickstats.nass.usda.gov/; raw quickstats-nevada-2021-2025.json",UNAVAILABLE: no accepted matching observation,UNAVAILABLE: no approved comparable cost and irrigation accounting
+cover_crop,US-NV,policy,0,no_sale,0,,POLICY: no harvested sale; not measured biomass,POLICY: terminated cover crop has no sale revenue,UNAVAILABLE: no approved comparable cost and irrigation accounting

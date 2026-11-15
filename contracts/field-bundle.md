@@ -106,3 +106,13 @@ documented depth-aware method. Convert soil volumetric percent to fractions befo
 Load explicitly by nv-fallon-01-sample. Check 9,131 weather rows, three synthetic history
 entries, eight reference rows and provenance=sample. This establishes loader compatibility,
 not completed rotation planning. H2 replaces crop placeholders; H3 replaces economics.
+
+## H2 prototype profile update
+
+The current crops.csv has ten complete numeric prototype profiles. Do not interpret
+numeric completeness as calibrated crop science. Cell statuses and assumptions are in
+reference/crop_parameter_provenance.json (under data/) and docs/H2_MODEL_ASSUMPTIONS.md.
+The advice-validation flag is false. gdd_required=0 explicitly disables that crop's heat
+eligibility gate; it must not be reported as a zero biological requirement. cover_crop
+is winter cereal rye, wheat is spring wheat, and fallow is a non-growing policy profile.
+Ordinal scores and heavy-feeder flags are model rules, not measured soil-health outcomes.

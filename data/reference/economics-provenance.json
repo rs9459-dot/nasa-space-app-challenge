@@ -1,0 +1,256 @@
+{
+  "alfalfa": {
+    "ready_for_income_comparison": false,
+    "source_geography": "Nevada state where supplied; not Churchill County",
+    "cost_basis_resolved": true,
+    "yield_per_acre": {
+      "value": 4.7,
+      "years": [
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ],
+      "unit": "TONS / ACRE",
+      "period": "YEAR"
+    },
+    "price_usd_per_unit": {
+      "value": 213.8,
+      "years": [
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ],
+      "unit": "$ / TON",
+      "period": "MARKETING YEAR"
+    },
+    "prototype": true,
+    "display_label": "Prototype estimate; historical nominal university costs; not current farm advice",
+    "cost_usd_per_acre": {
+      "value": 843.36,
+      "budget": {
+        "crop": "alfalfa",
+        "university": "University of Nevada, Reno Extension",
+        "title": "Northwestern Nevada Alfalfa Hay Establishment, Production Costs and Returns",
+        "region": "Northwestern Nevada",
+        "budget_year": 2008,
+        "reported_full_cost_usd_per_acre": 943.36,
+        "excluded_water_usd_per_acre": 100,
+        "cost_usd_per_acre": 843.36,
+        "unit": "USD per acre per budget crop cycle/year",
+        "source": "https://naes.unr.edu/publication.aspx?PubID=3855",
+        "table": "Production Table 2 and irrigation narrative",
+        "notes": "Annual established-stand production cost. Water-only 100 excluded; parcel administration 1 and ditch maintenance 10 retained. Publisher HTML table caption is erroneous; body describes alfalfa.",
+        "inflation_adjusted": false,
+        "prototype": true,
+        "review": "Official publisher HTML / previously inspected PDF evidence"
+      }
+    },
+    "years_averaged_meaning": "Budget cost year only, per user request; revenue observation years retained in source columns and provenance.",
+    "prototype_net_return_available": true
+  },
+  "wheat": {
+    "ready_for_income_comparison": false,
+    "source_geography": "Nevada state where supplied; not Churchill County",
+    "cost_basis_resolved": true,
+    "prototype": true,
+    "display_label": "Prototype estimate; historical nominal university costs; not current farm advice",
+    "cost_usd_per_acre": {
+      "value": 989,
+      "budget": {
+        "crop": "wheat",
+        "university": "UC Davis / University of California Cooperative Extension",
+        "title": "Sample Costs to Produce Wheat, Sacramento Valley-Irrigated",
+        "region": "Sacramento Valley",
+        "budget_year": 2016,
+        "reported_full_cost_usd_per_acre": 1034,
+        "excluded_water_usd_per_acre": 45,
+        "cost_usd_per_acre": 989,
+        "unit": "USD per acre per budget crop cycle/year",
+        "source": "https://coststudyfiles.ucdavis.edu/uploads/cs_public/dc/15/dc158210-055c-494c-9c2f-54083fbf0323/2016wheatsacvalleyfinaldraft122116.pdf",
+        "table": "Table 2, p13",
+        "notes": "Water SacVal 45 excluded. Irrigation labor 22 and irrigation-system ownership retained. Budget includes straw operations; no straw revenue added. Blanca Grande 515 budget, local cultivar fit unverified.",
+        "inflation_adjusted": false,
+        "prototype": true,
+        "source_sha256": "de35b1fdf35276b7952d597f289b7008c2689dae7d943bf334e803437c9a1fdd",
+        "review": "Relevant original PDF tables rendered and visually checked"
+      }
+    },
+    "years_averaged_meaning": "Budget cost year only, per user request; revenue observation years retained in source columns and provenance.",
+    "prototype_net_return_available": false
+  },
+  "barley": {
+    "ready_for_income_comparison": false,
+    "source_geography": "Nevada state where supplied; not Churchill County",
+    "cost_basis_resolved": true,
+    "prototype": true,
+    "display_label": "Prototype estimate; historical nominal university costs; not current farm advice",
+    "cost_usd_per_acre": {
+      "value": 963.07,
+      "budget": {
+        "crop": "barley",
+        "university": "University of Nevada, Reno Extension",
+        "title": "Northwestern Nevada Two Row Malt Barley Production Costs and Returns, 2008",
+        "region": "Northwestern Nevada",
+        "budget_year": 2008,
+        "reported_full_cost_usd_per_acre": 963.07,
+        "excluded_water_usd_per_acre": 0,
+        "cost_usd_per_acre": 963.07,
+        "unit": "USD per acre per budget crop cycle/year",
+        "source": "https://naes.unr.edu/publication.aspx?PubID=2301",
+        "table": "Table 1 and irrigation narrative",
+        "notes": "Irrigation line 56 is pumping power, not purchased water; retained. Malting-barley budget is a disclosed proxy for generic barley. Well/pivot production system differs from TCID surface delivery.",
+        "inflation_adjusted": false,
+        "prototype": true,
+        "review": "Official publisher HTML / previously inspected PDF evidence"
+      }
+    },
+    "years_averaged_meaning": "Budget cost year only, per user request; revenue observation years retained in source columns and provenance.",
+    "prototype_net_return_available": false
+  },
+  "sorghum": {
+    "ready_for_income_comparison": false,
+    "source_geography": "Nevada state where supplied; not Churchill County",
+    "cost_basis_resolved": true,
+    "prototype": true,
+    "display_label": "Prototype estimate; historical nominal university costs; not current farm advice",
+    "cost_usd_per_acre": {
+      "value": 1699,
+      "budget": {
+        "crop": "sorghum",
+        "university": "UC Davis / University of California Cooperative Extension",
+        "title": "Sample Costs to Produce Grain Sorghum",
+        "region": "San Joaquin Valley",
+        "budget_year": 2016,
+        "reported_full_cost_usd_per_acre": 2107,
+        "excluded_water_usd_per_acre": 408,
+        "cost_usd_per_acre": 1699,
+        "unit": "USD per acre per budget crop cycle/year",
+        "source": "https://coststudyfiles.ucdavis.edu/uploads/cs_public/cb/2c/cb2c22b4-04b7-45fb-a29b-7a5babe95776/2016sorghumgrainsjvfinaldraftmar23.pdf",
+        "table": "Tables 1-2, pp8-9",
+        "notes": "Published Water 408 excluded; irrigation labor 8 retained. Water unit price blends district and well supply; removed as the budget water charge, without inventing a pump-energy split. Source land/accounting assumptions retained.",
+        "inflation_adjusted": false,
+        "prototype": true,
+        "source_sha256": "1ce0e3c2a68bd91236bab859b6330722d74cbc4f51410fd8dc6d4c095d141f03",
+        "review": "Relevant original PDF tables rendered and visually checked"
+      }
+    },
+    "years_averaged_meaning": "Budget cost year only, per user request; revenue observation years retained in source columns and provenance.",
+    "prototype_net_return_available": false
+  },
+  "dry_beans": {
+    "ready_for_income_comparison": false,
+    "source_geography": "Nevada state where supplied; not Churchill County",
+    "cost_basis_resolved": true,
+    "prototype": true,
+    "display_label": "Prototype estimate; historical nominal university costs; not current farm advice",
+    "cost_usd_per_acre": {
+      "value": 965,
+      "budget": {
+        "crop": "dry_beans",
+        "university": "UC Davis / University of California Cooperative Extension",
+        "title": "Sample Costs to Produce Common Dry Beans, Double Cropped",
+        "region": "Northern San Joaquin Valley",
+        "budget_year": 2010,
+        "reported_full_cost_usd_per_acre": 1065,
+        "excluded_water_usd_per_acre": 100,
+        "cost_usd_per_acre": 965,
+        "unit": "USD per acre per budget crop cycle/year",
+        "source": "https://coststudyfiles.ucdavis.edu/uploads/cs_public/eb/30/eb30eff3-7e34-48d1-a633-e1d87ef13d03/beansvn2010.pdf",
+        "table": "Table 2, pp10-11",
+        "notes": "Water 100 excluded. Source crop-enterprise share of annual land/ownership retained; not doubled into invented full-year cost. Common dry classes, kidney seed assumption; no Lima/blackeye substitution. Includes cleaning/storage/insurance as source lists them.",
+        "inflation_adjusted": false,
+        "prototype": true,
+        "source_sha256": "2a97b1482f7dccf54e4080d56e80103d62411a7dae60f4ab7c6eadffaa1b60c7",
+        "review": "Relevant original PDF tables rendered and visually checked"
+      }
+    },
+    "years_averaged_meaning": "Budget cost year only, per user request; revenue observation years retained in source columns and provenance.",
+    "prototype_net_return_available": false
+  },
+  "safflower": {
+    "ready_for_income_comparison": false,
+    "source_geography": "Nevada state where supplied; not Churchill County",
+    "cost_basis_resolved": true,
+    "prototype": true,
+    "display_label": "Prototype estimate; historical nominal university costs; not current farm advice",
+    "cost_usd_per_acre": {
+      "value": 339,
+      "budget": {
+        "crop": "safflower",
+        "university": "UC Davis / University of California Cooperative Extension",
+        "title": "Sample Costs to Produce Safflower",
+        "region": "Sacramento Valley",
+        "budget_year": 2011,
+        "reported_full_cost_usd_per_acre": 350,
+        "excluded_water_usd_per_acre": 11,
+        "cost_usd_per_acre": 339,
+        "unit": "USD per acre per budget crop cycle/year",
+        "source": "https://coststudyfiles.ucdavis.edu/uploads/cs_public/63/a9/63a948b0-8cef-4843-b66c-ac27006f726f/safflowersv2011.pdf",
+        "table": "Table 2, p10",
+        "notes": "Published water 11 excluded; labor and ownership retained. Source rounded table totals used.",
+        "inflation_adjusted": false,
+        "prototype": true,
+        "review": "Official publisher HTML / previously inspected PDF evidence"
+      }
+    },
+    "years_averaged_meaning": "Budget cost year only, per user request; revenue observation years retained in source columns and provenance.",
+    "prototype_net_return_available": false
+  },
+  "corn_silage": {
+    "ready_for_income_comparison": false,
+    "source_geography": "Nevada state where supplied; not Churchill County",
+    "cost_basis_resolved": true,
+    "yield_per_acre": {
+      "value": 23.2,
+      "years": [
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ],
+      "unit": "TONS / ACRE",
+      "period": "YEAR"
+    },
+    "prototype": true,
+    "display_label": "Prototype estimate; historical nominal university costs; not current farm advice",
+    "cost_usd_per_acre": {
+      "value": 1365,
+      "budget": {
+        "crop": "corn_silage",
+        "university": "UC Davis / University of California Cooperative Extension",
+        "title": "Sample Costs to Produce Silage Corn, Conservation Tillage Practices",
+        "region": "Northern San Joaquin Valley",
+        "budget_year": 2015,
+        "reported_full_cost_usd_per_acre": 1523,
+        "excluded_water_usd_per_acre": 158,
+        "cost_usd_per_acre": 1365,
+        "unit": "USD per acre per budget crop cycle/year",
+        "source": "https://coststudyfiles.ucdavis.edu/uploads/cs_public/a9/c5/a9c55e16-83cf-46f3-86b8-436ae2deb41f/15ctsilagecornsanjoaquinvalleyfinaldraftjuly20.pdf",
+        "table": "Table 2, p10",
+        "notes": "Water 158 excluded; irrigation labor 124 retained. One silage crop in a double-crop system; half annual land rent allocated by source. Not a full-year single-crop farm ownership budget; use only as a disclosed prototype crop-enterprise allocation.",
+        "inflation_adjusted": false,
+        "prototype": true,
+        "source_sha256": "e335d1559443aade003b9608602a4e8557ef073ebc95ddd83008788b6c8fa9dc",
+        "review": "Relevant original PDF tables rendered and visually checked"
+      }
+    },
+    "years_averaged_meaning": "Budget cost year only, per user request; revenue observation years retained in source columns and provenance.",
+    "prototype_net_return_available": false
+  },
+  "cover_crop": {
+    "ready_for_income_comparison": false,
+    "source_geography": "Nevada state where supplied; not Churchill County",
+    "cost_basis_resolved": false,
+    "prototype": true,
+    "display_label": "Prototype estimate; historical nominal university costs; not current farm advice",
+    "cost_usd_per_acre": {
+      "value": null,
+      "reason": "UNAVAILABLE: No verified annual sole-rye full operating-plus-ownership budget found in preferred sources. UC Davis 2022 vetch/pea/rye mix reports operating costs only, so do not use 156 or 134 as full cost."
+    }
+  }
+}

@@ -1,0 +1,146 @@
+[
+  {
+    "year": 2008,
+    "cdl_code": 28,
+    "crop": null,
+    "category": "Oats",
+    "source": "https://nassgeodata.gmu.edu/axis2/services/CDLService/GetCDLValue?year=2008&x=-1924961.9510180918&y=2049220.3009903221",
+    "retrieved_at": "2026-11-15T03:35:06.159767+00:00"
+  },
+  {
+    "year": 2009,
+    "cdl_code": 36,
+    "crop": "alfalfa",
+    "category": "Alfalfa",
+    "source": "https://nassgeodata.gmu.edu/axis2/services/CDLService/GetCDLValue?year=2009&x=-1924961.9510180918&y=2049220.3009903221",
+    "retrieved_at": "2026-11-15T03:35:06.085242+00:00"
+  },
+  {
+    "year": 2010,
+    "cdl_code": 36,
+    "crop": "alfalfa",
+    "category": "Alfalfa",
+    "source": "https://nassgeodata.gmu.edu/axis2/services/CDLService/GetCDLValue?year=2010&x=-1924961.9510180918&y=2049220.3009903221",
+    "retrieved_at": "2026-11-15T03:35:06.160271+00:00"
+  },
+  {
+    "year": 2011,
+    "cdl_code": 36,
+    "crop": "alfalfa",
+    "category": "Alfalfa",
+    "source": "https://nassgeodata.gmu.edu/axis2/services/CDLService/GetCDLValue?year=2011&x=-1924961.9510180918&y=2049220.3009903221",
+    "retrieved_at": "2026-11-15T03:34:56.671149+00:00"
+  },
+  {
+    "year": 2012,
+    "cdl_code": 36,
+    "crop": "alfalfa",
+    "category": "Alfalfa",
+    "source": "https://nassgeodata.gmu.edu/axis2/services/CDLService/GetCDLValue?year=2012&x=-1924961.9510180918&y=2049220.3009903221",
+    "retrieved_at": "2026-11-15T03:34:56.752226+00:00"
+  },
+  {
+    "year": 2013,
+    "cdl_code": 36,
+    "crop": "alfalfa",
+    "category": "Alfalfa",
+    "source": "https://nassgeodata.gmu.edu/axis2/services/CDLService/GetCDLValue?year=2013&x=-1924961.9510180918&y=2049220.3009903221",
+    "retrieved_at": "2026-11-15T03:34:56.646861+00:00"
+  },
+  {
+    "year": 2014,
+    "cdl_code": 36,
+    "crop": "alfalfa",
+    "category": "Alfalfa",
+    "source": "https://nassgeodata.gmu.edu/axis2/services/CDLService/GetCDLValue?year=2014&x=-1924961.9510180918&y=2049220.3009903221",
+    "retrieved_at": "2026-11-15T03:34:56.815607+00:00"
+  },
+  {
+    "year": 2015,
+    "cdl_code": 36,
+    "crop": "alfalfa",
+    "category": "Alfalfa",
+    "source": "https://nassgeodata.gmu.edu/axis2/services/CDLService/GetCDLValue?year=2015&x=-1924961.9510180918&y=2049220.3009903221",
+    "retrieved_at": "2026-11-15T03:34:56.851696+00:00"
+  },
+  {
+    "year": 2016,
+    "cdl_code": 36,
+    "crop": "alfalfa",
+    "category": "Alfalfa",
+    "source": "https://nassgeodata.gmu.edu/axis2/services/CDLService/GetCDLValue?year=2016&x=-1924961.9510180918&y=2049220.3009903221",
+    "retrieved_at": "2026-11-15T03:34:57.004044+00:00"
+  },
+  {
+    "year": 2017,
+    "cdl_code": 36,
+    "crop": "alfalfa",
+    "category": "Alfalfa",
+    "source": "https://nassgeodata.gmu.edu/axis2/services/CDLService/GetCDLValue?year=2017&x=-1924961.9510180918&y=2049220.3009903221",
+    "retrieved_at": "2026-11-15T03:34:57.064990+00:00"
+  },
+  {
+    "year": 2018,
+    "cdl_code": 36,
+    "crop": "alfalfa",
+    "category": "Alfalfa",
+    "source": "https://nassgeodata.gmu.edu/axis2/services/CDLService/GetCDLValue?year=2018&x=-1924961.9510180918&y=2049220.3009903221",
+    "retrieved_at": "2026-11-15T03:34:57.104978+00:00"
+  },
+  {
+    "year": 2019,
+    "cdl_code": 36,
+    "crop": "alfalfa",
+    "category": "Alfalfa",
+    "source": "https://nassgeodata.gmu.edu/axis2/services/CDLService/GetCDLValue?year=2019&x=-1924961.9510180918&y=2049220.3009903221",
+    "retrieved_at": "2026-11-15T03:34:57.163914+00:00"
+  },
+  {
+    "year": 2020,
+    "cdl_code": 36,
+    "crop": "alfalfa",
+    "category": "Alfalfa",
+    "source": "https://nassgeodata.gmu.edu/axis2/services/CDLService/GetCDLValue?year=2020&x=-1924961.9510180918&y=2049220.3009903221",
+    "retrieved_at": "2026-11-15T03:34:57.306209+00:00"
+  },
+  {
+    "year": 2021,
+    "cdl_code": 1,
+    "crop": "corn",
+    "category": "Corn",
+    "source": "https://nassgeodata.gmu.edu/axis2/services/CDLService/GetCDLValue?year=2021&x=-1924961.9510180918&y=2049220.3009903221",
+    "retrieved_at": "2026-11-15T03:34:57.365652+00:00"
+  },
+  {
+    "year": 2022,
+    "cdl_code": 61,
+    "crop": "fallow",
+    "category": "Fallow/Idle Cropland",
+    "source": "https://nassgeodata.gmu.edu/axis2/services/CDLService/GetCDLValue?year=2022&x=-1924961.9510180918&y=2049220.3009903221",
+    "retrieved_at": "2026-11-15T03:34:57.475110+00:00"
+  },
+  {
+    "year": 2023,
+    "cdl_code": 36,
+    "crop": "alfalfa",
+    "category": "Alfalfa",
+    "source": "https://nassgeodata.gmu.edu/axis2/services/CDLService/GetCDLValue?year=2023&x=-1924961.9510180918&y=2049220.3009903221",
+    "retrieved_at": "2026-11-15T03:34:57.543670+00:00"
+  },
+  {
+    "year": 2024,
+    "cdl_code": 36,
+    "crop": "alfalfa",
+    "category": "Alfalfa",
+    "source": "https://nassgeodata.gmu.edu/axis2/services/CDLService/GetCDLValue?year=2024&x=-1924961.9510180918&y=2049220.3009903221",
+    "retrieved_at": "2026-11-15T03:34:59.298593+00:00"
+  },
+  {
+    "year": 2025,
+    "cdl_code": 36,
+    "crop": "alfalfa",
+    "category": "Alfalfa",
+    "source": "https://nassgeodata.gmu.edu/axis2/services/CDLService/GetCDLValue?year=2025&x=-1924961.9510180918&y=2049220.3009903221",
+    "retrieved_at": "2026-11-15T03:34:59.373120+00:00"
+  }
+]

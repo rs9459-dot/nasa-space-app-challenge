@@ -1,0 +1,243 @@
+{
+  "alfalfa": {
+    "target_region": "US-NV-Churchill",
+    "source_geography": "Nevada",
+    "county_status": "County QuickStats not queried by this keyless overview path. This is not evidence of suppression.",
+    "geographic_transfer": "Nevada state fallback",
+    "yield_per_acre": {
+      "value": 4.566667,
+      "unit": "short_ton",
+      "years": [
+        2022,
+        2023,
+        2024
+      ],
+      "sources": [
+        "https://www.nass.usda.gov/Quick_Stats/Ag_Overview/stateOverview.php?state=Nevada&year=2022",
+        "https://www.nass.usda.gov/Quick_Stats/Ag_Overview/stateOverview.php?state=Nevada&year=2023",
+        "https://www.nass.usda.gov/Quick_Stats/Ag_Overview/stateOverview.php?state=Nevada&year=2024"
+      ],
+      "conversion": null
+    },
+    "price_usd_per_unit": {
+      "value": 226.0,
+      "unit": "short_ton",
+      "years": [
+        2022,
+        2023,
+        2024
+      ],
+      "sources": [
+        "https://www.nass.usda.gov/Quick_Stats/Ag_Overview/stateOverview.php?state=Nevada&year=2022",
+        "https://www.nass.usda.gov/Quick_Stats/Ag_Overview/stateOverview.php?state=Nevada&year=2023",
+        "https://www.nass.usda.gov/Quick_Stats/Ag_Overview/stateOverview.php?state=Nevada&year=2024"
+      ],
+      "conversion": null
+    },
+    "cost_usd_per_acre": {
+      "value": null,
+      "reason": "UNAVAILABLE for current-income comparison: historical cost evidence retained in economics-cost-evidence.json; base year, system and water-charge alignment required."
+    },
+    "ready_for_income_comparison": false
+  },
+  "wheat": {
+    "target_region": "US-NV-Churchill",
+    "source_geography": "Idaho",
+    "county_status": "County QuickStats not queried by this keyless overview path. This is not evidence of suppression.",
+    "geographic_transfer": "Out-of-state proxy; local market/crop suitability not verified",
+    "yield_per_acre": {
+      "value": 89.0,
+      "unit": "bushel",
+      "years": [
+        2024
+      ],
+      "sources": [
+        "https://www.nass.usda.gov/Quick_Stats/Ag_Overview/stateOverview.php?state=Idaho&year=2024"
+      ],
+      "conversion": null
+    },
+    "price_usd_per_unit": {
+      "value": 5.7,
+      "unit": "bushel",
+      "years": [
+        2024
+      ],
+      "sources": [
+        "https://www.nass.usda.gov/Quick_Stats/Ag_Overview/stateOverview.php?state=Idaho&year=2024"
+      ],
+      "conversion": null
+    },
+    "cost_usd_per_acre": {
+      "value": null,
+      "reason": "UNAVAILABLE for current-income comparison: historical cost evidence retained in economics-cost-evidence.json; base year, system and water-charge alignment required."
+    },
+    "ready_for_income_comparison": false
+  },
+  "barley": {
+    "target_region": "US-NV-Churchill",
+    "source_geography": "Utah",
+    "county_status": "County QuickStats not queried by this keyless overview path. This is not evidence of suppression.",
+    "geographic_transfer": "Out-of-state proxy; local market/crop suitability not verified",
+    "yield_per_acre": {
+      "value": 90.0,
+      "unit": "bushel",
+      "years": [
+        2024
+      ],
+      "sources": [
+        "https://www.nass.usda.gov/Quick_Stats/Ag_Overview/stateOverview.php?state=Utah&year=2024"
+      ],
+      "conversion": null
+    },
+    "price_usd_per_unit": {
+      "value": 7.5,
+      "unit": "bushel",
+      "years": [
+        2024
+      ],
+      "sources": [
+        "https://www.nass.usda.gov/Quick_Stats/Ag_Overview/stateOverview.php?state=Utah&year=2024"
+      ],
+      "conversion": null
+    },
+    "cost_usd_per_acre": {
+      "value": null,
+      "reason": "UNAVAILABLE for current-income comparison: historical cost evidence retained in economics-cost-evidence.json; base year, system and water-charge alignment required."
+    },
+    "ready_for_income_comparison": false
+  },
+  "sorghum": {
+    "target_region": "US-NV-Churchill",
+    "source_geography": "Kansas",
+    "county_status": "County QuickStats not queried by this keyless overview path. This is not evidence of suppression.",
+    "geographic_transfer": "Out-of-state proxy; local market/crop suitability not verified",
+    "yield_per_acre": {
+      "value": 65.0,
+      "unit": "bushel",
+      "years": [
+        2024
+      ],
+      "sources": [
+        "https://www.nass.usda.gov/Quick_Stats/Ag_Overview/stateOverview.php?state=Kansas&year=2024"
+      ],
+      "conversion": null
+    },
+    "price_usd_per_unit": {
+      "value": 4.004,
+      "unit": "bushel",
+      "years": [
+        2024
+      ],
+      "sources": [
+        "https://www.nass.usda.gov/Quick_Stats/Ag_Overview/stateOverview.php?state=Kansas&year=2024"
+      ],
+      "conversion": "USD/cwt * 56/100 = USD/bushel; USDA ERS Feed Grains documentation https://ers.usda.gov/data-products/feed-grains-database/documentation"
+    },
+    "cost_usd_per_acre": {
+      "value": null,
+      "reason": "UNAVAILABLE for current-income comparison: historical cost evidence retained in economics-cost-evidence.json; base year, system and water-charge alignment required."
+    },
+    "ready_for_income_comparison": false
+  },
+  "dry_beans": {
+    "target_region": "US-NV-Churchill",
+    "source_geography": null,
+    "county_status": "County QuickStats not queried by this keyless overview path. This is not evidence of suppression.",
+    "geographic_transfer": "Out-of-state proxy; local market/crop suitability not verified",
+    "yield_per_acre": {
+      "value": null,
+      "reason": "UNAVAILABLE: no verified current matching observation. Historical budget evidence is separate."
+    },
+    "price_usd_per_unit": {
+      "value": null,
+      "reason": "UNAVAILABLE: no verified current matching observation. Historical budget evidence is separate."
+    },
+    "cost_usd_per_acre": {
+      "value": null,
+      "reason": "UNAVAILABLE for current-income comparison: historical cost evidence retained in economics-cost-evidence.json; base year, system and water-charge alignment required."
+    },
+    "ready_for_income_comparison": false
+  },
+  "safflower": {
+    "target_region": "US-NV-Churchill",
+    "source_geography": "Utah",
+    "county_status": "County QuickStats not queried by this keyless overview path. This is not evidence of suppression.",
+    "geographic_transfer": "Out-of-state proxy; local market/crop suitability not verified",
+    "yield_per_acre": {
+      "value": 660.0,
+      "unit": "lb",
+      "years": [
+        2024
+      ],
+      "sources": [
+        "https://www.nass.usda.gov/Quick_Stats/Ag_Overview/stateOverview.php?state=Utah&year=2024"
+      ],
+      "conversion": null
+    },
+    "price_usd_per_unit": {
+      "value": 0.23,
+      "unit": "lb",
+      "years": [
+        2024
+      ],
+      "sources": [
+        "https://www.nass.usda.gov/Quick_Stats/Ag_Overview/stateOverview.php?state=Utah&year=2024"
+      ],
+      "conversion": "USD/cwt / 100 = USD/lb (US hundredweight)"
+    },
+    "cost_usd_per_acre": {
+      "value": null,
+      "reason": "UNAVAILABLE for current-income comparison: historical cost evidence retained in economics-cost-evidence.json; base year, system and water-charge alignment required."
+    },
+    "ready_for_income_comparison": false
+  },
+  "corn_silage": {
+    "target_region": "US-NV-Churchill",
+    "source_geography": "Nevada",
+    "county_status": "County QuickStats not queried by this keyless overview path. This is not evidence of suppression.",
+    "geographic_transfer": "Nevada state fallback",
+    "yield_per_acre": {
+      "value": 22.666667,
+      "unit": "short_ton",
+      "years": [
+        2022,
+        2023,
+        2024
+      ],
+      "sources": [
+        "https://www.nass.usda.gov/Quick_Stats/Ag_Overview/stateOverview.php?state=Nevada&year=2022",
+        "https://www.nass.usda.gov/Quick_Stats/Ag_Overview/stateOverview.php?state=Nevada&year=2023",
+        "https://www.nass.usda.gov/Quick_Stats/Ag_Overview/stateOverview.php?state=Nevada&year=2024"
+      ],
+      "conversion": null
+    },
+    "price_usd_per_unit": {
+      "value": null,
+      "reason": "UNAVAILABLE: no verified current matching observation. Historical budget evidence is separate."
+    },
+    "cost_usd_per_acre": {
+      "value": null,
+      "reason": "UNAVAILABLE for current-income comparison: historical cost evidence retained in economics-cost-evidence.json; base year, system and water-charge alignment required."
+    },
+    "ready_for_income_comparison": false
+  },
+  "cover_crop": {
+    "target_region": "US-NV-Churchill",
+    "source_geography": null,
+    "county_status": "County QuickStats not queried by this keyless overview path. This is not evidence of suppression.",
+    "geographic_transfer": "Out-of-state proxy; local market/crop suitability not verified",
+    "yield_per_acre": {
+      "value": 0,
+      "status": "no_sale_policy"
+    },
+    "price_usd_per_unit": {
+      "value": 0,
+      "status": "no_sale_policy"
+    },
+    "cost_usd_per_acre": {
+      "value": null,
+      "reason": "UNAVAILABLE for current-income comparison: historical cost evidence retained in economics-cost-evidence.json; base year, system and water-charge alignment required."
+    },
+    "ready_for_income_comparison": false
+  }
+}

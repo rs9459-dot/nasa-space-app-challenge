@@ -1,0 +1,1424 @@
+{
+  "schema_version": 2,
+  "meaning": "Complete numeric prototype profiles; assumption/proxy/policy values are explicitly distinguished from observations. Numeric completeness is not validation for farmer advice.",
+  "parameters": {
+    "alfalfa": {
+      "perennial": {
+        "value": 1,
+        "status": "published_generic",
+        "source": "FAO-56 Tables 11/12 crop identities and groups; wheat is defined as spring wheat for this reference row",
+        "url": "https://www.fao.org/4/x0490e/x0490e0b.htm"
+      },
+      "heavy_feeder": {
+        "value": 0,
+        "status": "model_assumption",
+        "reason": "Ordinal design rubric, not a measured soil-health outcome. Heavy feeder is a rotation constraint; scores compare residue retention, root habit, and living cover.",
+        "source": "docs/H2_MODEL_ASSUMPTIONS.md"
+      },
+      "legume": {
+        "value": 1,
+        "status": "published_generic",
+        "source": "FAO-56 Tables 11/12 crop identities and groups; wheat is defined as spring wheat for this reference row",
+        "url": "https://www.fao.org/4/x0490e/x0490e0b.htm"
+      },
+      "plant_month": {
+        "value": 4,
+        "status": "model_assumption",
+        "reason": "Chosen scenario sowing/green-up date; not a verified date for this farm.",
+        "source": "docs/H2_MODEL_ASSUMPTIONS.md"
+      },
+      "plant_day": {
+        "value": 1,
+        "status": "model_assumption",
+        "reason": "Chosen scenario sowing/green-up date; not a verified date for this farm.",
+        "source": "docs/H2_MODEL_ASSUMPTIONS.md"
+      },
+      "stage_ini_days": {
+        "value": 10,
+        "status": "model_assumption",
+        "reason": "Scenario duration; established alfalfa uses an averaged season, silage harvest shortens grain season, rye uses a coarse overwinter curve, and fallow has no crop season.",
+        "source": "docs/H2_MODEL_ASSUMPTIONS.md"
+      },
+      "stage_dev_days": {
+        "value": 30,
+        "status": "model_assumption",
+        "reason": "Scenario duration; established alfalfa uses an averaged season, silage harvest shortens grain season, rye uses a coarse overwinter curve, and fallow has no crop season.",
+        "source": "docs/H2_MODEL_ASSUMPTIONS.md"
+      },
+      "stage_mid_days": {
+        "value": 150,
+        "status": "model_assumption",
+        "reason": "Scenario duration; established alfalfa uses an averaged season, silage harvest shortens grain season, rye uses a coarse overwinter curve, and fallow has no crop season.",
+        "source": "docs/H2_MODEL_ASSUMPTIONS.md"
+      },
+      "stage_late_days": {
+        "value": 30,
+        "status": "model_assumption",
+        "reason": "Scenario duration; established alfalfa uses an averaged season, silage harvest shortens grain season, rye uses a coarse overwinter curve, and fallow has no crop season.",
+        "source": "docs/H2_MODEL_ASSUMPTIONS.md"
+      },
+      "kc_ini": {
+        "value": 0.4,
+        "status": "published_generic",
+        "source": "FAO-56 Table 12",
+        "url": "https://www.fao.org/4/x0490e/x0490e0b.htm"
+      },
+      "kc_mid": {
+        "value": 0.95,
+        "status": "published_generic",
+        "source": "FAO-56 Table 12",
+        "url": "https://www.fao.org/4/x0490e/x0490e0b.htm"
+      },
+      "kc_end": {
+        "value": 0.9,
+        "status": "published_generic",
+        "source": "FAO-56 Table 12",
+        "url": "https://www.fao.org/4/x0490e/x0490e0b.htm"
+      },
+      "root_depth_m": {
+        "value": 1.5,
+        "status": "derived_assumption",
+        "reason": "Arithmetic midpoint of published range 1-2 m. Not field-measured effective rooting depth.",
+        "source": "https://www.fao.org/4/x0490e/x0490e0e.htm"
+      },
+      "p_depletion": {
+        "value": 0.55,
+        "status": "published_generic",
+        "source": "https://www.fao.org/4/x0490e/x0490e0e.htm ; Table 22"
+      },
+      "ky": {
+        "value": 1.1,
+        "status": "model_assumption",
+        "reason": "Upper endpoint of published seasonal alfalfa range 0.7-1.1.",
+        "source": "https://www.fao.org/4/X5647E/x5647e0e.htm ; docs/H2_MODEL_ASSUMPTIONS.md"
+      },
+      "ece_threshold_ds_m": {
+        "value": 2.0,
+        "status": "published_generic",
+        "source": "FAO-56 Table 23",
+        "url": "https://www.fao.org/4/x0490e/x0490e0e.htm"
+      },
+      "salinity_slope_pct": {
+        "value": 7.3,
+        "status": "published_generic",
+        "source": "FAO-56 Table 23",
+        "url": "https://www.fao.org/4/x0490e/x0490e0e.htm"
+      },
+      "base_temp_c": {
+        "value": 5,
+        "status": "model_assumption",
+        "reason": "Scenario base; GDD constraint disabled for this profile until matching cultivar heat units are supplied.",
+        "source": "docs/H2_MODEL_ASSUMPTIONS.md"
+      },
+      "gdd_required": {
+        "value": 0,
+        "status": "policy",
+        "reason": "0 explicitly DISABLES the thermal eligibility gate for this crop; it is not a biological heat requirement. Must be reported as an unverified suitability check.",
+        "source": "docs/H2_MODEL_ASSUMPTIONS.md"
+      },
+      "frost_free_days_min": {
+        "value": 45,
+        "status": "regional_proxy",
+        "source": "https://extension.usu.edu/crops/tools/alternative-crops-for-cache-valley ; Cache Valley regional proxy, not a Fallon observation"
+      },
+      "residue_score": {
+        "value": 2,
+        "status": "model_assumption",
+        "reason": "Ordinal design rubric, not a measured soil-health outcome. Heavy feeder is a rotation constraint; scores compare residue retention, root habit, and living cover.",
+        "source": "docs/H2_MODEL_ASSUMPTIONS.md"
+      },
+      "deep_roots": {
+        "value": 3,
+        "status": "model_assumption",
+        "reason": "Ordinal design rubric, not a measured soil-health outcome. Heavy feeder is a rotation constraint; scores compare residue retention, root habit, and living cover.",
+        "source": "docs/H2_MODEL_ASSUMPTIONS.md"
+      },
+      "cover_benefit": {
+        "value": 2,
+        "status": "model_assumption",
+        "reason": "Ordinal design rubric, not a measured soil-health outcome. Heavy feeder is a rotation constraint; scores compare residue retention, root habit, and living cover.",
+        "source": "docs/H2_MODEL_ASSUMPTIONS.md"
+      }
+    },
+    "wheat": {
+      "perennial": {
+        "value": 0,
+        "status": "published_generic",
+        "source": "FAO-56 Tables 11/12 crop identities and groups; wheat is defined as spring wheat for this reference row",
+        "url": "https://www.fao.org/4/x0490e/x0490e0b.htm"
+      },
+      "heavy_feeder": {
+        "value": 0,
+        "status": "model_assumption",
+        "reason": "Ordinal design rubric, not a measured soil-health outcome. Heavy feeder is a rotation constraint; scores compare residue retention, root habit, and living cover.",
+        "source": "docs/H2_MODEL_ASSUMPTIONS.md"
+      },
+      "legume": {
+        "value": 0,
+        "status": "published_generic",
+        "source": "FAO-56 Tables 11/12 crop identities and groups; wheat is defined as spring wheat for this reference row",
+        "url": "https://www.fao.org/4/x0490e/x0490e0b.htm"
+      },
+      "plant_month": {
+        "value": 3,
+        "status": "model_assumption",
+        "reason": "Chosen scenario sowing/green-up date; not a verified date for this farm.",
+        "source": "docs/H2_MODEL_ASSUMPTIONS.md"
+      },
+      "plant_day": {
+        "value": 15,
+        "status": "model_assumption",
+        "reason": "Chosen scenario sowing/green-up date; not a verified date for this farm.",
+        "source": "docs/H2_MODEL_ASSUMPTIONS.md"
+      },
+      "stage_ini_days": {
+        "value": 20,
+        "status": "regional_proxy",
+        "source": "FAO-56 Table 11",
+        "url": "https://www.fao.org/4/x0490e/x0490e0b.htm",
+        "limitation": "spring cereals, 35-45 latitude; March/April window; selecting a Fallon schedule requires local validation. Month is window start, not an exact sowing date."
+      },
+      "stage_dev_days": {
+        "value": 25,
+        "status": "regional_proxy",
+        "source": "FAO-56 Table 11",
+        "url": "https://www.fao.org/4/x0490e/x0490e0b.htm",
+        "limitation": "spring cereals, 35-45 latitude; March/April window; selecting a Fallon schedule requires local validation. Month is window start, not an exact sowing date."
+      },
+      "stage_mid_days": {
+        "value": 60,
+        "status": "regional_proxy",
+        "source": "FAO-56 Table 11",
+        "url": "https://www.fao.org/4/x0490e/x0490e0b.htm",
+        "limitation": "spring cereals, 35-45 latitude; March/April window; selecting a Fallon schedule requires local validation. Month is window start, not an exact sowing date."
+      },
+      "stage_late_days": {
+        "value": 30,
+        "status": "regional_proxy",
+        "source": "FAO-56 Table 11",
+        "url": "https://www.fao.org/4/x0490e/x0490e0b.htm",
+        "limitation": "spring cereals, 35-45 latitude; March/April window; selecting a Fallon schedule requires local validation. Month is window start, not an exact sowing date."
+      },
+      "kc_ini": {
+        "value": 0.3,
+        "status": "published_generic",
+        "source": "FAO-56 Table 12",
+        "url": "https://www.fao.org/4/x0490e/x0490e0b.htm"
+      },
+      "kc_mid": {
+        "value": 1.15,
+        "status": "published_generic",
+        "source": "FAO-56 Table 12",
+        "url": "https://www.fao.org/4/x0490e/x0490e0b.htm"
+      },
+      "kc_end": {
+        "value": 0.25,
+        "status": "model_assumption",
+        "reason": "Lower end of published spring wheat range; dry-grain harvest scenario.",
+        "source": "https://www.fao.org/4/x0490e/x0490e0b.htm"
+      },
+      "root_depth_m": {
+        "value": 1.25,
+        "status": "derived_assumption",
+        "reason": "Arithmetic midpoint of published range 1-1.5 m. Not field-measured effective rooting depth.",
+        "source": "https://www.fao.org/4/x0490e/x0490e0e.htm"
+      },
+      "p_depletion": {
+        "value": 0.55,
+        "status": "published_generic",
+        "source": "FAO-56 Table 22",
+        "url": "https://www.fao.org/4/x0490e/x0490e0e.htm"
+      },
+      "ky": {
+        "value": 1.15,
+        "status": "published_generic",
+        "source": "FAO irrigation scheduling annex Table 12, spring wheat total season",
+        "url": "https://www.fao.org/4/X5647E/x5647e0e.htm"
+      },
+      "ece_threshold_ds_m": {
+        "value": 6.0,
+        "status": "published_generic",
+        "source": "FAO-56 Table 23",
+        "url": "https://www.fao.org/4/x0490e/x0490e0e.htm"
+      },
+      "salinity_slope_pct": {
+        "value": 7.1,
+        "status": "published_generic",
+        "source": "FAO-56 Table 23",
+        "url": "https://www.fao.org/4/x0490e/x0490e0e.htm"
+      },
+      "base_temp_c": {
+        "value": 0,
+        "status": "published_generic",
+        "reason": "Use the Celsius base specified with the published phenology ranges.",
+        "source": "https://extension-store.montana.edu/montguides/using-growing-degree-days-to-predict-plant-stages"
+      },
+      "gdd_required": {
+        "value": 1601.5,
+        "status": "derived_assumption",
+        "reason": "Midpoint of maturity-complete range 1538-1665 Celsius degree-days; Saskatchewan/Montana proxy, not this farm/cultivar.",
+        "source": "https://extension-store.montana.edu/montguides/using-growing-degree-days-to-predict-plant-stages"
+      },
+      "frost_free_days_min": {
+        "value": 95,
+        "status": "regional_proxy",
+        "source": "https://extension.usu.edu/crops/tools/alternative-crops-for-cache-valley ; Cache Valley regional proxy, not a Fallon observation"
+      },
+      "residue_score": {
+        "value": 3,
+        "status": "model_assumption",
+        "reason": "Ordinal design rubric, not a measured soil-health outcome. Heavy feeder is a rotation constraint; scores compare residue retention, root habit, and living cover.",
+        "source": "docs/H2_MODEL_ASSUMPTIONS.md"
+      },
+      "deep_roots": {
+        "value": 2,
+        "status": "model_assumption",
+        "reason": "Ordinal design rubric, not a measured soil-health outcome. Heavy feeder is a rotation constraint; scores compare residue retention, root habit, and living cover.",
+        "source": "docs/H2_MODEL_ASSUMPTIONS.md"
+      },
+      "cover_benefit": {
+        "value": 1,
+        "status": "model_assumption",
+        "reason": "Ordinal design rubric, not a measured soil-health outcome. Heavy feeder is a rotation constraint; scores compare residue retention, root habit, and living cover.",
+        "source": "docs/H2_MODEL_ASSUMPTIONS.md"
+      }
+    },
+    "barley": {
+      "perennial": {
+        "value": 0,
+        "status": "published_generic",
+        "source": "FAO-56 Tables 11/12 crop identities and groups; wheat is defined as spring wheat for this reference row",
+        "url": "https://www.fao.org/4/x0490e/x0490e0b.htm"
+      },
+      "heavy_feeder": {
+        "value": 0,
+        "status": "model_assumption",
+        "reason": "Ordinal design rubric, not a measured soil-health outcome. Heavy feeder is a rotation constraint; scores compare residue retention, root habit, and living cover.",
+        "source": "docs/H2_MODEL_ASSUMPTIONS.md"
+      },
+      "legume": {
+        "value": 0,
+        "status": "published_generic",
+        "source": "FAO-56 Tables 11/12 crop identities and groups; wheat is defined as spring wheat for this reference row",
+        "url": "https://www.fao.org/4/x0490e/x0490e0b.htm"
+      },
+      "plant_month": {
+        "value": 3,
+        "status": "model_assumption",
+        "reason": "Chosen scenario sowing/green-up date; not a verified date for this farm.",
+        "source": "docs/H2_MODEL_ASSUMPTIONS.md"
+      },
+      "plant_day": {
+        "value": 15,
+        "status": "model_assumption",
+        "reason": "Chosen scenario sowing/green-up date; not a verified date for this farm.",
+        "source": "docs/H2_MODEL_ASSUMPTIONS.md"
+      },
+      "stage_ini_days": {
+        "value": 20,
+        "status": "regional_proxy",
+        "source": "FAO-56 Table 11",
+        "url": "https://www.fao.org/4/x0490e/x0490e0b.htm",
+        "limitation": "spring cereals, 35-45 latitude; March/April window; selecting a Fallon schedule requires local validation. Month is window start, not an exact sowing date."
+      },
+      "stage_dev_days": {
+        "value": 25,
+        "status": "regional_proxy",
+        "source": "FAO-56 Table 11",
+        "url": "https://www.fao.org/4/x0490e/x0490e0b.htm",
+        "limitation": "spring cereals, 35-45 latitude; March/April window; selecting a Fallon schedule requires local validation. Month is window start, not an exact sowing date."
+      },
+      "stage_mid_days": {
+        "value": 60,
+        "status": "regional_proxy",
+        "source": "FAO-56 Table 11",
+        "url": "https://www.fao.org/4/x0490e/x0490e0b.htm",
+        "limitation": "spring cereals, 35-45 latitude; March/April window; selecting a Fallon schedule requires local validation. Month is window start, not an exact sowing date."
+      },
+      "stage_late_days": {
+        "value": 30,
+        "status": "regional_proxy",
+        "source": "FAO-56 Table 11",
+        "url": "https://www.fao.org/4/x0490e/x0490e0b.htm",
+        "limitation": "spring cereals, 35-45 latitude; March/April window; selecting a Fallon schedule requires local validation. Month is window start, not an exact sowing date."
+      },
+      "kc_ini": {
+        "value": 0.3,
+        "status": "published_generic",
+        "source": "FAO-56 Table 12",
+        "url": "https://www.fao.org/4/x0490e/x0490e0b.htm"
+      },
+      "kc_mid": {
+        "value": 1.15,
+        "status": "published_generic",
+        "source": "FAO-56 Table 12",
+        "url": "https://www.fao.org/4/x0490e/x0490e0b.htm"
+      },
+      "kc_end": {
+        "value": 0.25,
+        "status": "published_generic",
+        "source": "FAO-56 Table 12",
+        "url": "https://www.fao.org/4/x0490e/x0490e0b.htm"
+      },
+      "root_depth_m": {
+        "value": 1.25,
+        "status": "derived_assumption",
+        "reason": "Arithmetic midpoint of published range 1-1.5 m. Not field-measured effective rooting depth.",
+        "source": "https://www.fao.org/4/x0490e/x0490e0e.htm"
+      },
+      "p_depletion": {
+        "value": 0.55,
+        "status": "published_generic",
+        "source": "FAO-56 Table 22",
+        "url": "https://www.fao.org/4/x0490e/x0490e0e.htm"
+      },
+      "ky": {
+        "value": 1.15,
+        "status": "model_assumption",
+        "reason": "Spring-wheat seasonal response proxy; barley-specific coefficient not verified.",
+        "source": "https://www.fao.org/4/X5647E/x5647e0e.htm ; docs/H2_MODEL_ASSUMPTIONS.md"
+      },
+      "ece_threshold_ds_m": {
+        "value": 8.0,
+        "status": "published_generic",
+        "source": "FAO-56 Table 23",
+        "url": "https://www.fao.org/4/x0490e/x0490e0e.htm"
+      },
+      "salinity_slope_pct": {
+        "value": 5.0,
+        "status": "published_generic",
+        "source": "FAO-56 Table 23",
+        "url": "https://www.fao.org/4/x0490e/x0490e0e.htm"
+      },
+      "base_temp_c": {
+        "value": 0,
+        "status": "published_generic",
+        "reason": "Use the Celsius base specified with the published phenology ranges.",
+        "source": "https://extension-store.montana.edu/montguides/using-growing-degree-days-to-predict-plant-stages"
+      },
+      "gdd_required": {
+        "value": 1395.5,
+        "status": "derived_assumption",
+        "reason": "Midpoint of maturity-complete range 1269-1522 Celsius degree-days; Saskatchewan/Montana proxy, not this farm/cultivar.",
+        "source": "https://extension-store.montana.edu/montguides/using-growing-degree-days-to-predict-plant-stages"
+      },
+      "frost_free_days_min": {
+        "value": 75,
+        "status": "regional_proxy",
+        "source": "https://extension.usu.edu/crops/tools/alternative-crops-for-cache-valley ; Cache Valley regional proxy, not a Fallon observation"
+      },
+      "residue_score": {
+        "value": 3,
+        "status": "model_assumption",
+        "reason": "Ordinal design rubric, not a measured soil-health outcome. Heavy feeder is a rotation constraint; scores compare residue retention, root habit, and living cover.",
+        "source": "docs/H2_MODEL_ASSUMPTIONS.md"
+      },
+      "deep_roots": {
+        "value": 2,
+        "status": "model_assumption",
+        "reason": "Ordinal design rubric, not a measured soil-health outcome. Heavy feeder is a rotation constraint; scores compare residue retention, root habit, and living cover.",
+        "source": "docs/H2_MODEL_ASSUMPTIONS.md"
+      },
+      "cover_benefit": {
+        "value": 1,
+        "status": "model_assumption",
+        "reason": "Ordinal design rubric, not a measured soil-health outcome. Heavy feeder is a rotation constraint; scores compare residue retention, root habit, and living cover.",
+        "source": "docs/H2_MODEL_ASSUMPTIONS.md"
+      }
+    },
+    "sorghum": {
+      "perennial": {
+        "value": 0,
+        "status": "published_generic",
+        "source": "FAO-56 Tables 11/12 crop identities and groups; wheat is defined as spring wheat for this reference row",
+        "url": "https://www.fao.org/4/x0490e/x0490e0b.htm"
+      },
+      "heavy_feeder": {
+        "value": 1,
+        "status": "model_assumption",
+        "reason": "Ordinal design rubric, not a measured soil-health outcome. Heavy feeder is a rotation constraint; scores compare residue retention, root habit, and living cover.",
+        "source": "docs/H2_MODEL_ASSUMPTIONS.md"
+      },
+      "legume": {
+        "value": 0,
+        "status": "published_generic",
+        "source": "FAO-56 Tables 11/12 crop identities and groups; wheat is defined as spring wheat for this reference row",
+        "url": "https://www.fao.org/4/x0490e/x0490e0b.htm"
+      },
+      "plant_month": {
+        "value": 5,
+        "status": "model_assumption",
+        "reason": "Chosen scenario sowing/green-up date; not a verified date for this farm.",
+        "source": "docs/H2_MODEL_ASSUMPTIONS.md"
+      },
+      "plant_day": {
+        "value": 15,
+        "status": "model_assumption",
+        "reason": "Chosen scenario sowing/green-up date; not a verified date for this farm.",
+        "source": "docs/H2_MODEL_ASSUMPTIONS.md"
+      },
+      "stage_ini_days": {
+        "value": 20,
+        "status": "regional_proxy",
+        "reason": "FAO Table 11 grain-sorghum example.",
+        "source": "https://www.fao.org/4/x0490e/x0490e0b.htm"
+      },
+      "stage_dev_days": {
+        "value": 35,
+        "status": "regional_proxy",
+        "reason": "FAO Table 11 grain-sorghum example.",
+        "source": "https://www.fao.org/4/x0490e/x0490e0b.htm"
+      },
+      "stage_mid_days": {
+        "value": 40,
+        "status": "regional_proxy",
+        "reason": "FAO Table 11 grain-sorghum example.",
+        "source": "https://www.fao.org/4/x0490e/x0490e0b.htm"
+      },
+      "stage_late_days": {
+        "value": 30,
+        "status": "regional_proxy",
+        "reason": "FAO Table 11 grain-sorghum example.",
+        "source": "https://www.fao.org/4/x0490e/x0490e0b.htm"
+      },
+      "kc_ini": {
+        "value": 0.3,
+        "status": "model_assumption",
+        "reason": "Scalar selection or crop proxy; see named crop profile and sensitivity requirements in model assumptions.",
+        "source": "https://www.fao.org/4/x0490e/x0490e0b.htm ; docs/H2_MODEL_ASSUMPTIONS.md"
+      },
+      "kc_mid": {
+        "value": 1.05,
+        "status": "model_assumption",
+        "reason": "Scalar selection or crop proxy; see named crop profile and sensitivity requirements in model assumptions.",
+        "source": "https://www.fao.org/4/x0490e/x0490e0b.htm ; docs/H2_MODEL_ASSUMPTIONS.md"
+      },
+      "kc_end": {
+        "value": 0.55,
+        "status": "published_generic",
+        "source": "FAO-56 Table 12",
+        "url": "https://www.fao.org/4/x0490e/x0490e0b.htm"
+      },
+      "root_depth_m": {
+        "value": 1.5,
+        "status": "derived_assumption",
+        "reason": "Arithmetic midpoint of published range 1-2 m. Not field-measured effective rooting depth.",
+        "source": "https://www.fao.org/4/x0490e/x0490e0e.htm"
+      },
+      "p_depletion": {
+        "value": 0.55,
+        "status": "published_generic",
+        "source": "FAO-56 Table 22",
+        "url": "https://www.fao.org/4/x0490e/x0490e0e.htm"
+      },
+      "ky": {
+        "value": 0.9,
+        "status": "published_generic",
+        "source": "https://www.fao.org/4/X5647E/x5647e0e.htm ; Table 12, total growing period"
+      },
+      "ece_threshold_ds_m": {
+        "value": 6.8,
+        "status": "published_generic",
+        "source": "FAO-56 Table 23",
+        "url": "https://www.fao.org/4/x0490e/x0490e0e.htm"
+      },
+      "salinity_slope_pct": {
+        "value": 16.0,
+        "status": "published_generic",
+        "source": "FAO-56 Table 23",
+        "url": "https://www.fao.org/4/x0490e/x0490e0e.htm"
+      },
+      "base_temp_c": {
+        "value": 10,
+        "status": "model_assumption",
+        "reason": "Scenario base; GDD constraint disabled for this profile until matching cultivar heat units are supplied.",
+        "source": "docs/H2_MODEL_ASSUMPTIONS.md"
+      },
+      "gdd_required": {
+        "value": 0,
+        "status": "policy",
+        "reason": "0 explicitly DISABLES the thermal eligibility gate for this crop; it is not a biological heat requirement. Must be reported as an unverified suitability check.",
+        "source": "docs/H2_MODEL_ASSUMPTIONS.md"
+      },
+      "frost_free_days_min": {
+        "value": 105,
+        "status": "regional_proxy",
+        "source": "https://extension.usu.edu/crops/tools/alternative-crops-for-cache-valley ; Cache Valley regional proxy, not a Fallon observation"
+      },
+      "residue_score": {
+        "value": 3,
+        "status": "model_assumption",
+        "reason": "Ordinal design rubric, not a measured soil-health outcome. Heavy feeder is a rotation constraint; scores compare residue retention, root habit, and living cover.",
+        "source": "docs/H2_MODEL_ASSUMPTIONS.md"
+      },
+      "deep_roots": {
+        "value": 3,
+        "status": "model_assumption",
+        "reason": "Ordinal design rubric, not a measured soil-health outcome. Heavy feeder is a rotation constraint; scores compare residue retention, root habit, and living cover.",
+        "source": "docs/H2_MODEL_ASSUMPTIONS.md"
+      },
+      "cover_benefit": {
+        "value": 1,
+        "status": "model_assumption",
+        "reason": "Ordinal design rubric, not a measured soil-health outcome. Heavy feeder is a rotation constraint; scores compare residue retention, root habit, and living cover.",
+        "source": "docs/H2_MODEL_ASSUMPTIONS.md"
+      }
+    },
+    "dry_beans": {
+      "perennial": {
+        "value": 0,
+        "status": "published_generic",
+        "source": "FAO-56 Tables 11/12 crop identities and groups; wheat is defined as spring wheat for this reference row",
+        "url": "https://www.fao.org/4/x0490e/x0490e0b.htm"
+      },
+      "heavy_feeder": {
+        "value": 0,
+        "status": "model_assumption",
+        "reason": "Ordinal design rubric, not a measured soil-health outcome. Heavy feeder is a rotation constraint; scores compare residue retention, root habit, and living cover.",
+        "source": "docs/H2_MODEL_ASSUMPTIONS.md"
+      },
+      "legume": {
+        "value": 1,
+        "status": "published_generic",
+        "source": "FAO-56 Tables 11/12 crop identities and groups; wheat is defined as spring wheat for this reference row",
+        "url": "https://www.fao.org/4/x0490e/x0490e0b.htm"
+      },
+      "plant_month": {
+        "value": 6,
+        "status": "model_assumption",
+        "reason": "Chosen scenario sowing/green-up date; not a verified date for this farm.",
+        "source": "docs/H2_MODEL_ASSUMPTIONS.md"
+      },
+      "plant_day": {
+        "value": 1,
+        "status": "model_assumption",
+        "reason": "Chosen scenario sowing/green-up date; not a verified date for this farm.",
+        "source": "docs/H2_MODEL_ASSUMPTIONS.md"
+      },
+      "stage_ini_days": {
+        "value": 25,
+        "status": "regional_proxy",
+        "source": "FAO-56 Table 11",
+        "url": "https://www.fao.org/4/x0490e/x0490e0b.htm",
+        "limitation": "Idaho dry beans; June; selecting a Fallon schedule requires local validation. Month is window start, not an exact sowing date."
+      },
+      "stage_dev_days": {
+        "value": 25,
+        "status": "regional_proxy",
+        "source": "FAO-56 Table 11",
+        "url": "https://www.fao.org/4/x0490e/x0490e0b.htm",
+        "limitation": "Idaho dry beans; June; selecting a Fallon schedule requires local validation. Month is window start, not an exact sowing date."
+      },
+      "stage_mid_days": {
+        "value": 30,
+        "status": "regional_proxy",
+        "source": "FAO-56 Table 11",
+        "url": "https://www.fao.org/4/x0490e/x0490e0b.htm",
+        "limitation": "Idaho dry beans; June; selecting a Fallon schedule requires local validation. Month is window start, not an exact sowing date."
+      },
+      "stage_late_days": {
+        "value": 20,
+        "status": "regional_proxy",
+        "source": "FAO-56 Table 11",
+        "url": "https://www.fao.org/4/x0490e/x0490e0b.htm",
+        "limitation": "Idaho dry beans; June; selecting a Fallon schedule requires local validation. Month is window start, not an exact sowing date."
+      },
+      "kc_ini": {
+        "value": 0.5,
+        "status": "published_generic",
+        "source": "FAO-56 Table 12",
+        "url": "https://www.fao.org/4/x0490e/x0490e0b.htm"
+      },
+      "kc_mid": {
+        "value": 1.15,
+        "status": "published_generic",
+        "source": "FAO-56 Table 12",
+        "url": "https://www.fao.org/4/x0490e/x0490e0b.htm"
+      },
+      "kc_end": {
+        "value": 0.3,
+        "status": "published_generic",
+        "source": "FAO-56 Table 12",
+        "url": "https://www.fao.org/4/x0490e/x0490e0b.htm"
+      },
+      "root_depth_m": {
+        "value": 0.75,
+        "status": "derived_assumption",
+        "reason": "Arithmetic midpoint of published range 0.6-0.9 m. Not field-measured effective rooting depth.",
+        "source": "https://www.fao.org/4/x0490e/x0490e0e.htm"
+      },
+      "p_depletion": {
+        "value": 0.45,
+        "status": "published_generic",
+        "source": "https://www.fao.org/4/x0490e/x0490e0e.htm ; Table 22"
+      },
+      "ky": {
+        "value": 1.15,
+        "status": "published_generic",
+        "source": "https://www.fao.org/4/X5647E/x5647e0e.htm ; Table 12, total growing period"
+      },
+      "ece_threshold_ds_m": {
+        "value": 1.0,
+        "status": "published_generic",
+        "source": "FAO-56 Table 23",
+        "url": "https://www.fao.org/4/x0490e/x0490e0e.htm"
+      },
+      "salinity_slope_pct": {
+        "value": 19.0,
+        "status": "published_generic",
+        "source": "FAO-56 Table 23",
+        "url": "https://www.fao.org/4/x0490e/x0490e0e.htm"
+      },
+      "base_temp_c": {
+        "value": 10,
+        "status": "model_assumption",
+        "reason": "Scenario base; GDD constraint disabled for this profile until matching cultivar heat units are supplied.",
+        "source": "docs/H2_MODEL_ASSUMPTIONS.md"
+      },
+      "gdd_required": {
+        "value": 0,
+        "status": "policy",
+        "reason": "0 explicitly DISABLES the thermal eligibility gate for this crop; it is not a biological heat requirement. Must be reported as an unverified suitability check.",
+        "source": "docs/H2_MODEL_ASSUMPTIONS.md"
+      },
+      "frost_free_days_min": {
+        "value": 100,
+        "status": "regional_proxy",
+        "source": "https://extension.usu.edu/crops/tools/alternative-crops-for-cache-valley ; Cache Valley regional proxy, not a Fallon observation"
+      },
+      "residue_score": {
+        "value": 1,
+        "status": "model_assumption",
+        "reason": "Ordinal design rubric, not a measured soil-health outcome. Heavy feeder is a rotation constraint; scores compare residue retention, root habit, and living cover.",
+        "source": "docs/H2_MODEL_ASSUMPTIONS.md"
+      },
+      "deep_roots": {
+        "value": 1,
+        "status": "model_assumption",
+        "reason": "Ordinal design rubric, not a measured soil-health outcome. Heavy feeder is a rotation constraint; scores compare residue retention, root habit, and living cover.",
+        "source": "docs/H2_MODEL_ASSUMPTIONS.md"
+      },
+      "cover_benefit": {
+        "value": 1,
+        "status": "model_assumption",
+        "reason": "Ordinal design rubric, not a measured soil-health outcome. Heavy feeder is a rotation constraint; scores compare residue retention, root habit, and living cover.",
+        "source": "docs/H2_MODEL_ASSUMPTIONS.md"
+      }
+    },
+    "safflower": {
+      "perennial": {
+        "value": 0,
+        "status": "published_generic",
+        "source": "FAO-56 Tables 11/12 crop identities and groups; wheat is defined as spring wheat for this reference row",
+        "url": "https://www.fao.org/4/x0490e/x0490e0b.htm"
+      },
+      "heavy_feeder": {
+        "value": 0,
+        "status": "model_assumption",
+        "reason": "Ordinal design rubric, not a measured soil-health outcome. Heavy feeder is a rotation constraint; scores compare residue retention, root habit, and living cover.",
+        "source": "docs/H2_MODEL_ASSUMPTIONS.md"
+      },
+      "legume": {
+        "value": 0,
+        "status": "published_generic",
+        "source": "FAO-56 Tables 11/12 crop identities and groups; wheat is defined as spring wheat for this reference row",
+        "url": "https://www.fao.org/4/x0490e/x0490e0b.htm"
+      },
+      "plant_month": {
+        "value": 4,
+        "status": "model_assumption",
+        "reason": "Chosen scenario sowing/green-up date; not a verified date for this farm.",
+        "source": "docs/H2_MODEL_ASSUMPTIONS.md"
+      },
+      "plant_day": {
+        "value": 15,
+        "status": "model_assumption",
+        "reason": "Chosen scenario sowing/green-up date; not a verified date for this farm.",
+        "source": "docs/H2_MODEL_ASSUMPTIONS.md"
+      },
+      "stage_ini_days": {
+        "value": 20,
+        "status": "regional_proxy",
+        "source": "FAO-56 Table 11",
+        "url": "https://www.fao.org/4/x0490e/x0490e0b.htm",
+        "limitation": "California safflower; April; selecting a Fallon schedule requires local validation. Month is window start, not an exact sowing date."
+      },
+      "stage_dev_days": {
+        "value": 35,
+        "status": "regional_proxy",
+        "source": "FAO-56 Table 11",
+        "url": "https://www.fao.org/4/x0490e/x0490e0b.htm",
+        "limitation": "California safflower; April; selecting a Fallon schedule requires local validation. Month is window start, not an exact sowing date."
+      },
+      "stage_mid_days": {
+        "value": 45,
+        "status": "regional_proxy",
+        "source": "FAO-56 Table 11",
+        "url": "https://www.fao.org/4/x0490e/x0490e0b.htm",
+        "limitation": "California safflower; April; selecting a Fallon schedule requires local validation. Month is window start, not an exact sowing date."
+      },
+      "stage_late_days": {
+        "value": 25,
+        "status": "regional_proxy",
+        "source": "FAO-56 Table 11",
+        "url": "https://www.fao.org/4/x0490e/x0490e0b.htm",
+        "limitation": "California safflower; April; selecting a Fallon schedule requires local validation. Month is window start, not an exact sowing date."
+      },
+      "kc_ini": {
+        "value": 0.35,
+        "status": "published_generic",
+        "source": "FAO-56 Table 12",
+        "url": "https://www.fao.org/4/x0490e/x0490e0b.htm"
+      },
+      "kc_mid": {
+        "value": 1.075,
+        "status": "model_assumption",
+        "reason": "Scalar selection or crop proxy; see named crop profile and sensitivity requirements in model assumptions.",
+        "source": "https://www.fao.org/4/x0490e/x0490e0b.htm ; docs/H2_MODEL_ASSUMPTIONS.md"
+      },
+      "kc_end": {
+        "value": 0.25,
+        "status": "published_generic",
+        "source": "FAO-56 Table 12",
+        "url": "https://www.fao.org/4/x0490e/x0490e0b.htm"
+      },
+      "root_depth_m": {
+        "value": 1.5,
+        "status": "derived_assumption",
+        "reason": "Arithmetic midpoint of published range 1-2 m. Not field-measured effective rooting depth.",
+        "source": "https://www.fao.org/4/x0490e/x0490e0e.htm"
+      },
+      "p_depletion": {
+        "value": 0.6,
+        "status": "published_generic",
+        "source": "FAO-56 Table 22",
+        "url": "https://www.fao.org/4/x0490e/x0490e0e.htm"
+      },
+      "ky": {
+        "value": 0.8,
+        "status": "published_generic",
+        "source": "https://www.fao.org/4/X5647E/x5647e0e.htm ; Table 12, total growing period"
+      },
+      "ece_threshold_ds_m": {
+        "value": 6,
+        "status": "model_assumption",
+        "reason": "Wheat salt-response proxy for a conservative prototype scenario; FAO has no numeric safflower fit. Must not be described as a safflower observation.",
+        "source": "https://www.fao.org/4/x0490e/x0490e0e.htm ; docs/H2_MODEL_ASSUMPTIONS.md"
+      },
+      "salinity_slope_pct": {
+        "value": 7.1,
+        "status": "model_assumption",
+        "reason": "Wheat salt-response proxy for a conservative prototype scenario; FAO has no numeric safflower fit. Must not be described as a safflower observation.",
+        "source": "https://www.fao.org/4/x0490e/x0490e0e.htm ; docs/H2_MODEL_ASSUMPTIONS.md"
+      },
+      "base_temp_c": {
+        "value": 5,
+        "status": "model_assumption",
+        "reason": "Scenario base; GDD constraint disabled for this profile until matching cultivar heat units are supplied.",
+        "source": "docs/H2_MODEL_ASSUMPTIONS.md"
+      },
+      "gdd_required": {
+        "value": 0,
+        "status": "policy",
+        "reason": "0 explicitly DISABLES the thermal eligibility gate for this crop; it is not a biological heat requirement. Must be reported as an unverified suitability check.",
+        "source": "docs/H2_MODEL_ASSUMPTIONS.md"
+      },
+      "frost_free_days_min": {
+        "value": 120,
+        "status": "regional_proxy",
+        "source": "https://extension.usu.edu/crops/tools/alternative-crops-for-cache-valley ; Cache Valley regional proxy, not a Fallon observation"
+      },
+      "residue_score": {
+        "value": 2,
+        "status": "model_assumption",
+        "reason": "Ordinal design rubric, not a measured soil-health outcome. Heavy feeder is a rotation constraint; scores compare residue retention, root habit, and living cover.",
+        "source": "docs/H2_MODEL_ASSUMPTIONS.md"
+      },
+      "deep_roots": {
+        "value": 3,
+        "status": "model_assumption",
+        "reason": "Ordinal design rubric, not a measured soil-health outcome. Heavy feeder is a rotation constraint; scores compare residue retention, root habit, and living cover.",
+        "source": "docs/H2_MODEL_ASSUMPTIONS.md"
+      },
+      "cover_benefit": {
+        "value": 1,
+        "status": "model_assumption",
+        "reason": "Ordinal design rubric, not a measured soil-health outcome. Heavy feeder is a rotation constraint; scores compare residue retention, root habit, and living cover.",
+        "source": "docs/H2_MODEL_ASSUMPTIONS.md"
+      }
+    },
+    "corn_silage": {
+      "perennial": {
+        "value": 0,
+        "status": "published_generic",
+        "source": "FAO-56 Tables 11/12 crop identities and groups; wheat is defined as spring wheat for this reference row",
+        "url": "https://www.fao.org/4/x0490e/x0490e0b.htm"
+      },
+      "heavy_feeder": {
+        "value": 1,
+        "status": "model_assumption",
+        "reason": "Ordinal design rubric, not a measured soil-health outcome. Heavy feeder is a rotation constraint; scores compare residue retention, root habit, and living cover.",
+        "source": "docs/H2_MODEL_ASSUMPTIONS.md"
+      },
+      "legume": {
+        "value": 0,
+        "status": "published_generic",
+        "source": "FAO-56 Tables 11/12 crop identities and groups; wheat is defined as spring wheat for this reference row",
+        "url": "https://www.fao.org/4/x0490e/x0490e0b.htm"
+      },
+      "plant_month": {
+        "value": 5,
+        "status": "model_assumption",
+        "reason": "Chosen scenario sowing/green-up date; not a verified date for this farm.",
+        "source": "docs/H2_MODEL_ASSUMPTIONS.md"
+      },
+      "plant_day": {
+        "value": 1,
+        "status": "model_assumption",
+        "reason": "Chosen scenario sowing/green-up date; not a verified date for this farm.",
+        "source": "docs/H2_MODEL_ASSUMPTIONS.md"
+      },
+      "stage_ini_days": {
+        "value": 30,
+        "status": "model_assumption",
+        "reason": "Scenario duration; established alfalfa uses an averaged season, silage harvest shortens grain season, rye uses a coarse overwinter curve, and fallow has no crop season.",
+        "source": "docs/H2_MODEL_ASSUMPTIONS.md"
+      },
+      "stage_dev_days": {
+        "value": 40,
+        "status": "model_assumption",
+        "reason": "Scenario duration; established alfalfa uses an averaged season, silage harvest shortens grain season, rye uses a coarse overwinter curve, and fallow has no crop season.",
+        "source": "docs/H2_MODEL_ASSUMPTIONS.md"
+      },
+      "stage_mid_days": {
+        "value": 40,
+        "status": "model_assumption",
+        "reason": "Scenario duration; established alfalfa uses an averaged season, silage harvest shortens grain season, rye uses a coarse overwinter curve, and fallow has no crop season.",
+        "source": "docs/H2_MODEL_ASSUMPTIONS.md"
+      },
+      "stage_late_days": {
+        "value": 20,
+        "status": "model_assumption",
+        "reason": "Scenario duration; established alfalfa uses an averaged season, silage harvest shortens grain season, rye uses a coarse overwinter curve, and fallow has no crop season.",
+        "source": "docs/H2_MODEL_ASSUMPTIONS.md"
+      },
+      "kc_ini": {
+        "value": 0.3,
+        "status": "model_assumption",
+        "reason": "Scalar selection or crop proxy; see named crop profile and sensitivity requirements in model assumptions.",
+        "source": "https://www.fao.org/4/x0490e/x0490e0b.htm ; docs/H2_MODEL_ASSUMPTIONS.md"
+      },
+      "kc_mid": {
+        "value": 1.2,
+        "status": "model_assumption",
+        "reason": "Scalar selection or crop proxy; see named crop profile and sensitivity requirements in model assumptions.",
+        "source": "https://www.fao.org/4/x0490e/x0490e0b.htm ; docs/H2_MODEL_ASSUMPTIONS.md"
+      },
+      "kc_end": {
+        "value": 0.9,
+        "status": "model_assumption",
+        "reason": "Scalar selection or crop proxy; see named crop profile and sensitivity requirements in model assumptions.",
+        "source": "https://www.fao.org/4/x0490e/x0490e0b.htm ; docs/H2_MODEL_ASSUMPTIONS.md"
+      },
+      "root_depth_m": {
+        "value": 1.35,
+        "status": "derived_assumption",
+        "reason": "Arithmetic midpoint of published range 1-1.7 m. Not field-measured effective rooting depth.",
+        "source": "https://www.fao.org/4/x0490e/x0490e0e.htm"
+      },
+      "p_depletion": {
+        "value": 0.55,
+        "status": "model_assumption",
+        "reason": "Small-grain proxy for rye/silage; fallow placeholder has no transpiring crop.",
+        "source": "https://www.fao.org/4/x0490e/x0490e0e.htm ; docs/H2_MODEL_ASSUMPTIONS.md"
+      },
+      "ky": {
+        "value": 1.25,
+        "status": "model_assumption",
+        "reason": "Grain-maize proxy for biomass response; not an observed silage coefficient.",
+        "source": "https://www.fao.org/4/X5647E/x5647e0e.htm ; docs/H2_MODEL_ASSUMPTIONS.md"
+      },
+      "ece_threshold_ds_m": {
+        "value": 1.8,
+        "status": "published_generic",
+        "source": "FAO-56 Table 23",
+        "url": "https://www.fao.org/4/x0490e/x0490e0e.htm"
+      },
+      "salinity_slope_pct": {
+        "value": 7.4,
+        "status": "published_generic",
+        "source": "FAO-56 Table 23",
+        "url": "https://www.fao.org/4/x0490e/x0490e0e.htm"
+      },
+      "base_temp_c": {
+        "value": 10,
+        "status": "model_assumption",
+        "reason": "Scenario base; GDD constraint disabled for this profile until matching cultivar heat units are supplied.",
+        "source": "docs/H2_MODEL_ASSUMPTIONS.md"
+      },
+      "gdd_required": {
+        "value": 0,
+        "status": "policy",
+        "reason": "0 explicitly DISABLES the thermal eligibility gate for this crop; it is not a biological heat requirement. Must be reported as an unverified suitability check.",
+        "source": "docs/H2_MODEL_ASSUMPTIONS.md"
+      },
+      "frost_free_days_min": {
+        "value": 115,
+        "status": "regional_proxy",
+        "source": "https://extension.usu.edu/crops/tools/alternative-crops-for-cache-valley ; Cache Valley regional proxy, not a Fallon observation"
+      },
+      "residue_score": {
+        "value": 1,
+        "status": "model_assumption",
+        "reason": "Ordinal design rubric, not a measured soil-health outcome. Heavy feeder is a rotation constraint; scores compare residue retention, root habit, and living cover.",
+        "source": "docs/H2_MODEL_ASSUMPTIONS.md"
+      },
+      "deep_roots": {
+        "value": 2,
+        "status": "model_assumption",
+        "reason": "Ordinal design rubric, not a measured soil-health outcome. Heavy feeder is a rotation constraint; scores compare residue retention, root habit, and living cover.",
+        "source": "docs/H2_MODEL_ASSUMPTIONS.md"
+      },
+      "cover_benefit": {
+        "value": 0,
+        "status": "model_assumption",
+        "reason": "Ordinal design rubric, not a measured soil-health outcome. Heavy feeder is a rotation constraint; scores compare residue retention, root habit, and living cover.",
+        "source": "docs/H2_MODEL_ASSUMPTIONS.md"
+      }
+    },
+    "cover_crop": {
+      "perennial": {
+        "value": 0,
+        "status": "model_assumption",
+        "reason": "Cover profile is winter cereal rye, an annual nonlegume; salinity uses a wheat-forage screening proxy, not a validated rye biomass fit.",
+        "source": "https://www.nrcs.usda.gov/plantmaterials/nvpmcsr14987.pdf ; docs/H2_MODEL_ASSUMPTIONS.md"
+      },
+      "heavy_feeder": {
+        "value": 0,
+        "status": "model_assumption",
+        "reason": "Ordinal design rubric, not a measured soil-health outcome. Heavy feeder is a rotation constraint; scores compare residue retention, root habit, and living cover.",
+        "source": "docs/H2_MODEL_ASSUMPTIONS.md"
+      },
+      "legume": {
+        "value": 0,
+        "status": "model_assumption",
+        "reason": "Cover profile is winter cereal rye, an annual nonlegume; salinity uses a wheat-forage screening proxy, not a validated rye biomass fit.",
+        "source": "https://www.nrcs.usda.gov/plantmaterials/nvpmcsr14987.pdf ; docs/H2_MODEL_ASSUMPTIONS.md"
+      },
+      "plant_month": {
+        "value": 10,
+        "status": "published_local",
+        "reason": "October 3 treatment in methods of the Fallon rye study; choosing this treatment does not establish an optimum.",
+        "source": "https://www.nrcs.usda.gov/plantmaterials/nvpmcsr14987.pdf"
+      },
+      "plant_day": {
+        "value": 3,
+        "status": "published_local",
+        "reason": "October 3 treatment in methods of the Fallon rye study; choosing this treatment does not establish an optimum.",
+        "source": "https://www.nrcs.usda.gov/plantmaterials/nvpmcsr14987.pdf"
+      },
+      "stage_ini_days": {
+        "value": 30,
+        "status": "model_assumption",
+        "reason": "Scenario duration; established alfalfa uses an averaged season, silage harvest shortens grain season, rye uses a coarse overwinter curve, and fallow has no crop season.",
+        "source": "docs/H2_MODEL_ASSUMPTIONS.md"
+      },
+      "stage_dev_days": {
+        "value": 60,
+        "status": "model_assumption",
+        "reason": "Scenario duration; established alfalfa uses an averaged season, silage harvest shortens grain season, rye uses a coarse overwinter curve, and fallow has no crop season.",
+        "source": "docs/H2_MODEL_ASSUMPTIONS.md"
+      },
+      "stage_mid_days": {
+        "value": 120,
+        "status": "model_assumption",
+        "reason": "Scenario duration; established alfalfa uses an averaged season, silage harvest shortens grain season, rye uses a coarse overwinter curve, and fallow has no crop season.",
+        "source": "docs/H2_MODEL_ASSUMPTIONS.md"
+      },
+      "stage_late_days": {
+        "value": 20,
+        "status": "model_assumption",
+        "reason": "Scenario duration; established alfalfa uses an averaged season, silage harvest shortens grain season, rye uses a coarse overwinter curve, and fallow has no crop season.",
+        "source": "docs/H2_MODEL_ASSUMPTIONS.md"
+      },
+      "kc_ini": {
+        "value": 0.3,
+        "status": "model_assumption",
+        "reason": "Scalar selection or crop proxy; see named crop profile and sensitivity requirements in model assumptions.",
+        "source": "https://www.fao.org/4/x0490e/x0490e0b.htm ; docs/H2_MODEL_ASSUMPTIONS.md"
+      },
+      "kc_mid": {
+        "value": 1.0,
+        "status": "model_assumption",
+        "reason": "Scalar selection or crop proxy; see named crop profile and sensitivity requirements in model assumptions.",
+        "source": "https://www.fao.org/4/x0490e/x0490e0b.htm ; docs/H2_MODEL_ASSUMPTIONS.md"
+      },
+      "kc_end": {
+        "value": 0.8,
+        "status": "model_assumption",
+        "reason": "Scalar selection or crop proxy; see named crop profile and sensitivity requirements in model assumptions.",
+        "source": "https://www.fao.org/4/x0490e/x0490e0b.htm ; docs/H2_MODEL_ASSUMPTIONS.md"
+      },
+      "root_depth_m": {
+        "value": 1,
+        "status": "model_assumption",
+        "reason": "Rye effective-root scenario; fallow root placeholder is ignored when no crop season exists.",
+        "source": "docs/H2_MODEL_ASSUMPTIONS.md"
+      },
+      "p_depletion": {
+        "value": 0.55,
+        "status": "model_assumption",
+        "reason": "Small-grain proxy for rye/silage; fallow placeholder has no transpiring crop.",
+        "source": "https://www.fao.org/4/x0490e/x0490e0e.htm ; docs/H2_MODEL_ASSUMPTIONS.md"
+      },
+      "ky": {
+        "value": 1,
+        "status": "model_assumption",
+        "reason": "Neutral linear biomass stress assumption; cover crop has no sale revenue.",
+        "source": "https://www.fao.org/4/X5647E/x5647e0e.htm ; docs/H2_MODEL_ASSUMPTIONS.md"
+      },
+      "ece_threshold_ds_m": {
+        "value": 6,
+        "status": "model_assumption",
+        "reason": "Cover profile is winter cereal rye, an annual nonlegume; salinity uses a wheat-forage screening proxy, not a validated rye biomass fit.",
+        "source": "https://www.nrcs.usda.gov/plantmaterials/nvpmcsr14987.pdf ; docs/H2_MODEL_ASSUMPTIONS.md"
+      },
+      "salinity_slope_pct": {
+        "value": 7.1,
+        "status": "model_assumption",
+        "reason": "Cover profile is winter cereal rye, an annual nonlegume; salinity uses a wheat-forage screening proxy, not a validated rye biomass fit.",
+        "source": "https://www.nrcs.usda.gov/plantmaterials/nvpmcsr14987.pdf ; docs/H2_MODEL_ASSUMPTIONS.md"
+      },
+      "base_temp_c": {
+        "value": 0,
+        "status": "model_assumption",
+        "reason": "Scenario base; GDD constraint disabled for this profile until matching cultivar heat units are supplied.",
+        "source": "docs/H2_MODEL_ASSUMPTIONS.md"
+      },
+      "gdd_required": {
+        "value": 0,
+        "status": "policy",
+        "reason": "0 explicitly DISABLES the thermal eligibility gate for this crop; it is not a biological heat requirement. Must be reported as an unverified suitability check.",
+        "source": "docs/H2_MODEL_ASSUMPTIONS.md"
+      },
+      "frost_free_days_min": {
+        "value": 0,
+        "status": "policy",
+        "reason": "No frost-free maturity gate for overwintering cover or non-growing fallow. Not a claim of zero frost sensitivity.",
+        "source": "docs/H2_MODEL_ASSUMPTIONS.md"
+      },
+      "residue_score": {
+        "value": 3,
+        "status": "model_assumption",
+        "reason": "Ordinal design rubric, not a measured soil-health outcome. Heavy feeder is a rotation constraint; scores compare residue retention, root habit, and living cover.",
+        "source": "docs/H2_MODEL_ASSUMPTIONS.md"
+      },
+      "deep_roots": {
+        "value": 2,
+        "status": "model_assumption",
+        "reason": "Ordinal design rubric, not a measured soil-health outcome. Heavy feeder is a rotation constraint; scores compare residue retention, root habit, and living cover.",
+        "source": "docs/H2_MODEL_ASSUMPTIONS.md"
+      },
+      "cover_benefit": {
+        "value": 3,
+        "status": "model_assumption",
+        "reason": "Ordinal design rubric, not a measured soil-health outcome. Heavy feeder is a rotation constraint; scores compare residue retention, root habit, and living cover.",
+        "source": "docs/H2_MODEL_ASSUMPTIONS.md"
+      }
+    },
+    "corn": {
+      "perennial": {
+        "value": 0,
+        "status": "published_generic",
+        "source": "FAO-56 Tables 11/12 crop identities and groups; wheat is defined as spring wheat for this reference row",
+        "url": "https://www.fao.org/4/x0490e/x0490e0b.htm"
+      },
+      "heavy_feeder": {
+        "value": 1,
+        "status": "model_assumption",
+        "reason": "Ordinal design rubric, not a measured soil-health outcome. Heavy feeder is a rotation constraint; scores compare residue retention, root habit, and living cover.",
+        "source": "docs/H2_MODEL_ASSUMPTIONS.md"
+      },
+      "legume": {
+        "value": 0,
+        "status": "published_generic",
+        "source": "FAO-56 Tables 11/12 crop identities and groups; wheat is defined as spring wheat for this reference row",
+        "url": "https://www.fao.org/4/x0490e/x0490e0b.htm"
+      },
+      "plant_month": {
+        "value": 5,
+        "status": "model_assumption",
+        "reason": "Chosen scenario sowing/green-up date; not a verified date for this farm.",
+        "source": "docs/H2_MODEL_ASSUMPTIONS.md"
+      },
+      "plant_day": {
+        "value": 1,
+        "status": "model_assumption",
+        "reason": "Chosen scenario sowing/green-up date; not a verified date for this farm.",
+        "source": "docs/H2_MODEL_ASSUMPTIONS.md"
+      },
+      "stage_ini_days": {
+        "value": 30,
+        "status": "regional_proxy",
+        "source": "FAO-56 Table 11",
+        "url": "https://www.fao.org/4/x0490e/x0490e0b.htm",
+        "limitation": "Idaho grain maize; April; selecting a Fallon schedule requires local validation. Month is window start, not an exact sowing date."
+      },
+      "stage_dev_days": {
+        "value": 40,
+        "status": "regional_proxy",
+        "source": "FAO-56 Table 11",
+        "url": "https://www.fao.org/4/x0490e/x0490e0b.htm",
+        "limitation": "Idaho grain maize; April; selecting a Fallon schedule requires local validation. Month is window start, not an exact sowing date."
+      },
+      "stage_mid_days": {
+        "value": 50,
+        "status": "regional_proxy",
+        "source": "FAO-56 Table 11",
+        "url": "https://www.fao.org/4/x0490e/x0490e0b.htm",
+        "limitation": "Idaho grain maize; April; selecting a Fallon schedule requires local validation. Month is window start, not an exact sowing date."
+      },
+      "stage_late_days": {
+        "value": 50,
+        "status": "regional_proxy",
+        "source": "FAO-56 Table 11",
+        "url": "https://www.fao.org/4/x0490e/x0490e0b.htm",
+        "limitation": "Idaho grain maize; April; selecting a Fallon schedule requires local validation. Month is window start, not an exact sowing date."
+      },
+      "kc_ini": {
+        "value": 0.3,
+        "status": "model_assumption",
+        "reason": "Scalar selection or crop proxy; see named crop profile and sensitivity requirements in model assumptions.",
+        "source": "https://www.fao.org/4/x0490e/x0490e0b.htm ; docs/H2_MODEL_ASSUMPTIONS.md"
+      },
+      "kc_mid": {
+        "value": 1.2,
+        "status": "published_generic",
+        "source": "FAO-56 Table 12",
+        "url": "https://www.fao.org/4/x0490e/x0490e0b.htm"
+      },
+      "kc_end": {
+        "value": 0.35,
+        "status": "model_assumption",
+        "reason": "Scalar selection or crop proxy; see named crop profile and sensitivity requirements in model assumptions.",
+        "source": "https://www.fao.org/4/x0490e/x0490e0b.htm ; docs/H2_MODEL_ASSUMPTIONS.md"
+      },
+      "root_depth_m": {
+        "value": 1.35,
+        "status": "derived_assumption",
+        "reason": "Arithmetic midpoint of published range 1-1.7 m. Not field-measured effective rooting depth.",
+        "source": "https://www.fao.org/4/x0490e/x0490e0e.htm"
+      },
+      "p_depletion": {
+        "value": 0.55,
+        "status": "published_generic",
+        "source": "FAO-56 Table 22",
+        "url": "https://www.fao.org/4/x0490e/x0490e0e.htm"
+      },
+      "ky": {
+        "value": 1.25,
+        "status": "published_generic",
+        "source": "https://www.fao.org/4/X5647E/x5647e0e.htm ; Table 12, total growing period"
+      },
+      "ece_threshold_ds_m": {
+        "value": 1.7,
+        "status": "published_generic",
+        "source": "FAO-56 Table 23",
+        "url": "https://www.fao.org/4/x0490e/x0490e0e.htm"
+      },
+      "salinity_slope_pct": {
+        "value": 12.0,
+        "status": "published_generic",
+        "source": "FAO-56 Table 23",
+        "url": "https://www.fao.org/4/x0490e/x0490e0e.htm"
+      },
+      "base_temp_c": {
+        "value": 10,
+        "status": "model_assumption",
+        "reason": "Scenario base; GDD constraint disabled for this profile until matching cultivar heat units are supplied.",
+        "source": "docs/H2_MODEL_ASSUMPTIONS.md"
+      },
+      "gdd_required": {
+        "value": 0,
+        "status": "policy",
+        "reason": "0 explicitly DISABLES the thermal eligibility gate for this crop; it is not a biological heat requirement. Must be reported as an unverified suitability check.",
+        "source": "docs/H2_MODEL_ASSUMPTIONS.md"
+      },
+      "frost_free_days_min": {
+        "value": 115,
+        "status": "regional_proxy",
+        "source": "https://extension.usu.edu/crops/tools/alternative-crops-for-cache-valley ; Cache Valley regional proxy, not a Fallon observation"
+      },
+      "residue_score": {
+        "value": 3,
+        "status": "model_assumption",
+        "reason": "Ordinal design rubric, not a measured soil-health outcome. Heavy feeder is a rotation constraint; scores compare residue retention, root habit, and living cover.",
+        "source": "docs/H2_MODEL_ASSUMPTIONS.md"
+      },
+      "deep_roots": {
+        "value": 2,
+        "status": "model_assumption",
+        "reason": "Ordinal design rubric, not a measured soil-health outcome. Heavy feeder is a rotation constraint; scores compare residue retention, root habit, and living cover.",
+        "source": "docs/H2_MODEL_ASSUMPTIONS.md"
+      },
+      "cover_benefit": {
+        "value": 1,
+        "status": "model_assumption",
+        "reason": "Ordinal design rubric, not a measured soil-health outcome. Heavy feeder is a rotation constraint; scores compare residue retention, root habit, and living cover.",
+        "source": "docs/H2_MODEL_ASSUMPTIONS.md"
+      }
+    },
+    "fallow": {
+      "perennial": {
+        "value": 0,
+        "status": "policy",
+        "reason": "Not applicable to bare fallow; no crop yield or sale.",
+        "source": "docs/H2_MODEL_ASSUMPTIONS.md"
+      },
+      "heavy_feeder": {
+        "value": 0,
+        "status": "model_assumption",
+        "reason": "Ordinal design rubric, not a measured soil-health outcome. Heavy feeder is a rotation constraint; scores compare residue retention, root habit, and living cover.",
+        "source": "docs/H2_MODEL_ASSUMPTIONS.md"
+      },
+      "legume": {
+        "value": 0,
+        "status": "policy",
+        "reason": "Not applicable to bare fallow; no crop yield or sale.",
+        "source": "docs/H2_MODEL_ASSUMPTIONS.md"
+      },
+      "plant_month": {
+        "value": 1,
+        "status": "model_assumption",
+        "reason": "Chosen scenario sowing/green-up date; not a verified date for this farm.",
+        "source": "docs/H2_MODEL_ASSUMPTIONS.md"
+      },
+      "plant_day": {
+        "value": 1,
+        "status": "model_assumption",
+        "reason": "Chosen scenario sowing/green-up date; not a verified date for this farm.",
+        "source": "docs/H2_MODEL_ASSUMPTIONS.md"
+      },
+      "stage_ini_days": {
+        "value": 0,
+        "status": "model_assumption",
+        "reason": "Scenario duration; established alfalfa uses an averaged season, silage harvest shortens grain season, rye uses a coarse overwinter curve, and fallow has no crop season.",
+        "source": "docs/H2_MODEL_ASSUMPTIONS.md"
+      },
+      "stage_dev_days": {
+        "value": 0,
+        "status": "model_assumption",
+        "reason": "Scenario duration; established alfalfa uses an averaged season, silage harvest shortens grain season, rye uses a coarse overwinter curve, and fallow has no crop season.",
+        "source": "docs/H2_MODEL_ASSUMPTIONS.md"
+      },
+      "stage_mid_days": {
+        "value": 0,
+        "status": "model_assumption",
+        "reason": "Scenario duration; established alfalfa uses an averaged season, silage harvest shortens grain season, rye uses a coarse overwinter curve, and fallow has no crop season.",
+        "source": "docs/H2_MODEL_ASSUMPTIONS.md"
+      },
+      "stage_late_days": {
+        "value": 0,
+        "status": "model_assumption",
+        "reason": "Scenario duration; established alfalfa uses an averaged season, silage harvest shortens grain season, rye uses a coarse overwinter curve, and fallow has no crop season.",
+        "source": "docs/H2_MODEL_ASSUMPTIONS.md"
+      },
+      "kc_ini": {
+        "value": 0.15,
+        "status": "model_assumption",
+        "reason": "Scalar selection or crop proxy; see named crop profile and sensitivity requirements in model assumptions.",
+        "source": "https://www.fao.org/4/x0490e/x0490e0b.htm ; docs/H2_MODEL_ASSUMPTIONS.md"
+      },
+      "kc_mid": {
+        "value": 0.15,
+        "status": "model_assumption",
+        "reason": "Scalar selection or crop proxy; see named crop profile and sensitivity requirements in model assumptions.",
+        "source": "https://www.fao.org/4/x0490e/x0490e0b.htm ; docs/H2_MODEL_ASSUMPTIONS.md"
+      },
+      "kc_end": {
+        "value": 0.15,
+        "status": "model_assumption",
+        "reason": "Scalar selection or crop proxy; see named crop profile and sensitivity requirements in model assumptions.",
+        "source": "https://www.fao.org/4/x0490e/x0490e0b.htm ; docs/H2_MODEL_ASSUMPTIONS.md"
+      },
+      "root_depth_m": {
+        "value": 0.1,
+        "status": "model_assumption",
+        "reason": "Rye effective-root scenario; fallow root placeholder is ignored when no crop season exists.",
+        "source": "docs/H2_MODEL_ASSUMPTIONS.md"
+      },
+      "p_depletion": {
+        "value": 0.55,
+        "status": "model_assumption",
+        "reason": "Small-grain proxy for rye/silage; fallow placeholder has no transpiring crop.",
+        "source": "https://www.fao.org/4/x0490e/x0490e0e.htm ; docs/H2_MODEL_ASSUMPTIONS.md"
+      },
+      "ky": {
+        "value": 0,
+        "status": "model_assumption",
+        "reason": "No harvested yield; ky=0 is a not-applicable policy value.",
+        "source": "https://www.fao.org/4/X5647E/x5647e0e.htm ; docs/H2_MODEL_ASSUMPTIONS.md"
+      },
+      "ece_threshold_ds_m": {
+        "value": 0,
+        "status": "policy",
+        "reason": "Not applicable to bare fallow; no crop yield or sale.",
+        "source": "docs/H2_MODEL_ASSUMPTIONS.md"
+      },
+      "salinity_slope_pct": {
+        "value": 0,
+        "status": "policy",
+        "reason": "Not applicable to bare fallow; no crop yield or sale.",
+        "source": "docs/H2_MODEL_ASSUMPTIONS.md"
+      },
+      "base_temp_c": {
+        "value": 0,
+        "status": "model_assumption",
+        "reason": "Scenario base; GDD constraint disabled for this profile until matching cultivar heat units are supplied.",
+        "source": "docs/H2_MODEL_ASSUMPTIONS.md"
+      },
+      "gdd_required": {
+        "value": 0,
+        "status": "policy",
+        "reason": "0 explicitly DISABLES the thermal eligibility gate for this crop; it is not a biological heat requirement. Must be reported as an unverified suitability check.",
+        "source": "docs/H2_MODEL_ASSUMPTIONS.md"
+      },
+      "frost_free_days_min": {
+        "value": 0,
+        "status": "policy",
+        "reason": "No frost-free maturity gate for overwintering cover or non-growing fallow. Not a claim of zero frost sensitivity.",
+        "source": "docs/H2_MODEL_ASSUMPTIONS.md"
+      },
+      "residue_score": {
+        "value": 0,
+        "status": "model_assumption",
+        "reason": "Ordinal design rubric, not a measured soil-health outcome. Heavy feeder is a rotation constraint; scores compare residue retention, root habit, and living cover.",
+        "source": "docs/H2_MODEL_ASSUMPTIONS.md"
+      },
+      "deep_roots": {
+        "value": 0,
+        "status": "model_assumption",
+        "reason": "Ordinal design rubric, not a measured soil-health outcome. Heavy feeder is a rotation constraint; scores compare residue retention, root habit, and living cover.",
+        "source": "docs/H2_MODEL_ASSUMPTIONS.md"
+      },
+      "cover_benefit": {
+        "value": 0,
+        "status": "model_assumption",
+        "reason": "Ordinal design rubric, not a measured soil-health outcome. Heavy feeder is a rotation constraint; scores compare residue retention, root habit, and living cover.",
+        "source": "docs/H2_MODEL_ASSUMPTIONS.md"
+      }
+    }
+  },
+  "computationally_complete": true,
+  "validated_for_farmer_advice": false,
+  "profile_definitions": {
+    "wheat": "spring grain wheat",
+    "barley": "spring grain barley",
+    "sorghum": "grain sorghum",
+    "corn": "grain maize",
+    "corn_silage": "maize harvested for silage",
+    "alfalfa": "established hay stand with averaged cutting effects",
+    "cover_crop": "winter cereal rye, terminated rather than sold",
+    "fallow": "unplanted bare fallow"
+  }
+}

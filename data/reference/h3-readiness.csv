@@ -1,0 +1,9 @@
+crop,has_university_cost,prototype_net_return_available,farmer_advice_ready,remaining
+alfalfa,True,True,False,Prototype only: historical costs and separately dated revenue; local agronomic validation outstanding
+barley,True,False,False,"yield_per_acre, price_usd_per_unit"
+wheat,True,False,False,"yield_per_acre, price_usd_per_unit"
+corn_silage,True,False,False,price_usd_per_unit
+sorghum,True,False,False,"yield_per_acre, price_usd_per_unit"
+safflower,True,False,False,"yield_per_acre, price_usd_per_unit"
+dry_beans,True,False,False,"yield_per_acre, price_usd_per_unit"
+cover_crop,False,False,False,cost_usd_per_acre

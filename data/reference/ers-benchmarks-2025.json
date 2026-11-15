@@ -1,0 +1,976 @@
+[
+  {
+    "commodity": "corn",
+    "source": "https://www.ers.usda.gov/media/4962/corn.csv?v=95150",
+    "source_sha256": "a42362ce2c9b8f6a5992ae11ef6cb1ed12e25ec59b694782572daea646113951",
+    "benchmarks": [
+      {
+        "region": "Eastern Uplands",
+        "year": 2025,
+        "items": {
+          "Total, operating costs": {
+            "value": 476.28,
+            "units": "dollars per planted acre",
+            "category": "Operating costs",
+            "survey_base_year": "Base survey of 2021"
+          },
+          "Total, costs listed": {
+            "value": 875.4,
+            "units": "dollars per planted acre",
+            "category": "Costs listed",
+            "survey_base_year": "Base survey of 2021"
+          },
+          "Total, allocated overhead": {
+            "value": 399.13,
+            "units": "dollars per planted acre",
+            "category": "Allocated overhead",
+            "survey_base_year": "Base survey of 2021"
+          },
+          "Yield": {
+            "value": 176.0,
+            "units": "bushels per planted acre",
+            "category": "Supporting information",
+            "survey_base_year": "Base survey of 2021"
+          },
+          "Price": {
+            "value": 4.3,
+            "units": "dollars per bushel at harvest",
+            "category": "Supporting information",
+            "survey_base_year": "Base survey of 2021"
+          }
+        },
+        "farmer_income_ready": false,
+        "limitations": [
+          "Regional sector benchmark, not field-specific cost.",
+          "Planted-acre basis must not be mixed with harvested-acre yield.",
+          "Irrigation water/power separation unresolved; no additional water charge may be added blindly.",
+          "Crop-class, production-system and geographic transfer require review."
+        ]
+      },
+      {
+        "region": "Heartland",
+        "year": 2025,
+        "items": {
+          "Total, costs listed": {
+            "value": 963.43,
+            "units": "dollars per planted acre",
+            "category": "Costs listed",
+            "survey_base_year": "Base survey of 2021"
+          },
+          "Total, operating costs": {
+            "value": 474.71,
+            "units": "dollars per planted acre",
+            "category": "Operating costs",
+            "survey_base_year": "Base survey of 2021"
+          },
+          "Total, allocated overhead": {
+            "value": 488.72,
+            "units": "dollars per planted acre",
+            "category": "Allocated overhead",
+            "survey_base_year": "Base survey of 2021"
+          },
+          "Price": {
+            "value": 3.92,
+            "units": "dollars per bushel at harvest",
+            "category": "Supporting information",
+            "survey_base_year": "Base survey of 2021"
+          },
+          "Yield": {
+            "value": 214.0,
+            "units": "bushels per planted acre",
+            "category": "Supporting information",
+            "survey_base_year": "Base survey of 2021"
+          }
+        },
+        "farmer_income_ready": false,
+        "limitations": [
+          "Regional sector benchmark, not field-specific cost.",
+          "Planted-acre basis must not be mixed with harvested-acre yield.",
+          "Irrigation water/power separation unresolved; no additional water charge may be added blindly.",
+          "Crop-class, production-system and geographic transfer require review."
+        ]
+      },
+      {
+        "region": "Northern Crescent",
+        "year": 2025,
+        "items": {
+          "Yield": {
+            "value": 178.0,
+            "units": "bushels per planted acre",
+            "category": "Supporting information",
+            "survey_base_year": "Base survey of 2021"
+          },
+          "Price": {
+            "value": 3.95,
+            "units": "dollars per bushel at harvest",
+            "category": "Supporting information",
+            "survey_base_year": "Base survey of 2021"
+          },
+          "Total, operating costs": {
+            "value": 482.46,
+            "units": "dollars per planted acre",
+            "category": "Operating costs",
+            "survey_base_year": "Base survey of 2021"
+          },
+          "Total, costs listed": {
+            "value": 896.82,
+            "units": "dollars per planted acre",
+            "category": "Costs listed",
+            "survey_base_year": "Base survey of 2021"
+          },
+          "Total, allocated overhead": {
+            "value": 414.36,
+            "units": "dollars per planted acre",
+            "category": "Allocated overhead",
+            "survey_base_year": "Base survey of 2021"
+          }
+        },
+        "farmer_income_ready": false,
+        "limitations": [
+          "Regional sector benchmark, not field-specific cost.",
+          "Planted-acre basis must not be mixed with harvested-acre yield.",
+          "Irrigation water/power separation unresolved; no additional water charge may be added blindly.",
+          "Crop-class, production-system and geographic transfer require review."
+        ]
+      },
+      {
+        "region": "Northern Great Plains",
+        "year": 2025,
+        "items": {
+          "Price": {
+            "value": 3.71,
+            "units": "dollars per bushel at harvest",
+            "category": "Supporting information",
+            "survey_base_year": "Base survey of 2021"
+          },
+          "Yield": {
+            "value": 208.0,
+            "units": "bushels per planted acre",
+            "category": "Supporting information",
+            "survey_base_year": "Base survey of 2021"
+          },
+          "Total, costs listed": {
+            "value": 786.53,
+            "units": "dollars per planted acre",
+            "category": "Costs listed",
+            "survey_base_year": "Base survey of 2021"
+          },
+          "Total, operating costs": {
+            "value": 417.55,
+            "units": "dollars per planted acre",
+            "category": "Operating costs",
+            "survey_base_year": "Base survey of 2021"
+          },
+          "Total, allocated overhead": {
+            "value": 368.98,
+            "units": "dollars per planted acre",
+            "category": "Allocated overhead",
+            "survey_base_year": "Base survey of 2021"
+          }
+        },
+        "farmer_income_ready": false,
+        "limitations": [
+          "Regional sector benchmark, not field-specific cost.",
+          "Planted-acre basis must not be mixed with harvested-acre yield.",
+          "Irrigation water/power separation unresolved; no additional water charge may be added blindly.",
+          "Crop-class, production-system and geographic transfer require review."
+        ]
+      },
+      {
+        "region": "Prairie Gateway",
+        "year": 2025,
+        "items": {
+          "Price": {
+            "value": 4.0,
+            "units": "dollars per bushel at harvest",
+            "category": "Supporting information",
+            "survey_base_year": "Base survey of 2021"
+          },
+          "Total, allocated overhead": {
+            "value": 388.03,
+            "units": "dollars per planted acre",
+            "category": "Allocated overhead",
+            "survey_base_year": "Base survey of 2021"
+          },
+          "Total, operating costs": {
+            "value": 401.25,
+            "units": "dollars per planted acre",
+            "category": "Operating costs",
+            "survey_base_year": "Base survey of 2021"
+          },
+          "Total, costs listed": {
+            "value": 789.28,
+            "units": "dollars per planted acre",
+            "category": "Costs listed",
+            "survey_base_year": "Base survey of 2021"
+          },
+          "Yield": {
+            "value": 168.0,
+            "units": "bushels per planted acre",
+            "category": "Supporting information",
+            "survey_base_year": "Base survey of 2021"
+          }
+        },
+        "farmer_income_ready": false,
+        "limitations": [
+          "Regional sector benchmark, not field-specific cost.",
+          "Planted-acre basis must not be mixed with harvested-acre yield.",
+          "Irrigation water/power separation unresolved; no additional water charge may be added blindly.",
+          "Crop-class, production-system and geographic transfer require review."
+        ]
+      },
+      {
+        "region": "Southern Seaboard",
+        "year": 2025,
+        "items": {
+          "Yield": {
+            "value": 173.0,
+            "units": "bushels per planted acre",
+            "category": "Supporting information",
+            "survey_base_year": "Base survey of 2021"
+          },
+          "Total, costs listed": {
+            "value": 903.11,
+            "units": "dollars per planted acre",
+            "category": "Costs listed",
+            "survey_base_year": "Base survey of 2021"
+          },
+          "Price": {
+            "value": 4.95,
+            "units": "dollars per bushel at harvest",
+            "category": "Supporting information",
+            "survey_base_year": "Base survey of 2021"
+          },
+          "Total, operating costs": {
+            "value": 517.81,
+            "units": "dollars per planted acre",
+            "category": "Operating costs",
+            "survey_base_year": "Base survey of 2021"
+          },
+          "Total, allocated overhead": {
+            "value": 385.3,
+            "units": "dollars per planted acre",
+            "category": "Allocated overhead",
+            "survey_base_year": "Base survey of 2021"
+          }
+        },
+        "farmer_income_ready": false,
+        "limitations": [
+          "Regional sector benchmark, not field-specific cost.",
+          "Planted-acre basis must not be mixed with harvested-acre yield.",
+          "Irrigation water/power separation unresolved; no additional water charge may be added blindly.",
+          "Crop-class, production-system and geographic transfer require review."
+        ]
+      },
+      {
+        "region": "U.S. total",
+        "year": 2025,
+        "items": {
+          "Total, allocated overhead": {
+            "value": 444.72,
+            "units": "dollars per planted acre",
+            "category": "Allocated overhead",
+            "survey_base_year": "Base survey of 2021"
+          },
+          "Price": {
+            "value": 3.93,
+            "units": "dollars per bushel at harvest",
+            "category": "Supporting information",
+            "survey_base_year": "Base survey of 2021"
+          },
+          "Total, costs listed": {
+            "value": 900.52,
+            "units": "dollars per planted acre",
+            "category": "Costs listed",
+            "survey_base_year": "Base survey of 2021"
+          },
+          "Yield": {
+            "value": 198.0,
+            "units": "bushels per planted acre",
+            "category": "Supporting information",
+            "survey_base_year": "Base survey of 2021"
+          },
+          "Total, operating costs": {
+            "value": 455.8,
+            "units": "dollars per planted acre",
+            "category": "Operating costs",
+            "survey_base_year": "Base survey of 2021"
+          }
+        },
+        "farmer_income_ready": false,
+        "limitations": [
+          "Regional sector benchmark, not field-specific cost.",
+          "Planted-acre basis must not be mixed with harvested-acre yield.",
+          "Irrigation water/power separation unresolved; no additional water charge may be added blindly.",
+          "Crop-class, production-system and geographic transfer require review."
+        ]
+      }
+    ]
+  },
+  {
+    "commodity": "barley",
+    "source": "https://www.ers.usda.gov/media/4966/barley.csv?v=59996",
+    "source_sha256": "c8d1c0cde0bbcb398ca52158941693a65bdb15c6380441d26049a94bba626bb7",
+    "benchmarks": [
+      {
+        "region": "Basin and Range",
+        "year": 2025,
+        "items": {
+          "Total, costs listed": {
+            "value": 561.49,
+            "units": "dollars per planted acre",
+            "category": "Costs listed",
+            "survey_base_year": "Base survey of 2019"
+          },
+          "Total, allocated overhead": {
+            "value": 319.65,
+            "units": "dollars per planted acre",
+            "category": "Allocated overhead",
+            "survey_base_year": "Base survey of 2019"
+          },
+          "Price": {
+            "value": 5.45,
+            "units": "dollars per bushel at harvest",
+            "category": "Supporting information",
+            "survey_base_year": "Base survey of 2019"
+          },
+          "Total, operating costs": {
+            "value": 241.84,
+            "units": "dollars per planted acre",
+            "category": "Operating costs",
+            "survey_base_year": "Base survey of 2019"
+          },
+          "Yield": {
+            "value": 70.0,
+            "units": "bushels per planted acre",
+            "category": "Supporting information",
+            "survey_base_year": "Base survey of 2019"
+          }
+        },
+        "farmer_income_ready": false,
+        "limitations": [
+          "Regional sector benchmark, not field-specific cost.",
+          "Planted-acre basis must not be mixed with harvested-acre yield.",
+          "Irrigation water/power separation unresolved; no additional water charge may be added blindly.",
+          "Crop-class, production-system and geographic transfer require review."
+        ]
+      },
+      {
+        "region": "Fruitful Rim",
+        "year": 2025,
+        "items": {
+          "Total, operating costs": {
+            "value": 251.37,
+            "units": "dollars per planted acre",
+            "category": "Operating costs",
+            "survey_base_year": "Base survey of 2019"
+          },
+          "Total, allocated overhead": {
+            "value": 441.48,
+            "units": "dollars per planted acre",
+            "category": "Allocated overhead",
+            "survey_base_year": "Base survey of 2019"
+          },
+          "Total, costs listed": {
+            "value": 692.85,
+            "units": "dollars per planted acre",
+            "category": "Costs listed",
+            "survey_base_year": "Base survey of 2019"
+          },
+          "Price": {
+            "value": 5.67,
+            "units": "dollars per bushel at harvest",
+            "category": "Supporting information",
+            "survey_base_year": "Base survey of 2019"
+          },
+          "Yield": {
+            "value": 96.0,
+            "units": "bushels per planted acre",
+            "category": "Supporting information",
+            "survey_base_year": "Base survey of 2019"
+          }
+        },
+        "farmer_income_ready": false,
+        "limitations": [
+          "Regional sector benchmark, not field-specific cost.",
+          "Planted-acre basis must not be mixed with harvested-acre yield.",
+          "Irrigation water/power separation unresolved; no additional water charge may be added blindly.",
+          "Crop-class, production-system and geographic transfer require review."
+        ]
+      },
+      {
+        "region": "Northern Crescent",
+        "year": 2025,
+        "items": {
+          "Total, costs listed": {
+            "value": 566.13,
+            "units": "dollars per planted acre",
+            "category": "Costs listed",
+            "survey_base_year": "Base survey of 2019"
+          },
+          "Total, allocated overhead": {
+            "value": 316.12,
+            "units": "dollars per planted acre",
+            "category": "Allocated overhead",
+            "survey_base_year": "Base survey of 2019"
+          },
+          "Total, operating costs": {
+            "value": 250.01,
+            "units": "dollars per planted acre",
+            "category": "Operating costs",
+            "survey_base_year": "Base survey of 2019"
+          },
+          "Price": {
+            "value": 4.55,
+            "units": "dollars per bushel at harvest",
+            "category": "Supporting information",
+            "survey_base_year": "Base survey of 2019"
+          },
+          "Yield": {
+            "value": 59.0,
+            "units": "bushels per planted acre",
+            "category": "Supporting information",
+            "survey_base_year": "Base survey of 2019"
+          }
+        },
+        "farmer_income_ready": false,
+        "limitations": [
+          "Regional sector benchmark, not field-specific cost.",
+          "Planted-acre basis must not be mixed with harvested-acre yield.",
+          "Irrigation water/power separation unresolved; no additional water charge may be added blindly.",
+          "Crop-class, production-system and geographic transfer require review."
+        ]
+      },
+      {
+        "region": "Northern Great Plains",
+        "year": 2025,
+        "items": {
+          "Total, costs listed": {
+            "value": 411.2,
+            "units": "dollars per planted acre",
+            "category": "Costs listed",
+            "survey_base_year": "Base survey of 2019"
+          },
+          "Price": {
+            "value": 4.99,
+            "units": "dollars per bushel at harvest",
+            "category": "Supporting information",
+            "survey_base_year": "Base survey of 2019"
+          },
+          "Total, operating costs": {
+            "value": 156.26,
+            "units": "dollars per planted acre",
+            "category": "Operating costs",
+            "survey_base_year": "Base survey of 2019"
+          },
+          "Total, allocated overhead": {
+            "value": 254.94,
+            "units": "dollars per planted acre",
+            "category": "Allocated overhead",
+            "survey_base_year": "Base survey of 2019"
+          },
+          "Yield": {
+            "value": 57.0,
+            "units": "bushels per planted acre",
+            "category": "Supporting information",
+            "survey_base_year": "Base survey of 2019"
+          }
+        },
+        "farmer_income_ready": false,
+        "limitations": [
+          "Regional sector benchmark, not field-specific cost.",
+          "Planted-acre basis must not be mixed with harvested-acre yield.",
+          "Irrigation water/power separation unresolved; no additional water charge may be added blindly.",
+          "Crop-class, production-system and geographic transfer require review."
+        ]
+      },
+      {
+        "region": "U.S. total",
+        "year": 2025,
+        "items": {
+          "Yield": {
+            "value": 68.0,
+            "units": "bushels per planted acre",
+            "category": "Supporting information",
+            "survey_base_year": "Base survey of 2019"
+          },
+          "Price": {
+            "value": 5.27,
+            "units": "dollars per bushel at harvest",
+            "category": "Supporting information",
+            "survey_base_year": "Base survey of 2019"
+          },
+          "Total, costs listed": {
+            "value": 503.77,
+            "units": "dollars per planted acre",
+            "category": "Costs listed",
+            "survey_base_year": "Base survey of 2019"
+          },
+          "Total, allocated overhead": {
+            "value": 308.11,
+            "units": "dollars per planted acre",
+            "category": "Allocated overhead",
+            "survey_base_year": "Base survey of 2019"
+          },
+          "Total, operating costs": {
+            "value": 195.66,
+            "units": "dollars per planted acre",
+            "category": "Operating costs",
+            "survey_base_year": "Base survey of 2019"
+          }
+        },
+        "farmer_income_ready": false,
+        "limitations": [
+          "Regional sector benchmark, not field-specific cost.",
+          "Planted-acre basis must not be mixed with harvested-acre yield.",
+          "Irrigation water/power separation unresolved; no additional water charge may be added blindly.",
+          "Crop-class, production-system and geographic transfer require review."
+        ]
+      }
+    ]
+  },
+  {
+    "commodity": "sorghum",
+    "source": "https://www.ers.usda.gov/media/4972/sorghum.csv?v=85680",
+    "source_sha256": "5af85d43128fab49edc48e0bbaa30afdf0e4173970748b0a6ead6bba6873c7ee",
+    "benchmarks": [
+      {
+        "region": "Fruitful Rim",
+        "year": 2025,
+        "items": {
+          "Price": {
+            "value": 3.77,
+            "units": "dollars per bushel at harvest",
+            "category": "Supporting information",
+            "survey_base_year": "Base survey of 2019"
+          },
+          "Yield": {
+            "value": 68.0,
+            "units": "bushels per planted acre",
+            "category": "Supporting information",
+            "survey_base_year": "Base survey of 2019"
+          },
+          "Total, costs listed": {
+            "value": 429.87,
+            "units": "dollars per planted acre",
+            "category": "Costs listed",
+            "survey_base_year": "Base survey of 2019"
+          },
+          "Total, operating costs": {
+            "value": 182.6,
+            "units": "dollars per planted acre",
+            "category": "Operating costs",
+            "survey_base_year": "Base survey of 2019"
+          },
+          "Total, allocated overhead": {
+            "value": 247.27,
+            "units": "dollars per planted acre",
+            "category": "Allocated overhead",
+            "survey_base_year": "Base survey of 2019"
+          }
+        },
+        "farmer_income_ready": false,
+        "limitations": [
+          "Regional sector benchmark, not field-specific cost.",
+          "Planted-acre basis must not be mixed with harvested-acre yield.",
+          "Irrigation water/power separation unresolved; no additional water charge may be added blindly.",
+          "Crop-class, production-system and geographic transfer require review."
+        ]
+      },
+      {
+        "region": "Prairie Gateway",
+        "year": 2025,
+        "items": {
+          "Price": {
+            "value": 3.31,
+            "units": "dollars per bushel at harvest",
+            "category": "Supporting information",
+            "survey_base_year": "Base survey of 2019"
+          },
+          "Total, allocated overhead": {
+            "value": 266.89,
+            "units": "dollars per planted acre",
+            "category": "Allocated overhead",
+            "survey_base_year": "Base survey of 2019"
+          },
+          "Total, operating costs": {
+            "value": 183.21,
+            "units": "dollars per planted acre",
+            "category": "Operating costs",
+            "survey_base_year": "Base survey of 2019"
+          },
+          "Yield": {
+            "value": 83.0,
+            "units": "bushels per planted acre",
+            "category": "Supporting information",
+            "survey_base_year": "Base survey of 2019"
+          },
+          "Total, costs listed": {
+            "value": 450.09,
+            "units": "dollars per planted acre",
+            "category": "Costs listed",
+            "survey_base_year": "Base survey of 2019"
+          }
+        },
+        "farmer_income_ready": false,
+        "limitations": [
+          "Regional sector benchmark, not field-specific cost.",
+          "Planted-acre basis must not be mixed with harvested-acre yield.",
+          "Irrigation water/power separation unresolved; no additional water charge may be added blindly.",
+          "Crop-class, production-system and geographic transfer require review."
+        ]
+      },
+      {
+        "region": "U.S. total",
+        "year": 2025,
+        "items": {
+          "Total, costs listed": {
+            "value": 447.66,
+            "units": "dollars per planted acre",
+            "category": "Costs listed",
+            "survey_base_year": "Base survey of 2019"
+          },
+          "Yield": {
+            "value": 79.0,
+            "units": "bushels per planted acre",
+            "category": "Supporting information",
+            "survey_base_year": "Base survey of 2019"
+          },
+          "Total, allocated overhead": {
+            "value": 264.42,
+            "units": "dollars per planted acre",
+            "category": "Allocated overhead",
+            "survey_base_year": "Base survey of 2019"
+          },
+          "Total, operating costs": {
+            "value": 183.24,
+            "units": "dollars per planted acre",
+            "category": "Operating costs",
+            "survey_base_year": "Base survey of 2019"
+          },
+          "Price": {
+            "value": 3.4,
+            "units": "dollars per bushel at harvest",
+            "category": "Supporting information",
+            "survey_base_year": "Base survey of 2019"
+          }
+        },
+        "farmer_income_ready": false,
+        "limitations": [
+          "Regional sector benchmark, not field-specific cost.",
+          "Planted-acre basis must not be mixed with harvested-acre yield.",
+          "Irrigation water/power separation unresolved; no additional water charge may be added blindly.",
+          "Crop-class, production-system and geographic transfer require review."
+        ]
+      }
+    ]
+  },
+  {
+    "commodity": "wheat",
+    "source": "https://www.ers.usda.gov/media/4978/wheat.csv?v=19709",
+    "source_sha256": "dcb104291c9f34c1b53292fb19ef27e32f9f51eed66915ab35ef6ec6020a8df5",
+    "benchmarks": [
+      {
+        "region": "Basin and Range",
+        "year": 2025,
+        "items": {
+          "Total, operating costs": {
+            "value": 201.28,
+            "units": "dollars per planted acre",
+            "category": "Operating costs",
+            "survey_base_year": "Base survey of 2022"
+          },
+          "Total, costs listed": {
+            "value": 474.8,
+            "units": "dollars per planted acre",
+            "category": "Costs listed",
+            "survey_base_year": "Base survey of 2022"
+          },
+          "Price": {
+            "value": 5.41,
+            "units": "dollars per bushel at harvest",
+            "category": "Supporting information",
+            "survey_base_year": "Base survey of 2022"
+          },
+          "Yield": {
+            "value": 67.0,
+            "units": "bushels per planted acre",
+            "category": "Supporting information",
+            "survey_base_year": "Base survey of 2022"
+          },
+          "Total, allocated overhead": {
+            "value": 273.52,
+            "units": "dollars per planted acre",
+            "category": "Allocated overhead",
+            "survey_base_year": "Base survey of 2022"
+          }
+        },
+        "farmer_income_ready": false,
+        "limitations": [
+          "Regional sector benchmark, not field-specific cost.",
+          "Planted-acre basis must not be mixed with harvested-acre yield.",
+          "Irrigation water/power separation unresolved; no additional water charge may be added blindly.",
+          "Crop-class, production-system and geographic transfer require review."
+        ]
+      },
+      {
+        "region": "Fruitful Rim",
+        "year": 2025,
+        "items": {
+          "Price": {
+            "value": 5.51,
+            "units": "dollars per bushel at harvest",
+            "category": "Supporting information",
+            "survey_base_year": "Base survey of 2022"
+          },
+          "Total, allocated overhead": {
+            "value": 318.76,
+            "units": "dollars per planted acre",
+            "category": "Allocated overhead",
+            "survey_base_year": "Base survey of 2022"
+          },
+          "Total, costs listed": {
+            "value": 506.73,
+            "units": "dollars per planted acre",
+            "category": "Costs listed",
+            "survey_base_year": "Base survey of 2022"
+          },
+          "Total, operating costs": {
+            "value": 187.97,
+            "units": "dollars per planted acre",
+            "category": "Operating costs",
+            "survey_base_year": "Base survey of 2022"
+          },
+          "Yield": {
+            "value": 59.0,
+            "units": "bushels per planted acre",
+            "category": "Supporting information",
+            "survey_base_year": "Base survey of 2022"
+          }
+        },
+        "farmer_income_ready": false,
+        "limitations": [
+          "Regional sector benchmark, not field-specific cost.",
+          "Planted-acre basis must not be mixed with harvested-acre yield.",
+          "Irrigation water/power separation unresolved; no additional water charge may be added blindly.",
+          "Crop-class, production-system and geographic transfer require review."
+        ]
+      },
+      {
+        "region": "Heartland",
+        "year": 2025,
+        "items": {
+          "Total, operating costs": {
+            "value": 230.85,
+            "units": "dollars per planted acre",
+            "category": "Operating costs",
+            "survey_base_year": "Base survey of 2022"
+          },
+          "Total, costs listed": {
+            "value": 566.53,
+            "units": "dollars per planted acre",
+            "category": "Costs listed",
+            "survey_base_year": "Base survey of 2022"
+          },
+          "Price": {
+            "value": 5.18,
+            "units": "dollars per bushel at harvest",
+            "category": "Supporting information",
+            "survey_base_year": "Base survey of 2022"
+          },
+          "Yield": {
+            "value": 87.0,
+            "units": "bushels per planted acre",
+            "category": "Supporting information",
+            "survey_base_year": "Base survey of 2022"
+          },
+          "Total, allocated overhead": {
+            "value": 335.68,
+            "units": "dollars per planted acre",
+            "category": "Allocated overhead",
+            "survey_base_year": "Base survey of 2022"
+          }
+        },
+        "farmer_income_ready": false,
+        "limitations": [
+          "Regional sector benchmark, not field-specific cost.",
+          "Planted-acre basis must not be mixed with harvested-acre yield.",
+          "Irrigation water/power separation unresolved; no additional water charge may be added blindly.",
+          "Crop-class, production-system and geographic transfer require review."
+        ]
+      },
+      {
+        "region": "Northern Crescent",
+        "year": 2025,
+        "items": {
+          "Price": {
+            "value": 5.24,
+            "units": "dollars per bushel at harvest",
+            "category": "Supporting information",
+            "survey_base_year": "Base survey of 2022"
+          },
+          "Yield": {
+            "value": 91.0,
+            "units": "bushels per planted acre",
+            "category": "Supporting information",
+            "survey_base_year": "Base survey of 2022"
+          },
+          "Total, costs listed": {
+            "value": 574.17,
+            "units": "dollars per planted acre",
+            "category": "Costs listed",
+            "survey_base_year": "Base survey of 2022"
+          },
+          "Total, allocated overhead": {
+            "value": 329.96,
+            "units": "dollars per planted acre",
+            "category": "Allocated overhead",
+            "survey_base_year": "Base survey of 2022"
+          },
+          "Total, operating costs": {
+            "value": 244.21,
+            "units": "dollars per planted acre",
+            "category": "Operating costs",
+            "survey_base_year": "Base survey of 2022"
+          }
+        },
+        "farmer_income_ready": false,
+        "limitations": [
+          "Regional sector benchmark, not field-specific cost.",
+          "Planted-acre basis must not be mixed with harvested-acre yield.",
+          "Irrigation water/power separation unresolved; no additional water charge may be added blindly.",
+          "Crop-class, production-system and geographic transfer require review."
+        ]
+      },
+      {
+        "region": "Northern Great Plains",
+        "year": 2025,
+        "items": {
+          "Yield": {
+            "value": 46.0,
+            "units": "bushels per planted acre",
+            "category": "Supporting information",
+            "survey_base_year": "Base survey of 2022"
+          },
+          "Total, allocated overhead": {
+            "value": 254.84,
+            "units": "dollars per planted acre",
+            "category": "Allocated overhead",
+            "survey_base_year": "Base survey of 2022"
+          },
+          "Price": {
+            "value": 5.04,
+            "units": "dollars per bushel at harvest",
+            "category": "Supporting information",
+            "survey_base_year": "Base survey of 2022"
+          },
+          "Total, costs listed": {
+            "value": 406.92,
+            "units": "dollars per planted acre",
+            "category": "Costs listed",
+            "survey_base_year": "Base survey of 2022"
+          },
+          "Total, operating costs": {
+            "value": 152.08,
+            "units": "dollars per planted acre",
+            "category": "Operating costs",
+            "survey_base_year": "Base survey of 2022"
+          }
+        },
+        "farmer_income_ready": false,
+        "limitations": [
+          "Regional sector benchmark, not field-specific cost.",
+          "Planted-acre basis must not be mixed with harvested-acre yield.",
+          "Irrigation water/power separation unresolved; no additional water charge may be added blindly.",
+          "Crop-class, production-system and geographic transfer require review."
+        ]
+      },
+      {
+        "region": "Prairie Gateway",
+        "year": 2025,
+        "items": {
+          "Total, allocated overhead": {
+            "value": 209.01,
+            "units": "dollars per planted acre",
+            "category": "Allocated overhead",
+            "survey_base_year": "Base survey of 2022"
+          },
+          "Yield": {
+            "value": 50.0,
+            "units": "bushels per planted acre",
+            "category": "Supporting information",
+            "survey_base_year": "Base survey of 2022"
+          },
+          "Total, costs listed": {
+            "value": 355.76,
+            "units": "dollars per planted acre",
+            "category": "Costs listed",
+            "survey_base_year": "Base survey of 2022"
+          },
+          "Total, operating costs": {
+            "value": 146.75,
+            "units": "dollars per planted acre",
+            "category": "Operating costs",
+            "survey_base_year": "Base survey of 2022"
+          },
+          "Price": {
+            "value": 4.91,
+            "units": "dollars per bushel at harvest",
+            "category": "Supporting information",
+            "survey_base_year": "Base survey of 2022"
+          }
+        },
+        "farmer_income_ready": false,
+        "limitations": [
+          "Regional sector benchmark, not field-specific cost.",
+          "Planted-acre basis must not be mixed with harvested-acre yield.",
+          "Irrigation water/power separation unresolved; no additional water charge may be added blindly.",
+          "Crop-class, production-system and geographic transfer require review."
+        ]
+      },
+      {
+        "region": "U.S. total",
+        "year": 2025,
+        "items": {
+          "Total, operating costs": {
+            "value": 162.96,
+            "units": "dollars per planted acre",
+            "category": "Operating costs",
+            "survey_base_year": "Base survey of 2022"
+          },
+          "Total, costs listed": {
+            "value": 408.55,
+            "units": "dollars per planted acre",
+            "category": "Costs listed",
+            "survey_base_year": "Base survey of 2022"
+          },
+          "Price": {
+            "value": 5.07,
+            "units": "dollars per bushel at harvest",
+            "category": "Supporting information",
+            "survey_base_year": "Base survey of 2022"
+          },
+          "Yield": {
+            "value": 54.0,
+            "units": "bushels per planted acre",
+            "category": "Supporting information",
+            "survey_base_year": "Base survey of 2022"
+          },
+          "Total, allocated overhead": {
+            "value": 245.59,
+            "units": "dollars per planted acre",
+            "category": "Allocated overhead",
+            "survey_base_year": "Base survey of 2022"
+          }
+        },
+        "farmer_income_ready": false,
+        "limitations": [
+          "Regional sector benchmark, not field-specific cost.",
+          "Planted-acre basis must not be mixed with harvested-acre yield.",
+          "Irrigation water/power separation unresolved; no additional water charge may be added blindly.",
+          "Crop-class, production-system and geographic transfer require review."
+        ]
+      }
+    ]
+  }
+]

@@ -1,0 +1,78 @@
+{
+  "alfalfa": {
+    "ready_for_income_comparison": false,
+    "source_geography": "Nevada state where supplied; not Churchill County",
+    "cost_basis_resolved": false,
+    "yield_per_acre": {
+      "value": 4.7,
+      "years": [
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ],
+      "unit": "TONS / ACRE",
+      "period": "YEAR"
+    },
+    "price_usd_per_unit": {
+      "value": 213.8,
+      "years": [
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ],
+      "unit": "$ / TON",
+      "period": "MARKETING YEAR"
+    }
+  },
+  "wheat": {
+    "ready_for_income_comparison": false,
+    "source_geography": "Nevada state where supplied; not Churchill County",
+    "cost_basis_resolved": false
+  },
+  "barley": {
+    "ready_for_income_comparison": false,
+    "source_geography": "Nevada state where supplied; not Churchill County",
+    "cost_basis_resolved": false
+  },
+  "sorghum": {
+    "ready_for_income_comparison": false,
+    "source_geography": "Nevada state where supplied; not Churchill County",
+    "cost_basis_resolved": false
+  },
+  "dry_beans": {
+    "ready_for_income_comparison": false,
+    "source_geography": "Nevada state where supplied; not Churchill County",
+    "cost_basis_resolved": false
+  },
+  "safflower": {
+    "ready_for_income_comparison": false,
+    "source_geography": "Nevada state where supplied; not Churchill County",
+    "cost_basis_resolved": false
+  },
+  "corn_silage": {
+    "ready_for_income_comparison": false,
+    "source_geography": "Nevada state where supplied; not Churchill County",
+    "cost_basis_resolved": false,
+    "yield_per_acre": {
+      "value": 23.2,
+      "years": [
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ],
+      "unit": "TONS / ACRE",
+      "period": "YEAR"
+    }
+  },
+  "cover_crop": {
+    "ready_for_income_comparison": false,
+    "source_geography": "Nevada state where supplied; not Churchill County",
+    "cost_basis_resolved": false
+  }
+}
