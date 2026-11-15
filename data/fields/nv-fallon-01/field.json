@@ -1,0 +1,13 @@
+{
+  "field_id": "nv-fallon-01",
+  "name": "Fallon reference point",
+  "place": "Fallon, Churchill County, Nevada",
+  "county": "Churchill",
+  "state": "NV",
+  "country": "US",
+  "zip": "89406",
+  "lat": 39.38,
+  "lon": -118.77,
+  "provenance": "real",
+  "notes": "Reference location from team plan; parcel boundary and farmer ownership not verified. Crop history is a point-pixel classification, not a farm survey."
+}

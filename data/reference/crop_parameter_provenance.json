@@ -1,0 +1,1279 @@
+{
+  "schema_version": 1,
+  "meaning": "Every crop parameter has a citation/status or an explicit reason for a blank. Generic literature and regional proxies are not field observations. No crop is model-ready while required cells are blank.",
+  "parameters": {
+    "alfalfa": {
+      "perennial": {
+        "value": 1,
+        "status": "published_generic",
+        "source": "FAO-56 Tables 11/12 crop identities and groups; wheat is defined as spring wheat for this reference row",
+        "url": "https://www.fao.org/4/x0490e/x0490e0b.htm"
+      },
+      "heavy_feeder": {
+        "value": null,
+        "status": "unavailable",
+        "reason": "Custom model rubric not yet agreed; these are not directly measured dataset variables."
+      },
+      "legume": {
+        "value": 1,
+        "status": "published_generic",
+        "source": "FAO-56 Tables 11/12 crop identities and groups; wheat is defined as spring wheat for this reference row",
+        "url": "https://www.fao.org/4/x0490e/x0490e0b.htm"
+      },
+      "plant_month": {
+        "value": null,
+        "status": "unavailable",
+        "reason": "UC IPM Intermountain recommendation is spring or August, not one exact date; established-stand green-up also differs from new sowing.",
+        "reference_url": "https://ipm.ucanr.edu/agriculture/alfalfa/planting-and-establishing-a-stand-stand-establishment/"
+      },
+      "plant_day": {
+        "value": null,
+        "status": "unavailable",
+        "reason": "UC IPM Intermountain recommendation is spring or August, not one exact date; established-stand green-up also differs from new sowing.",
+        "reference_url": "https://ipm.ucanr.edu/agriculture/alfalfa/planting-and-establishing-a-stand-stand-establishment/"
+      },
+      "stage_ini_days": {
+        "value": null,
+        "status": "unavailable",
+        "reason": "Local growing stages unresolved; FAO climate-region examples are not automatically Fallon timings."
+      },
+      "stage_dev_days": {
+        "value": null,
+        "status": "unavailable",
+        "reason": "Local growing stages unresolved; FAO climate-region examples are not automatically Fallon timings."
+      },
+      "stage_mid_days": {
+        "value": null,
+        "status": "unavailable",
+        "reason": "Local growing stages unresolved; FAO climate-region examples are not automatically Fallon timings."
+      },
+      "stage_late_days": {
+        "value": null,
+        "status": "unavailable",
+        "reason": "Local growing stages unresolved; FAO climate-region examples are not automatically Fallon timings."
+      },
+      "kc_ini": {
+        "value": 0.4,
+        "status": "published_generic",
+        "source": "FAO-56 Table 12",
+        "url": "https://www.fao.org/4/x0490e/x0490e0b.htm"
+      },
+      "kc_mid": {
+        "value": 0.95,
+        "status": "published_generic",
+        "source": "FAO-56 Table 12",
+        "url": "https://www.fao.org/4/x0490e/x0490e0b.htm"
+      },
+      "kc_end": {
+        "value": 0.9,
+        "status": "published_generic",
+        "source": "FAO-56 Table 12",
+        "url": "https://www.fao.org/4/x0490e/x0490e0b.htm"
+      },
+      "root_depth_m": {
+        "value": null,
+        "status": "unavailable",
+        "reason": "Published maximum rooting depth is a range, not a measured effective root depth for this soil."
+      },
+      "p_depletion": {
+        "value": 0.55,
+        "status": "published_generic",
+        "source": "https://www.fao.org/4/x0490e/x0490e0e.htm ; Table 22"
+      },
+      "ky": {
+        "value": null,
+        "status": "unavailable",
+        "reason": "FAO annex gives total-season ky range 0.7-1.1; scalar selection not justified."
+      },
+      "ece_threshold_ds_m": {
+        "value": 2.0,
+        "status": "published_generic",
+        "source": "FAO-56 Table 23",
+        "url": "https://www.fao.org/4/x0490e/x0490e0e.htm"
+      },
+      "salinity_slope_pct": {
+        "value": 7.3,
+        "status": "published_generic",
+        "source": "FAO-56 Table 23",
+        "url": "https://www.fao.org/4/x0490e/x0490e0e.htm"
+      },
+      "base_temp_c": {
+        "value": null,
+        "status": "unavailable",
+        "reason": "Crop/cultivar and heat-unit convention (C-days/F-days, base and daily caps) must match before use."
+      },
+      "gdd_required": {
+        "value": null,
+        "status": "unavailable",
+        "reason": "Crop/cultivar and heat-unit convention (C-days/F-days, base and daily caps) must match before use."
+      },
+      "frost_free_days_min": {
+        "value": 45,
+        "status": "regional_proxy",
+        "source": "https://extension.usu.edu/crops/tools/alternative-crops-for-cache-valley ; Cache Valley regional proxy, not a Fallon observation"
+      },
+      "residue_score": {
+        "value": null,
+        "status": "unavailable",
+        "reason": "Custom model rubric not yet agreed; these are not directly measured dataset variables."
+      },
+      "deep_roots": {
+        "value": null,
+        "status": "unavailable",
+        "reason": "Custom model rubric not yet agreed; these are not directly measured dataset variables."
+      },
+      "cover_benefit": {
+        "value": null,
+        "status": "unavailable",
+        "reason": "Custom model rubric not yet agreed; these are not directly measured dataset variables."
+      }
+    },
+    "wheat": {
+      "perennial": {
+        "value": 0,
+        "status": "published_generic",
+        "source": "FAO-56 Tables 11/12 crop identities and groups; wheat is defined as spring wheat for this reference row",
+        "url": "https://www.fao.org/4/x0490e/x0490e0b.htm"
+      },
+      "heavy_feeder": {
+        "value": null,
+        "status": "unavailable",
+        "reason": "Custom model rubric not yet agreed; these are not directly measured dataset variables."
+      },
+      "legume": {
+        "value": 0,
+        "status": "published_generic",
+        "source": "FAO-56 Tables 11/12 crop identities and groups; wheat is defined as spring wheat for this reference row",
+        "url": "https://www.fao.org/4/x0490e/x0490e0b.htm"
+      },
+      "plant_month": {
+        "value": 3,
+        "status": "regional_proxy",
+        "source": "FAO-56 Table 11",
+        "url": "https://www.fao.org/4/x0490e/x0490e0b.htm",
+        "limitation": "spring cereals, 35-45 latitude; March/April window; selecting a Fallon schedule requires local validation. Month is window start, not an exact sowing date."
+      },
+      "plant_day": {
+        "value": null,
+        "status": "unavailable",
+        "reason": "Fallon-specific cultivar and planting window not established; do not convert another region into a local date."
+      },
+      "stage_ini_days": {
+        "value": 20,
+        "status": "regional_proxy",
+        "source": "FAO-56 Table 11",
+        "url": "https://www.fao.org/4/x0490e/x0490e0b.htm",
+        "limitation": "spring cereals, 35-45 latitude; March/April window; selecting a Fallon schedule requires local validation. Month is window start, not an exact sowing date."
+      },
+      "stage_dev_days": {
+        "value": 25,
+        "status": "regional_proxy",
+        "source": "FAO-56 Table 11",
+        "url": "https://www.fao.org/4/x0490e/x0490e0b.htm",
+        "limitation": "spring cereals, 35-45 latitude; March/April window; selecting a Fallon schedule requires local validation. Month is window start, not an exact sowing date."
+      },
+      "stage_mid_days": {
+        "value": 60,
+        "status": "regional_proxy",
+        "source": "FAO-56 Table 11",
+        "url": "https://www.fao.org/4/x0490e/x0490e0b.htm",
+        "limitation": "spring cereals, 35-45 latitude; March/April window; selecting a Fallon schedule requires local validation. Month is window start, not an exact sowing date."
+      },
+      "stage_late_days": {
+        "value": 30,
+        "status": "regional_proxy",
+        "source": "FAO-56 Table 11",
+        "url": "https://www.fao.org/4/x0490e/x0490e0b.htm",
+        "limitation": "spring cereals, 35-45 latitude; March/April window; selecting a Fallon schedule requires local validation. Month is window start, not an exact sowing date."
+      },
+      "kc_ini": {
+        "value": 0.3,
+        "status": "published_generic",
+        "source": "FAO-56 Table 12",
+        "url": "https://www.fao.org/4/x0490e/x0490e0b.htm"
+      },
+      "kc_mid": {
+        "value": 1.15,
+        "status": "published_generic",
+        "source": "FAO-56 Table 12",
+        "url": "https://www.fao.org/4/x0490e/x0490e0b.htm"
+      },
+      "kc_end": {
+        "value": null,
+        "status": "unavailable",
+        "reason": "No verified scalar parameter selected; unavailable for modeling."
+      },
+      "root_depth_m": {
+        "value": null,
+        "status": "unavailable",
+        "reason": "Published maximum rooting depth is a range, not a measured effective root depth for this soil."
+      },
+      "p_depletion": {
+        "value": 0.55,
+        "status": "published_generic",
+        "source": "FAO-56 Table 22",
+        "url": "https://www.fao.org/4/x0490e/x0490e0e.htm"
+      },
+      "ky": {
+        "value": 1.15,
+        "status": "published_generic",
+        "source": "FAO irrigation scheduling annex Table 12, spring wheat total season",
+        "url": "https://www.fao.org/4/X5647E/x5647e0e.htm"
+      },
+      "ece_threshold_ds_m": {
+        "value": 6.0,
+        "status": "published_generic",
+        "source": "FAO-56 Table 23",
+        "url": "https://www.fao.org/4/x0490e/x0490e0e.htm"
+      },
+      "salinity_slope_pct": {
+        "value": 7.1,
+        "status": "published_generic",
+        "source": "FAO-56 Table 23",
+        "url": "https://www.fao.org/4/x0490e/x0490e0e.htm"
+      },
+      "base_temp_c": {
+        "value": null,
+        "status": "unavailable",
+        "reason": "Crop/cultivar and heat-unit convention (C-days/F-days, base and daily caps) must match before use."
+      },
+      "gdd_required": {
+        "value": null,
+        "status": "unavailable",
+        "reason": "Crop/cultivar and heat-unit convention (C-days/F-days, base and daily caps) must match before use."
+      },
+      "frost_free_days_min": {
+        "value": 95,
+        "status": "regional_proxy",
+        "source": "https://extension.usu.edu/crops/tools/alternative-crops-for-cache-valley ; Cache Valley regional proxy, not a Fallon observation"
+      },
+      "residue_score": {
+        "value": null,
+        "status": "unavailable",
+        "reason": "Custom model rubric not yet agreed; these are not directly measured dataset variables."
+      },
+      "deep_roots": {
+        "value": null,
+        "status": "unavailable",
+        "reason": "Custom model rubric not yet agreed; these are not directly measured dataset variables."
+      },
+      "cover_benefit": {
+        "value": null,
+        "status": "unavailable",
+        "reason": "Custom model rubric not yet agreed; these are not directly measured dataset variables."
+      }
+    },
+    "barley": {
+      "perennial": {
+        "value": 0,
+        "status": "published_generic",
+        "source": "FAO-56 Tables 11/12 crop identities and groups; wheat is defined as spring wheat for this reference row",
+        "url": "https://www.fao.org/4/x0490e/x0490e0b.htm"
+      },
+      "heavy_feeder": {
+        "value": null,
+        "status": "unavailable",
+        "reason": "Custom model rubric not yet agreed; these are not directly measured dataset variables."
+      },
+      "legume": {
+        "value": 0,
+        "status": "published_generic",
+        "source": "FAO-56 Tables 11/12 crop identities and groups; wheat is defined as spring wheat for this reference row",
+        "url": "https://www.fao.org/4/x0490e/x0490e0b.htm"
+      },
+      "plant_month": {
+        "value": 3,
+        "status": "regional_proxy",
+        "source": "FAO-56 Table 11",
+        "url": "https://www.fao.org/4/x0490e/x0490e0b.htm",
+        "limitation": "spring cereals, 35-45 latitude; March/April window; selecting a Fallon schedule requires local validation. Month is window start, not an exact sowing date."
+      },
+      "plant_day": {
+        "value": null,
+        "status": "unavailable",
+        "reason": "Fallon-specific cultivar and planting window not established; do not convert another region into a local date."
+      },
+      "stage_ini_days": {
+        "value": 20,
+        "status": "regional_proxy",
+        "source": "FAO-56 Table 11",
+        "url": "https://www.fao.org/4/x0490e/x0490e0b.htm",
+        "limitation": "spring cereals, 35-45 latitude; March/April window; selecting a Fallon schedule requires local validation. Month is window start, not an exact sowing date."
+      },
+      "stage_dev_days": {
+        "value": 25,
+        "status": "regional_proxy",
+        "source": "FAO-56 Table 11",
+        "url": "https://www.fao.org/4/x0490e/x0490e0b.htm",
+        "limitation": "spring cereals, 35-45 latitude; March/April window; selecting a Fallon schedule requires local validation. Month is window start, not an exact sowing date."
+      },
+      "stage_mid_days": {
+        "value": 60,
+        "status": "regional_proxy",
+        "source": "FAO-56 Table 11",
+        "url": "https://www.fao.org/4/x0490e/x0490e0b.htm",
+        "limitation": "spring cereals, 35-45 latitude; March/April window; selecting a Fallon schedule requires local validation. Month is window start, not an exact sowing date."
+      },
+      "stage_late_days": {
+        "value": 30,
+        "status": "regional_proxy",
+        "source": "FAO-56 Table 11",
+        "url": "https://www.fao.org/4/x0490e/x0490e0b.htm",
+        "limitation": "spring cereals, 35-45 latitude; March/April window; selecting a Fallon schedule requires local validation. Month is window start, not an exact sowing date."
+      },
+      "kc_ini": {
+        "value": 0.3,
+        "status": "published_generic",
+        "source": "FAO-56 Table 12",
+        "url": "https://www.fao.org/4/x0490e/x0490e0b.htm"
+      },
+      "kc_mid": {
+        "value": 1.15,
+        "status": "published_generic",
+        "source": "FAO-56 Table 12",
+        "url": "https://www.fao.org/4/x0490e/x0490e0b.htm"
+      },
+      "kc_end": {
+        "value": 0.25,
+        "status": "published_generic",
+        "source": "FAO-56 Table 12",
+        "url": "https://www.fao.org/4/x0490e/x0490e0b.htm"
+      },
+      "root_depth_m": {
+        "value": null,
+        "status": "unavailable",
+        "reason": "Published maximum rooting depth is a range, not a measured effective root depth for this soil."
+      },
+      "p_depletion": {
+        "value": 0.55,
+        "status": "published_generic",
+        "source": "FAO-56 Table 22",
+        "url": "https://www.fao.org/4/x0490e/x0490e0e.htm"
+      },
+      "ky": {
+        "value": null,
+        "status": "unavailable",
+        "reason": "Barley absent from verified FAO annex Table 12; no proxy assigned."
+      },
+      "ece_threshold_ds_m": {
+        "value": 8.0,
+        "status": "published_generic",
+        "source": "FAO-56 Table 23",
+        "url": "https://www.fao.org/4/x0490e/x0490e0e.htm"
+      },
+      "salinity_slope_pct": {
+        "value": 5.0,
+        "status": "published_generic",
+        "source": "FAO-56 Table 23",
+        "url": "https://www.fao.org/4/x0490e/x0490e0e.htm"
+      },
+      "base_temp_c": {
+        "value": null,
+        "status": "unavailable",
+        "reason": "Crop/cultivar and heat-unit convention (C-days/F-days, base and daily caps) must match before use."
+      },
+      "gdd_required": {
+        "value": null,
+        "status": "unavailable",
+        "reason": "Crop/cultivar and heat-unit convention (C-days/F-days, base and daily caps) must match before use."
+      },
+      "frost_free_days_min": {
+        "value": 75,
+        "status": "regional_proxy",
+        "source": "https://extension.usu.edu/crops/tools/alternative-crops-for-cache-valley ; Cache Valley regional proxy, not a Fallon observation"
+      },
+      "residue_score": {
+        "value": null,
+        "status": "unavailable",
+        "reason": "Custom model rubric not yet agreed; these are not directly measured dataset variables."
+      },
+      "deep_roots": {
+        "value": null,
+        "status": "unavailable",
+        "reason": "Custom model rubric not yet agreed; these are not directly measured dataset variables."
+      },
+      "cover_benefit": {
+        "value": null,
+        "status": "unavailable",
+        "reason": "Custom model rubric not yet agreed; these are not directly measured dataset variables."
+      }
+    },
+    "sorghum": {
+      "perennial": {
+        "value": 0,
+        "status": "published_generic",
+        "source": "FAO-56 Tables 11/12 crop identities and groups; wheat is defined as spring wheat for this reference row",
+        "url": "https://www.fao.org/4/x0490e/x0490e0b.htm"
+      },
+      "heavy_feeder": {
+        "value": null,
+        "status": "unavailable",
+        "reason": "Custom model rubric not yet agreed; these are not directly measured dataset variables."
+      },
+      "legume": {
+        "value": 0,
+        "status": "published_generic",
+        "source": "FAO-56 Tables 11/12 crop identities and groups; wheat is defined as spring wheat for this reference row",
+        "url": "https://www.fao.org/4/x0490e/x0490e0b.htm"
+      },
+      "plant_month": {
+        "value": null,
+        "status": "unavailable",
+        "reason": "Fallon-specific cultivar and planting window not established; do not convert another region into a local date."
+      },
+      "plant_day": {
+        "value": null,
+        "status": "unavailable",
+        "reason": "Fallon-specific cultivar and planting window not established; do not convert another region into a local date."
+      },
+      "stage_ini_days": {
+        "value": null,
+        "status": "unavailable",
+        "reason": "Local growing stages unresolved; FAO climate-region examples are not automatically Fallon timings."
+      },
+      "stage_dev_days": {
+        "value": null,
+        "status": "unavailable",
+        "reason": "Local growing stages unresolved; FAO climate-region examples are not automatically Fallon timings."
+      },
+      "stage_mid_days": {
+        "value": null,
+        "status": "unavailable",
+        "reason": "Local growing stages unresolved; FAO climate-region examples are not automatically Fallon timings."
+      },
+      "stage_late_days": {
+        "value": null,
+        "status": "unavailable",
+        "reason": "Local growing stages unresolved; FAO climate-region examples are not automatically Fallon timings."
+      },
+      "kc_ini": {
+        "value": null,
+        "status": "unavailable",
+        "reason": "No verified scalar parameter selected; unavailable for modeling."
+      },
+      "kc_mid": {
+        "value": null,
+        "status": "unavailable",
+        "reason": "No verified scalar parameter selected; unavailable for modeling."
+      },
+      "kc_end": {
+        "value": 0.55,
+        "status": "published_generic",
+        "source": "FAO-56 Table 12",
+        "url": "https://www.fao.org/4/x0490e/x0490e0b.htm"
+      },
+      "root_depth_m": {
+        "value": null,
+        "status": "unavailable",
+        "reason": "Published maximum rooting depth is a range, not a measured effective root depth for this soil."
+      },
+      "p_depletion": {
+        "value": 0.55,
+        "status": "published_generic",
+        "source": "FAO-56 Table 22",
+        "url": "https://www.fao.org/4/x0490e/x0490e0e.htm"
+      },
+      "ky": {
+        "value": 0.9,
+        "status": "published_generic",
+        "source": "https://www.fao.org/4/X5647E/x5647e0e.htm ; Table 12, total growing period"
+      },
+      "ece_threshold_ds_m": {
+        "value": 6.8,
+        "status": "published_generic",
+        "source": "FAO-56 Table 23",
+        "url": "https://www.fao.org/4/x0490e/x0490e0e.htm"
+      },
+      "salinity_slope_pct": {
+        "value": 16.0,
+        "status": "published_generic",
+        "source": "FAO-56 Table 23",
+        "url": "https://www.fao.org/4/x0490e/x0490e0e.htm"
+      },
+      "base_temp_c": {
+        "value": null,
+        "status": "unavailable",
+        "reason": "Crop/cultivar and heat-unit convention (C-days/F-days, base and daily caps) must match before use."
+      },
+      "gdd_required": {
+        "value": null,
+        "status": "unavailable",
+        "reason": "Crop/cultivar and heat-unit convention (C-days/F-days, base and daily caps) must match before use."
+      },
+      "frost_free_days_min": {
+        "value": 105,
+        "status": "regional_proxy",
+        "source": "https://extension.usu.edu/crops/tools/alternative-crops-for-cache-valley ; Cache Valley regional proxy, not a Fallon observation"
+      },
+      "residue_score": {
+        "value": null,
+        "status": "unavailable",
+        "reason": "Custom model rubric not yet agreed; these are not directly measured dataset variables."
+      },
+      "deep_roots": {
+        "value": null,
+        "status": "unavailable",
+        "reason": "Custom model rubric not yet agreed; these are not directly measured dataset variables."
+      },
+      "cover_benefit": {
+        "value": null,
+        "status": "unavailable",
+        "reason": "Custom model rubric not yet agreed; these are not directly measured dataset variables."
+      }
+    },
+    "dry_beans": {
+      "perennial": {
+        "value": 0,
+        "status": "published_generic",
+        "source": "FAO-56 Tables 11/12 crop identities and groups; wheat is defined as spring wheat for this reference row",
+        "url": "https://www.fao.org/4/x0490e/x0490e0b.htm"
+      },
+      "heavy_feeder": {
+        "value": null,
+        "status": "unavailable",
+        "reason": "Custom model rubric not yet agreed; these are not directly measured dataset variables."
+      },
+      "legume": {
+        "value": 1,
+        "status": "published_generic",
+        "source": "FAO-56 Tables 11/12 crop identities and groups; wheat is defined as spring wheat for this reference row",
+        "url": "https://www.fao.org/4/x0490e/x0490e0b.htm"
+      },
+      "plant_month": {
+        "value": 6,
+        "status": "regional_proxy",
+        "source": "FAO-56 Table 11",
+        "url": "https://www.fao.org/4/x0490e/x0490e0b.htm",
+        "limitation": "Idaho dry beans; June; selecting a Fallon schedule requires local validation. Month is window start, not an exact sowing date."
+      },
+      "plant_day": {
+        "value": null,
+        "status": "unavailable",
+        "reason": "Fallon-specific cultivar and planting window not established; do not convert another region into a local date."
+      },
+      "stage_ini_days": {
+        "value": 25,
+        "status": "regional_proxy",
+        "source": "FAO-56 Table 11",
+        "url": "https://www.fao.org/4/x0490e/x0490e0b.htm",
+        "limitation": "Idaho dry beans; June; selecting a Fallon schedule requires local validation. Month is window start, not an exact sowing date."
+      },
+      "stage_dev_days": {
+        "value": 25,
+        "status": "regional_proxy",
+        "source": "FAO-56 Table 11",
+        "url": "https://www.fao.org/4/x0490e/x0490e0b.htm",
+        "limitation": "Idaho dry beans; June; selecting a Fallon schedule requires local validation. Month is window start, not an exact sowing date."
+      },
+      "stage_mid_days": {
+        "value": 30,
+        "status": "regional_proxy",
+        "source": "FAO-56 Table 11",
+        "url": "https://www.fao.org/4/x0490e/x0490e0b.htm",
+        "limitation": "Idaho dry beans; June; selecting a Fallon schedule requires local validation. Month is window start, not an exact sowing date."
+      },
+      "stage_late_days": {
+        "value": 20,
+        "status": "regional_proxy",
+        "source": "FAO-56 Table 11",
+        "url": "https://www.fao.org/4/x0490e/x0490e0b.htm",
+        "limitation": "Idaho dry beans; June; selecting a Fallon schedule requires local validation. Month is window start, not an exact sowing date."
+      },
+      "kc_ini": {
+        "value": 0.5,
+        "status": "published_generic",
+        "source": "FAO-56 Table 12",
+        "url": "https://www.fao.org/4/x0490e/x0490e0b.htm"
+      },
+      "kc_mid": {
+        "value": 1.15,
+        "status": "published_generic",
+        "source": "FAO-56 Table 12",
+        "url": "https://www.fao.org/4/x0490e/x0490e0b.htm"
+      },
+      "kc_end": {
+        "value": 0.3,
+        "status": "published_generic",
+        "source": "FAO-56 Table 12",
+        "url": "https://www.fao.org/4/x0490e/x0490e0b.htm"
+      },
+      "root_depth_m": {
+        "value": null,
+        "status": "unavailable",
+        "reason": "Published maximum rooting depth is a range, not a measured effective root depth for this soil."
+      },
+      "p_depletion": {
+        "value": 0.45,
+        "status": "published_generic",
+        "source": "https://www.fao.org/4/x0490e/x0490e0e.htm ; Table 22"
+      },
+      "ky": {
+        "value": 1.15,
+        "status": "published_generic",
+        "source": "https://www.fao.org/4/X5647E/x5647e0e.htm ; Table 12, total growing period"
+      },
+      "ece_threshold_ds_m": {
+        "value": 1.0,
+        "status": "published_generic",
+        "source": "FAO-56 Table 23",
+        "url": "https://www.fao.org/4/x0490e/x0490e0e.htm"
+      },
+      "salinity_slope_pct": {
+        "value": 19.0,
+        "status": "published_generic",
+        "source": "FAO-56 Table 23",
+        "url": "https://www.fao.org/4/x0490e/x0490e0e.htm"
+      },
+      "base_temp_c": {
+        "value": null,
+        "status": "unavailable",
+        "reason": "Crop/cultivar and heat-unit convention (C-days/F-days, base and daily caps) must match before use."
+      },
+      "gdd_required": {
+        "value": null,
+        "status": "unavailable",
+        "reason": "Crop/cultivar and heat-unit convention (C-days/F-days, base and daily caps) must match before use."
+      },
+      "frost_free_days_min": {
+        "value": 100,
+        "status": "regional_proxy",
+        "source": "https://extension.usu.edu/crops/tools/alternative-crops-for-cache-valley ; Cache Valley regional proxy, not a Fallon observation"
+      },
+      "residue_score": {
+        "value": null,
+        "status": "unavailable",
+        "reason": "Custom model rubric not yet agreed; these are not directly measured dataset variables."
+      },
+      "deep_roots": {
+        "value": null,
+        "status": "unavailable",
+        "reason": "Custom model rubric not yet agreed; these are not directly measured dataset variables."
+      },
+      "cover_benefit": {
+        "value": null,
+        "status": "unavailable",
+        "reason": "Custom model rubric not yet agreed; these are not directly measured dataset variables."
+      }
+    },
+    "safflower": {
+      "perennial": {
+        "value": 0,
+        "status": "published_generic",
+        "source": "FAO-56 Tables 11/12 crop identities and groups; wheat is defined as spring wheat for this reference row",
+        "url": "https://www.fao.org/4/x0490e/x0490e0b.htm"
+      },
+      "heavy_feeder": {
+        "value": null,
+        "status": "unavailable",
+        "reason": "Custom model rubric not yet agreed; these are not directly measured dataset variables."
+      },
+      "legume": {
+        "value": 0,
+        "status": "published_generic",
+        "source": "FAO-56 Tables 11/12 crop identities and groups; wheat is defined as spring wheat for this reference row",
+        "url": "https://www.fao.org/4/x0490e/x0490e0b.htm"
+      },
+      "plant_month": {
+        "value": 4,
+        "status": "regional_proxy",
+        "source": "FAO-56 Table 11",
+        "url": "https://www.fao.org/4/x0490e/x0490e0b.htm",
+        "limitation": "California safflower; April; selecting a Fallon schedule requires local validation. Month is window start, not an exact sowing date."
+      },
+      "plant_day": {
+        "value": null,
+        "status": "unavailable",
+        "reason": "Fallon-specific cultivar and planting window not established; do not convert another region into a local date."
+      },
+      "stage_ini_days": {
+        "value": 20,
+        "status": "regional_proxy",
+        "source": "FAO-56 Table 11",
+        "url": "https://www.fao.org/4/x0490e/x0490e0b.htm",
+        "limitation": "California safflower; April; selecting a Fallon schedule requires local validation. Month is window start, not an exact sowing date."
+      },
+      "stage_dev_days": {
+        "value": 35,
+        "status": "regional_proxy",
+        "source": "FAO-56 Table 11",
+        "url": "https://www.fao.org/4/x0490e/x0490e0b.htm",
+        "limitation": "California safflower; April; selecting a Fallon schedule requires local validation. Month is window start, not an exact sowing date."
+      },
+      "stage_mid_days": {
+        "value": 45,
+        "status": "regional_proxy",
+        "source": "FAO-56 Table 11",
+        "url": "https://www.fao.org/4/x0490e/x0490e0b.htm",
+        "limitation": "California safflower; April; selecting a Fallon schedule requires local validation. Month is window start, not an exact sowing date."
+      },
+      "stage_late_days": {
+        "value": 25,
+        "status": "regional_proxy",
+        "source": "FAO-56 Table 11",
+        "url": "https://www.fao.org/4/x0490e/x0490e0b.htm",
+        "limitation": "California safflower; April; selecting a Fallon schedule requires local validation. Month is window start, not an exact sowing date."
+      },
+      "kc_ini": {
+        "value": 0.35,
+        "status": "published_generic",
+        "source": "FAO-56 Table 12",
+        "url": "https://www.fao.org/4/x0490e/x0490e0b.htm"
+      },
+      "kc_mid": {
+        "value": null,
+        "status": "unavailable",
+        "reason": "No verified scalar parameter selected; unavailable for modeling."
+      },
+      "kc_end": {
+        "value": 0.25,
+        "status": "published_generic",
+        "source": "FAO-56 Table 12",
+        "url": "https://www.fao.org/4/x0490e/x0490e0b.htm"
+      },
+      "root_depth_m": {
+        "value": null,
+        "status": "unavailable",
+        "reason": "Published maximum rooting depth is a range, not a measured effective root depth for this soil."
+      },
+      "p_depletion": {
+        "value": 0.6,
+        "status": "published_generic",
+        "source": "FAO-56 Table 22",
+        "url": "https://www.fao.org/4/x0490e/x0490e0e.htm"
+      },
+      "ky": {
+        "value": 0.8,
+        "status": "published_generic",
+        "source": "https://www.fao.org/4/X5647E/x5647e0e.htm ; Table 12, total growing period"
+      },
+      "ece_threshold_ds_m": {
+        "value": null,
+        "status": "unavailable",
+        "reason": "FAO-56 Table 23 lists no numeric value for safflower."
+      },
+      "salinity_slope_pct": {
+        "value": null,
+        "status": "unavailable",
+        "reason": "FAO-56 Table 23 lists no numeric value for safflower."
+      },
+      "base_temp_c": {
+        "value": null,
+        "status": "unavailable",
+        "reason": "Crop/cultivar and heat-unit convention (C-days/F-days, base and daily caps) must match before use."
+      },
+      "gdd_required": {
+        "value": null,
+        "status": "unavailable",
+        "reason": "Crop/cultivar and heat-unit convention (C-days/F-days, base and daily caps) must match before use."
+      },
+      "frost_free_days_min": {
+        "value": 120,
+        "status": "regional_proxy",
+        "source": "https://extension.usu.edu/crops/tools/alternative-crops-for-cache-valley ; Cache Valley regional proxy, not a Fallon observation"
+      },
+      "residue_score": {
+        "value": null,
+        "status": "unavailable",
+        "reason": "Custom model rubric not yet agreed; these are not directly measured dataset variables."
+      },
+      "deep_roots": {
+        "value": null,
+        "status": "unavailable",
+        "reason": "Custom model rubric not yet agreed; these are not directly measured dataset variables."
+      },
+      "cover_benefit": {
+        "value": null,
+        "status": "unavailable",
+        "reason": "Custom model rubric not yet agreed; these are not directly measured dataset variables."
+      }
+    },
+    "corn_silage": {
+      "perennial": {
+        "value": 0,
+        "status": "published_generic",
+        "source": "FAO-56 Tables 11/12 crop identities and groups; wheat is defined as spring wheat for this reference row",
+        "url": "https://www.fao.org/4/x0490e/x0490e0b.htm"
+      },
+      "heavy_feeder": {
+        "value": null,
+        "status": "unavailable",
+        "reason": "Custom model rubric not yet agreed; these are not directly measured dataset variables."
+      },
+      "legume": {
+        "value": 0,
+        "status": "published_generic",
+        "source": "FAO-56 Tables 11/12 crop identities and groups; wheat is defined as spring wheat for this reference row",
+        "url": "https://www.fao.org/4/x0490e/x0490e0b.htm"
+      },
+      "plant_month": {
+        "value": null,
+        "status": "unavailable",
+        "reason": "Fallon-specific cultivar and planting window not established; do not convert another region into a local date."
+      },
+      "plant_day": {
+        "value": null,
+        "status": "unavailable",
+        "reason": "Fallon-specific cultivar and planting window not established; do not convert another region into a local date."
+      },
+      "stage_ini_days": {
+        "value": null,
+        "status": "unavailable",
+        "reason": "Local growing stages unresolved; FAO climate-region examples are not automatically Fallon timings."
+      },
+      "stage_dev_days": {
+        "value": null,
+        "status": "unavailable",
+        "reason": "Local growing stages unresolved; FAO climate-region examples are not automatically Fallon timings."
+      },
+      "stage_mid_days": {
+        "value": null,
+        "status": "unavailable",
+        "reason": "Local growing stages unresolved; FAO climate-region examples are not automatically Fallon timings."
+      },
+      "stage_late_days": {
+        "value": null,
+        "status": "unavailable",
+        "reason": "Local growing stages unresolved; FAO climate-region examples are not automatically Fallon timings."
+      },
+      "kc_ini": {
+        "value": null,
+        "status": "unavailable",
+        "reason": "No verified scalar parameter selected; unavailable for modeling."
+      },
+      "kc_mid": {
+        "value": null,
+        "status": "unavailable",
+        "reason": "No verified scalar parameter selected; unavailable for modeling."
+      },
+      "kc_end": {
+        "value": null,
+        "status": "unavailable",
+        "reason": "No verified scalar parameter selected; unavailable for modeling."
+      },
+      "root_depth_m": {
+        "value": null,
+        "status": "unavailable",
+        "reason": "Published maximum rooting depth is a range, not a measured effective root depth for this soil."
+      },
+      "p_depletion": {
+        "value": null,
+        "status": "unavailable",
+        "reason": "No verified scalar parameter selected; unavailable for modeling."
+      },
+      "ky": {
+        "value": null,
+        "status": "unavailable",
+        "reason": "Maize grain ky is not assumed to apply to harvested forage biomass."
+      },
+      "ece_threshold_ds_m": {
+        "value": 1.8,
+        "status": "published_generic",
+        "source": "FAO-56 Table 23",
+        "url": "https://www.fao.org/4/x0490e/x0490e0e.htm"
+      },
+      "salinity_slope_pct": {
+        "value": 7.4,
+        "status": "published_generic",
+        "source": "FAO-56 Table 23",
+        "url": "https://www.fao.org/4/x0490e/x0490e0e.htm"
+      },
+      "base_temp_c": {
+        "value": null,
+        "status": "unavailable",
+        "reason": "Crop/cultivar and heat-unit convention (C-days/F-days, base and daily caps) must match before use."
+      },
+      "gdd_required": {
+        "value": null,
+        "status": "unavailable",
+        "reason": "Crop/cultivar and heat-unit convention (C-days/F-days, base and daily caps) must match before use."
+      },
+      "frost_free_days_min": {
+        "value": 115,
+        "status": "regional_proxy",
+        "source": "https://extension.usu.edu/crops/tools/alternative-crops-for-cache-valley ; Cache Valley regional proxy, not a Fallon observation"
+      },
+      "residue_score": {
+        "value": null,
+        "status": "unavailable",
+        "reason": "Custom model rubric not yet agreed; these are not directly measured dataset variables."
+      },
+      "deep_roots": {
+        "value": null,
+        "status": "unavailable",
+        "reason": "Custom model rubric not yet agreed; these are not directly measured dataset variables."
+      },
+      "cover_benefit": {
+        "value": null,
+        "status": "unavailable",
+        "reason": "Custom model rubric not yet agreed; these are not directly measured dataset variables."
+      }
+    },
+    "cover_crop": {
+      "perennial": {
+        "value": null,
+        "status": "unavailable",
+        "reason": "Cover-crop species or mixture unspecified; no unique parameter set."
+      },
+      "heavy_feeder": {
+        "value": null,
+        "status": "unavailable",
+        "reason": "Cover-crop species or mixture unspecified; no unique parameter set."
+      },
+      "legume": {
+        "value": null,
+        "status": "unavailable",
+        "reason": "Cover-crop species or mixture unspecified; no unique parameter set."
+      },
+      "plant_month": {
+        "value": null,
+        "status": "unavailable",
+        "reason": "Cover-crop species or mixture unspecified; no unique parameter set."
+      },
+      "plant_day": {
+        "value": null,
+        "status": "unavailable",
+        "reason": "Cover-crop species or mixture unspecified; no unique parameter set."
+      },
+      "stage_ini_days": {
+        "value": null,
+        "status": "unavailable",
+        "reason": "Cover-crop species or mixture unspecified; no unique parameter set."
+      },
+      "stage_dev_days": {
+        "value": null,
+        "status": "unavailable",
+        "reason": "Cover-crop species or mixture unspecified; no unique parameter set."
+      },
+      "stage_mid_days": {
+        "value": null,
+        "status": "unavailable",
+        "reason": "Cover-crop species or mixture unspecified; no unique parameter set."
+      },
+      "stage_late_days": {
+        "value": null,
+        "status": "unavailable",
+        "reason": "Cover-crop species or mixture unspecified; no unique parameter set."
+      },
+      "kc_ini": {
+        "value": null,
+        "status": "unavailable",
+        "reason": "Cover-crop species or mixture unspecified; no unique parameter set."
+      },
+      "kc_mid": {
+        "value": null,
+        "status": "unavailable",
+        "reason": "Cover-crop species or mixture unspecified; no unique parameter set."
+      },
+      "kc_end": {
+        "value": null,
+        "status": "unavailable",
+        "reason": "Cover-crop species or mixture unspecified; no unique parameter set."
+      },
+      "root_depth_m": {
+        "value": null,
+        "status": "unavailable",
+        "reason": "Cover-crop species or mixture unspecified; no unique parameter set."
+      },
+      "p_depletion": {
+        "value": null,
+        "status": "unavailable",
+        "reason": "Cover-crop species or mixture unspecified; no unique parameter set."
+      },
+      "ky": {
+        "value": null,
+        "status": "unavailable",
+        "reason": "Cover-crop species or mixture unspecified; no unique parameter set."
+      },
+      "ece_threshold_ds_m": {
+        "value": null,
+        "status": "unavailable",
+        "reason": "Cover-crop species or mixture unspecified; no unique parameter set."
+      },
+      "salinity_slope_pct": {
+        "value": null,
+        "status": "unavailable",
+        "reason": "Cover-crop species or mixture unspecified; no unique parameter set."
+      },
+      "base_temp_c": {
+        "value": null,
+        "status": "unavailable",
+        "reason": "Cover-crop species or mixture unspecified; no unique parameter set."
+      },
+      "gdd_required": {
+        "value": null,
+        "status": "unavailable",
+        "reason": "Cover-crop species or mixture unspecified; no unique parameter set."
+      },
+      "frost_free_days_min": {
+        "value": null,
+        "status": "unavailable",
+        "reason": "Cover-crop species or mixture unspecified; no unique parameter set."
+      },
+      "residue_score": {
+        "value": null,
+        "status": "unavailable",
+        "reason": "Cover-crop species or mixture unspecified; no unique parameter set."
+      },
+      "deep_roots": {
+        "value": null,
+        "status": "unavailable",
+        "reason": "Cover-crop species or mixture unspecified; no unique parameter set."
+      },
+      "cover_benefit": {
+        "value": null,
+        "status": "unavailable",
+        "reason": "Cover-crop species or mixture unspecified; no unique parameter set."
+      }
+    },
+    "corn": {
+      "perennial": {
+        "value": 0,
+        "status": "published_generic",
+        "source": "FAO-56 Tables 11/12 crop identities and groups; wheat is defined as spring wheat for this reference row",
+        "url": "https://www.fao.org/4/x0490e/x0490e0b.htm"
+      },
+      "heavy_feeder": {
+        "value": null,
+        "status": "unavailable",
+        "reason": "Custom model rubric not yet agreed; these are not directly measured dataset variables."
+      },
+      "legume": {
+        "value": 0,
+        "status": "published_generic",
+        "source": "FAO-56 Tables 11/12 crop identities and groups; wheat is defined as spring wheat for this reference row",
+        "url": "https://www.fao.org/4/x0490e/x0490e0b.htm"
+      },
+      "plant_month": {
+        "value": 4,
+        "status": "regional_proxy",
+        "source": "FAO-56 Table 11",
+        "url": "https://www.fao.org/4/x0490e/x0490e0b.htm",
+        "limitation": "Idaho grain maize; April; selecting a Fallon schedule requires local validation. Month is window start, not an exact sowing date."
+      },
+      "plant_day": {
+        "value": null,
+        "status": "unavailable",
+        "reason": "Fallon-specific cultivar and planting window not established; do not convert another region into a local date."
+      },
+      "stage_ini_days": {
+        "value": 30,
+        "status": "regional_proxy",
+        "source": "FAO-56 Table 11",
+        "url": "https://www.fao.org/4/x0490e/x0490e0b.htm",
+        "limitation": "Idaho grain maize; April; selecting a Fallon schedule requires local validation. Month is window start, not an exact sowing date."
+      },
+      "stage_dev_days": {
+        "value": 40,
+        "status": "regional_proxy",
+        "source": "FAO-56 Table 11",
+        "url": "https://www.fao.org/4/x0490e/x0490e0b.htm",
+        "limitation": "Idaho grain maize; April; selecting a Fallon schedule requires local validation. Month is window start, not an exact sowing date."
+      },
+      "stage_mid_days": {
+        "value": 50,
+        "status": "regional_proxy",
+        "source": "FAO-56 Table 11",
+        "url": "https://www.fao.org/4/x0490e/x0490e0b.htm",
+        "limitation": "Idaho grain maize; April; selecting a Fallon schedule requires local validation. Month is window start, not an exact sowing date."
+      },
+      "stage_late_days": {
+        "value": 50,
+        "status": "regional_proxy",
+        "source": "FAO-56 Table 11",
+        "url": "https://www.fao.org/4/x0490e/x0490e0b.htm",
+        "limitation": "Idaho grain maize; April; selecting a Fallon schedule requires local validation. Month is window start, not an exact sowing date."
+      },
+      "kc_ini": {
+        "value": null,
+        "status": "unavailable",
+        "reason": "No verified scalar parameter selected; unavailable for modeling."
+      },
+      "kc_mid": {
+        "value": 1.2,
+        "status": "published_generic",
+        "source": "FAO-56 Table 12",
+        "url": "https://www.fao.org/4/x0490e/x0490e0b.htm"
+      },
+      "kc_end": {
+        "value": null,
+        "status": "unavailable",
+        "reason": "No verified scalar parameter selected; unavailable for modeling."
+      },
+      "root_depth_m": {
+        "value": null,
+        "status": "unavailable",
+        "reason": "Published maximum rooting depth is a range, not a measured effective root depth for this soil."
+      },
+      "p_depletion": {
+        "value": 0.55,
+        "status": "published_generic",
+        "source": "FAO-56 Table 22",
+        "url": "https://www.fao.org/4/x0490e/x0490e0e.htm"
+      },
+      "ky": {
+        "value": 1.25,
+        "status": "published_generic",
+        "source": "https://www.fao.org/4/X5647E/x5647e0e.htm ; Table 12, total growing period"
+      },
+      "ece_threshold_ds_m": {
+        "value": 1.7,
+        "status": "published_generic",
+        "source": "FAO-56 Table 23",
+        "url": "https://www.fao.org/4/x0490e/x0490e0e.htm"
+      },
+      "salinity_slope_pct": {
+        "value": 12.0,
+        "status": "published_generic",
+        "source": "FAO-56 Table 23",
+        "url": "https://www.fao.org/4/x0490e/x0490e0e.htm"
+      },
+      "base_temp_c": {
+        "value": null,
+        "status": "unavailable",
+        "reason": "Crop/cultivar and heat-unit convention (C-days/F-days, base and daily caps) must match before use."
+      },
+      "gdd_required": {
+        "value": null,
+        "status": "unavailable",
+        "reason": "Crop/cultivar and heat-unit convention (C-days/F-days, base and daily caps) must match before use."
+      },
+      "frost_free_days_min": {
+        "value": 115,
+        "status": "regional_proxy",
+        "source": "https://extension.usu.edu/crops/tools/alternative-crops-for-cache-valley ; Cache Valley regional proxy, not a Fallon observation"
+      },
+      "residue_score": {
+        "value": null,
+        "status": "unavailable",
+        "reason": "Custom model rubric not yet agreed; these are not directly measured dataset variables."
+      },
+      "deep_roots": {
+        "value": null,
+        "status": "unavailable",
+        "reason": "Custom model rubric not yet agreed; these are not directly measured dataset variables."
+      },
+      "cover_benefit": {
+        "value": null,
+        "status": "unavailable",
+        "reason": "Custom model rubric not yet agreed; these are not directly measured dataset variables."
+      }
+    },
+    "fallow": {
+      "perennial": {
+        "value": null,
+        "status": "unavailable",
+        "reason": "Not a harvested crop; requires explicit bare-soil/management treatment, not fabricated crop coefficients."
+      },
+      "heavy_feeder": {
+        "value": null,
+        "status": "unavailable",
+        "reason": "Not a harvested crop; requires explicit bare-soil/management treatment, not fabricated crop coefficients."
+      },
+      "legume": {
+        "value": null,
+        "status": "unavailable",
+        "reason": "Not a harvested crop; requires explicit bare-soil/management treatment, not fabricated crop coefficients."
+      },
+      "plant_month": {
+        "value": null,
+        "status": "unavailable",
+        "reason": "Not a harvested crop; requires explicit bare-soil/management treatment, not fabricated crop coefficients."
+      },
+      "plant_day": {
+        "value": null,
+        "status": "unavailable",
+        "reason": "Not a harvested crop; requires explicit bare-soil/management treatment, not fabricated crop coefficients."
+      },
+      "stage_ini_days": {
+        "value": null,
+        "status": "unavailable",
+        "reason": "Not a harvested crop; requires explicit bare-soil/management treatment, not fabricated crop coefficients."
+      },
+      "stage_dev_days": {
+        "value": null,
+        "status": "unavailable",
+        "reason": "Not a harvested crop; requires explicit bare-soil/management treatment, not fabricated crop coefficients."
+      },
+      "stage_mid_days": {
+        "value": null,
+        "status": "unavailable",
+        "reason": "Not a harvested crop; requires explicit bare-soil/management treatment, not fabricated crop coefficients."
+      },
+      "stage_late_days": {
+        "value": null,
+        "status": "unavailable",
+        "reason": "Not a harvested crop; requires explicit bare-soil/management treatment, not fabricated crop coefficients."
+      },
+      "kc_ini": {
+        "value": null,
+        "status": "unavailable",
+        "reason": "Not a harvested crop; requires explicit bare-soil/management treatment, not fabricated crop coefficients."
+      },
+      "kc_mid": {
+        "value": null,
+        "status": "unavailable",
+        "reason": "Not a harvested crop; requires explicit bare-soil/management treatment, not fabricated crop coefficients."
+      },
+      "kc_end": {
+        "value": null,
+        "status": "unavailable",
+        "reason": "Not a harvested crop; requires explicit bare-soil/management treatment, not fabricated crop coefficients."
+      },
+      "root_depth_m": {
+        "value": null,
+        "status": "unavailable",
+        "reason": "Not a harvested crop; requires explicit bare-soil/management treatment, not fabricated crop coefficients."
+      },
+      "p_depletion": {
+        "value": null,
+        "status": "unavailable",
+        "reason": "Not a harvested crop; requires explicit bare-soil/management treatment, not fabricated crop coefficients."
+      },
+      "ky": {
+        "value": null,
+        "status": "unavailable",
+        "reason": "Not a harvested crop; requires explicit bare-soil/management treatment, not fabricated crop coefficients."
+      },
+      "ece_threshold_ds_m": {
+        "value": null,
+        "status": "unavailable",
+        "reason": "Not a harvested crop; requires explicit bare-soil/management treatment, not fabricated crop coefficients."
+      },
+      "salinity_slope_pct": {
+        "value": null,
+        "status": "unavailable",
+        "reason": "Not a harvested crop; requires explicit bare-soil/management treatment, not fabricated crop coefficients."
+      },
+      "base_temp_c": {
+        "value": null,
+        "status": "unavailable",
+        "reason": "Not a harvested crop; requires explicit bare-soil/management treatment, not fabricated crop coefficients."
+      },
+      "gdd_required": {
+        "value": null,
+        "status": "unavailable",
+        "reason": "Not a harvested crop; requires explicit bare-soil/management treatment, not fabricated crop coefficients."
+      },
+      "frost_free_days_min": {
+        "value": null,
+        "status": "unavailable",
+        "reason": "Not a harvested crop; requires explicit bare-soil/management treatment, not fabricated crop coefficients."
+      },
+      "residue_score": {
+        "value": null,
+        "status": "unavailable",
+        "reason": "Not a harvested crop; requires explicit bare-soil/management treatment, not fabricated crop coefficients."
+      },
+      "deep_roots": {
+        "value": null,
+        "status": "unavailable",
+        "reason": "Not a harvested crop; requires explicit bare-soil/management treatment, not fabricated crop coefficients."
+      },
+      "cover_benefit": {
+        "value": null,
+        "status": "unavailable",
+        "reason": "Not a harvested crop; requires explicit bare-soil/management treatment, not fabricated crop coefficients."
+      }
+    }
+  }
+}

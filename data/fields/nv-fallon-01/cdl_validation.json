@@ -1,0 +1,50 @@
+{
+  "lat": 39.38,
+  "lon": -118.77,
+  "x_epsg5070": -1924961.9510180918,
+  "y_epsg5070": 2049220.3009903221,
+  "neighbour_year": 2025,
+  "neighbours": [
+    {
+      "dx_m": 100,
+      "dy_m": 0,
+      "year": 2025,
+      "cdl_code": 36,
+      "crop": "alfalfa",
+      "category": "Alfalfa",
+      "source": "https://nassgeodata.gmu.edu/axis2/services/CDLService/GetCDLValue?year=2025&x=-1924861.9510180918&y=2049220.3009903221",
+      "retrieved_at": "2026-11-15T03:35:06.333131+00:00"
+    },
+    {
+      "dx_m": -100,
+      "dy_m": 0,
+      "year": 2025,
+      "cdl_code": 36,
+      "crop": "alfalfa",
+      "category": "Alfalfa",
+      "source": "https://nassgeodata.gmu.edu/axis2/services/CDLService/GetCDLValue?year=2025&x=-1925061.9510180918&y=2049220.3009903221",
+      "retrieved_at": "2026-11-15T03:35:06.490759+00:00"
+    },
+    {
+      "dx_m": 0,
+      "dy_m": 100,
+      "year": 2025,
+      "cdl_code": 36,
+      "crop": "alfalfa",
+      "category": "Alfalfa",
+      "source": "https://nassgeodata.gmu.edu/axis2/services/CDLService/GetCDLValue?year=2025&x=-1924961.9510180918&y=2049320.3009903221",
+      "retrieved_at": "2026-11-15T03:35:06.639010+00:00"
+    },
+    {
+      "dx_m": 0,
+      "dy_m": -100,
+      "year": 2025,
+      "cdl_code": 36,
+      "crop": "alfalfa",
+      "category": "Alfalfa",
+      "source": "https://nassgeodata.gmu.edu/axis2/services/CDLService/GetCDLValue?year=2025&x=-1924961.9510180918&y=2049120.3009903221",
+      "retrieved_at": "2026-11-15T03:35:06.804828+00:00"
+    }
+  ],
+  "limitation": "Four pixels 100 m away check local consistency in 2025 only; this does not prove parcel boundaries or verify all historic years."
+}
