@@ -118,6 +118,10 @@
         },
         "safest_rotation": { "type": "array", "minItems": 1, "items": { "$ref": "#/$defs/cropCode" } },
         "safest_water_af_per_acre": { "$ref": "#/$defs/acreFeet" },
+        "safest_need_met_pct": { "type": "integer", "minimum": 0, "maximum": 100, "description": "Share of the safest rotation's crop water need that was met in those years." },
+        "current_crop": { "$ref": "#/$defs/cropCode", "description": "What the field grew in weather_through, i.e. what 'carrying on as before' means." },
+        "current_crop_water_af_per_acre": { "$ref": "#/$defs/acreFeet" },
+        "current_crop_need_met_pct": { "type": "integer", "minimum": 0, "maximum": 100 },
         "actual_crops": { "type": "array", "items": { "anyOf": [{ "$ref": "#/$defs/cropCode" }, { "type": "null" }] } },
         "summary": { "type": "string", "minLength": 1, "maxLength": 300, "description": "One sentence for the slide; only numbers that appear elsewhere in this object." }
       }

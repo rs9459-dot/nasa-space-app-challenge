@@ -64,7 +64,9 @@ class WaterResult:
     sequences: np.ndarray  # (S, 3) calendar years used for years 1..3
     etc_mm: np.ndarray  # (R, S, 3) seasonal crop water need without stress
     eta_mm: np.ndarray  # (R, S, 3) actual crop water use
-    irrigation_mm: np.ndarray  # (R, S, 3) irrigation applied (capped by allocation)
+    irrigation_mm: np.ndarray  # (R, S, 3) irrigation delivered to the farm (capped by allocation)
+    allocation: np.ndarray | None = None  # (S, 3) share of the water right available in years 1..3
+    allocation_years: np.ndarray | None = None  # (S, 3) the sourced years those shares come from
 
 
 @dataclass

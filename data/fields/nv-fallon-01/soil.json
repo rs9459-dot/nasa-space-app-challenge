@@ -1,0 +1,49 @@
+{
+  "source": "USDA SSURGO",
+  "source_detail": "USDA NRCS Soil Data Access, map unit 643787, retrieved 2026-11-14",
+  "mukey": "643787",
+  "map_unit": "Carcity clay, slightly saline, 0 to 1 percent slopes",
+  "component": "Carcity",
+  "component_pct": 85.0,
+  "aws_0_25_cm": 4.08,
+  "aws_0_50_cm": 8.12,
+  "aws_0_100_cm": 13.65,
+  "aws_0_150_cm": 17.28,
+  "drainage": "Somewhat poorly drained",
+  "hydrologic_group": "C",
+  "slope_pct": 0.5,
+  "organic_matter_pct": 4.0,
+  "sand_pct": 22.1,
+  "silt_pct": 27.9,
+  "clay_pct": 50.0,
+  "ph": 7.9,
+  "ec_ds_m": 6.0,
+  "fc_top_vol_pct": 37.2,
+  "wp_top_vol_pct": 32.2,
+  "horizons": [
+    {
+      "name": "H1",
+      "top_cm": 0.0,
+      "bottom_cm": 18.0,
+      "awc_cm_per_cm": 0.16,
+      "ec_ds_m": 6.0,
+      "clay_pct": 50.0
+    },
+    {
+      "name": "H2",
+      "top_cm": 18.0,
+      "bottom_cm": 71.0,
+      "awc_cm_per_cm": 0.16,
+      "ec_ds_m": 5.0,
+      "clay_pct": 50.0
+    },
+    {
+      "name": "H3",
+      "top_cm": 71.0,
+      "bottom_cm": 152.0,
+      "awc_cm_per_cm": 0.06,
+      "ec_ds_m": 5.0,
+      "clay_pct": 2.5
+    }
+  ]
+}

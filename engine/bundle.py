@@ -173,12 +173,25 @@ def resolve(request: dict) -> str:
     """field_id, then zip/place via reference/places.csv, then the nearest field to lat/lon."""
     if request.get("field_id"):
         return request["field_id"]
+    # Try everything the farmer gave; an unknown ZIP shouldn't hide a town we do know.
+    first_error: BundleError | None = None
     for kind in ("zip", "place"):
         if request.get(kind):
-            return _lookup_place(kind, str(request[kind]))
+            try:
+                return _lookup_place(kind, str(request[kind]))
+            except BundleError as err:
+                first_error = first_error or err
     if request.get("lat") is not None and request.get("lon") is not None:
-        return _nearest(float(request["lat"]), float(request["lon"]))
-    raise BundleError("field_not_found", "The request gives no field_id, zip, place or lat/lon")
+        try:
+            return _nearest(float(request["lat"]), float(request["lon"]))
+        except BundleError as err:
+            first_error = first_error or err
+    raise first_error or BundleError("field_not_found", "The request gives no field_id, zip, place or lat/lon")
+
+
+def _place_key(text: str) -> str:
+    """'Fallon, NV ' -> 'fallon nv': case, punctuation and extra spaces don't matter."""
+    return " ".join(re.sub(r"[^\w\s]", " ", text.lower()).split())
 
 
 def _lookup_place(kind: str, value: str) -> str:
@@ -188,7 +201,7 @@ def _lookup_place(kind: str, value: str) -> str:
         raise BundleError("field_not_found", f"No reference/places.csv yet, so {label} can't be looked up")
     places = pd.read_csv(path, dtype=str).fillna("")
     want = "zip" if kind == "zip" else "town"
-    rows = places[(places["kind"].str.lower() == want) & (places["key"].str.strip().str.lower() == value.strip().lower())]
+    rows = places[(places["kind"].str.lower() == want) & (places["key"].map(_place_key) == _place_key(value))]
     if rows.empty:
         raise BundleError("field_not_found", f"No field near {label} in reference/places.csv")
     return rows.iloc[0]["field_id"]

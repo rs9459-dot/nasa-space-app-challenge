@@ -18,7 +18,7 @@ def test_loads_a_bundle(data_root):
     assert list(field.weather.columns) == bundle.WEATHER_COLUMNS
     assert len(field.weather) == 730 and field.weather.index.name == "day"
     assert field.water["allocation_fraction_by_year"]["2002"] == 0.5
-    assert ref.crops.index.tolist() == ["alfalfa", "barley"]
+    assert ref.crops.index.tolist() == ["alfalfa", "barley", "fallow"]
     assert "crop" in ref.economics.columns
 
 
