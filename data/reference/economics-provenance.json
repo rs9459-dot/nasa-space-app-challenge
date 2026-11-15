@@ -56,6 +56,27 @@
     "ready_for_income_comparison": false,
     "source_geography": "Nevada state where supplied; not Churchill County",
     "cost_basis_resolved": true,
+    "yield_per_acre": {
+      "value": 70.6036327444638,
+      "harvested_acres": 4019.0,
+      "production": 283756.0,
+      "year": 2022,
+      "geography": "Nevada state",
+      "method": "Census production divided by harvested acres; derived, not reported annual yield or unstressed potential yield"
+    },
+    "price_usd_per_unit": {
+      "value": 5.7,
+      "unit": "bushel",
+      "years": [
+        2024
+      ],
+      "sources": [
+        "https://www.nass.usda.gov/Quick_Stats/Ag_Overview/stateOverview.php?state=Idaho&year=2024"
+      ],
+      "source_geography": "Idaho",
+      "regional_proxy": true,
+      "conversion": null
+    },
     "prototype": true,
     "display_label": "Prototype estimate; historical nominal university costs; not current farm advice",
     "cost_usd_per_acre": {
@@ -80,12 +101,33 @@
       }
     },
     "years_averaged_meaning": "Budget cost year only, per user request; revenue observation years retained in source columns and provenance.",
-    "prototype_net_return_available": false
+    "prototype_net_return_available": true
   },
   "barley": {
     "ready_for_income_comparison": false,
     "source_geography": "Nevada state where supplied; not Churchill County",
     "cost_basis_resolved": true,
+    "yield_per_acre": {
+      "value": 80.88958707360862,
+      "harvested_acres": 1114.0,
+      "production": 90111.0,
+      "year": 2022,
+      "geography": "Nevada state",
+      "method": "Census production divided by harvested acres; derived, not reported annual yield or unstressed potential yield"
+    },
+    "price_usd_per_unit": {
+      "value": 7.5,
+      "unit": "bushel",
+      "years": [
+        2024
+      ],
+      "sources": [
+        "https://www.nass.usda.gov/Quick_Stats/Ag_Overview/stateOverview.php?state=Utah&year=2024"
+      ],
+      "source_geography": "Utah",
+      "regional_proxy": true,
+      "conversion": null
+    },
     "prototype": true,
     "display_label": "Prototype estimate; historical nominal university costs; not current farm advice",
     "cost_usd_per_acre": {
@@ -109,12 +151,38 @@
       }
     },
     "years_averaged_meaning": "Budget cost year only, per user request; revenue observation years retained in source columns and provenance.",
-    "prototype_net_return_available": false
+    "prototype_net_return_available": true
   },
   "sorghum": {
     "ready_for_income_comparison": false,
     "source_geography": "Nevada state where supplied; not Churchill County",
     "cost_basis_resolved": true,
+    "yield_per_acre": {
+      "value": 65.0,
+      "unit": "bushel",
+      "years": [
+        2024
+      ],
+      "sources": [
+        "https://www.nass.usda.gov/Quick_Stats/Ag_Overview/stateOverview.php?state=Kansas&year=2024"
+      ],
+      "source_geography": "Kansas",
+      "regional_proxy": true,
+      "conversion": null
+    },
+    "price_usd_per_unit": {
+      "value": 4.004,
+      "unit": "bushel",
+      "years": [
+        2024
+      ],
+      "sources": [
+        "https://www.nass.usda.gov/Quick_Stats/Ag_Overview/stateOverview.php?state=Kansas&year=2024"
+      ],
+      "source_geography": "Kansas",
+      "regional_proxy": true,
+      "conversion": "USD/cwt * 56/100 = USD/bushel"
+    },
     "prototype": true,
     "display_label": "Prototype estimate; historical nominal university costs; not current farm advice",
     "cost_usd_per_acre": {
@@ -139,12 +207,40 @@
       }
     },
     "years_averaged_meaning": "Budget cost year only, per user request; revenue observation years retained in source columns and provenance.",
-    "prototype_net_return_available": false
+    "prototype_net_return_available": true
   },
   "dry_beans": {
     "ready_for_income_comparison": false,
     "source_geography": "Nevada state where supplied; not Churchill County",
     "cost_basis_resolved": true,
+    "yield_per_acre": {
+      "value": 25.94,
+      "unit": "cwt",
+      "regional_proxy": true,
+      "source_geography": "Idaho",
+      "years": [
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ],
+      "commodity": "dry edible beans excluding chickpeas; aggregate class proxy, not a pinto-specific price"
+    },
+    "price_usd_per_unit": {
+      "value": 37.78,
+      "unit": "cwt",
+      "regional_proxy": true,
+      "source_geography": "Idaho",
+      "years": [
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ],
+      "commodity": "dry edible beans excluding chickpeas; aggregate class proxy, not a pinto-specific price"
+    },
     "prototype": true,
     "display_label": "Prototype estimate; historical nominal university costs; not current farm advice",
     "cost_usd_per_acre": {
@@ -169,12 +265,38 @@
       }
     },
     "years_averaged_meaning": "Budget cost year only, per user request; revenue observation years retained in source columns and provenance.",
-    "prototype_net_return_available": false
+    "prototype_net_return_available": true
   },
   "safflower": {
     "ready_for_income_comparison": false,
     "source_geography": "Nevada state where supplied; not Churchill County",
     "cost_basis_resolved": true,
+    "yield_per_acre": {
+      "value": 660.0,
+      "unit": "lb",
+      "years": [
+        2024
+      ],
+      "sources": [
+        "https://www.nass.usda.gov/Quick_Stats/Ag_Overview/stateOverview.php?state=Utah&year=2024"
+      ],
+      "source_geography": "Utah",
+      "regional_proxy": true,
+      "conversion": null
+    },
+    "price_usd_per_unit": {
+      "value": 0.23,
+      "unit": "lb",
+      "years": [
+        2024
+      ],
+      "sources": [
+        "https://www.nass.usda.gov/Quick_Stats/Ag_Overview/stateOverview.php?state=Utah&year=2024"
+      ],
+      "source_geography": "Utah",
+      "regional_proxy": true,
+      "conversion": "USD/cwt / 100 = USD/lb"
+    },
     "prototype": true,
     "display_label": "Prototype estimate; historical nominal university costs; not current farm advice",
     "cost_usd_per_acre": {
@@ -198,7 +320,7 @@
       }
     },
     "years_averaged_meaning": "Budget cost year only, per user request; revenue observation years retained in source columns and provenance.",
-    "prototype_net_return_available": false
+    "prototype_net_return_available": true
   },
   "corn_silage": {
     "ready_for_income_comparison": false,

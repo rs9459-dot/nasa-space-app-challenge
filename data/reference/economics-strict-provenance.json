@@ -31,12 +31,28 @@
   "wheat": {
     "ready_for_income_comparison": false,
     "source_geography": "Nevada state where supplied; not Churchill County",
-    "cost_basis_resolved": false
+    "cost_basis_resolved": false,
+    "yield_per_acre": {
+      "value": 70.6036327444638,
+      "harvested_acres": 4019.0,
+      "production": 283756.0,
+      "year": 2022,
+      "geography": "Nevada state",
+      "method": "Census production divided by harvested acres; derived, not reported annual yield or unstressed potential yield"
+    }
   },
   "barley": {
     "ready_for_income_comparison": false,
     "source_geography": "Nevada state where supplied; not Churchill County",
-    "cost_basis_resolved": false
+    "cost_basis_resolved": false,
+    "yield_per_acre": {
+      "value": 80.88958707360862,
+      "harvested_acres": 1114.0,
+      "production": 90111.0,
+      "year": 2022,
+      "geography": "Nevada state",
+      "method": "Census production divided by harvested acres; derived, not reported annual yield or unstressed potential yield"
+    }
   },
   "sorghum": {
     "ready_for_income_comparison": false,

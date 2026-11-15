@@ -1,0 +1,221 @@
+{
+  "prototype": true,
+  "candidates": [
+    "alfalfa",
+    "sorghum",
+    "dry_beans"
+  ],
+  "rotations": [
+    [
+      "alfalfa",
+      "alfalfa",
+      "alfalfa"
+    ],
+    [
+      "alfalfa",
+      "alfalfa",
+      "sorghum"
+    ],
+    [
+      "alfalfa",
+      "alfalfa",
+      "dry_beans"
+    ],
+    [
+      "alfalfa",
+      "sorghum",
+      "alfalfa"
+    ],
+    [
+      "alfalfa",
+      "sorghum",
+      "dry_beans"
+    ],
+    [
+      "alfalfa",
+      "dry_beans",
+      "alfalfa"
+    ],
+    [
+      "alfalfa",
+      "dry_beans",
+      "sorghum"
+    ],
+    [
+      "alfalfa",
+      "dry_beans",
+      "dry_beans"
+    ],
+    [
+      "sorghum",
+      "alfalfa",
+      "alfalfa"
+    ],
+    [
+      "sorghum",
+      "alfalfa",
+      "sorghum"
+    ],
+    [
+      "sorghum",
+      "alfalfa",
+      "dry_beans"
+    ],
+    [
+      "sorghum",
+      "dry_beans",
+      "alfalfa"
+    ],
+    [
+      "sorghum",
+      "dry_beans",
+      "sorghum"
+    ],
+    [
+      "sorghum",
+      "dry_beans",
+      "dry_beans"
+    ],
+    [
+      "dry_beans",
+      "alfalfa",
+      "alfalfa"
+    ],
+    [
+      "dry_beans",
+      "alfalfa",
+      "sorghum"
+    ],
+    [
+      "dry_beans",
+      "alfalfa",
+      "dry_beans"
+    ],
+    [
+      "dry_beans",
+      "sorghum",
+      "alfalfa"
+    ],
+    [
+      "dry_beans",
+      "sorghum",
+      "dry_beans"
+    ],
+    [
+      "dry_beans",
+      "dry_beans",
+      "alfalfa"
+    ],
+    [
+      "dry_beans",
+      "dry_beans",
+      "sorghum"
+    ]
+  ],
+  "crop_checks": [
+    {
+      "crop": "alfalfa",
+      "eligible": true,
+      "reasons": [],
+      "warnings": [
+        "heat eligibility unchecked: requirement disabled, not zero biological need",
+        "Prototype profiles and historical costs; not validated farmer advice"
+      ]
+    },
+    {
+      "crop": "wheat",
+      "eligible": false,
+      "reasons": [
+        "frost-free requirement fails in at least one complete season"
+      ],
+      "warnings": [
+        "Prototype profiles and historical costs; not validated farmer advice"
+      ]
+    },
+    {
+      "crop": "barley",
+      "eligible": false,
+      "reasons": [
+        "frost-free requirement fails in at least one complete season"
+      ],
+      "warnings": [
+        "Prototype profiles and historical costs; not validated farmer advice"
+      ]
+    },
+    {
+      "crop": "sorghum",
+      "eligible": true,
+      "reasons": [],
+      "warnings": [
+        "heat eligibility unchecked: requirement disabled, not zero biological need",
+        "Prototype profiles and historical costs; not validated farmer advice"
+      ]
+    },
+    {
+      "crop": "dry_beans",
+      "eligible": true,
+      "reasons": [],
+      "warnings": [
+        "heat eligibility unchecked: requirement disabled, not zero biological need",
+        "Prototype profiles and historical costs; not validated farmer advice"
+      ]
+    },
+    {
+      "crop": "safflower",
+      "eligible": false,
+      "reasons": [
+        "frost-free requirement fails in at least one complete season"
+      ],
+      "warnings": [
+        "heat eligibility unchecked: requirement disabled, not zero biological need",
+        "Prototype profiles and historical costs; not validated farmer advice"
+      ]
+    },
+    {
+      "crop": "corn_silage",
+      "eligible": false,
+      "reasons": [
+        "matching complete economics unavailable",
+        "frost-free requirement fails in at least one complete season"
+      ],
+      "warnings": [
+        "heat eligibility unchecked: requirement disabled, not zero biological need",
+        "Prototype profiles and historical costs; not validated farmer advice"
+      ]
+    },
+    {
+      "crop": "cover_crop",
+      "eligible": false,
+      "reasons": [
+        "matching complete economics unavailable"
+      ],
+      "warnings": [
+        "heat eligibility unchecked: requirement disabled, not zero biological need",
+        "Prototype profiles and historical costs; not validated farmer advice"
+      ]
+    },
+    {
+      "crop": "corn",
+      "eligible": false,
+      "reasons": [
+        "matching complete economics unavailable"
+      ],
+      "warnings": [
+        "heat eligibility unchecked: requirement disabled, not zero biological need",
+        "Prototype profiles and historical costs; not validated farmer advice"
+      ]
+    },
+    {
+      "crop": "fallow",
+      "eligible": false,
+      "reasons": [
+        "matching complete economics unavailable",
+        "no complete growing-season weather"
+      ],
+      "warnings": [
+        "heat eligibility unchecked: requirement disabled, not zero biological need",
+        "Prototype profiles and historical costs; not validated farmer advice"
+      ]
+    }
+  ]
+}

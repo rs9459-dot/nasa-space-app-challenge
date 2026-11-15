@@ -19,3 +19,5 @@ end of the table). The Space Apps submission lists these.
 | Feed Grains documentation | USDA ERS | Standard grain sorghum bushel=56 lb; match USD/cwt price to bushel yield | https://ers.usda.gov/data-products/feed-grains-database/documentation | pipeline/economics.py build | 2026-11-14 |
 
 | University enterprise cost-and-return budgets (active prototype cost inputs) | University of Nevada, Reno Extension; UC Davis / UCCE | Seven published full crop-enterprise costs less identified water charges; nominal 2008-2016 USD/acre, not inflation adjusted; cover crop unavailable | Full citations, budget year, table and water subtraction in data/reference/university-costs.json and economics.csv source_cost | pipeline/university_costs.py via pipeline/economics.py build | 2026-11-14 |
+
+| USDA NASS 2022 Census county/state and Idaho annual bean records | USDA NASS | Suppression evidence, derived Nevada spring-wheat/barley yields and labeled Idaho bean proxy; no forecast records averaged | QuickStats API, sanitized raw JSON and source columns retained | pipeline/nevada_census.py; pipeline/regional_economics.py | 2026-11-15 |
