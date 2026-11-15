@@ -1,0 +1,2 @@
+# H9: pipeline/tiger.py (Tiger Data loader). pg8000 is pure Python, so it installs anywhere.
+pg8000>=1.31
