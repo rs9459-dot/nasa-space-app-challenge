@@ -24,7 +24,9 @@ SOIL_REQUIRED = ["aws_0_100_cm", "ec_ds_m"]
 FIELD_REQUIRED = ["field_id", "name", "lat", "lon", "country", "provenance"]
 REAL_WEATHER_YEARS = (2001, 2025)  # a "real" bundle must cover all 25 years
 
-# Files whose dataset is fixed, so their name is enough to cite them.
+# Files whose dataset is fixed, so their name is enough to cite them, but only in a real
+# bundle: a sample bundle's files are made up, so a file name is no evidence of a dataset.
+SAMPLE_SOURCE = "SAMPLE DATA: made-up values, not real observations"
 FILE_SOURCES = {
     "weather_daily.csv": "NASA POWER",
     "crop_history.json": "USDA CropScape",
@@ -94,7 +96,7 @@ def load_field(field_id: str) -> Field:
         water=water,
         crop_history=crop_history,
         satellite=satellite,
-        sources=_sources(folder, soil, water, satellite),
+        sources=_sources(folder, meta["provenance"], soil, water, satellite),
     )
 
 
@@ -127,11 +129,15 @@ def _load_weather(path: Path, field_id: str, provenance: str) -> pd.DataFrame:
     return df
 
 
-def _sources(folder: Path, *json_files: dict) -> list[str]:
+def _sources(folder: Path, provenance: str, *json_files: dict) -> list[str]:
+    """Datasets to cite. A sample bundle cites only SAMPLE_SOURCE and what its files say."""
     found: list[str] = []
-    for filename, name in FILE_SOURCES.items():
-        if (folder / filename).exists():
-            found.append(name)
+    if provenance == "real":
+        for filename, name in FILE_SOURCES.items():
+            if (folder / filename).exists():
+                found.append(name)
+    else:
+        found.append(SAMPLE_SOURCE)
     for data in json_files:
         for key in ("source", "sources"):
             value = data.get(key) if isinstance(data, dict) else None

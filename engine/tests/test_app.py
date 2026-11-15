@@ -3,7 +3,7 @@ from __future__ import annotations
 import pytest
 from fastapi.testclient import TestClient
 
-from engine import contract, plan as planner
+from engine import bundle, contract, plan as planner
 from engine.app import app
 from engine.tests.conftest import FIELD_ID
 
@@ -52,7 +52,7 @@ def test_plan_computes_a_contract_valid_answer(client, request_body):
     assert contract.problems(doc) == []
     assert doc["field"] == {"id": FIELD_ID, "place": "Testville, NV", "current_rotation": ["alfalfa"] * 3}
     assert doc["years_tested"] == 2
-    assert doc["data_sources"] == ["NASA POWER", "USDA CropScape", "TEST soil", "TEST allocations"]
+    assert doc["data_sources"] == [bundle.SAMPLE_SOURCE, "TEST soil", "TEST allocations"]
     assert doc["sample_data"] is True  # the test bundle is a sample
     if planner.stand_ins():
         assert doc["_note"].startswith("NOT A REAL RESULT")
