@@ -20,8 +20,10 @@ def from_scratch(request: dict) -> dict:
     from engine import bundle
     field, ref = bundle.load(request["field_id"])
     rotations = plan.candidate_rotations(field, ref)
-    outcomes, base = plan.evaluate(field, ref, Signals(), rotations, (request["current_crop"],) * 3)
-    return rank.choose(outcomes, base, request["priorities"], field, sources=field.sources)
+    module = plan.optional("signals")
+    signals = module.compute(field) if module else Signals()
+    outcomes, base = plan.evaluate(field, ref, signals, rotations, (request["current_crop"],) * 3)
+    return rank.choose(outcomes, base, request["priorities"], field, sources=[*field.sources, *signals.sources])
 
 
 def count_simulations(monkeypatch) -> list[int]:

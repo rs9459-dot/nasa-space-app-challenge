@@ -52,7 +52,8 @@ def test_plan_computes_a_contract_valid_answer(client, request_body):
     assert contract.problems(doc) == []
     assert doc["field"] == {"id": FIELD_ID, "place": "Testville, Nevada", "current_rotation": ["alfalfa"] * 3}
     assert doc["years_tested"] == 2
-    assert doc["data_sources"] == [bundle.SAMPLE_SOURCE, "TEST soil", "TEST allocations"]
+    # the bundle's datasets first; the signals step (H7) adds what it used or could not use
+    assert doc["data_sources"][:3] == [bundle.SAMPLE_SOURCE, "TEST soil", "TEST allocations"]
     assert doc["sample_data"] is True  # the test bundle is a sample
     if planner.stand_ins():
         assert doc["_note"].startswith("NOT A REAL RESULT")
