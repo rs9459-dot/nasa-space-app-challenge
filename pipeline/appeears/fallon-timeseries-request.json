@@ -1,0 +1,69 @@
+{
+  "task_type": "point",
+  "task_name": "FarmLine Fallon H6 2015-2025",
+  "params": {
+    "dates": [
+      {
+        "startDate": "01-01-2015",
+        "endDate": "12-31-2025"
+      }
+    ],
+    "layers": [
+      {
+        "product": "SPL3SMP_E.006",
+        "layer": "Soil_Moisture_Retrieval_Data_AM_soil_moisture"
+      },
+      {
+        "product": "SPL3SMP_E.006",
+        "layer": "Soil_Moisture_Retrieval_Data_PM_soil_moisture_pm"
+      },
+      {
+        "product": "SPL3SMP_E.006",
+        "layer": "Soil_Moisture_Retrieval_Data_AM_retrieval_qual_flag"
+      },
+      {
+        "product": "SPL3SMP_E.006",
+        "layer": "Soil_Moisture_Retrieval_Data_PM_retrieval_qual_flag_pm"
+      },
+      {
+        "product": "HLSL30.020",
+        "layer": "B04"
+      },
+      {
+        "product": "HLSL30.020",
+        "layer": "B05"
+      },
+      {
+        "product": "HLSL30.020",
+        "layer": "Fmask"
+      },
+      {
+        "product": "HLSS30.020",
+        "layer": "B04"
+      },
+      {
+        "product": "HLSS30.020",
+        "layer": "B8A"
+      },
+      {
+        "product": "HLSS30.020",
+        "layer": "Fmask"
+      },
+      {
+        "product": "ECO_L3T_JET.002",
+        "layer": "ETdaily"
+      },
+      {
+        "product": "ECO_L3T_JET.002",
+        "layer": "cloud"
+      }
+    ],
+    "coordinates": [
+      {
+        "id": "nv-fallon-01",
+        "latitude": 39.38,
+        "longitude": -118.77
+      }
+    ]
+  }
+}

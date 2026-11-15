@@ -1,0 +1,4198 @@
+{
+  "SPL3SMP_E.006": {
+    "Soil_Moisture_Retrieval_Data_AM_albedo": {
+      "AddOffset": "",
+      "Available": true,
+      "DataType": "float32",
+      "Description": "Diffuse reflecting power of the Earth&apos;s surface used in SCA-V within the grid cell.",
+      "Dimensions": [
+        "epoch_days",
+        "FakeDim0",
+        "FakeDim1"
+      ],
+      "FillValue": -9999,
+      "FillValueAll": [
+        -9999
+      ],
+      "Group": "",
+      "Info": {
+        "group_name": "Soil_Moisture_Retrieval_Data_AM",
+        "layer_name": "albedo"
+      },
+      "IsQA": false,
+      "Layer": "Soil_Moisture_Retrieval_Data_AM_albedo",
+      "OrigDataType": "float32",
+      "OrigValidMax": 1.0,
+      "OrigValidMin": 0.0,
+      "QualityLayers": "['Soil_Moisture_Retrieval_Data_AM_retrieval_qual_flag']",
+      "QualityProductAndVersion": "SPL3SMP_E.006",
+      "ScaleFactor": "",
+      "Units": "",
+      "ValidMax": 1.0,
+      "ValidMin": 0.0,
+      "XSize": 3856,
+      "YSize": 1624
+    },
+    "Soil_Moisture_Retrieval_Data_AM_albedo_dca": {
+      "AddOffset": "",
+      "Available": true,
+      "DataType": "float32",
+      "Description": "Diffuse reflecting power of the Earth&apos;s surface used in DCA within the grid cell.",
+      "Dimensions": [
+        "epoch_days",
+        "FakeDim0",
+        "FakeDim1"
+      ],
+      "FillValue": -9999,
+      "FillValueAll": [
+        -9999
+      ],
+      "Group": "",
+      "Info": {
+        "group_name": "Soil_Moisture_Retrieval_Data_AM",
+        "layer_name": "albedo_dca"
+      },
+      "IsQA": false,
+      "Layer": "Soil_Moisture_Retrieval_Data_AM_albedo_dca",
+      "OrigDataType": "float32",
+      "OrigValidMax": 1.0,
+      "OrigValidMin": 0.0,
+      "QualityLayers": "['Soil_Moisture_Retrieval_Data_AM_retrieval_qual_flag_dca']",
+      "QualityProductAndVersion": "SPL3SMP_E.006",
+      "ScaleFactor": "",
+      "Units": "",
+      "ValidMax": 1.0,
+      "ValidMin": 0.0,
+      "XSize": 3856,
+      "YSize": 1624
+    },
+    "Soil_Moisture_Retrieval_Data_AM_albedo_scah": {
+      "AddOffset": "",
+      "Available": true,
+      "DataType": "float32",
+      "Description": "Diffuse reflecting power of the Earth&apos;s surface used in SCA-H within the grid cell.",
+      "Dimensions": [
+        "epoch_days",
+        "FakeDim0",
+        "FakeDim1"
+      ],
+      "FillValue": -9999,
+      "FillValueAll": [
+        -9999
+      ],
+      "Group": "",
+      "Info": {
+        "group_name": "Soil_Moisture_Retrieval_Data_AM",
+        "layer_name": "albedo_scah"
+      },
+      "IsQA": false,
+      "Layer": "Soil_Moisture_Retrieval_Data_AM_albedo_scah",
+      "OrigDataType": "float32",
+      "OrigValidMax": 1.0,
+      "OrigValidMin": 0.0,
+      "QualityLayers": "['Soil_Moisture_Retrieval_Data_AM_retrieval_qual_flag_scah']",
+      "QualityProductAndVersion": "SPL3SMP_E.006",
+      "ScaleFactor": "",
+      "Units": "",
+      "ValidMax": 1.0,
+      "ValidMin": 0.0,
+      "XSize": 3856,
+      "YSize": 1624
+    },
+    "Soil_Moisture_Retrieval_Data_AM_albedo_scav": {
+      "AddOffset": "",
+      "Available": true,
+      "DataType": "float32",
+      "Description": "Diffuse reflecting power of the Earth&apos;s surface used in SCA-V within the grid cell.",
+      "Dimensions": [
+        "epoch_days",
+        "FakeDim0",
+        "FakeDim1"
+      ],
+      "FillValue": -9999,
+      "FillValueAll": [
+        -9999
+      ],
+      "Group": "",
+      "Info": {
+        "group_name": "Soil_Moisture_Retrieval_Data_AM",
+        "layer_name": "albedo_scav"
+      },
+      "IsQA": false,
+      "Layer": "Soil_Moisture_Retrieval_Data_AM_albedo_scav",
+      "OrigDataType": "float32",
+      "OrigValidMax": 1.0,
+      "OrigValidMin": 0.0,
+      "QualityLayers": "['Soil_Moisture_Retrieval_Data_AM_retrieval_qual_flag_scav']",
+      "QualityProductAndVersion": "SPL3SMP_E.006",
+      "ScaleFactor": "",
+      "Units": "",
+      "ValidMax": 1.0,
+      "ValidMin": 0.0,
+      "XSize": 3856,
+      "YSize": 1624
+    },
+    "Soil_Moisture_Retrieval_Data_AM_boresight_incidence": {
+      "AddOffset": "",
+      "Available": true,
+      "DataType": "float32",
+      "Description": "Representative angle between the antenna boresight vector and the normal to the Earth&apos;s surface for all footprints within the cell.",
+      "Dimensions": [
+        "epoch_days",
+        "FakeDim0",
+        "FakeDim1"
+      ],
+      "FillValue": -9999,
+      "FillValueAll": [
+        -9999
+      ],
+      "Group": "",
+      "Info": {
+        "group_name": "Soil_Moisture_Retrieval_Data_AM",
+        "layer_name": "boresight_incidence"
+      },
+      "IsQA": false,
+      "Layer": "Soil_Moisture_Retrieval_Data_AM_boresight_incidence",
+      "OrigDataType": "float32",
+      "OrigValidMax": 90.0,
+      "OrigValidMin": 0.0,
+      "QualityLayers": "['Soil_Moisture_Retrieval_Data_AM_retrieval_qual_flag']",
+      "QualityProductAndVersion": "SPL3SMP_E.006",
+      "ScaleFactor": "",
+      "Units": "",
+      "ValidMax": 90.0,
+      "ValidMin": 0.0,
+      "XSize": 3856,
+      "YSize": 1624
+    },
+    "Soil_Moisture_Retrieval_Data_AM_bulk_density": {
+      "AddOffset": "",
+      "Available": true,
+      "DataType": "float32",
+      "Description": "A unitless value that is indicative of aggregated bulk_density within the 9 km grid cell.",
+      "Dimensions": [
+        "epoch_days",
+        "FakeDim0",
+        "FakeDim1"
+      ],
+      "FillValue": -9999,
+      "FillValueAll": [
+        -9999
+      ],
+      "Group": "",
+      "Info": {
+        "group_name": "Soil_Moisture_Retrieval_Data_AM",
+        "layer_name": "bulk_density"
+      },
+      "IsQA": false,
+      "Layer": "Soil_Moisture_Retrieval_Data_AM_bulk_density",
+      "OrigDataType": "float32",
+      "OrigValidMax": 1.0,
+      "OrigValidMin": 0.0,
+      "QualityLayers": "['Soil_Moisture_Retrieval_Data_AM_retrieval_qual_flag']",
+      "QualityProductAndVersion": "SPL3SMP_E.006",
+      "ScaleFactor": "",
+      "Units": "",
+      "ValidMax": 1.0,
+      "ValidMin": 0.0,
+      "XSize": 3856,
+      "YSize": 1624
+    },
+    "Soil_Moisture_Retrieval_Data_AM_clay_fraction": {
+      "AddOffset": "",
+      "Available": true,
+      "DataType": "float32",
+      "Description": "A unitless value that is indicative of aggregated clay fraction within the 9 km grid cell.",
+      "Dimensions": [
+        "epoch_days",
+        "FakeDim0",
+        "FakeDim1"
+      ],
+      "FillValue": -9999,
+      "FillValueAll": [
+        -9999
+      ],
+      "Group": "",
+      "Info": {
+        "group_name": "Soil_Moisture_Retrieval_Data_AM",
+        "layer_name": "clay_fraction"
+      },
+      "IsQA": false,
+      "Layer": "Soil_Moisture_Retrieval_Data_AM_clay_fraction",
+      "OrigDataType": "float32",
+      "OrigValidMax": 1.0,
+      "OrigValidMin": 0.0,
+      "QualityLayers": "['Soil_Moisture_Retrieval_Data_AM_retrieval_qual_flag']",
+      "QualityProductAndVersion": "SPL3SMP_E.006",
+      "ScaleFactor": "",
+      "Units": "",
+      "ValidMax": 1.0,
+      "ValidMin": 0.0,
+      "XSize": 3856,
+      "YSize": 1624
+    },
+    "Soil_Moisture_Retrieval_Data_AM_freeze_thaw_fraction": {
+      "AddOffset": "",
+      "Available": true,
+      "DataType": "float32",
+      "Description": "Fraction of the 9 km grid cell that is denoted as frozen.  Based on binary flag that specifies freeze thaw conditions in each of the component 3 km grid cells.",
+      "Dimensions": [
+        "epoch_days",
+        "FakeDim0",
+        "FakeDim1"
+      ],
+      "FillValue": -9999,
+      "FillValueAll": [
+        -9999
+      ],
+      "Group": "",
+      "Info": {
+        "group_name": "Soil_Moisture_Retrieval_Data_AM",
+        "layer_name": "freeze_thaw_fraction"
+      },
+      "IsQA": false,
+      "Layer": "Soil_Moisture_Retrieval_Data_AM_freeze_thaw_fraction",
+      "OrigDataType": "float32",
+      "OrigValidMax": 1.0,
+      "OrigValidMin": 0.0,
+      "QualityLayers": "['Soil_Moisture_Retrieval_Data_AM_retrieval_qual_flag']",
+      "QualityProductAndVersion": "SPL3SMP_E.006",
+      "ScaleFactor": "",
+      "Units": "",
+      "ValidMax": 1.0,
+      "ValidMin": 0.0,
+      "XSize": 3856,
+      "YSize": 1624
+    },
+    "Soil_Moisture_Retrieval_Data_AM_grid_surface_status": {
+      "AddOffset": "",
+      "Available": true,
+      "DataType": "uint16",
+      "Description": "Indicates if the grid point lies on land (0) or water (1).",
+      "Dimensions": [
+        "epoch_days",
+        "FakeDim0",
+        "FakeDim1"
+      ],
+      "FillValue": 65534,
+      "FillValueAll": [
+        65534
+      ],
+      "Group": "",
+      "Info": {
+        "group_name": "Soil_Moisture_Retrieval_Data_AM",
+        "layer_name": "grid_surface_status"
+      },
+      "IsQA": false,
+      "Layer": "Soil_Moisture_Retrieval_Data_AM_grid_surface_status",
+      "OrigDataType": "uint16",
+      "OrigValidMax": 1.0,
+      "OrigValidMin": 0.0,
+      "QualityLayers": "['Soil_Moisture_Retrieval_Data_AM_retrieval_qual_flag']",
+      "QualityProductAndVersion": "SPL3SMP_E.006",
+      "ScaleFactor": "",
+      "Units": "",
+      "ValidMax": 1.0,
+      "ValidMin": 0.0,
+      "XSize": 3856,
+      "YSize": 1624
+    },
+    "Soil_Moisture_Retrieval_Data_AM_radar_water_body_fraction": {
+      "AddOffset": "",
+      "Available": true,
+      "DataType": "float32",
+      "Description": "The fraction of the area of the 9 km grid cell that is covered by water based on the radar detection algorithm.",
+      "Dimensions": [
+        "epoch_days",
+        "FakeDim0",
+        "FakeDim1"
+      ],
+      "FillValue": -9999,
+      "FillValueAll": [
+        -9999
+      ],
+      "Group": "",
+      "Info": {
+        "group_name": "Soil_Moisture_Retrieval_Data_AM",
+        "layer_name": "radar_water_body_fraction"
+      },
+      "IsQA": false,
+      "Layer": "Soil_Moisture_Retrieval_Data_AM_radar_water_body_fraction",
+      "OrigDataType": "float32",
+      "OrigValidMax": 1.0,
+      "OrigValidMin": 0.0,
+      "QualityLayers": "['Soil_Moisture_Retrieval_Data_AM_retrieval_qual_flag']",
+      "QualityProductAndVersion": "SPL3SMP_E.006",
+      "ScaleFactor": "",
+      "Units": "",
+      "ValidMax": 1.0,
+      "ValidMin": 0.0,
+      "XSize": 3856,
+      "YSize": 1624
+    },
+    "Soil_Moisture_Retrieval_Data_AM_retrieval_qual_flag": {
+      "AddOffset": "",
+      "Available": true,
+      "DataType": "uint16",
+      "Description": "Bit flags that record the conditions and the quality of the SCA-V retrieval algorithms that generate soil moisture for the grid cell.",
+      "Dimensions": [
+        "epoch_days",
+        "FakeDim0",
+        "FakeDim1"
+      ],
+      "FillValue": 65534,
+      "FillValueAll": [
+        65534
+      ],
+      "Group": "",
+      "Info": {
+        "group_name": "Soil_Moisture_Retrieval_Data_AM",
+        "layer_name": "retrieval_qual_flag"
+      },
+      "IsQA": true,
+      "Layer": "Soil_Moisture_Retrieval_Data_AM_retrieval_qual_flag",
+      "OrigDataType": "uint16",
+      "OrigValidMax": "",
+      "OrigValidMin": "",
+      "QualityLayers": "",
+      "QualityProductAndVersion": "",
+      "ScaleFactor": "",
+      "Units": "",
+      "ValidMax": "",
+      "ValidMin": "",
+      "XSize": 3856,
+      "YSize": 1624
+    },
+    "Soil_Moisture_Retrieval_Data_AM_retrieval_qual_flag_dca": {
+      "AddOffset": "",
+      "Available": true,
+      "DataType": "uint16",
+      "Description": "Bit flags that record the conditions and the quality of the DCA retrieval algorithms that generate soil moisture for the grid cell.",
+      "Dimensions": [
+        "epoch_days",
+        "FakeDim0",
+        "FakeDim1"
+      ],
+      "FillValue": 65534,
+      "FillValueAll": [
+        65534
+      ],
+      "Group": "",
+      "Info": {
+        "group_name": "Soil_Moisture_Retrieval_Data_AM",
+        "layer_name": "retrieval_qual_flag_dca"
+      },
+      "IsQA": true,
+      "Layer": "Soil_Moisture_Retrieval_Data_AM_retrieval_qual_flag_dca",
+      "OrigDataType": "uint16",
+      "OrigValidMax": "",
+      "OrigValidMin": "",
+      "QualityLayers": "",
+      "QualityProductAndVersion": "SPL3SMP_E.006",
+      "ScaleFactor": "",
+      "Units": "",
+      "ValidMax": "",
+      "ValidMin": "",
+      "XSize": 3856,
+      "YSize": 1624
+    },
+    "Soil_Moisture_Retrieval_Data_AM_retrieval_qual_flag_scah": {
+      "AddOffset": "",
+      "Available": true,
+      "DataType": "uint16",
+      "Description": "Bit flags that record the conditions and the quality of the SCA-H retrieval algorithms that generate soil moisture for the grid cell.",
+      "Dimensions": [
+        "epoch_days",
+        "FakeDim0",
+        "FakeDim1"
+      ],
+      "FillValue": 65534,
+      "FillValueAll": [
+        65534
+      ],
+      "Group": "",
+      "Info": {
+        "group_name": "Soil_Moisture_Retrieval_Data_AM",
+        "layer_name": "retrieval_qual_flag_scah"
+      },
+      "IsQA": true,
+      "Layer": "Soil_Moisture_Retrieval_Data_AM_retrieval_qual_flag_scah",
+      "OrigDataType": "uint16",
+      "OrigValidMax": "",
+      "OrigValidMin": "",
+      "QualityLayers": "",
+      "QualityProductAndVersion": "SPL3SMP_E.006",
+      "ScaleFactor": "",
+      "Units": "",
+      "ValidMax": "",
+      "ValidMin": "",
+      "XSize": 3856,
+      "YSize": 1624
+    },
+    "Soil_Moisture_Retrieval_Data_AM_retrieval_qual_flag_scav": {
+      "AddOffset": "",
+      "Available": true,
+      "DataType": "uint16",
+      "Description": "Bit flags that record the conditions and the quality of the SCA-V retrieval algorithms that generate soil moisture for the grid cell.",
+      "Dimensions": [
+        "epoch_days",
+        "FakeDim0",
+        "FakeDim1"
+      ],
+      "FillValue": 65534,
+      "FillValueAll": [
+        65534
+      ],
+      "Group": "",
+      "Info": {
+        "group_name": "Soil_Moisture_Retrieval_Data_AM",
+        "layer_name": "retrieval_qual_flag_scav"
+      },
+      "IsQA": true,
+      "Layer": "Soil_Moisture_Retrieval_Data_AM_retrieval_qual_flag_scav",
+      "OrigDataType": "uint16",
+      "OrigValidMax": "",
+      "OrigValidMin": "",
+      "QualityLayers": "",
+      "QualityProductAndVersion": "SPL3SMP_E.006",
+      "ScaleFactor": "",
+      "Units": "",
+      "ValidMax": "",
+      "ValidMin": "",
+      "XSize": 3856,
+      "YSize": 1624
+    },
+    "Soil_Moisture_Retrieval_Data_AM_roughness_coefficient": {
+      "AddOffset": "",
+      "Available": true,
+      "DataType": "float32",
+      "Description": "A unitless value that is indicative of bare soil roughness used in SCA-V within the 9 km grid cell.",
+      "Dimensions": [
+        "epoch_days",
+        "FakeDim0",
+        "FakeDim1"
+      ],
+      "FillValue": -9999,
+      "FillValueAll": [
+        -9999
+      ],
+      "Group": "",
+      "Info": {
+        "group_name": "Soil_Moisture_Retrieval_Data_AM",
+        "layer_name": "roughness_coefficient"
+      },
+      "IsQA": false,
+      "Layer": "Soil_Moisture_Retrieval_Data_AM_roughness_coefficient",
+      "OrigDataType": "float32",
+      "OrigValidMax": 1.0,
+      "OrigValidMin": 0.0,
+      "QualityLayers": "['Soil_Moisture_Retrieval_Data_AM_retrieval_qual_flag']",
+      "QualityProductAndVersion": "SPL3SMP_E.006",
+      "ScaleFactor": "",
+      "Units": "",
+      "ValidMax": 1.0,
+      "ValidMin": 0.0,
+      "XSize": 3856,
+      "YSize": 1624
+    },
+    "Soil_Moisture_Retrieval_Data_AM_roughness_coefficient_dca": {
+      "AddOffset": "",
+      "Available": true,
+      "DataType": "float32",
+      "Description": "A unitless value that is indicative of bare soil roughness used in DCA within the 9 km grid cell.",
+      "Dimensions": [
+        "epoch_days",
+        "FakeDim0",
+        "FakeDim1"
+      ],
+      "FillValue": -9999,
+      "FillValueAll": [
+        -9999
+      ],
+      "Group": "",
+      "Info": {
+        "group_name": "Soil_Moisture_Retrieval_Data_AM",
+        "layer_name": "roughness_coefficient_dca"
+      },
+      "IsQA": false,
+      "Layer": "Soil_Moisture_Retrieval_Data_AM_roughness_coefficient_dca",
+      "OrigDataType": "float32",
+      "OrigValidMax": 1.0,
+      "OrigValidMin": 0.0,
+      "QualityLayers": "['Soil_Moisture_Retrieval_Data_AM_retrieval_qual_flag_dca']",
+      "QualityProductAndVersion": "SPL3SMP_E.006",
+      "ScaleFactor": "",
+      "Units": "",
+      "ValidMax": 1.0,
+      "ValidMin": 0.0,
+      "XSize": 3856,
+      "YSize": 1624
+    },
+    "Soil_Moisture_Retrieval_Data_AM_roughness_coefficient_scah": {
+      "AddOffset": "",
+      "Available": true,
+      "DataType": "float32",
+      "Description": "A unitless value that is indicative of bare soil roughness used in SCA-H within the 9 km grid cell.",
+      "Dimensions": [
+        "epoch_days",
+        "FakeDim0",
+        "FakeDim1"
+      ],
+      "FillValue": -9999,
+      "FillValueAll": [
+        -9999
+      ],
+      "Group": "",
+      "Info": {
+        "group_name": "Soil_Moisture_Retrieval_Data_AM",
+        "layer_name": "roughness_coefficient_scah"
+      },
+      "IsQA": false,
+      "Layer": "Soil_Moisture_Retrieval_Data_AM_roughness_coefficient_scah",
+      "OrigDataType": "float32",
+      "OrigValidMax": 1.0,
+      "OrigValidMin": 0.0,
+      "QualityLayers": "['Soil_Moisture_Retrieval_Data_AM_retrieval_qual_flag_scah']",
+      "QualityProductAndVersion": "SPL3SMP_E.006",
+      "ScaleFactor": "",
+      "Units": "",
+      "ValidMax": 1.0,
+      "ValidMin": 0.0,
+      "XSize": 3856,
+      "YSize": 1624
+    },
+    "Soil_Moisture_Retrieval_Data_AM_roughness_coefficient_scav": {
+      "AddOffset": "",
+      "Available": true,
+      "DataType": "float32",
+      "Description": "A unitless value that is indicative of bare soil roughness used in SCA-V within the 9 km grid cell.",
+      "Dimensions": [
+        "epoch_days",
+        "FakeDim0",
+        "FakeDim1"
+      ],
+      "FillValue": -9999,
+      "FillValueAll": [
+        -9999
+      ],
+      "Group": "",
+      "Info": {
+        "group_name": "Soil_Moisture_Retrieval_Data_AM",
+        "layer_name": "roughness_coefficient_scav"
+      },
+      "IsQA": false,
+      "Layer": "Soil_Moisture_Retrieval_Data_AM_roughness_coefficient_scav",
+      "OrigDataType": "float32",
+      "OrigValidMax": 1.0,
+      "OrigValidMin": 0.0,
+      "QualityLayers": "['Soil_Moisture_Retrieval_Data_AM_retrieval_qual_flag_scav']",
+      "QualityProductAndVersion": "SPL3SMP_E.006",
+      "ScaleFactor": "",
+      "Units": "",
+      "ValidMax": 1.0,
+      "ValidMin": 0.0,
+      "XSize": 3856,
+      "YSize": 1624
+    },
+    "Soil_Moisture_Retrieval_Data_AM_soil_moisture": {
+      "AddOffset": "",
+      "Available": true,
+      "DataType": "float32",
+      "Description": "Representative SCA-V soil moisture measurement for the Earth based grid cell.",
+      "Dimensions": [
+        "epoch_days",
+        "FakeDim0",
+        "FakeDim1"
+      ],
+      "FillValue": -9999,
+      "FillValueAll": [
+        -9999
+      ],
+      "Group": "",
+      "Info": {
+        "group_name": "Soil_Moisture_Retrieval_Data_AM",
+        "layer_name": "soil_moisture"
+      },
+      "IsQA": false,
+      "Layer": "Soil_Moisture_Retrieval_Data_AM_soil_moisture",
+      "OrigDataType": "float32",
+      "OrigValidMax": 0.5,
+      "OrigValidMin": 0.02,
+      "QualityLayers": "['Soil_Moisture_Retrieval_Data_AM_retrieval_qual_flag']",
+      "QualityProductAndVersion": "SPL3SMP_E.006",
+      "ScaleFactor": "",
+      "Units": "",
+      "ValidMax": 0.5,
+      "ValidMin": 0.02,
+      "XSize": 3856,
+      "YSize": 1624
+    },
+    "Soil_Moisture_Retrieval_Data_AM_soil_moisture_dca": {
+      "AddOffset": "",
+      "Available": true,
+      "DataType": "float32",
+      "Description": "Representative DCA soil moisture measurement for the Earth based grid cell.",
+      "Dimensions": [
+        "epoch_days",
+        "FakeDim0",
+        "FakeDim1"
+      ],
+      "FillValue": -9999,
+      "FillValueAll": [
+        -9999
+      ],
+      "Group": "",
+      "Info": {
+        "group_name": "Soil_Moisture_Retrieval_Data_AM",
+        "layer_name": "soil_moisture_dca"
+      },
+      "IsQA": false,
+      "Layer": "Soil_Moisture_Retrieval_Data_AM_soil_moisture_dca",
+      "OrigDataType": "float32",
+      "OrigValidMax": 0.5,
+      "OrigValidMin": 0.02,
+      "QualityLayers": "['Soil_Moisture_Retrieval_Data_AM_retrieval_qual_flag_dca']",
+      "QualityProductAndVersion": "SPL3SMP_E.006",
+      "ScaleFactor": "",
+      "Units": "",
+      "ValidMax": 0.5,
+      "ValidMin": 0.02,
+      "XSize": 3856,
+      "YSize": 1624
+    },
+    "Soil_Moisture_Retrieval_Data_AM_soil_moisture_error": {
+      "AddOffset": "",
+      "Available": true,
+      "DataType": "float32",
+      "Description": "Net uncertainty measure of soil moisture measure for the Earth based grid cell. - Calculation method is TBD.",
+      "Dimensions": [
+        "epoch_days",
+        "FakeDim0",
+        "FakeDim1"
+      ],
+      "FillValue": -9999,
+      "FillValueAll": [
+        -9999
+      ],
+      "Group": "",
+      "Info": {
+        "group_name": "Soil_Moisture_Retrieval_Data_AM",
+        "layer_name": "soil_moisture_error"
+      },
+      "IsQA": false,
+      "Layer": "Soil_Moisture_Retrieval_Data_AM_soil_moisture_error",
+      "OrigDataType": "float32",
+      "OrigValidMax": 0.200000003,
+      "OrigValidMin": 0.0,
+      "QualityLayers": "['Soil_Moisture_Retrieval_Data_AM_retrieval_qual_flag']",
+      "QualityProductAndVersion": "SPL3SMP_E.006",
+      "ScaleFactor": "",
+      "Units": "",
+      "ValidMax": 0.200000003,
+      "ValidMin": 0.0,
+      "XSize": 3856,
+      "YSize": 1624
+    },
+    "Soil_Moisture_Retrieval_Data_AM_soil_moisture_scah": {
+      "AddOffset": "",
+      "Available": true,
+      "DataType": "float32",
+      "Description": "Representative SCA-H soil moisture measurement for the Earth based grid cell.",
+      "Dimensions": [
+        "epoch_days",
+        "FakeDim0",
+        "FakeDim1"
+      ],
+      "FillValue": -9999,
+      "FillValueAll": [
+        -9999
+      ],
+      "Group": "",
+      "Info": {
+        "group_name": "Soil_Moisture_Retrieval_Data_AM",
+        "layer_name": "soil_moisture_scah"
+      },
+      "IsQA": false,
+      "Layer": "Soil_Moisture_Retrieval_Data_AM_soil_moisture_scah",
+      "OrigDataType": "float32",
+      "OrigValidMax": 0.5,
+      "OrigValidMin": 0.02,
+      "QualityLayers": "['Soil_Moisture_Retrieval_Data_AM_retrieval_qual_flag_scah']",
+      "QualityProductAndVersion": "SPL3SMP_E.006",
+      "ScaleFactor": "",
+      "Units": "",
+      "ValidMax": 0.5,
+      "ValidMin": 0.02,
+      "XSize": 3856,
+      "YSize": 1624
+    },
+    "Soil_Moisture_Retrieval_Data_AM_soil_moisture_scav": {
+      "AddOffset": "",
+      "Available": true,
+      "DataType": "float32",
+      "Description": "Representative SCA-V soil moisture measurement for the Earth based grid cell.",
+      "Dimensions": [
+        "epoch_days",
+        "FakeDim0",
+        "FakeDim1"
+      ],
+      "FillValue": -9999,
+      "FillValueAll": [
+        -9999
+      ],
+      "Group": "",
+      "Info": {
+        "group_name": "Soil_Moisture_Retrieval_Data_AM",
+        "layer_name": "soil_moisture_scav"
+      },
+      "IsQA": false,
+      "Layer": "Soil_Moisture_Retrieval_Data_AM_soil_moisture_scav",
+      "OrigDataType": "float32",
+      "OrigValidMax": 0.5,
+      "OrigValidMin": 0.02,
+      "QualityLayers": "['Soil_Moisture_Retrieval_Data_AM_retrieval_qual_flag_scav']",
+      "QualityProductAndVersion": "SPL3SMP_E.006",
+      "ScaleFactor": "",
+      "Units": "",
+      "ValidMax": 0.5,
+      "ValidMin": 0.02,
+      "XSize": 3856,
+      "YSize": 1624
+    },
+    "Soil_Moisture_Retrieval_Data_AM_static_water_body_fraction": {
+      "AddOffset": "",
+      "Available": true,
+      "DataType": "float32",
+      "Description": "The fraction of the area of the 9 km grid cell that is covered by static water based on a Digital Elevation Map.",
+      "Dimensions": [
+        "epoch_days",
+        "FakeDim0",
+        "FakeDim1"
+      ],
+      "FillValue": -9999,
+      "FillValueAll": [
+        -9999
+      ],
+      "Group": "",
+      "Info": {
+        "group_name": "Soil_Moisture_Retrieval_Data_AM",
+        "layer_name": "static_water_body_fraction"
+      },
+      "IsQA": false,
+      "Layer": "Soil_Moisture_Retrieval_Data_AM_static_water_body_fraction",
+      "OrigDataType": "float32",
+      "OrigValidMax": 1.0,
+      "OrigValidMin": 0.0,
+      "QualityLayers": "['Soil_Moisture_Retrieval_Data_AM_retrieval_qual_flag']",
+      "QualityProductAndVersion": "SPL3SMP_E.006",
+      "ScaleFactor": "",
+      "Units": "",
+      "ValidMax": 1.0,
+      "ValidMin": 0.0,
+      "XSize": 3856,
+      "YSize": 1624
+    },
+    "Soil_Moisture_Retrieval_Data_AM_surface_flag": {
+      "AddOffset": "",
+      "Available": true,
+      "DataType": "uint16",
+      "Description": "Bit flags that record ambient surface conditions for the grid cell",
+      "Dimensions": [
+        "epoch_days",
+        "FakeDim0",
+        "FakeDim1"
+      ],
+      "FillValue": 65534,
+      "FillValueAll": [
+        65534
+      ],
+      "Group": "",
+      "Info": {
+        "group_name": "Soil_Moisture_Retrieval_Data_AM",
+        "layer_name": "surface_flag"
+      },
+      "IsQA": false,
+      "Layer": "Soil_Moisture_Retrieval_Data_AM_surface_flag",
+      "OrigDataType": "uint16",
+      "OrigValidMax": "",
+      "OrigValidMin": "",
+      "QualityLayers": "['Soil_Moisture_Retrieval_Data_AM_retrieval_qual_flag']",
+      "QualityProductAndVersion": "SPL3SMP_E.006",
+      "ScaleFactor": "",
+      "Units": "",
+      "ValidMax": "",
+      "ValidMin": "",
+      "XSize": 3856,
+      "YSize": 1624
+    },
+    "Soil_Moisture_Retrieval_Data_AM_surface_temperature": {
+      "AddOffset": "",
+      "Available": true,
+      "DataType": "float32",
+      "Description": "Temperature at land surface based on GMAO GEOS-5 data.",
+      "Dimensions": [
+        "epoch_days",
+        "FakeDim0",
+        "FakeDim1"
+      ],
+      "FillValue": -9999,
+      "FillValueAll": [
+        -9999
+      ],
+      "Group": "",
+      "Info": {
+        "group_name": "Soil_Moisture_Retrieval_Data_AM",
+        "layer_name": "surface_temperature"
+      },
+      "IsQA": false,
+      "Layer": "Soil_Moisture_Retrieval_Data_AM_surface_temperature",
+      "OrigDataType": "float32",
+      "OrigValidMax": 350.0,
+      "OrigValidMin": 0.0,
+      "QualityLayers": "['Soil_Moisture_Retrieval_Data_AM_retrieval_qual_flag']",
+      "QualityProductAndVersion": "SPL3SMP_E.006",
+      "ScaleFactor": "",
+      "Units": "",
+      "ValidMax": 350.0,
+      "ValidMin": 0.0,
+      "XSize": 3856,
+      "YSize": 1624
+    },
+    "Soil_Moisture_Retrieval_Data_AM_surface_water_fraction_mb_h": {
+      "AddOffset": "",
+      "Available": true,
+      "DataType": "float32",
+      "Description": "Gain weighted fraction of static water within the radiometer horizontal polarization brightness temperature antenna pattern in 36 km Earth grid cell.",
+      "Dimensions": [
+        "epoch_days",
+        "FakeDim0",
+        "FakeDim1"
+      ],
+      "FillValue": -9999,
+      "FillValueAll": [
+        -9999
+      ],
+      "Group": "",
+      "Info": {
+        "group_name": "Soil_Moisture_Retrieval_Data_AM",
+        "layer_name": "surface_water_fraction_mb_h"
+      },
+      "IsQA": false,
+      "Layer": "Soil_Moisture_Retrieval_Data_AM_surface_water_fraction_mb_h",
+      "OrigDataType": "float32",
+      "OrigValidMax": 1.0,
+      "OrigValidMin": 0.0,
+      "QualityLayers": "['Soil_Moisture_Retrieval_Data_AM_retrieval_qual_flag']",
+      "QualityProductAndVersion": "SPL3SMP_E.006",
+      "ScaleFactor": "",
+      "Units": "",
+      "ValidMax": 1.0,
+      "ValidMin": 0.0,
+      "XSize": 3856,
+      "YSize": 1624
+    },
+    "Soil_Moisture_Retrieval_Data_AM_surface_water_fraction_mb_v": {
+      "AddOffset": "",
+      "Available": true,
+      "DataType": "float32",
+      "Description": "Gain weighted fraction of static water within the radiometer vertical polarization brightness temperature antenna pattern in 36 km Earth grid cell.",
+      "Dimensions": [
+        "epoch_days",
+        "FakeDim0",
+        "FakeDim1"
+      ],
+      "FillValue": -9999,
+      "FillValueAll": [
+        -9999
+      ],
+      "Group": "",
+      "Info": {
+        "group_name": "Soil_Moisture_Retrieval_Data_AM",
+        "layer_name": "surface_water_fraction_mb_v"
+      },
+      "IsQA": false,
+      "Layer": "Soil_Moisture_Retrieval_Data_AM_surface_water_fraction_mb_v",
+      "OrigDataType": "float32",
+      "OrigValidMax": 1.0,
+      "OrigValidMin": 0.0,
+      "QualityLayers": "['Soil_Moisture_Retrieval_Data_AM_retrieval_qual_flag']",
+      "QualityProductAndVersion": "SPL3SMP_E.006",
+      "ScaleFactor": "",
+      "Units": "",
+      "ValidMax": 1.0,
+      "ValidMin": 0.0,
+      "XSize": 3856,
+      "YSize": 1624
+    },
+    "Soil_Moisture_Retrieval_Data_AM_tb_3_corrected": {
+      "AddOffset": "",
+      "Available": true,
+      "DataType": "float32",
+      "Description": "Third stokes parameter for each 9 km grid cell calculated with an adjustment for the presence of water bodies",
+      "Dimensions": [
+        "epoch_days",
+        "FakeDim0",
+        "FakeDim1"
+      ],
+      "FillValue": -9999,
+      "FillValueAll": [
+        -9999
+      ],
+      "Group": "",
+      "Info": {
+        "group_name": "Soil_Moisture_Retrieval_Data_AM",
+        "layer_name": "tb_3_corrected"
+      },
+      "IsQA": false,
+      "Layer": "Soil_Moisture_Retrieval_Data_AM_tb_3_corrected",
+      "OrigDataType": "float32",
+      "OrigValidMax": 330.0,
+      "OrigValidMin": 0.0,
+      "QualityLayers": "['Soil_Moisture_Retrieval_Data_AM_retrieval_qual_flag']",
+      "QualityProductAndVersion": "SPL3SMP_E.006",
+      "ScaleFactor": "",
+      "Units": "",
+      "ValidMax": 330.0,
+      "ValidMin": 0.0,
+      "XSize": 3856,
+      "YSize": 1624
+    },
+    "Soil_Moisture_Retrieval_Data_AM_tb_4_corrected": {
+      "AddOffset": "",
+      "Available": true,
+      "DataType": "float32",
+      "Description": "Fourth stokes parameter for each 9 km grid cell calculated with an adjustment for the presence of water bodies",
+      "Dimensions": [
+        "epoch_days",
+        "FakeDim0",
+        "FakeDim1"
+      ],
+      "FillValue": -9999,
+      "FillValueAll": [
+        -9999
+      ],
+      "Group": "",
+      "Info": {
+        "group_name": "Soil_Moisture_Retrieval_Data_AM",
+        "layer_name": "tb_4_corrected"
+      },
+      "IsQA": false,
+      "Layer": "Soil_Moisture_Retrieval_Data_AM_tb_4_corrected",
+      "OrigDataType": "float32",
+      "OrigValidMax": 330.0,
+      "OrigValidMin": 0.0,
+      "QualityLayers": "['Soil_Moisture_Retrieval_Data_AM_retrieval_qual_flag']",
+      "QualityProductAndVersion": "SPL3SMP_E.006",
+      "ScaleFactor": "",
+      "Units": "",
+      "ValidMax": 330.0,
+      "ValidMin": 0.0,
+      "XSize": 3856,
+      "YSize": 1624
+    },
+    "Soil_Moisture_Retrieval_Data_AM_tb_h_corrected": {
+      "AddOffset": "",
+      "Available": true,
+      "DataType": "float32",
+      "Description": "Horizontal polarization brightness temperature in 9 km Earth grid cell adjusted for the presence of water bodies.",
+      "Dimensions": [
+        "epoch_days",
+        "FakeDim0",
+        "FakeDim1"
+      ],
+      "FillValue": -9999,
+      "FillValueAll": [
+        -9999
+      ],
+      "Group": "",
+      "Info": {
+        "group_name": "Soil_Moisture_Retrieval_Data_AM",
+        "layer_name": "tb_h_corrected"
+      },
+      "IsQA": false,
+      "Layer": "Soil_Moisture_Retrieval_Data_AM_tb_h_corrected",
+      "OrigDataType": "float32",
+      "OrigValidMax": 330.0,
+      "OrigValidMin": 0.0,
+      "QualityLayers": "['Soil_Moisture_Retrieval_Data_AM_retrieval_qual_flag']",
+      "QualityProductAndVersion": "SPL3SMP_E.006",
+      "ScaleFactor": "",
+      "Units": "",
+      "ValidMax": 330.0,
+      "ValidMin": 0.0,
+      "XSize": 3856,
+      "YSize": 1624
+    },
+    "Soil_Moisture_Retrieval_Data_AM_tb_h_uncorrected": {
+      "AddOffset": "",
+      "Available": true,
+      "DataType": "float32",
+      "Description": "Horizontal polarization brightness temperature in 36 km Earth grid cell before adjustment for the presence of water bodies.",
+      "Dimensions": [
+        "epoch_days",
+        "FakeDim0",
+        "FakeDim1"
+      ],
+      "FillValue": -9999,
+      "FillValueAll": [
+        -9999
+      ],
+      "Group": "",
+      "Info": {
+        "group_name": "Soil_Moisture_Retrieval_Data_AM",
+        "layer_name": "tb_h_uncorrected"
+      },
+      "IsQA": false,
+      "Layer": "Soil_Moisture_Retrieval_Data_AM_tb_h_uncorrected",
+      "OrigDataType": "float32",
+      "OrigValidMax": 330.0,
+      "OrigValidMin": 0.0,
+      "QualityLayers": "",
+      "QualityProductAndVersion": "",
+      "ScaleFactor": "",
+      "Units": "",
+      "ValidMax": 330.0,
+      "ValidMin": 0.0,
+      "XSize": 3856,
+      "YSize": 1624
+    },
+    "Soil_Moisture_Retrieval_Data_AM_tb_qual_flag_3": {
+      "AddOffset": "",
+      "Available": true,
+      "DataType": "uint16",
+      "Description": "Bit flags that represent the quality of the 3rd Stokes brightness temperature within each grid cell",
+      "Dimensions": [
+        "epoch_days",
+        "FakeDim0",
+        "FakeDim1"
+      ],
+      "FillValue": 65534,
+      "FillValueAll": [
+        65534
+      ],
+      "Group": "",
+      "Info": {
+        "group_name": "Soil_Moisture_Retrieval_Data_AM",
+        "layer_name": "tb_qual_flag_3"
+      },
+      "IsQA": false,
+      "Layer": "Soil_Moisture_Retrieval_Data_AM_tb_qual_flag_3",
+      "OrigDataType": "uint16",
+      "OrigValidMax": "",
+      "OrigValidMin": "",
+      "QualityLayers": "['Soil_Moisture_Retrieval_Data_AM_retrieval_qual_flag']",
+      "QualityProductAndVersion": "SPL3SMP_E.006",
+      "ScaleFactor": "",
+      "Units": "",
+      "ValidMax": "",
+      "ValidMin": "",
+      "XSize": 3856,
+      "YSize": 1624
+    },
+    "Soil_Moisture_Retrieval_Data_AM_tb_qual_flag_4": {
+      "AddOffset": "",
+      "Available": true,
+      "DataType": "uint16",
+      "Description": "Bit flags that represent the quality of the 4th Stokes brightness temperature within each grid cell",
+      "Dimensions": [
+        "epoch_days",
+        "FakeDim0",
+        "FakeDim1"
+      ],
+      "FillValue": 65534,
+      "FillValueAll": [
+        65534
+      ],
+      "Group": "",
+      "Info": {
+        "group_name": "Soil_Moisture_Retrieval_Data_AM",
+        "layer_name": "tb_qual_flag_4"
+      },
+      "IsQA": false,
+      "Layer": "Soil_Moisture_Retrieval_Data_AM_tb_qual_flag_4",
+      "OrigDataType": "uint16",
+      "OrigValidMax": "",
+      "OrigValidMin": "",
+      "QualityLayers": "['Soil_Moisture_Retrieval_Data_AM_retrieval_qual_flag']",
+      "QualityProductAndVersion": "SPL3SMP_E.006",
+      "ScaleFactor": "",
+      "Units": "",
+      "ValidMax": "",
+      "ValidMin": "",
+      "XSize": 3856,
+      "YSize": 1624
+    },
+    "Soil_Moisture_Retrieval_Data_AM_tb_qual_flag_h": {
+      "AddOffset": "",
+      "Available": true,
+      "DataType": "uint16",
+      "Description": "Bit flags that represent the quality of the horizontal polarization brightness temperature within each grid cell",
+      "Dimensions": [
+        "epoch_days",
+        "FakeDim0",
+        "FakeDim1"
+      ],
+      "FillValue": 65534,
+      "FillValueAll": [
+        65534
+      ],
+      "Group": "",
+      "Info": {
+        "group_name": "Soil_Moisture_Retrieval_Data_AM",
+        "layer_name": "tb_qual_flag_h"
+      },
+      "IsQA": false,
+      "Layer": "Soil_Moisture_Retrieval_Data_AM_tb_qual_flag_h",
+      "OrigDataType": "uint16",
+      "OrigValidMax": "",
+      "OrigValidMin": "",
+      "QualityLayers": "['Soil_Moisture_Retrieval_Data_AM_retrieval_qual_flag']",
+      "QualityProductAndVersion": "SPL3SMP_E.006",
+      "ScaleFactor": "",
+      "Units": "",
+      "ValidMax": "",
+      "ValidMin": "",
+      "XSize": 3856,
+      "YSize": 1624
+    },
+    "Soil_Moisture_Retrieval_Data_AM_tb_qual_flag_v": {
+      "AddOffset": "",
+      "Available": true,
+      "DataType": "uint16",
+      "Description": "Bit flags that represent the quality of the vertical polarization brightness temperature within each grid cell",
+      "Dimensions": [
+        "epoch_days",
+        "FakeDim0",
+        "FakeDim1"
+      ],
+      "FillValue": 65534,
+      "FillValueAll": [
+        65534
+      ],
+      "Group": "",
+      "Info": {
+        "group_name": "Soil_Moisture_Retrieval_Data_AM",
+        "layer_name": "tb_qual_flag_v"
+      },
+      "IsQA": false,
+      "Layer": "Soil_Moisture_Retrieval_Data_AM_tb_qual_flag_v",
+      "OrigDataType": "uint16",
+      "OrigValidMax": "",
+      "OrigValidMin": "",
+      "QualityLayers": "['Soil_Moisture_Retrieval_Data_AM_retrieval_qual_flag']",
+      "QualityProductAndVersion": "SPL3SMP_E.006",
+      "ScaleFactor": "",
+      "Units": "",
+      "ValidMax": "",
+      "ValidMin": "",
+      "XSize": 3856,
+      "YSize": 1624
+    },
+    "Soil_Moisture_Retrieval_Data_AM_tb_time_seconds": {
+      "AddOffset": "",
+      "Available": true,
+      "DataType": "float64",
+      "Description": "Arithmetic average of the acquisition time of all of the brightness temperature footprints with a center that falls within the EASE grid cell in seconds since noon on January 1, 2000 UTC.",
+      "Dimensions": [
+        "epoch_days",
+        "FakeDim0",
+        "FakeDim1"
+      ],
+      "FillValue": -9999,
+      "FillValueAll": [
+        -9999
+      ],
+      "Group": "",
+      "Info": {
+        "group_name": "Soil_Moisture_Retrieval_Data_AM",
+        "layer_name": "tb_time_seconds"
+      },
+      "IsQA": false,
+      "Layer": "Soil_Moisture_Retrieval_Data_AM_tb_time_seconds",
+      "OrigDataType": "float64",
+      "OrigValidMax": 940000000.0,
+      "OrigValidMin": -999999.9,
+      "QualityLayers": "['Soil_Moisture_Retrieval_Data_AM_retrieval_qual_flag']",
+      "QualityProductAndVersion": "SPL3SMP_E.006",
+      "ScaleFactor": "",
+      "Units": "",
+      "ValidMax": 940000000.0,
+      "ValidMin": -999999.9,
+      "XSize": 3856,
+      "YSize": 1624
+    },
+    "Soil_Moisture_Retrieval_Data_AM_tb_v_corrected": {
+      "AddOffset": "",
+      "Available": true,
+      "DataType": "float32",
+      "Description": "Vertical polarization brightness temperature in 9 km Earth grid cell adjusted for the presence of water bodies.",
+      "Dimensions": [
+        "epoch_days",
+        "FakeDim0",
+        "FakeDim1"
+      ],
+      "FillValue": -9999,
+      "FillValueAll": [
+        -9999
+      ],
+      "Group": "",
+      "Info": {
+        "group_name": "Soil_Moisture_Retrieval_Data_AM",
+        "layer_name": "tb_v_corrected"
+      },
+      "IsQA": false,
+      "Layer": "Soil_Moisture_Retrieval_Data_AM_tb_v_corrected",
+      "OrigDataType": "float32",
+      "OrigValidMax": 330.0,
+      "OrigValidMin": 0.0,
+      "QualityLayers": "['Soil_Moisture_Retrieval_Data_AM_retrieval_qual_flag']",
+      "QualityProductAndVersion": "SPL3SMP_E.006",
+      "ScaleFactor": "",
+      "Units": "",
+      "ValidMax": 330.0,
+      "ValidMin": 0.0,
+      "XSize": 3856,
+      "YSize": 1624
+    },
+    "Soil_Moisture_Retrieval_Data_AM_vegetation_opacity": {
+      "AddOffset": "",
+      "Available": true,
+      "DataType": "float32",
+      "Description": "The measured opacity of the vegetation used in the SCA-V retrieval in the grid cell.",
+      "Dimensions": [
+        "epoch_days",
+        "FakeDim0",
+        "FakeDim1"
+      ],
+      "FillValue": -9999,
+      "FillValueAll": [
+        -9999
+      ],
+      "Group": "",
+      "Info": {
+        "group_name": "Soil_Moisture_Retrieval_Data_AM",
+        "layer_name": "vegetation_opacity"
+      },
+      "IsQA": false,
+      "Layer": "Soil_Moisture_Retrieval_Data_AM_vegetation_opacity",
+      "OrigDataType": "float32",
+      "OrigValidMax": 999999.875,
+      "OrigValidMin": -999999.875,
+      "QualityLayers": "['Soil_Moisture_Retrieval_Data_AM_retrieval_qual_flag']",
+      "QualityProductAndVersion": "SPL3SMP_E.006",
+      "ScaleFactor": "",
+      "Units": "",
+      "ValidMax": 999999.875,
+      "ValidMin": -999999.875,
+      "XSize": 3856,
+      "YSize": 1624
+    },
+    "Soil_Moisture_Retrieval_Data_AM_vegetation_opacity_dca": {
+      "AddOffset": "",
+      "Available": true,
+      "DataType": "float32",
+      "Description": "The measured opacity of the vegetation used in the DCA retrieval in the grid cell.",
+      "Dimensions": [
+        "epoch_days",
+        "FakeDim0",
+        "FakeDim1"
+      ],
+      "FillValue": -9999,
+      "FillValueAll": [
+        -9999
+      ],
+      "Group": "",
+      "Info": {
+        "group_name": "Soil_Moisture_Retrieval_Data_AM",
+        "layer_name": "vegetation_opacity_dca"
+      },
+      "IsQA": false,
+      "Layer": "Soil_Moisture_Retrieval_Data_AM_vegetation_opacity_dca",
+      "OrigDataType": "float32",
+      "OrigValidMax": 999999.875,
+      "OrigValidMin": -999999.875,
+      "QualityLayers": "['Soil_Moisture_Retrieval_Data_AM_retrieval_qual_flag_dca']",
+      "QualityProductAndVersion": "SPL3SMP_E.006",
+      "ScaleFactor": "",
+      "Units": "",
+      "ValidMax": 999999.875,
+      "ValidMin": -999999.875,
+      "XSize": 3856,
+      "YSize": 1624
+    },
+    "Soil_Moisture_Retrieval_Data_AM_vegetation_opacity_scah": {
+      "AddOffset": "",
+      "Available": true,
+      "DataType": "float32",
+      "Description": "The measured opacity of the vegetation used in the SCA-H retrieval in the grid cell.",
+      "Dimensions": [
+        "epoch_days",
+        "FakeDim0",
+        "FakeDim1"
+      ],
+      "FillValue": -9999,
+      "FillValueAll": [
+        -9999
+      ],
+      "Group": "",
+      "Info": {
+        "group_name": "Soil_Moisture_Retrieval_Data_AM",
+        "layer_name": "vegetation_opacity_scah"
+      },
+      "IsQA": false,
+      "Layer": "Soil_Moisture_Retrieval_Data_AM_vegetation_opacity_scah",
+      "OrigDataType": "float32",
+      "OrigValidMax": 999999.875,
+      "OrigValidMin": -999999.875,
+      "QualityLayers": "['Soil_Moisture_Retrieval_Data_AM_retrieval_qual_flag_scah']",
+      "QualityProductAndVersion": "SPL3SMP_E.006",
+      "ScaleFactor": "",
+      "Units": "",
+      "ValidMax": 999999.875,
+      "ValidMin": -999999.875,
+      "XSize": 3856,
+      "YSize": 1624
+    },
+    "Soil_Moisture_Retrieval_Data_AM_vegetation_opacity_scav": {
+      "AddOffset": "",
+      "Available": true,
+      "DataType": "float32",
+      "Description": "The measured opacity of the vegetation used in the SCA-V retrieval in the grid cell.",
+      "Dimensions": [
+        "epoch_days",
+        "FakeDim0",
+        "FakeDim1"
+      ],
+      "FillValue": -9999,
+      "FillValueAll": [
+        -9999
+      ],
+      "Group": "",
+      "Info": {
+        "group_name": "Soil_Moisture_Retrieval_Data_AM",
+        "layer_name": "vegetation_opacity_scav"
+      },
+      "IsQA": false,
+      "Layer": "Soil_Moisture_Retrieval_Data_AM_vegetation_opacity_scav",
+      "OrigDataType": "float32",
+      "OrigValidMax": 999999.875,
+      "OrigValidMin": -999999.875,
+      "QualityLayers": "['Soil_Moisture_Retrieval_Data_AM_retrieval_qual_flag_scav']",
+      "QualityProductAndVersion": "SPL3SMP_E.006",
+      "ScaleFactor": "",
+      "Units": "",
+      "ValidMax": 999999.875,
+      "ValidMin": -999999.875,
+      "XSize": 3856,
+      "YSize": 1624
+    },
+    "Soil_Moisture_Retrieval_Data_AM_vegetation_water_content": {
+      "AddOffset": "",
+      "Available": true,
+      "DataType": "float32",
+      "Description": "Representative measure of water in the vegetation within the 9 km grid cell.",
+      "Dimensions": [
+        "epoch_days",
+        "FakeDim0",
+        "FakeDim1"
+      ],
+      "FillValue": -9999,
+      "FillValueAll": [
+        -9999
+      ],
+      "Group": "",
+      "Info": {
+        "group_name": "Soil_Moisture_Retrieval_Data_AM",
+        "layer_name": "vegetation_water_content"
+      },
+      "IsQA": false,
+      "Layer": "Soil_Moisture_Retrieval_Data_AM_vegetation_water_content",
+      "OrigDataType": "float32",
+      "OrigValidMax": 20.0,
+      "OrigValidMin": 0.0,
+      "QualityLayers": "['Soil_Moisture_Retrieval_Data_AM_retrieval_qual_flag']",
+      "QualityProductAndVersion": "SPL3SMP_E.006",
+      "ScaleFactor": "",
+      "Units": "",
+      "ValidMax": 20.0,
+      "ValidMin": 0.0,
+      "XSize": 3856,
+      "YSize": 1624
+    },
+    "Soil_Moisture_Retrieval_Data_PM_albedo_dca_pm": {
+      "AddOffset": "",
+      "Available": true,
+      "DataType": "float32",
+      "Description": "Diffuse reflecting power of the Earth&apos;s surface used in DCA retrievals within the grid cell.",
+      "Dimensions": [
+        "epoch_days",
+        "FakeDim0",
+        "FakeDim1"
+      ],
+      "FillValue": -9999,
+      "FillValueAll": [
+        -9999
+      ],
+      "Group": "",
+      "Info": {
+        "group_name": "Soil_Moisture_Retrieval_Data_PM",
+        "layer_name": "albedo_dca_pm"
+      },
+      "IsQA": false,
+      "Layer": "Soil_Moisture_Retrieval_Data_PM_albedo_dca_pm",
+      "OrigDataType": "float32",
+      "OrigValidMax": 1.0,
+      "OrigValidMin": 0.0,
+      "QualityLayers": "['Soil_Moisture_Retrieval_Data_PM_retrieval_qual_flag_dca_pm']",
+      "QualityProductAndVersion": "SPL3SMP_E.006",
+      "ScaleFactor": "",
+      "Units": "",
+      "ValidMax": 1.0,
+      "ValidMin": 0.0,
+      "XSize": 3856,
+      "YSize": 1624
+    },
+    "Soil_Moisture_Retrieval_Data_PM_albedo_pm": {
+      "AddOffset": "",
+      "Available": true,
+      "DataType": "float32",
+      "Description": "Diffuse reflecting power of the Earth&apos;s surface used in SCA-V retrievals within the grid cell.",
+      "Dimensions": [
+        "epoch_days",
+        "FakeDim0",
+        "FakeDim1"
+      ],
+      "FillValue": -9999,
+      "FillValueAll": [
+        -9999
+      ],
+      "Group": "",
+      "Info": {
+        "group_name": "Soil_Moisture_Retrieval_Data_PM",
+        "layer_name": "albedo_pm"
+      },
+      "IsQA": false,
+      "Layer": "Soil_Moisture_Retrieval_Data_PM_albedo_pm",
+      "OrigDataType": "float32",
+      "OrigValidMax": 1.0,
+      "OrigValidMin": 0.0,
+      "QualityLayers": "['Soil_Moisture_Retrieval_Data_PM_retrieval_qual_flag_pm']",
+      "QualityProductAndVersion": "SPL3SMP_E.006",
+      "ScaleFactor": "",
+      "Units": "",
+      "ValidMax": 1.0,
+      "ValidMin": 0.0,
+      "XSize": 3856,
+      "YSize": 1624
+    },
+    "Soil_Moisture_Retrieval_Data_PM_albedo_scah_pm": {
+      "AddOffset": "",
+      "Available": true,
+      "DataType": "float32",
+      "Description": "Diffuse reflecting power of the Earth&apos;s surface used in SCA-H retrievals within the grid cell.",
+      "Dimensions": [
+        "epoch_days",
+        "FakeDim0",
+        "FakeDim1"
+      ],
+      "FillValue": -9999,
+      "FillValueAll": [
+        -9999
+      ],
+      "Group": "",
+      "Info": {
+        "group_name": "Soil_Moisture_Retrieval_Data_PM",
+        "layer_name": "albedo_scah_pm"
+      },
+      "IsQA": false,
+      "Layer": "Soil_Moisture_Retrieval_Data_PM_albedo_scah_pm",
+      "OrigDataType": "float32",
+      "OrigValidMax": 1.0,
+      "OrigValidMin": 0.0,
+      "QualityLayers": "['Soil_Moisture_Retrieval_Data_PM_retrieval_qual_flag_scah_pm']",
+      "QualityProductAndVersion": "SPL3SMP_E.006",
+      "ScaleFactor": "",
+      "Units": "",
+      "ValidMax": 1.0,
+      "ValidMin": 0.0,
+      "XSize": 3856,
+      "YSize": 1624
+    },
+    "Soil_Moisture_Retrieval_Data_PM_albedo_scav_pm": {
+      "AddOffset": "",
+      "Available": true,
+      "DataType": "float32",
+      "Description": "Diffuse reflecting power of the Earth&apos;s surface used in SCA-V retrievals within the grid cell.",
+      "Dimensions": [
+        "epoch_days",
+        "FakeDim0",
+        "FakeDim1"
+      ],
+      "FillValue": -9999,
+      "FillValueAll": [
+        -9999
+      ],
+      "Group": "",
+      "Info": {
+        "group_name": "Soil_Moisture_Retrieval_Data_PM",
+        "layer_name": "albedo_scav_pm"
+      },
+      "IsQA": false,
+      "Layer": "Soil_Moisture_Retrieval_Data_PM_albedo_scav_pm",
+      "OrigDataType": "float32",
+      "OrigValidMax": 1.0,
+      "OrigValidMin": 0.0,
+      "QualityLayers": "['Soil_Moisture_Retrieval_Data_PM_retrieval_qual_flag_scav_pm']",
+      "QualityProductAndVersion": "SPL3SMP_E.006",
+      "ScaleFactor": "",
+      "Units": "",
+      "ValidMax": 1.0,
+      "ValidMin": 0.0,
+      "XSize": 3856,
+      "YSize": 1624
+    },
+    "Soil_Moisture_Retrieval_Data_PM_boresight_incidence_pm": {
+      "AddOffset": "",
+      "Available": true,
+      "DataType": "float32",
+      "Description": "Representative angle between the antenna boresight vector and the normal to the Earth&apos;s surface for all footprints within the cell.",
+      "Dimensions": [
+        "epoch_days",
+        "FakeDim0",
+        "FakeDim1"
+      ],
+      "FillValue": -9999,
+      "FillValueAll": [
+        -9999
+      ],
+      "Group": "",
+      "Info": {
+        "group_name": "Soil_Moisture_Retrieval_Data_PM",
+        "layer_name": "boresight_incidence_pm"
+      },
+      "IsQA": false,
+      "Layer": "Soil_Moisture_Retrieval_Data_PM_boresight_incidence_pm",
+      "OrigDataType": "float32",
+      "OrigValidMax": 90.0,
+      "OrigValidMin": 0.0,
+      "QualityLayers": "['Soil_Moisture_Retrieval_Data_PM_retrieval_qual_flag_pm']",
+      "QualityProductAndVersion": "SPL3SMP_E.006",
+      "ScaleFactor": "",
+      "Units": "",
+      "ValidMax": 90.0,
+      "ValidMin": 0.0,
+      "XSize": 3856,
+      "YSize": 1624
+    },
+    "Soil_Moisture_Retrieval_Data_PM_bulk_density_pm": {
+      "AddOffset": "",
+      "Available": true,
+      "DataType": "float32",
+      "Description": "A unitless value that is indicative of aggregated bulk density within the 9 km grid cell.",
+      "Dimensions": [
+        "epoch_days",
+        "FakeDim0",
+        "FakeDim1"
+      ],
+      "FillValue": -9999,
+      "FillValueAll": [
+        -9999
+      ],
+      "Group": "",
+      "Info": {
+        "group_name": "Soil_Moisture_Retrieval_Data_PM",
+        "layer_name": "bulk_density_pm"
+      },
+      "IsQA": false,
+      "Layer": "Soil_Moisture_Retrieval_Data_PM_bulk_density_pm",
+      "OrigDataType": "float32",
+      "OrigValidMax": 1.0,
+      "OrigValidMin": 0.0,
+      "QualityLayers": "['Soil_Moisture_Retrieval_Data_PM_retrieval_qual_flag_pm']",
+      "QualityProductAndVersion": "SPL3SMP_E.006",
+      "ScaleFactor": "",
+      "Units": "",
+      "ValidMax": 1.0,
+      "ValidMin": 0.0,
+      "XSize": 3856,
+      "YSize": 1624
+    },
+    "Soil_Moisture_Retrieval_Data_PM_clay_fraction_pm": {
+      "AddOffset": "",
+      "Available": true,
+      "DataType": "float32",
+      "Description": "A unitless value that is indicative of aggregated clay fraction within the 9 km grid cell.",
+      "Dimensions": [
+        "epoch_days",
+        "FakeDim0",
+        "FakeDim1"
+      ],
+      "FillValue": -9999,
+      "FillValueAll": [
+        -9999
+      ],
+      "Group": "",
+      "Info": {
+        "group_name": "Soil_Moisture_Retrieval_Data_PM",
+        "layer_name": "clay_fraction_pm"
+      },
+      "IsQA": false,
+      "Layer": "Soil_Moisture_Retrieval_Data_PM_clay_fraction_pm",
+      "OrigDataType": "float32",
+      "OrigValidMax": 1.0,
+      "OrigValidMin": 0.0,
+      "QualityLayers": "['Soil_Moisture_Retrieval_Data_PM_retrieval_qual_flag_pm']",
+      "QualityProductAndVersion": "SPL3SMP_E.006",
+      "ScaleFactor": "",
+      "Units": "",
+      "ValidMax": 1.0,
+      "ValidMin": 0.0,
+      "XSize": 3856,
+      "YSize": 1624
+    },
+    "Soil_Moisture_Retrieval_Data_PM_freeze_thaw_fraction_pm": {
+      "AddOffset": "",
+      "Available": true,
+      "DataType": "float32",
+      "Description": "Fraction of the 9 km grid cell that is denoted as frozen.  Based on binary flag that specifies freeze thaw conditions in each of the component 3 km grid cells.",
+      "Dimensions": [
+        "epoch_days",
+        "FakeDim0",
+        "FakeDim1"
+      ],
+      "FillValue": -9999,
+      "FillValueAll": [
+        -9999
+      ],
+      "Group": "",
+      "Info": {
+        "group_name": "Soil_Moisture_Retrieval_Data_PM",
+        "layer_name": "freeze_thaw_fraction_pm"
+      },
+      "IsQA": false,
+      "Layer": "Soil_Moisture_Retrieval_Data_PM_freeze_thaw_fraction_pm",
+      "OrigDataType": "float32",
+      "OrigValidMax": 1.0,
+      "OrigValidMin": 0.0,
+      "QualityLayers": "['Soil_Moisture_Retrieval_Data_PM_retrieval_qual_flag_pm']",
+      "QualityProductAndVersion": "SPL3SMP_E.006",
+      "ScaleFactor": "",
+      "Units": "",
+      "ValidMax": 1.0,
+      "ValidMin": 0.0,
+      "XSize": 3856,
+      "YSize": 1624
+    },
+    "Soil_Moisture_Retrieval_Data_PM_grid_surface_status_pm": {
+      "AddOffset": "",
+      "Available": true,
+      "DataType": "uint16",
+      "Description": "Indicates if the grid point lies on land (0) or water (1).",
+      "Dimensions": [
+        "epoch_days",
+        "FakeDim0",
+        "FakeDim1"
+      ],
+      "FillValue": 65534,
+      "FillValueAll": [
+        65534
+      ],
+      "Group": "",
+      "Info": {
+        "group_name": "Soil_Moisture_Retrieval_Data_PM",
+        "layer_name": "grid_surface_status_pm"
+      },
+      "IsQA": false,
+      "Layer": "Soil_Moisture_Retrieval_Data_PM_grid_surface_status_pm",
+      "OrigDataType": "uint16",
+      "OrigValidMax": 1.0,
+      "OrigValidMin": 0.0,
+      "QualityLayers": "['Soil_Moisture_Retrieval_Data_PM_retrieval_qual_flag_pm']",
+      "QualityProductAndVersion": "SPL3SMP_E.006",
+      "ScaleFactor": "",
+      "Units": "",
+      "ValidMax": 1.0,
+      "ValidMin": 0.0,
+      "XSize": 3856,
+      "YSize": 1624
+    },
+    "Soil_Moisture_Retrieval_Data_PM_radar_water_body_fraction_pm": {
+      "AddOffset": "",
+      "Available": true,
+      "DataType": "float32",
+      "Description": "The fraction of the area of the 9 km grid cell that is covered by water based on the radar detection algorithm.",
+      "Dimensions": [
+        "epoch_days",
+        "FakeDim0",
+        "FakeDim1"
+      ],
+      "FillValue": -9999,
+      "FillValueAll": [
+        -9999
+      ],
+      "Group": "",
+      "Info": {
+        "group_name": "Soil_Moisture_Retrieval_Data_PM",
+        "layer_name": "radar_water_body_fraction_pm"
+      },
+      "IsQA": false,
+      "Layer": "Soil_Moisture_Retrieval_Data_PM_radar_water_body_fraction_pm",
+      "OrigDataType": "float32",
+      "OrigValidMax": 1.0,
+      "OrigValidMin": 0.0,
+      "QualityLayers": "['Soil_Moisture_Retrieval_Data_PM_retrieval_qual_flag_pm']",
+      "QualityProductAndVersion": "SPL3SMP_E.006",
+      "ScaleFactor": "",
+      "Units": "",
+      "ValidMax": 1.0,
+      "ValidMin": 0.0,
+      "XSize": 3856,
+      "YSize": 1624
+    },
+    "Soil_Moisture_Retrieval_Data_PM_retrieval_qual_flag_dca_pm": {
+      "AddOffset": "",
+      "Available": true,
+      "DataType": "uint16",
+      "Description": "Bit flags that record the conditions and the quality of the DCA retrieval algorithms that generate soil moisture for the grid cell.",
+      "Dimensions": [
+        "epoch_days",
+        "FakeDim0",
+        "FakeDim1"
+      ],
+      "FillValue": 65534,
+      "FillValueAll": [
+        65534
+      ],
+      "Group": "",
+      "Info": {
+        "group_name": "Soil_Moisture_Retrieval_Data_PM",
+        "layer_name": "retrieval_qual_flag_dca_pm"
+      },
+      "IsQA": true,
+      "Layer": "Soil_Moisture_Retrieval_Data_PM_retrieval_qual_flag_dca_pm",
+      "OrigDataType": "uint16",
+      "OrigValidMax": "",
+      "OrigValidMin": "",
+      "QualityLayers": "",
+      "QualityProductAndVersion": "SPL3SMP_E.006",
+      "ScaleFactor": "",
+      "Units": "",
+      "ValidMax": "",
+      "ValidMin": "",
+      "XSize": 3856,
+      "YSize": 1624
+    },
+    "Soil_Moisture_Retrieval_Data_PM_retrieval_qual_flag_pm": {
+      "AddOffset": "",
+      "Available": true,
+      "DataType": "uint16",
+      "Description": "Bit flags that record the conditions and the quality of the SCA-V retrieval algorithms that generate soil moisture for the grid cell.",
+      "Dimensions": [
+        "epoch_days",
+        "FakeDim0",
+        "FakeDim1"
+      ],
+      "FillValue": 65534,
+      "FillValueAll": [
+        65534
+      ],
+      "Group": "",
+      "Info": {
+        "group_name": "Soil_Moisture_Retrieval_Data_PM",
+        "layer_name": "retrieval_qual_flag_pm"
+      },
+      "IsQA": true,
+      "Layer": "Soil_Moisture_Retrieval_Data_PM_retrieval_qual_flag_pm",
+      "OrigDataType": "uint16",
+      "OrigValidMax": "",
+      "OrigValidMin": "",
+      "QualityLayers": "",
+      "QualityProductAndVersion": "",
+      "ScaleFactor": "",
+      "Units": "",
+      "ValidMax": "",
+      "ValidMin": "",
+      "XSize": 3856,
+      "YSize": 1624
+    },
+    "Soil_Moisture_Retrieval_Data_PM_retrieval_qual_flag_scah_pm": {
+      "AddOffset": "",
+      "Available": true,
+      "DataType": "uint16",
+      "Description": "Bit flags that record the conditions and the quality of the SCA-H retrieval algorithms that generate soil moisture for the grid cell.",
+      "Dimensions": [
+        "epoch_days",
+        "FakeDim0",
+        "FakeDim1"
+      ],
+      "FillValue": 65534,
+      "FillValueAll": [
+        65534
+      ],
+      "Group": "",
+      "Info": {
+        "group_name": "Soil_Moisture_Retrieval_Data_PM",
+        "layer_name": "retrieval_qual_flag_scah_pm"
+      },
+      "IsQA": true,
+      "Layer": "Soil_Moisture_Retrieval_Data_PM_retrieval_qual_flag_scah_pm",
+      "OrigDataType": "uint16",
+      "OrigValidMax": "",
+      "OrigValidMin": "",
+      "QualityLayers": "",
+      "QualityProductAndVersion": "SPL3SMP_E.006",
+      "ScaleFactor": "",
+      "Units": "",
+      "ValidMax": "",
+      "ValidMin": "",
+      "XSize": 3856,
+      "YSize": 1624
+    },
+    "Soil_Moisture_Retrieval_Data_PM_retrieval_qual_flag_scav_pm": {
+      "AddOffset": "",
+      "Available": true,
+      "DataType": "uint16",
+      "Description": "Bit flags that record the conditions and the quality of the SCA-V retrieval algorithms that generate soil moisture for the grid cell.",
+      "Dimensions": [
+        "epoch_days",
+        "FakeDim0",
+        "FakeDim1"
+      ],
+      "FillValue": 65534,
+      "FillValueAll": [
+        65534
+      ],
+      "Group": "",
+      "Info": {
+        "group_name": "Soil_Moisture_Retrieval_Data_PM",
+        "layer_name": "retrieval_qual_flag_scav_pm"
+      },
+      "IsQA": true,
+      "Layer": "Soil_Moisture_Retrieval_Data_PM_retrieval_qual_flag_scav_pm",
+      "OrigDataType": "uint16",
+      "OrigValidMax": "",
+      "OrigValidMin": "",
+      "QualityLayers": "",
+      "QualityProductAndVersion": "SPL3SMP_E.006",
+      "ScaleFactor": "",
+      "Units": "",
+      "ValidMax": "",
+      "ValidMin": "",
+      "XSize": 3856,
+      "YSize": 1624
+    },
+    "Soil_Moisture_Retrieval_Data_PM_roughness_coefficient_dca_pm": {
+      "AddOffset": "",
+      "Available": true,
+      "DataType": "float32",
+      "Description": "A unitless value that is indicative of bare soil roughness used in DCA retrievals within the 9 km grid cell.",
+      "Dimensions": [
+        "epoch_days",
+        "FakeDim0",
+        "FakeDim1"
+      ],
+      "FillValue": -9999,
+      "FillValueAll": [
+        -9999
+      ],
+      "Group": "",
+      "Info": {
+        "group_name": "Soil_Moisture_Retrieval_Data_PM",
+        "layer_name": "roughness_coefficient_dca_pm"
+      },
+      "IsQA": false,
+      "Layer": "Soil_Moisture_Retrieval_Data_PM_roughness_coefficient_dca_pm",
+      "OrigDataType": "float32",
+      "OrigValidMax": 1.0,
+      "OrigValidMin": 0.0,
+      "QualityLayers": "['Soil_Moisture_Retrieval_Data_PM_retrieval_qual_flag_dca_pm']",
+      "QualityProductAndVersion": "SPL3SMP_E.006",
+      "ScaleFactor": "",
+      "Units": "",
+      "ValidMax": 1.0,
+      "ValidMin": 0.0,
+      "XSize": 3856,
+      "YSize": 1624
+    },
+    "Soil_Moisture_Retrieval_Data_PM_roughness_coefficient_pm": {
+      "AddOffset": "",
+      "Available": true,
+      "DataType": "float32",
+      "Description": "A unitless value that is indicative of bare soil roughness used in SCA-V retrievals within the 9 km grid cell.",
+      "Dimensions": [
+        "epoch_days",
+        "FakeDim0",
+        "FakeDim1"
+      ],
+      "FillValue": -9999,
+      "FillValueAll": [
+        -9999
+      ],
+      "Group": "",
+      "Info": {
+        "group_name": "Soil_Moisture_Retrieval_Data_PM",
+        "layer_name": "roughness_coefficient_pm"
+      },
+      "IsQA": false,
+      "Layer": "Soil_Moisture_Retrieval_Data_PM_roughness_coefficient_pm",
+      "OrigDataType": "float32",
+      "OrigValidMax": 1.0,
+      "OrigValidMin": 0.0,
+      "QualityLayers": "['Soil_Moisture_Retrieval_Data_PM_retrieval_qual_flag_pm']",
+      "QualityProductAndVersion": "SPL3SMP_E.006",
+      "ScaleFactor": "",
+      "Units": "",
+      "ValidMax": 1.0,
+      "ValidMin": 0.0,
+      "XSize": 3856,
+      "YSize": 1624
+    },
+    "Soil_Moisture_Retrieval_Data_PM_roughness_coefficient_scah_pm": {
+      "AddOffset": "",
+      "Available": true,
+      "DataType": "float32",
+      "Description": "A unitless value that is indicative of bare soil roughness used in SCA-H retrievals within the 9 km grid cell.",
+      "Dimensions": [
+        "epoch_days",
+        "FakeDim0",
+        "FakeDim1"
+      ],
+      "FillValue": -9999,
+      "FillValueAll": [
+        -9999
+      ],
+      "Group": "",
+      "Info": {
+        "group_name": "Soil_Moisture_Retrieval_Data_PM",
+        "layer_name": "roughness_coefficient_scah_pm"
+      },
+      "IsQA": false,
+      "Layer": "Soil_Moisture_Retrieval_Data_PM_roughness_coefficient_scah_pm",
+      "OrigDataType": "float32",
+      "OrigValidMax": 1.0,
+      "OrigValidMin": 0.0,
+      "QualityLayers": "['Soil_Moisture_Retrieval_Data_PM_retrieval_qual_flag_scah_pm']",
+      "QualityProductAndVersion": "SPL3SMP_E.006",
+      "ScaleFactor": "",
+      "Units": "",
+      "ValidMax": 1.0,
+      "ValidMin": 0.0,
+      "XSize": 3856,
+      "YSize": 1624
+    },
+    "Soil_Moisture_Retrieval_Data_PM_roughness_coefficient_scav_pm": {
+      "AddOffset": "",
+      "Available": true,
+      "DataType": "float32",
+      "Description": "A unitless value that is indicative of bare soil roughness used in SCA-V retrievals within the 9 km grid cell.",
+      "Dimensions": [
+        "epoch_days",
+        "FakeDim0",
+        "FakeDim1"
+      ],
+      "FillValue": -9999,
+      "FillValueAll": [
+        -9999
+      ],
+      "Group": "",
+      "Info": {
+        "group_name": "Soil_Moisture_Retrieval_Data_PM",
+        "layer_name": "roughness_coefficient_scav_pm"
+      },
+      "IsQA": false,
+      "Layer": "Soil_Moisture_Retrieval_Data_PM_roughness_coefficient_scav_pm",
+      "OrigDataType": "float32",
+      "OrigValidMax": 1.0,
+      "OrigValidMin": 0.0,
+      "QualityLayers": "['Soil_Moisture_Retrieval_Data_PM_retrieval_qual_flag_scav_pm']",
+      "QualityProductAndVersion": "SPL3SMP_E.006",
+      "ScaleFactor": "",
+      "Units": "",
+      "ValidMax": 1.0,
+      "ValidMin": 0.0,
+      "XSize": 3856,
+      "YSize": 1624
+    },
+    "Soil_Moisture_Retrieval_Data_PM_soil_moisture_dca_pm": {
+      "AddOffset": "",
+      "Available": true,
+      "DataType": "float32",
+      "Description": "Representative DCA soil moisture measurement for the Earth based grid cell.",
+      "Dimensions": [
+        "epoch_days",
+        "FakeDim0",
+        "FakeDim1"
+      ],
+      "FillValue": -9999,
+      "FillValueAll": [
+        -9999
+      ],
+      "Group": "",
+      "Info": {
+        "group_name": "Soil_Moisture_Retrieval_Data_PM",
+        "layer_name": "soil_moisture_dca_pm"
+      },
+      "IsQA": false,
+      "Layer": "Soil_Moisture_Retrieval_Data_PM_soil_moisture_dca_pm",
+      "OrigDataType": "float32",
+      "OrigValidMax": 0.5,
+      "OrigValidMin": 0.02,
+      "QualityLayers": "['Soil_Moisture_Retrieval_Data_PM_retrieval_qual_flag_dca_pm']",
+      "QualityProductAndVersion": "SPL3SMP_E.006",
+      "ScaleFactor": "",
+      "Units": "",
+      "ValidMax": 0.5,
+      "ValidMin": 0.02,
+      "XSize": 3856,
+      "YSize": 1624
+    },
+    "Soil_Moisture_Retrieval_Data_PM_soil_moisture_error_pm": {
+      "AddOffset": "",
+      "Available": true,
+      "DataType": "float32",
+      "Description": "Net uncertainty measure of soil moisture measure for the Earth based grid cell. - Calculation method is TBD.",
+      "Dimensions": [
+        "epoch_days",
+        "FakeDim0",
+        "FakeDim1"
+      ],
+      "FillValue": -9999,
+      "FillValueAll": [
+        -9999
+      ],
+      "Group": "",
+      "Info": {
+        "group_name": "Soil_Moisture_Retrieval_Data_PM",
+        "layer_name": "soil_moisture_error_pm"
+      },
+      "IsQA": false,
+      "Layer": "Soil_Moisture_Retrieval_Data_PM_soil_moisture_error_pm",
+      "OrigDataType": "float32",
+      "OrigValidMax": 0.200000003,
+      "OrigValidMin": 0.0,
+      "QualityLayers": "['Soil_Moisture_Retrieval_Data_PM_retrieval_qual_flag_pm']",
+      "QualityProductAndVersion": "SPL3SMP_E.006",
+      "ScaleFactor": "",
+      "Units": "",
+      "ValidMax": 0.200000003,
+      "ValidMin": 0.0,
+      "XSize": 3856,
+      "YSize": 1624
+    },
+    "Soil_Moisture_Retrieval_Data_PM_soil_moisture_pm": {
+      "AddOffset": "",
+      "Available": true,
+      "DataType": "float32",
+      "Description": "Representative SCA-V soil moisture measurement for the Earth based grid cell.",
+      "Dimensions": [
+        "epoch_days",
+        "FakeDim0",
+        "FakeDim1"
+      ],
+      "FillValue": -9999,
+      "FillValueAll": [
+        -9999
+      ],
+      "Group": "",
+      "Info": {
+        "group_name": "Soil_Moisture_Retrieval_Data_PM",
+        "layer_name": "soil_moisture_pm"
+      },
+      "IsQA": false,
+      "Layer": "Soil_Moisture_Retrieval_Data_PM_soil_moisture_pm",
+      "OrigDataType": "float32",
+      "OrigValidMax": 0.5,
+      "OrigValidMin": 0.02,
+      "QualityLayers": "['Soil_Moisture_Retrieval_Data_PM_retrieval_qual_flag_pm']",
+      "QualityProductAndVersion": "SPL3SMP_E.006",
+      "ScaleFactor": "",
+      "Units": "",
+      "ValidMax": 0.5,
+      "ValidMin": 0.02,
+      "XSize": 3856,
+      "YSize": 1624
+    },
+    "Soil_Moisture_Retrieval_Data_PM_soil_moisture_scah_pm": {
+      "AddOffset": "",
+      "Available": true,
+      "DataType": "float32",
+      "Description": "Representative SCA-H soil moisture measurement for the Earth based grid cell.",
+      "Dimensions": [
+        "epoch_days",
+        "FakeDim0",
+        "FakeDim1"
+      ],
+      "FillValue": -9999,
+      "FillValueAll": [
+        -9999
+      ],
+      "Group": "",
+      "Info": {
+        "group_name": "Soil_Moisture_Retrieval_Data_PM",
+        "layer_name": "soil_moisture_scah_pm"
+      },
+      "IsQA": false,
+      "Layer": "Soil_Moisture_Retrieval_Data_PM_soil_moisture_scah_pm",
+      "OrigDataType": "float32",
+      "OrigValidMax": 0.5,
+      "OrigValidMin": 0.02,
+      "QualityLayers": "['Soil_Moisture_Retrieval_Data_PM_retrieval_qual_flag_scah_pm']",
+      "QualityProductAndVersion": "SPL3SMP_E.006",
+      "ScaleFactor": "",
+      "Units": "",
+      "ValidMax": 0.5,
+      "ValidMin": 0.02,
+      "XSize": 3856,
+      "YSize": 1624
+    },
+    "Soil_Moisture_Retrieval_Data_PM_soil_moisture_scav_pm": {
+      "AddOffset": "",
+      "Available": true,
+      "DataType": "float32",
+      "Description": "Representative SCA-V soil moisture measurement for the Earth based grid cell.",
+      "Dimensions": [
+        "epoch_days",
+        "FakeDim0",
+        "FakeDim1"
+      ],
+      "FillValue": -9999,
+      "FillValueAll": [
+        -9999
+      ],
+      "Group": "",
+      "Info": {
+        "group_name": "Soil_Moisture_Retrieval_Data_PM",
+        "layer_name": "soil_moisture_scav_pm"
+      },
+      "IsQA": false,
+      "Layer": "Soil_Moisture_Retrieval_Data_PM_soil_moisture_scav_pm",
+      "OrigDataType": "float32",
+      "OrigValidMax": 0.5,
+      "OrigValidMin": 0.02,
+      "QualityLayers": "['Soil_Moisture_Retrieval_Data_PM_retrieval_qual_flag_scav_pm']",
+      "QualityProductAndVersion": "SPL3SMP_E.006",
+      "ScaleFactor": "",
+      "Units": "",
+      "ValidMax": 0.5,
+      "ValidMin": 0.02,
+      "XSize": 3856,
+      "YSize": 1624
+    },
+    "Soil_Moisture_Retrieval_Data_PM_static_water_body_fraction_pm": {
+      "AddOffset": "",
+      "Available": true,
+      "DataType": "float32",
+      "Description": "The fraction of the area of the 9 km grid cell that is covered by static water based on a Digital Elevation Map.",
+      "Dimensions": [
+        "epoch_days",
+        "FakeDim0",
+        "FakeDim1"
+      ],
+      "FillValue": -9999,
+      "FillValueAll": [
+        -9999
+      ],
+      "Group": "",
+      "Info": {
+        "group_name": "Soil_Moisture_Retrieval_Data_PM",
+        "layer_name": "static_water_body_fraction_pm"
+      },
+      "IsQA": false,
+      "Layer": "Soil_Moisture_Retrieval_Data_PM_static_water_body_fraction_pm",
+      "OrigDataType": "float32",
+      "OrigValidMax": 1.0,
+      "OrigValidMin": 0.0,
+      "QualityLayers": "['Soil_Moisture_Retrieval_Data_PM_retrieval_qual_flag_pm']",
+      "QualityProductAndVersion": "SPL3SMP_E.006",
+      "ScaleFactor": "",
+      "Units": "",
+      "ValidMax": 1.0,
+      "ValidMin": 0.0,
+      "XSize": 3856,
+      "YSize": 1624
+    },
+    "Soil_Moisture_Retrieval_Data_PM_surface_flag_pm": {
+      "AddOffset": "",
+      "Available": true,
+      "DataType": "uint16",
+      "Description": "Bit flags that record ambient surface conditions for the grid cell",
+      "Dimensions": [
+        "epoch_days",
+        "FakeDim0",
+        "FakeDim1"
+      ],
+      "FillValue": 65534,
+      "FillValueAll": [
+        65534
+      ],
+      "Group": "",
+      "Info": {
+        "group_name": "Soil_Moisture_Retrieval_Data_PM",
+        "layer_name": "surface_flag_pm"
+      },
+      "IsQA": false,
+      "Layer": "Soil_Moisture_Retrieval_Data_PM_surface_flag_pm",
+      "OrigDataType": "uint16",
+      "OrigValidMax": "",
+      "OrigValidMin": "",
+      "QualityLayers": "['Soil_Moisture_Retrieval_Data_PM_retrieval_qual_flag_pm']",
+      "QualityProductAndVersion": "SPL3SMP_E.006",
+      "ScaleFactor": "",
+      "Units": "",
+      "ValidMax": "",
+      "ValidMin": "",
+      "XSize": 3856,
+      "YSize": 1624
+    },
+    "Soil_Moisture_Retrieval_Data_PM_surface_temperature_pm": {
+      "AddOffset": "",
+      "Available": true,
+      "DataType": "float32",
+      "Description": "Temperature at land surface based on GMAO GEOS-5 data.",
+      "Dimensions": [
+        "epoch_days",
+        "FakeDim0",
+        "FakeDim1"
+      ],
+      "FillValue": -9999,
+      "FillValueAll": [
+        -9999
+      ],
+      "Group": "",
+      "Info": {
+        "group_name": "Soil_Moisture_Retrieval_Data_PM",
+        "layer_name": "surface_temperature_pm"
+      },
+      "IsQA": false,
+      "Layer": "Soil_Moisture_Retrieval_Data_PM_surface_temperature_pm",
+      "OrigDataType": "float32",
+      "OrigValidMax": 350.0,
+      "OrigValidMin": 0.0,
+      "QualityLayers": "['Soil_Moisture_Retrieval_Data_PM_retrieval_qual_flag_pm']",
+      "QualityProductAndVersion": "SPL3SMP_E.006",
+      "ScaleFactor": "",
+      "Units": "",
+      "ValidMax": 350.0,
+      "ValidMin": 0.0,
+      "XSize": 3856,
+      "YSize": 1624
+    },
+    "Soil_Moisture_Retrieval_Data_PM_surface_water_fraction_mb_h_pm": {
+      "AddOffset": "",
+      "Available": true,
+      "DataType": "float32",
+      "Description": "Gain weighted fraction of static water within the radiometer horizontal polarization brightness temperature antenna pattern in 36 km Earth grid cell.",
+      "Dimensions": [
+        "epoch_days",
+        "FakeDim0",
+        "FakeDim1"
+      ],
+      "FillValue": -9999,
+      "FillValueAll": [
+        -9999
+      ],
+      "Group": "",
+      "Info": {
+        "group_name": "Soil_Moisture_Retrieval_Data_PM",
+        "layer_name": "surface_water_fraction_mb_h_pm"
+      },
+      "IsQA": false,
+      "Layer": "Soil_Moisture_Retrieval_Data_PM_surface_water_fraction_mb_h_pm",
+      "OrigDataType": "float32",
+      "OrigValidMax": 1.0,
+      "OrigValidMin": 0.0,
+      "QualityLayers": "['Soil_Moisture_Retrieval_Data_PM_retrieval_qual_flag_pm']",
+      "QualityProductAndVersion": "SPL3SMP_E.006",
+      "ScaleFactor": "",
+      "Units": "",
+      "ValidMax": 1.0,
+      "ValidMin": 0.0,
+      "XSize": 3856,
+      "YSize": 1624
+    },
+    "Soil_Moisture_Retrieval_Data_PM_surface_water_fraction_mb_v_pm": {
+      "AddOffset": "",
+      "Available": true,
+      "DataType": "float32",
+      "Description": "Gain weighted fraction of static water within the radiometer vertical polarization brightness temperature antenna pattern in 36 km Earth grid cell.",
+      "Dimensions": [
+        "epoch_days",
+        "FakeDim0",
+        "FakeDim1"
+      ],
+      "FillValue": -9999,
+      "FillValueAll": [
+        -9999
+      ],
+      "Group": "",
+      "Info": {
+        "group_name": "Soil_Moisture_Retrieval_Data_PM",
+        "layer_name": "surface_water_fraction_mb_v_pm"
+      },
+      "IsQA": false,
+      "Layer": "Soil_Moisture_Retrieval_Data_PM_surface_water_fraction_mb_v_pm",
+      "OrigDataType": "float32",
+      "OrigValidMax": 1.0,
+      "OrigValidMin": 0.0,
+      "QualityLayers": "['Soil_Moisture_Retrieval_Data_PM_retrieval_qual_flag_pm']",
+      "QualityProductAndVersion": "SPL3SMP_E.006",
+      "ScaleFactor": "",
+      "Units": "",
+      "ValidMax": 1.0,
+      "ValidMin": 0.0,
+      "XSize": 3856,
+      "YSize": 1624
+    },
+    "Soil_Moisture_Retrieval_Data_PM_tb_3_corrected_pm": {
+      "AddOffset": "",
+      "Available": true,
+      "DataType": "float32",
+      "Description": "Third stokes parameter for each 9 km grid cell calculated with an adjustment for the presence of water bodies",
+      "Dimensions": [
+        "epoch_days",
+        "FakeDim0",
+        "FakeDim1"
+      ],
+      "FillValue": -9999,
+      "FillValueAll": [
+        -9999
+      ],
+      "Group": "",
+      "Info": {
+        "group_name": "Soil_Moisture_Retrieval_Data_PM",
+        "layer_name": "tb_3_corrected_pm"
+      },
+      "IsQA": false,
+      "Layer": "Soil_Moisture_Retrieval_Data_PM_tb_3_corrected_pm",
+      "OrigDataType": "float32",
+      "OrigValidMax": 330.0,
+      "OrigValidMin": 0.0,
+      "QualityLayers": "['Soil_Moisture_Retrieval_Data_PM_retrieval_qual_flag_pm']",
+      "QualityProductAndVersion": "SPL3SMP_E.006",
+      "ScaleFactor": "",
+      "Units": "",
+      "ValidMax": 330.0,
+      "ValidMin": 0.0,
+      "XSize": 3856,
+      "YSize": 1624
+    },
+    "Soil_Moisture_Retrieval_Data_PM_tb_4_corrected_pm": {
+      "AddOffset": "",
+      "Available": true,
+      "DataType": "float32",
+      "Description": "Fourth stokes parameter for each 9 km grid cell calculated with an adjustment for the presence of water bodies",
+      "Dimensions": [
+        "epoch_days",
+        "FakeDim0",
+        "FakeDim1"
+      ],
+      "FillValue": -9999,
+      "FillValueAll": [
+        -9999
+      ],
+      "Group": "",
+      "Info": {
+        "group_name": "Soil_Moisture_Retrieval_Data_PM",
+        "layer_name": "tb_4_corrected_pm"
+      },
+      "IsQA": false,
+      "Layer": "Soil_Moisture_Retrieval_Data_PM_tb_4_corrected_pm",
+      "OrigDataType": "float32",
+      "OrigValidMax": 330.0,
+      "OrigValidMin": 0.0,
+      "QualityLayers": "['Soil_Moisture_Retrieval_Data_PM_retrieval_qual_flag_pm']",
+      "QualityProductAndVersion": "SPL3SMP_E.006",
+      "ScaleFactor": "",
+      "Units": "",
+      "ValidMax": 330.0,
+      "ValidMin": 0.0,
+      "XSize": 3856,
+      "YSize": 1624
+    },
+    "Soil_Moisture_Retrieval_Data_PM_tb_h_corrected_pm": {
+      "AddOffset": "",
+      "Available": true,
+      "DataType": "float32",
+      "Description": "Horizontal polarization brightness temperature in 9 km Earth grid cell adjusted for the presence of water bodies.",
+      "Dimensions": [
+        "epoch_days",
+        "FakeDim0",
+        "FakeDim1"
+      ],
+      "FillValue": -9999,
+      "FillValueAll": [
+        -9999
+      ],
+      "Group": "",
+      "Info": {
+        "group_name": "Soil_Moisture_Retrieval_Data_PM",
+        "layer_name": "tb_h_corrected_pm"
+      },
+      "IsQA": false,
+      "Layer": "Soil_Moisture_Retrieval_Data_PM_tb_h_corrected_pm",
+      "OrigDataType": "float32",
+      "OrigValidMax": 330.0,
+      "OrigValidMin": 0.0,
+      "QualityLayers": "['Soil_Moisture_Retrieval_Data_PM_retrieval_qual_flag_pm']",
+      "QualityProductAndVersion": "SPL3SMP_E.006",
+      "ScaleFactor": "",
+      "Units": "",
+      "ValidMax": 330.0,
+      "ValidMin": 0.0,
+      "XSize": 3856,
+      "YSize": 1624
+    },
+    "Soil_Moisture_Retrieval_Data_PM_tb_h_uncorrected_pm": {
+      "AddOffset": "",
+      "Available": true,
+      "DataType": "float32",
+      "Description": "Horizontal polarization brightness temperature in 36 km Earth grid cell before adjustment for the presence of water bodies.",
+      "Dimensions": [
+        "epoch_days",
+        "FakeDim0",
+        "FakeDim1"
+      ],
+      "FillValue": -9999,
+      "FillValueAll": [
+        -9999
+      ],
+      "Group": "",
+      "Info": {
+        "group_name": "Soil_Moisture_Retrieval_Data_PM",
+        "layer_name": "tb_h_uncorrected_pm"
+      },
+      "IsQA": false,
+      "Layer": "Soil_Moisture_Retrieval_Data_PM_tb_h_uncorrected_pm",
+      "OrigDataType": "float32",
+      "OrigValidMax": 330.0,
+      "OrigValidMin": 0.0,
+      "QualityLayers": "",
+      "QualityProductAndVersion": "",
+      "ScaleFactor": "",
+      "Units": "",
+      "ValidMax": 330.0,
+      "ValidMin": 0.0,
+      "XSize": 3856,
+      "YSize": 1624
+    },
+    "Soil_Moisture_Retrieval_Data_PM_tb_qual_flag_3_pm": {
+      "AddOffset": "",
+      "Available": true,
+      "DataType": "uint16",
+      "Description": "Bit flags that represent the quality of the 3rd Stokes brightness temperature within each grid cell",
+      "Dimensions": [
+        "epoch_days",
+        "FakeDim0",
+        "FakeDim1"
+      ],
+      "FillValue": 65534,
+      "FillValueAll": [
+        65534
+      ],
+      "Group": "",
+      "Info": {
+        "group_name": "Soil_Moisture_Retrieval_Data_PM",
+        "layer_name": "tb_qual_flag_3_pm"
+      },
+      "IsQA": false,
+      "Layer": "Soil_Moisture_Retrieval_Data_PM_tb_qual_flag_3_pm",
+      "OrigDataType": "uint16",
+      "OrigValidMax": "",
+      "OrigValidMin": "",
+      "QualityLayers": "['Soil_Moisture_Retrieval_Data_PM_retrieval_qual_flag_pm']",
+      "QualityProductAndVersion": "SPL3SMP_E.006",
+      "ScaleFactor": "",
+      "Units": "",
+      "ValidMax": "",
+      "ValidMin": "",
+      "XSize": 3856,
+      "YSize": 1624
+    },
+    "Soil_Moisture_Retrieval_Data_PM_tb_qual_flag_4_pm": {
+      "AddOffset": "",
+      "Available": true,
+      "DataType": "uint16",
+      "Description": "Bit flags that represent the quality of the 4th Stokes brightness temperature within each grid cell",
+      "Dimensions": [
+        "epoch_days",
+        "FakeDim0",
+        "FakeDim1"
+      ],
+      "FillValue": 65534,
+      "FillValueAll": [
+        65534
+      ],
+      "Group": "",
+      "Info": {
+        "group_name": "Soil_Moisture_Retrieval_Data_PM",
+        "layer_name": "tb_qual_flag_4_pm"
+      },
+      "IsQA": false,
+      "Layer": "Soil_Moisture_Retrieval_Data_PM_tb_qual_flag_4_pm",
+      "OrigDataType": "uint16",
+      "OrigValidMax": "",
+      "OrigValidMin": "",
+      "QualityLayers": "['Soil_Moisture_Retrieval_Data_PM_retrieval_qual_flag_pm']",
+      "QualityProductAndVersion": "SPL3SMP_E.006",
+      "ScaleFactor": "",
+      "Units": "",
+      "ValidMax": "",
+      "ValidMin": "",
+      "XSize": 3856,
+      "YSize": 1624
+    },
+    "Soil_Moisture_Retrieval_Data_PM_tb_qual_flag_h_pm": {
+      "AddOffset": "",
+      "Available": true,
+      "DataType": "uint16",
+      "Description": "Bit flags that represent the quality of the horizontal polarization brightness temperature within each grid cell",
+      "Dimensions": [
+        "epoch_days",
+        "FakeDim0",
+        "FakeDim1"
+      ],
+      "FillValue": 65534,
+      "FillValueAll": [
+        65534
+      ],
+      "Group": "",
+      "Info": {
+        "group_name": "Soil_Moisture_Retrieval_Data_PM",
+        "layer_name": "tb_qual_flag_h_pm"
+      },
+      "IsQA": false,
+      "Layer": "Soil_Moisture_Retrieval_Data_PM_tb_qual_flag_h_pm",
+      "OrigDataType": "uint16",
+      "OrigValidMax": "",
+      "OrigValidMin": "",
+      "QualityLayers": "['Soil_Moisture_Retrieval_Data_PM_retrieval_qual_flag_pm']",
+      "QualityProductAndVersion": "SPL3SMP_E.006",
+      "ScaleFactor": "",
+      "Units": "",
+      "ValidMax": "",
+      "ValidMin": "",
+      "XSize": 3856,
+      "YSize": 1624
+    },
+    "Soil_Moisture_Retrieval_Data_PM_tb_qual_flag_v_pm": {
+      "AddOffset": "",
+      "Available": true,
+      "DataType": "uint16",
+      "Description": "Bit flags that represent the quality of the vertical polarization brightness temperature within each grid cell",
+      "Dimensions": [
+        "epoch_days",
+        "FakeDim0",
+        "FakeDim1"
+      ],
+      "FillValue": 65534,
+      "FillValueAll": [
+        65534
+      ],
+      "Group": "",
+      "Info": {
+        "group_name": "Soil_Moisture_Retrieval_Data_PM",
+        "layer_name": "tb_qual_flag_v_pm"
+      },
+      "IsQA": false,
+      "Layer": "Soil_Moisture_Retrieval_Data_PM_tb_qual_flag_v_pm",
+      "OrigDataType": "uint16",
+      "OrigValidMax": "",
+      "OrigValidMin": "",
+      "QualityLayers": "['Soil_Moisture_Retrieval_Data_PM_retrieval_qual_flag_pm']",
+      "QualityProductAndVersion": "SPL3SMP_E.006",
+      "ScaleFactor": "",
+      "Units": "",
+      "ValidMax": "",
+      "ValidMin": "",
+      "XSize": 3856,
+      "YSize": 1624
+    },
+    "Soil_Moisture_Retrieval_Data_PM_tb_time_seconds_pm": {
+      "AddOffset": "",
+      "Available": true,
+      "DataType": "float64",
+      "Description": "Arithmetic average of the acquisition time of all of the brightness temperature footprints with a center that falls within the EASE grid cell in seconds since noon on January 1, 2000 UTC.",
+      "Dimensions": [
+        "epoch_days",
+        "FakeDim0",
+        "FakeDim1"
+      ],
+      "FillValue": -9999,
+      "FillValueAll": [
+        -9999
+      ],
+      "Group": "",
+      "Info": {
+        "group_name": "Soil_Moisture_Retrieval_Data_PM",
+        "layer_name": "tb_time_seconds_pm"
+      },
+      "IsQA": false,
+      "Layer": "Soil_Moisture_Retrieval_Data_PM_tb_time_seconds_pm",
+      "OrigDataType": "float64",
+      "OrigValidMax": 940000000.0,
+      "OrigValidMin": -999999.9,
+      "QualityLayers": "['Soil_Moisture_Retrieval_Data_PM_retrieval_qual_flag_pm']",
+      "QualityProductAndVersion": "SPL3SMP_E.006",
+      "ScaleFactor": "",
+      "Units": "",
+      "ValidMax": 940000000.0,
+      "ValidMin": -999999.9,
+      "XSize": 3856,
+      "YSize": 1624
+    },
+    "Soil_Moisture_Retrieval_Data_PM_tb_v_corrected_pm": {
+      "AddOffset": "",
+      "Available": true,
+      "DataType": "float32",
+      "Description": "Vertical polarization brightness temperature in 9 km Earth grid cell adjusted for the presence of water bodies.",
+      "Dimensions": [
+        "epoch_days",
+        "FakeDim0",
+        "FakeDim1"
+      ],
+      "FillValue": -9999,
+      "FillValueAll": [
+        -9999
+      ],
+      "Group": "",
+      "Info": {
+        "group_name": "Soil_Moisture_Retrieval_Data_PM",
+        "layer_name": "tb_v_corrected_pm"
+      },
+      "IsQA": false,
+      "Layer": "Soil_Moisture_Retrieval_Data_PM_tb_v_corrected_pm",
+      "OrigDataType": "float32",
+      "OrigValidMax": 330.0,
+      "OrigValidMin": 0.0,
+      "QualityLayers": "['Soil_Moisture_Retrieval_Data_PM_retrieval_qual_flag_pm']",
+      "QualityProductAndVersion": "SPL3SMP_E.006",
+      "ScaleFactor": "",
+      "Units": "",
+      "ValidMax": 330.0,
+      "ValidMin": 0.0,
+      "XSize": 3856,
+      "YSize": 1624
+    },
+    "Soil_Moisture_Retrieval_Data_PM_vegetation_opacity_dca_pm": {
+      "AddOffset": "",
+      "Available": true,
+      "DataType": "float32",
+      "Description": "The measured opacity of the vegetation used in DCA retrievals in the grid cell.",
+      "Dimensions": [
+        "epoch_days",
+        "FakeDim0",
+        "FakeDim1"
+      ],
+      "FillValue": -9999,
+      "FillValueAll": [
+        -9999
+      ],
+      "Group": "",
+      "Info": {
+        "group_name": "Soil_Moisture_Retrieval_Data_PM",
+        "layer_name": "vegetation_opacity_dca_pm"
+      },
+      "IsQA": false,
+      "Layer": "Soil_Moisture_Retrieval_Data_PM_vegetation_opacity_dca_pm",
+      "OrigDataType": "float32",
+      "OrigValidMax": 999999.875,
+      "OrigValidMin": -999999.875,
+      "QualityLayers": "['Soil_Moisture_Retrieval_Data_PM_retrieval_qual_flag_dca_pm']",
+      "QualityProductAndVersion": "SPL3SMP_E.006",
+      "ScaleFactor": "",
+      "Units": "",
+      "ValidMax": 999999.875,
+      "ValidMin": -999999.875,
+      "XSize": 3856,
+      "YSize": 1624
+    },
+    "Soil_Moisture_Retrieval_Data_PM_vegetation_opacity_pm": {
+      "AddOffset": "",
+      "Available": true,
+      "DataType": "float32",
+      "Description": "The measured opacity of the vegetation used in SCA-V retrievals in the grid cell.",
+      "Dimensions": [
+        "epoch_days",
+        "FakeDim0",
+        "FakeDim1"
+      ],
+      "FillValue": -9999,
+      "FillValueAll": [
+        -9999
+      ],
+      "Group": "",
+      "Info": {
+        "group_name": "Soil_Moisture_Retrieval_Data_PM",
+        "layer_name": "vegetation_opacity_pm"
+      },
+      "IsQA": false,
+      "Layer": "Soil_Moisture_Retrieval_Data_PM_vegetation_opacity_pm",
+      "OrigDataType": "float32",
+      "OrigValidMax": 999999.875,
+      "OrigValidMin": -999999.875,
+      "QualityLayers": "['Soil_Moisture_Retrieval_Data_PM_retrieval_qual_flag_pm']",
+      "QualityProductAndVersion": "SPL3SMP_E.006",
+      "ScaleFactor": "",
+      "Units": "",
+      "ValidMax": 999999.875,
+      "ValidMin": -999999.875,
+      "XSize": 3856,
+      "YSize": 1624
+    },
+    "Soil_Moisture_Retrieval_Data_PM_vegetation_opacity_scah_pm": {
+      "AddOffset": "",
+      "Available": true,
+      "DataType": "float32",
+      "Description": "The measured opacity of the vegetation used in SCA-H retrievals in the grid cell.",
+      "Dimensions": [
+        "epoch_days",
+        "FakeDim0",
+        "FakeDim1"
+      ],
+      "FillValue": -9999,
+      "FillValueAll": [
+        -9999
+      ],
+      "Group": "",
+      "Info": {
+        "group_name": "Soil_Moisture_Retrieval_Data_PM",
+        "layer_name": "vegetation_opacity_scah_pm"
+      },
+      "IsQA": false,
+      "Layer": "Soil_Moisture_Retrieval_Data_PM_vegetation_opacity_scah_pm",
+      "OrigDataType": "float32",
+      "OrigValidMax": 999999.875,
+      "OrigValidMin": -999999.875,
+      "QualityLayers": "['Soil_Moisture_Retrieval_Data_PM_retrieval_qual_flag_scah_pm']",
+      "QualityProductAndVersion": "SPL3SMP_E.006",
+      "ScaleFactor": "",
+      "Units": "",
+      "ValidMax": 999999.875,
+      "ValidMin": -999999.875,
+      "XSize": 3856,
+      "YSize": 1624
+    },
+    "Soil_Moisture_Retrieval_Data_PM_vegetation_opacity_scav_pm": {
+      "AddOffset": "",
+      "Available": true,
+      "DataType": "float32",
+      "Description": "The measured opacity of the vegetation used in SCA-V retrievals in the grid cell.",
+      "Dimensions": [
+        "epoch_days",
+        "FakeDim0",
+        "FakeDim1"
+      ],
+      "FillValue": -9999,
+      "FillValueAll": [
+        -9999
+      ],
+      "Group": "",
+      "Info": {
+        "group_name": "Soil_Moisture_Retrieval_Data_PM",
+        "layer_name": "vegetation_opacity_scav_pm"
+      },
+      "IsQA": false,
+      "Layer": "Soil_Moisture_Retrieval_Data_PM_vegetation_opacity_scav_pm",
+      "OrigDataType": "float32",
+      "OrigValidMax": 999999.875,
+      "OrigValidMin": -999999.875,
+      "QualityLayers": "['Soil_Moisture_Retrieval_Data_PM_retrieval_qual_flag_scav_pm']",
+      "QualityProductAndVersion": "SPL3SMP_E.006",
+      "ScaleFactor": "",
+      "Units": "",
+      "ValidMax": 999999.875,
+      "ValidMin": -999999.875,
+      "XSize": 3856,
+      "YSize": 1624
+    },
+    "Soil_Moisture_Retrieval_Data_PM_vegetation_water_content_pm": {
+      "AddOffset": "",
+      "Available": true,
+      "DataType": "float32",
+      "Description": "Representative measure of water in the vegetation within the 9 km grid cell.",
+      "Dimensions": [
+        "epoch_days",
+        "FakeDim0",
+        "FakeDim1"
+      ],
+      "FillValue": -9999,
+      "FillValueAll": [
+        -9999
+      ],
+      "Group": "",
+      "Info": {
+        "group_name": "Soil_Moisture_Retrieval_Data_PM",
+        "layer_name": "vegetation_water_content_pm"
+      },
+      "IsQA": false,
+      "Layer": "Soil_Moisture_Retrieval_Data_PM_vegetation_water_content_pm",
+      "OrigDataType": "float32",
+      "OrigValidMax": 20.0,
+      "OrigValidMin": 0.0,
+      "QualityLayers": "['Soil_Moisture_Retrieval_Data_PM_retrieval_qual_flag_pm']",
+      "QualityProductAndVersion": "SPL3SMP_E.006",
+      "ScaleFactor": "",
+      "Units": "",
+      "ValidMax": 20.0,
+      "ValidMin": 0.0,
+      "XSize": 3856,
+      "YSize": 1624
+    }
+  },
+  "HLSL30.020": {
+    "B01": {
+      "AddOffset": 0.0,
+      "Available": true,
+      "DataType": "int16",
+      "Description": "B01 - Coastal Aerosol (0.43 \u2013 0.45 \u00b5m)",
+      "Dimensions": [
+        "time",
+        "y",
+        "x"
+      ],
+      "FillValue": -9999,
+      "FillValueAll": [
+        -9999
+      ],
+      "Group": "",
+      "Info": {},
+      "IsQA": false,
+      "Layer": "B01",
+      "OrigDataType": "int16",
+      "OrigValidMax": "",
+      "OrigValidMin": "",
+      "QualityLayers": "['Fmask']",
+      "QualityProductAndVersion": "HLSL30.020",
+      "ScaleFactor": 0.0001,
+      "Units": "Reflectance",
+      "ValidMax": "",
+      "ValidMin": "",
+      "XSize": 3660,
+      "YSize": 3660
+    },
+    "B02": {
+      "AddOffset": 0.0,
+      "Available": true,
+      "DataType": "int16",
+      "Description": "B02 - Blue (0.45 \u2013 0.51 \u00b5m)",
+      "Dimensions": [
+        "time",
+        "y",
+        "x"
+      ],
+      "FillValue": -9999,
+      "FillValueAll": [
+        -9999
+      ],
+      "Group": "",
+      "Info": {},
+      "IsQA": false,
+      "Layer": "B02",
+      "OrigDataType": "int16",
+      "OrigValidMax": "",
+      "OrigValidMin": "",
+      "QualityLayers": "['Fmask']",
+      "QualityProductAndVersion": "HLSL30.020",
+      "ScaleFactor": 0.0001,
+      "Units": "Reflectance",
+      "ValidMax": "",
+      "ValidMin": "",
+      "XSize": 3660,
+      "YSize": 3660
+    },
+    "B03": {
+      "AddOffset": 0.0,
+      "Available": true,
+      "DataType": "int16",
+      "Description": "B03 - Green (0.53 \u2013 0.59 \u00b5m)",
+      "Dimensions": [
+        "time",
+        "y",
+        "x"
+      ],
+      "FillValue": -9999,
+      "FillValueAll": [
+        -9999
+      ],
+      "Group": "",
+      "Info": {},
+      "IsQA": false,
+      "Layer": "B03",
+      "OrigDataType": "int16",
+      "OrigValidMax": "",
+      "OrigValidMin": "",
+      "QualityLayers": "['Fmask']",
+      "QualityProductAndVersion": "HLSL30.020",
+      "ScaleFactor": 0.0001,
+      "Units": "Reflectance",
+      "ValidMax": "",
+      "ValidMin": "",
+      "XSize": 3660,
+      "YSize": 3660
+    },
+    "B04": {
+      "AddOffset": 0.0,
+      "Available": true,
+      "DataType": "int16",
+      "Description": "B04 - Red (0.64 \u2013 0.67 \u00b5m)",
+      "Dimensions": [
+        "time",
+        "y",
+        "x"
+      ],
+      "FillValue": -9999,
+      "FillValueAll": [
+        -9999
+      ],
+      "Group": "",
+      "Info": {},
+      "IsQA": false,
+      "Layer": "B04",
+      "OrigDataType": "int16",
+      "OrigValidMax": "",
+      "OrigValidMin": "",
+      "QualityLayers": "['Fmask']",
+      "QualityProductAndVersion": "HLSL30.020",
+      "ScaleFactor": 0.0001,
+      "Units": "Reflectance",
+      "ValidMax": "",
+      "ValidMin": "",
+      "XSize": 3660,
+      "YSize": 3660
+    },
+    "B05": {
+      "AddOffset": 0.0,
+      "Available": true,
+      "DataType": "int16",
+      "Description": "B05 - NIR (0.85 \u2013 0.88 \u00b5m)",
+      "Dimensions": [
+        "time",
+        "y",
+        "x"
+      ],
+      "FillValue": -9999,
+      "FillValueAll": [
+        -9999
+      ],
+      "Group": "",
+      "Info": {},
+      "IsQA": false,
+      "Layer": "B05",
+      "OrigDataType": "int16",
+      "OrigValidMax": "",
+      "OrigValidMin": "",
+      "QualityLayers": "['Fmask']",
+      "QualityProductAndVersion": "HLSL30.020",
+      "ScaleFactor": 0.0001,
+      "Units": "Reflectance",
+      "ValidMax": "",
+      "ValidMin": "",
+      "XSize": 3660,
+      "YSize": 3660
+    },
+    "B06": {
+      "AddOffset": 0.0,
+      "Available": true,
+      "DataType": "int16",
+      "Description": "B06 - SWIR1 (1.57 \u2013 1.65 \u00b5m)",
+      "Dimensions": [
+        "time",
+        "y",
+        "x"
+      ],
+      "FillValue": -9999,
+      "FillValueAll": [
+        -9999
+      ],
+      "Group": "",
+      "Info": {},
+      "IsQA": false,
+      "Layer": "B06",
+      "OrigDataType": "int16",
+      "OrigValidMax": "",
+      "OrigValidMin": "",
+      "QualityLayers": "['Fmask']",
+      "QualityProductAndVersion": "HLSL30.020",
+      "ScaleFactor": 0.0001,
+      "Units": "Reflectance",
+      "ValidMax": "",
+      "ValidMin": "",
+      "XSize": 3660,
+      "YSize": 3660
+    },
+    "B07": {
+      "AddOffset": 0.0,
+      "Available": true,
+      "DataType": "int16",
+      "Description": "B07 - SWIR2 (2.11 \u2013 2.29 \u00b5m)",
+      "Dimensions": [
+        "time",
+        "y",
+        "x"
+      ],
+      "FillValue": -9999,
+      "FillValueAll": [
+        -9999
+      ],
+      "Group": "",
+      "Info": {},
+      "IsQA": false,
+      "Layer": "B07",
+      "OrigDataType": "int16",
+      "OrigValidMax": "",
+      "OrigValidMin": "",
+      "QualityLayers": "['Fmask']",
+      "QualityProductAndVersion": "HLSL30.020",
+      "ScaleFactor": 0.0001,
+      "Units": "Reflectance",
+      "ValidMax": "",
+      "ValidMin": "",
+      "XSize": 3660,
+      "YSize": 3660
+    },
+    "B09": {
+      "AddOffset": 0.0,
+      "Available": true,
+      "DataType": "int16",
+      "Description": "B09 - Cirrus (1.36 \u2013 1.38 \u00b5m)",
+      "Dimensions": [
+        "time",
+        "y",
+        "x"
+      ],
+      "FillValue": -9999,
+      "FillValueAll": [
+        -9999
+      ],
+      "Group": "",
+      "Info": {},
+      "IsQA": false,
+      "Layer": "B09",
+      "OrigDataType": "int16",
+      "OrigValidMax": "",
+      "OrigValidMin": "",
+      "QualityLayers": "['Fmask']",
+      "QualityProductAndVersion": "HLSL30.020",
+      "ScaleFactor": 0.0001,
+      "Units": "Reflectance",
+      "ValidMax": "",
+      "ValidMin": "",
+      "XSize": 3660,
+      "YSize": 3660
+    },
+    "B10": {
+      "AddOffset": 0.0,
+      "Available": true,
+      "DataType": "int16",
+      "Description": "B10 - TIRS1 (10.60 \u2013 11.19 \u00b5m)",
+      "Dimensions": [
+        "time",
+        "y",
+        "x"
+      ],
+      "FillValue": -9999,
+      "FillValueAll": [
+        -9999
+      ],
+      "Group": "",
+      "Info": {},
+      "IsQA": false,
+      "Layer": "B10",
+      "OrigDataType": "int16",
+      "OrigValidMax": "",
+      "OrigValidMin": "",
+      "QualityLayers": "['Fmask']",
+      "QualityProductAndVersion": "HLSL30.020",
+      "ScaleFactor": 0.01,
+      "Units": "Degree \u2103",
+      "ValidMax": "",
+      "ValidMin": "",
+      "XSize": 3660,
+      "YSize": 3660
+    },
+    "B11": {
+      "AddOffset": 0.0,
+      "Available": true,
+      "DataType": "int16",
+      "Description": "B11 - TIRS2 (11.50 \u2013 12.51 \u00b5m)",
+      "Dimensions": [
+        "time",
+        "y",
+        "x"
+      ],
+      "FillValue": -9999,
+      "FillValueAll": [
+        -9999
+      ],
+      "Group": "",
+      "Info": {},
+      "IsQA": false,
+      "Layer": "B11",
+      "OrigDataType": "int16",
+      "OrigValidMax": "",
+      "OrigValidMin": "",
+      "QualityLayers": "['Fmask']",
+      "QualityProductAndVersion": "HLSL30.020",
+      "ScaleFactor": 0.01,
+      "Units": "Degree \u2103",
+      "ValidMax": "",
+      "ValidMin": "",
+      "XSize": 3660,
+      "YSize": 3660
+    },
+    "Fmask": {
+      "AddOffset": "",
+      "Available": true,
+      "DataType": "uint8",
+      "Description": "Quality Bits",
+      "Dimensions": [
+        "time",
+        "y",
+        "x"
+      ],
+      "FillValue": 255,
+      "FillValueAll": [
+        255
+      ],
+      "Group": "",
+      "Info": {},
+      "IsQA": true,
+      "Layer": "Fmask",
+      "OrigDataType": "uint8",
+      "OrigValidMax": 255.0,
+      "OrigValidMin": 0.0,
+      "QualityLayers": "",
+      "QualityProductAndVersion": "",
+      "ScaleFactor": "",
+      "Units": "Bit Field",
+      "ValidMax": 255.0,
+      "ValidMin": 0.0,
+      "XSize": 3660,
+      "YSize": 3660
+    },
+    "SAA": {
+      "AddOffset": 0.0,
+      "Available": true,
+      "DataType": "uint16",
+      "Description": "Sun Azimuth Angle",
+      "Dimensions": [
+        "time",
+        "y",
+        "x"
+      ],
+      "FillValue": 40000,
+      "FillValueAll": [
+        40000
+      ],
+      "Group": "",
+      "Info": {},
+      "IsQA": false,
+      "Layer": "SAA",
+      "OrigDataType": "uint16",
+      "OrigValidMax": "",
+      "OrigValidMin": "",
+      "QualityLayers": "",
+      "QualityProductAndVersion": "",
+      "ScaleFactor": 0.01,
+      "Units": "Degree",
+      "ValidMax": "",
+      "ValidMin": "",
+      "XSize": 3660,
+      "YSize": 3660
+    },
+    "SZA": {
+      "AddOffset": 0.0,
+      "Available": true,
+      "DataType": "uint16",
+      "Description": "Sun Zenith Angle",
+      "Dimensions": [
+        "time",
+        "y",
+        "x"
+      ],
+      "FillValue": 40000,
+      "FillValueAll": [
+        40000
+      ],
+      "Group": "",
+      "Info": {},
+      "IsQA": false,
+      "Layer": "SZA",
+      "OrigDataType": "uint16",
+      "OrigValidMax": "",
+      "OrigValidMin": "",
+      "QualityLayers": "",
+      "QualityProductAndVersion": "",
+      "ScaleFactor": 0.01,
+      "Units": "Degree",
+      "ValidMax": "",
+      "ValidMin": "",
+      "XSize": 3660,
+      "YSize": 3660
+    },
+    "VAA": {
+      "AddOffset": 0.0,
+      "Available": true,
+      "DataType": "uint16",
+      "Description": "View Azimuth Angle",
+      "Dimensions": [
+        "time",
+        "y",
+        "x"
+      ],
+      "FillValue": 40000,
+      "FillValueAll": [
+        40000
+      ],
+      "Group": "",
+      "Info": {},
+      "IsQA": false,
+      "Layer": "VAA",
+      "OrigDataType": "uint16",
+      "OrigValidMax": "",
+      "OrigValidMin": "",
+      "QualityLayers": "",
+      "QualityProductAndVersion": "",
+      "ScaleFactor": 0.01,
+      "Units": "Degree",
+      "ValidMax": "",
+      "ValidMin": "",
+      "XSize": 3660,
+      "YSize": 3660
+    },
+    "VZA": {
+      "AddOffset": 0.0,
+      "Available": true,
+      "DataType": "uint16",
+      "Description": "View Zenith Angle",
+      "Dimensions": [
+        "time",
+        "y",
+        "x"
+      ],
+      "FillValue": 40000,
+      "FillValueAll": [
+        40000
+      ],
+      "Group": "",
+      "Info": {},
+      "IsQA": false,
+      "Layer": "VZA",
+      "OrigDataType": "uint16",
+      "OrigValidMax": "",
+      "OrigValidMin": "",
+      "QualityLayers": "",
+      "QualityProductAndVersion": "",
+      "ScaleFactor": 0.01,
+      "Units": "Degree",
+      "ValidMax": "",
+      "ValidMin": "",
+      "XSize": 3660,
+      "YSize": 3660
+    }
+  },
+  "HLSS30.020": {
+    "B01": {
+      "AddOffset": 0.0,
+      "Available": true,
+      "DataType": "int16",
+      "Description": "B01 - Coastal Aerosol (0.43 \u2013 0.45 \u00b5m)",
+      "Dimensions": [
+        "time",
+        "y",
+        "x"
+      ],
+      "FillValue": -9999,
+      "FillValueAll": [
+        -9999
+      ],
+      "Group": "",
+      "Info": {},
+      "IsQA": false,
+      "Layer": "B01",
+      "OrigDataType": "int16",
+      "OrigValidMax": "",
+      "OrigValidMin": "",
+      "QualityLayers": "['Fmask']",
+      "QualityProductAndVersion": "HLSS30.020",
+      "ScaleFactor": 0.0001,
+      "Units": "Reflectance",
+      "ValidMax": "",
+      "ValidMin": "",
+      "XSize": 3660,
+      "YSize": 3660
+    },
+    "B02": {
+      "AddOffset": 0.0,
+      "Available": true,
+      "DataType": "int16",
+      "Description": "B02 - Blue (0.45 \u2013 0.51 \u00b5m)",
+      "Dimensions": [
+        "time",
+        "y",
+        "x"
+      ],
+      "FillValue": -9999,
+      "FillValueAll": [
+        -9999
+      ],
+      "Group": "",
+      "Info": {},
+      "IsQA": false,
+      "Layer": "B02",
+      "OrigDataType": "int16",
+      "OrigValidMax": "",
+      "OrigValidMin": "",
+      "QualityLayers": "['Fmask']",
+      "QualityProductAndVersion": "HLSS30.020",
+      "ScaleFactor": 0.0001,
+      "Units": "Reflectance",
+      "ValidMax": "",
+      "ValidMin": "",
+      "XSize": 3660,
+      "YSize": 3660
+    },
+    "B03": {
+      "AddOffset": 0.0,
+      "Available": true,
+      "DataType": "int16",
+      "Description": "B03 - Green (0.53 \u2013 0.59 \u00b5m)",
+      "Dimensions": [
+        "time",
+        "y",
+        "x"
+      ],
+      "FillValue": -9999,
+      "FillValueAll": [
+        -9999
+      ],
+      "Group": "",
+      "Info": {},
+      "IsQA": false,
+      "Layer": "B03",
+      "OrigDataType": "int16",
+      "OrigValidMax": "",
+      "OrigValidMin": "",
+      "QualityLayers": "['Fmask']",
+      "QualityProductAndVersion": "HLSS30.020",
+      "ScaleFactor": 0.0001,
+      "Units": "Reflectance",
+      "ValidMax": "",
+      "ValidMin": "",
+      "XSize": 3660,
+      "YSize": 3660
+    },
+    "B04": {
+      "AddOffset": 0.0,
+      "Available": true,
+      "DataType": "int16",
+      "Description": "B04 - Red (0.64 \u2013 0.67 \u00b5m)",
+      "Dimensions": [
+        "time",
+        "y",
+        "x"
+      ],
+      "FillValue": -9999,
+      "FillValueAll": [
+        -9999
+      ],
+      "Group": "",
+      "Info": {},
+      "IsQA": false,
+      "Layer": "B04",
+      "OrigDataType": "int16",
+      "OrigValidMax": "",
+      "OrigValidMin": "",
+      "QualityLayers": "['Fmask']",
+      "QualityProductAndVersion": "HLSS30.020",
+      "ScaleFactor": 0.0001,
+      "Units": "Reflectance",
+      "ValidMax": "",
+      "ValidMin": "",
+      "XSize": 3660,
+      "YSize": 3660
+    },
+    "B05": {
+      "AddOffset": 0.0,
+      "Available": true,
+      "DataType": "int16",
+      "Description": "B05 - Red Edge1 (0.69 \u2013 0.71 \u00b5m)",
+      "Dimensions": [
+        "time",
+        "y",
+        "x"
+      ],
+      "FillValue": -9999,
+      "FillValueAll": [
+        -9999
+      ],
+      "Group": "",
+      "Info": {},
+      "IsQA": false,
+      "Layer": "B05",
+      "OrigDataType": "int16",
+      "OrigValidMax": "",
+      "OrigValidMin": "",
+      "QualityLayers": "['Fmask']",
+      "QualityProductAndVersion": "HLSS30.020",
+      "ScaleFactor": 0.0001,
+      "Units": "Reflectance",
+      "ValidMax": "",
+      "ValidMin": "",
+      "XSize": 3660,
+      "YSize": 3660
+    },
+    "B06": {
+      "AddOffset": 0.0,
+      "Available": true,
+      "DataType": "int16",
+      "Description": "B06 - Red Edge2 (0.73 \u2013 0.75 \u00b5m)",
+      "Dimensions": [
+        "time",
+        "y",
+        "x"
+      ],
+      "FillValue": -9999,
+      "FillValueAll": [
+        -9999
+      ],
+      "Group": "",
+      "Info": {},
+      "IsQA": false,
+      "Layer": "B06",
+      "OrigDataType": "int16",
+      "OrigValidMax": "",
+      "OrigValidMin": "",
+      "QualityLayers": "['Fmask']",
+      "QualityProductAndVersion": "HLSS30.020",
+      "ScaleFactor": 0.0001,
+      "Units": "Reflectance",
+      "ValidMax": "",
+      "ValidMin": "",
+      "XSize": 3660,
+      "YSize": 3660
+    },
+    "B07": {
+      "AddOffset": 0.0,
+      "Available": true,
+      "DataType": "int16",
+      "Description": "B07 - Red Edge3 (0.77 \u2013 0.79 \u00b5m)",
+      "Dimensions": [
+        "time",
+        "y",
+        "x"
+      ],
+      "FillValue": -9999,
+      "FillValueAll": [
+        -9999
+      ],
+      "Group": "",
+      "Info": {},
+      "IsQA": false,
+      "Layer": "B07",
+      "OrigDataType": "int16",
+      "OrigValidMax": "",
+      "OrigValidMin": "",
+      "QualityLayers": "['Fmask']",
+      "QualityProductAndVersion": "HLSS30.020",
+      "ScaleFactor": 0.0001,
+      "Units": "Reflectance",
+      "ValidMax": "",
+      "ValidMin": "",
+      "XSize": 3660,
+      "YSize": 3660
+    },
+    "B08": {
+      "AddOffset": 0.0,
+      "Available": true,
+      "DataType": "int16",
+      "Description": "B08 - NIR Broad (0.78 \u2013 0.88 \u00b5m)",
+      "Dimensions": [
+        "time",
+        "y",
+        "x"
+      ],
+      "FillValue": -9999,
+      "FillValueAll": [
+        -9999
+      ],
+      "Group": "",
+      "Info": {},
+      "IsQA": false,
+      "Layer": "B08",
+      "OrigDataType": "int16",
+      "OrigValidMax": "",
+      "OrigValidMin": "",
+      "QualityLayers": "['Fmask']",
+      "QualityProductAndVersion": "HLSS30.020",
+      "ScaleFactor": 0.0001,
+      "Units": "Reflectance",
+      "ValidMax": "",
+      "ValidMin": "",
+      "XSize": 3660,
+      "YSize": 3660
+    },
+    "B09": {
+      "AddOffset": 0.0,
+      "Available": true,
+      "DataType": "int16",
+      "Description": "B09 - Water Vapor (0.93 \u2013 0.95 \u00b5m)",
+      "Dimensions": [
+        "time",
+        "y",
+        "x"
+      ],
+      "FillValue": -9999,
+      "FillValueAll": [
+        -9999
+      ],
+      "Group": "",
+      "Info": {},
+      "IsQA": false,
+      "Layer": "B09",
+      "OrigDataType": "int16",
+      "OrigValidMax": "",
+      "OrigValidMin": "",
+      "QualityLayers": "['Fmask']",
+      "QualityProductAndVersion": "HLSS30.020",
+      "ScaleFactor": 0.0001,
+      "Units": "Reflectance",
+      "ValidMax": "",
+      "ValidMin": "",
+      "XSize": 3660,
+      "YSize": 3660
+    },
+    "B10": {
+      "AddOffset": 0.0,
+      "Available": true,
+      "DataType": "int16",
+      "Description": "B10 - Cirrus (1.36 \u2013 1.38 \u00b5m)",
+      "Dimensions": [
+        "time",
+        "y",
+        "x"
+      ],
+      "FillValue": -9999,
+      "FillValueAll": [
+        -9999
+      ],
+      "Group": "",
+      "Info": {},
+      "IsQA": false,
+      "Layer": "B10",
+      "OrigDataType": "int16",
+      "OrigValidMax": "",
+      "OrigValidMin": "",
+      "QualityLayers": "['Fmask']",
+      "QualityProductAndVersion": "HLSS30.020",
+      "ScaleFactor": 0.0001,
+      "Units": "Reflectance",
+      "ValidMax": "",
+      "ValidMin": "",
+      "XSize": 3660,
+      "YSize": 3660
+    },
+    "B11": {
+      "AddOffset": 0.0,
+      "Available": true,
+      "DataType": "int16",
+      "Description": "B11 - SWIR1 (1.57 \u2013 1.65 \u00b5m)",
+      "Dimensions": [
+        "time",
+        "y",
+        "x"
+      ],
+      "FillValue": -9999,
+      "FillValueAll": [
+        -9999
+      ],
+      "Group": "",
+      "Info": {},
+      "IsQA": false,
+      "Layer": "B11",
+      "OrigDataType": "int16",
+      "OrigValidMax": "",
+      "OrigValidMin": "",
+      "QualityLayers": "['Fmask']",
+      "QualityProductAndVersion": "HLSS30.020",
+      "ScaleFactor": 0.0001,
+      "Units": "Reflectance",
+      "ValidMax": "",
+      "ValidMin": "",
+      "XSize": 3660,
+      "YSize": 3660
+    },
+    "B12": {
+      "AddOffset": 0.0,
+      "Available": true,
+      "DataType": "int16",
+      "Description": "B12 - SWIR2 (2.11 \u2013 2.29 \u00b5m)",
+      "Dimensions": [
+        "time",
+        "y",
+        "x"
+      ],
+      "FillValue": -9999,
+      "FillValueAll": [
+        -9999
+      ],
+      "Group": "",
+      "Info": {},
+      "IsQA": false,
+      "Layer": "B12",
+      "OrigDataType": "int16",
+      "OrigValidMax": "",
+      "OrigValidMin": "",
+      "QualityLayers": "['Fmask']",
+      "QualityProductAndVersion": "HLSS30.020",
+      "ScaleFactor": 0.0001,
+      "Units": "Reflectance",
+      "ValidMax": "",
+      "ValidMin": "",
+      "XSize": 3660,
+      "YSize": 3660
+    },
+    "B8A": {
+      "AddOffset": 0.0,
+      "Available": true,
+      "DataType": "int16",
+      "Description": "B8A - NIR Narrow (0.85 \u2013 0.88 \u00b5m)",
+      "Dimensions": [
+        "time",
+        "y",
+        "x"
+      ],
+      "FillValue": -9999,
+      "FillValueAll": [
+        -9999
+      ],
+      "Group": "",
+      "Info": {},
+      "IsQA": false,
+      "Layer": "B8A",
+      "OrigDataType": "int16",
+      "OrigValidMax": "",
+      "OrigValidMin": "",
+      "QualityLayers": "['Fmask']",
+      "QualityProductAndVersion": "HLSS30.020",
+      "ScaleFactor": 0.0001,
+      "Units": "Reflectance",
+      "ValidMax": "",
+      "ValidMin": "",
+      "XSize": 3660,
+      "YSize": 3660
+    },
+    "Fmask": {
+      "AddOffset": "",
+      "Available": true,
+      "DataType": "uint8",
+      "Description": "Quality Bits",
+      "Dimensions": [
+        "time",
+        "y",
+        "x"
+      ],
+      "FillValue": 255,
+      "FillValueAll": [
+        255
+      ],
+      "Group": "",
+      "Info": {},
+      "IsQA": true,
+      "Layer": "Fmask",
+      "OrigDataType": "uint8",
+      "OrigValidMax": 255.0,
+      "OrigValidMin": 0.0,
+      "QualityLayers": "",
+      "QualityProductAndVersion": "",
+      "ScaleFactor": "",
+      "Units": "Bit Field",
+      "ValidMax": 255.0,
+      "ValidMin": 0.0,
+      "XSize": 3660,
+      "YSize": 3660
+    },
+    "SAA": {
+      "AddOffset": 0.0,
+      "Available": true,
+      "DataType": "uint16",
+      "Description": "Sun Azimuth Angle",
+      "Dimensions": [
+        "time",
+        "y",
+        "x"
+      ],
+      "FillValue": 40000,
+      "FillValueAll": [
+        40000
+      ],
+      "Group": "",
+      "Info": {},
+      "IsQA": false,
+      "Layer": "SAA",
+      "OrigDataType": "uint16",
+      "OrigValidMax": "",
+      "OrigValidMin": "",
+      "QualityLayers": "",
+      "QualityProductAndVersion": "",
+      "ScaleFactor": 0.01,
+      "Units": "Degree",
+      "ValidMax": "",
+      "ValidMin": "",
+      "XSize": 3660,
+      "YSize": 3660
+    },
+    "SZA": {
+      "AddOffset": 0.0,
+      "Available": true,
+      "DataType": "uint16",
+      "Description": "Sun Zenith Angle",
+      "Dimensions": [
+        "time",
+        "y",
+        "x"
+      ],
+      "FillValue": 40000,
+      "FillValueAll": [
+        40000
+      ],
+      "Group": "",
+      "Info": {},
+      "IsQA": false,
+      "Layer": "SZA",
+      "OrigDataType": "uint16",
+      "OrigValidMax": "",
+      "OrigValidMin": "",
+      "QualityLayers": "",
+      "QualityProductAndVersion": "",
+      "ScaleFactor": 0.01,
+      "Units": "Degree",
+      "ValidMax": "",
+      "ValidMin": "",
+      "XSize": 3660,
+      "YSize": 3660
+    },
+    "VAA": {
+      "AddOffset": 0.0,
+      "Available": true,
+      "DataType": "uint16",
+      "Description": "View Azimuth Angle",
+      "Dimensions": [
+        "time",
+        "y",
+        "x"
+      ],
+      "FillValue": 40000,
+      "FillValueAll": [
+        40000
+      ],
+      "Group": "",
+      "Info": {},
+      "IsQA": false,
+      "Layer": "VAA",
+      "OrigDataType": "uint16",
+      "OrigValidMax": "",
+      "OrigValidMin": "",
+      "QualityLayers": "",
+      "QualityProductAndVersion": "",
+      "ScaleFactor": 0.01,
+      "Units": "Degree",
+      "ValidMax": "",
+      "ValidMin": "",
+      "XSize": 3660,
+      "YSize": 3660
+    },
+    "VZA": {
+      "AddOffset": 0.0,
+      "Available": true,
+      "DataType": "uint16",
+      "Description": "View Zenith Angle",
+      "Dimensions": [
+        "time",
+        "y",
+        "x"
+      ],
+      "FillValue": 40000,
+      "FillValueAll": [
+        40000
+      ],
+      "Group": "",
+      "Info": {},
+      "IsQA": false,
+      "Layer": "VZA",
+      "OrigDataType": "uint16",
+      "OrigValidMax": "",
+      "OrigValidMin": "",
+      "QualityLayers": "",
+      "QualityProductAndVersion": "",
+      "ScaleFactor": 0.01,
+      "Units": "Degree",
+      "ValidMax": "",
+      "ValidMin": "",
+      "XSize": 3660,
+      "YSize": 3660
+    }
+  },
+  "ECO_L3T_JET.002": {
+    "BESSinst": {
+      "AddOffset": 0,
+      "Available": true,
+      "DataType": "float32",
+      "Description": "Instantaneous ET estimate from the Breathing Earth System Simulator (BESS) model",
+      "Dimensions": [
+        "time",
+        "y",
+        "x"
+      ],
+      "FillValue": "NaN",
+      "FillValueAll": [
+        "NaN"
+      ],
+      "Group": "",
+      "Info": {},
+      "IsQA": false,
+      "Layer": "BESSinst",
+      "OrigDataType": "float32",
+      "OrigValidMax": "",
+      "OrigValidMin": "",
+      "QualityLayers": "",
+      "QualityProductAndVersion": "",
+      "ScaleFactor": 1,
+      "Units": "W/m\u00b2",
+      "ValidMax": "",
+      "ValidMin": "",
+      "XSize": 1568,
+      "YSize": 1568
+    },
+    "ETdaily": {
+      "AddOffset": 0,
+      "Available": true,
+      "DataType": "float32",
+      "Description": "Daily Evapotranspiration (ET) estimate",
+      "Dimensions": [
+        "time",
+        "y",
+        "x"
+      ],
+      "FillValue": "NaN",
+      "FillValueAll": [
+        "NaN"
+      ],
+      "Group": "",
+      "Info": {},
+      "IsQA": false,
+      "Layer": "ETdaily",
+      "OrigDataType": "float32",
+      "OrigValidMax": "",
+      "OrigValidMin": "",
+      "QualityLayers": "",
+      "QualityProductAndVersion": "",
+      "ScaleFactor": 1,
+      "Units": "W/m\u00b2",
+      "ValidMax": "",
+      "ValidMin": "",
+      "XSize": 1568,
+      "YSize": 1568
+    },
+    "ETinstUncertainty": {
+      "AddOffset": 0,
+      "Available": true,
+      "DataType": "float32",
+      "Description": "ET uncertainty",
+      "Dimensions": [
+        "time",
+        "y",
+        "x"
+      ],
+      "FillValue": "NaN",
+      "FillValueAll": [
+        "NaN"
+      ],
+      "Group": "",
+      "Info": {},
+      "IsQA": false,
+      "Layer": "ETinstUncertainty",
+      "OrigDataType": "float32",
+      "OrigValidMax": "",
+      "OrigValidMin": "",
+      "QualityLayers": "",
+      "QualityProductAndVersion": "",
+      "ScaleFactor": 1,
+      "Units": "W/m\u00b2",
+      "ValidMax": "",
+      "ValidMin": "",
+      "XSize": 1568,
+      "YSize": 1568
+    },
+    "MOD16inst": {
+      "AddOffset": 0,
+      "Available": true,
+      "DataType": "float32",
+      "Description": "Instantaneous ET estimate from the Penman Monteith MODIS Global Evapotranspiration Model (MOD16)",
+      "Dimensions": [
+        "time",
+        "y",
+        "x"
+      ],
+      "FillValue": "NaN",
+      "FillValueAll": [
+        "NaN"
+      ],
+      "Group": "",
+      "Info": {},
+      "IsQA": false,
+      "Layer": "MOD16inst",
+      "OrigDataType": "float32",
+      "OrigValidMax": "",
+      "OrigValidMin": "",
+      "QualityLayers": "",
+      "QualityProductAndVersion": "",
+      "ScaleFactor": 1,
+      "Units": "W/m\u00b2",
+      "ValidMax": "",
+      "ValidMin": "",
+      "XSize": 1568,
+      "YSize": 1568
+    },
+    "PTJPLSMcanopy": {
+      "AddOffset": 0,
+      "Available": true,
+      "DataType": "float32",
+      "Description": "PT-JPL-SM instantaneous canopy transpiration",
+      "Dimensions": [
+        "time",
+        "y",
+        "x"
+      ],
+      "FillValue": "NaN",
+      "FillValueAll": [
+        "NaN"
+      ],
+      "Group": "",
+      "Info": {},
+      "IsQA": false,
+      "Layer": "PTJPLSMcanopy",
+      "OrigDataType": "float32",
+      "OrigValidMax": 1.0,
+      "OrigValidMin": 0.0,
+      "QualityLayers": "",
+      "QualityProductAndVersion": "",
+      "ScaleFactor": 1,
+      "Units": "Ratio",
+      "ValidMax": 1.0,
+      "ValidMin": 0.0,
+      "XSize": 1568,
+      "YSize": 1568
+    },
+    "PTJPLSMinst": {
+      "AddOffset": 0,
+      "Available": true,
+      "DataType": "float32",
+      "Description": "Total instantaneous ET estimate from combined Priestley-Taylor Jet Propulsion Laboratory Soil Moisture (PT-JPL-SM) model partitions",
+      "Dimensions": [
+        "time",
+        "y",
+        "x"
+      ],
+      "FillValue": "NaN",
+      "FillValueAll": [
+        "NaN"
+      ],
+      "Group": "",
+      "Info": {},
+      "IsQA": false,
+      "Layer": "PTJPLSMinst",
+      "OrigDataType": "float32",
+      "OrigValidMax": "",
+      "OrigValidMin": "",
+      "QualityLayers": "",
+      "QualityProductAndVersion": "",
+      "ScaleFactor": 1,
+      "Units": "W/m\u00b2",
+      "ValidMax": "",
+      "ValidMin": "",
+      "XSize": 1568,
+      "YSize": 1568
+    },
+    "PTJPLSMinterception": {
+      "AddOffset": 0,
+      "Available": true,
+      "DataType": "float32",
+      "Description": "PT-JPL-SM leaf surface evaporation",
+      "Dimensions": [
+        "time",
+        "y",
+        "x"
+      ],
+      "FillValue": "NaN",
+      "FillValueAll": [
+        "NaN"
+      ],
+      "Group": "",
+      "Info": {},
+      "IsQA": false,
+      "Layer": "PTJPLSMinterception",
+      "OrigDataType": "float32",
+      "OrigValidMax": 1.0,
+      "OrigValidMin": 0.0,
+      "QualityLayers": "",
+      "QualityProductAndVersion": "",
+      "ScaleFactor": 1,
+      "Units": "Ratio",
+      "ValidMax": 1.0,
+      "ValidMin": 0.0,
+      "XSize": 1568,
+      "YSize": 1568
+    },
+    "PTJPLSMsoil": {
+      "AddOffset": 0,
+      "Available": true,
+      "DataType": "float32",
+      "Description": "PT-JPL-SM soil moisture",
+      "Dimensions": [
+        "time",
+        "y",
+        "x"
+      ],
+      "FillValue": "NaN",
+      "FillValueAll": [
+        "NaN"
+      ],
+      "Group": "",
+      "Info": {},
+      "IsQA": false,
+      "Layer": "PTJPLSMsoil",
+      "OrigDataType": "float32",
+      "OrigValidMax": 1.0,
+      "OrigValidMin": 0.0,
+      "QualityLayers": "",
+      "QualityProductAndVersion": "",
+      "ScaleFactor": 1,
+      "Units": "Ratio",
+      "ValidMax": 1.0,
+      "ValidMin": 0.0,
+      "XSize": 1568,
+      "YSize": 1568
+    },
+    "STICcanopy": {
+      "AddOffset": 0,
+      "Available": true,
+      "DataType": "float32",
+      "Description": "STIC canopy partition",
+      "Dimensions": [
+        "time",
+        "y",
+        "x"
+      ],
+      "FillValue": "NaN",
+      "FillValueAll": [
+        "NaN"
+      ],
+      "Group": "",
+      "Info": {},
+      "IsQA": false,
+      "Layer": "STICcanopy",
+      "OrigDataType": "float32",
+      "OrigValidMax": 1.0,
+      "OrigValidMin": 0.0,
+      "QualityLayers": "",
+      "QualityProductAndVersion": "",
+      "ScaleFactor": 1,
+      "Units": "Ratio",
+      "ValidMax": 1.0,
+      "ValidMin": 0.0,
+      "XSize": 1568,
+      "YSize": 1568
+    },
+    "STICinst": {
+      "AddOffset": 0,
+      "Available": true,
+      "DataType": "float32",
+      "Description": "Instantaneous ET estimate from the Surface Temperature Initiated Closure (STIC) model",
+      "Dimensions": [
+        "time",
+        "y",
+        "x"
+      ],
+      "FillValue": "NaN",
+      "FillValueAll": [
+        "NaN"
+      ],
+      "Group": "",
+      "Info": {},
+      "IsQA": false,
+      "Layer": "STICinst",
+      "OrigDataType": "float32",
+      "OrigValidMax": "",
+      "OrigValidMin": "",
+      "QualityLayers": "",
+      "QualityProductAndVersion": "",
+      "ScaleFactor": 1,
+      "Units": "W/m\u00b2",
+      "ValidMax": "",
+      "ValidMin": "",
+      "XSize": 1568,
+      "YSize": 1568
+    },
+    "cloud": {
+      "AddOffset": 0,
+      "Available": true,
+      "DataType": "uint8",
+      "Description": "Cloud Mask",
+      "Dimensions": [
+        "time",
+        "y",
+        "x"
+      ],
+      "FillValue": 255,
+      "FillValueAll": [
+        255
+      ],
+      "Group": "",
+      "Info": {},
+      "IsQA": false,
+      "Layer": "cloud",
+      "OrigDataType": "uint8",
+      "OrigValidMax": 1.0,
+      "OrigValidMin": 0.0,
+      "QualityLayers": "",
+      "QualityProductAndVersion": "",
+      "ScaleFactor": 1,
+      "Units": "1 = Cloud",
+      "ValidMax": 1.0,
+      "ValidMin": 0.0,
+      "XSize": 1568,
+      "YSize": 1568
+    },
+    "water": {
+      "AddOffset": 0,
+      "Available": true,
+      "DataType": "uint8",
+      "Description": "Water Mask",
+      "Dimensions": [
+        "time",
+        "y",
+        "x"
+      ],
+      "FillValue": 255,
+      "FillValueAll": [
+        255
+      ],
+      "Group": "",
+      "Info": {},
+      "IsQA": false,
+      "Layer": "water",
+      "OrigDataType": "uint8",
+      "OrigValidMax": 1.0,
+      "OrigValidMin": 0.0,
+      "QualityLayers": "",
+      "QualityProductAndVersion": "",
+      "ScaleFactor": 1,
+      "Units": "1 = Water",
+      "ValidMax": 1.0,
+      "ValidMin": 0.0,
+      "XSize": 1568,
+      "YSize": 1568
+    }
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "checked_date": "2026-11-15",
+  "jobs": [
+    {
+      "task_id": "6935203f-0a90-4846-8a99-eccd74bd0ee2",
+      "name": "FarmLine Fallon H6 2015-2025",
+      "status": "processing",
+      "request": "fallon-timeseries-request.json"
+    },
+    {
+      "task_id": "2abbfbc7-cb15-4a7a-9811-624c73bfb118",
+      "name": "FarmLine Fallon H6 SRTM slope",
+      "status": "pending",
+      "request": "fallon-srtm-request.json"
+    }
+  ],
+  "remaining_collections": [
+    {
+      "short_name": "GPM_3IMERGM",
+      "version": "07",
+      "concept_id": "C2723754851-GES_DISC",
+      "status": "identified; not downloaded"
+    },
+    {
+      "short_name": "NLDAS_NOAH0125_M",
+      "version": "2.0",
+      "concept_id": "C1887990023-GES_DISC",
+      "status": "identified; not downloaded"
+    }
+  ]
+}
