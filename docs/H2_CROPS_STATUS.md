@@ -1,81 +1,43 @@
-# H2 progress and remaining parameter gaps
+# H2 handoff: crop history and complete prototype profiles
 
-## Retrieved
+## Completed
 
-USDA CDL point history: 2008-2025, 18 successful responses. Requests use EPSG:5070,
-converted from longitude/latitude with pyproj. Original categories and source URLs are
-retained, including unmapped categories (crop=null). Corn CDL does not distinguish silage.
-Four 100 m offsets in 2025 all classify as alfalfa. This is local pixel agreement, not a
-verified farm boundary or annual crop survey. See crop_history.json and cdl_validation.json.
-Raw XML and the request report are gitignored under data/raw/cdl/nv-fallon-01/.
+- Real USDA CDL history for the reference point, 2008-2025 (18 years), plus four
+  100-m neighbour checks in 2025. Original category, source URL and retrieval time retained.
+- Ten numeric crop profiles: the eight planned Fallon choices plus grain corn and fallow.
+- Defined spring wheat, grain sorghum, established alfalfa, silage maize, winter cereal rye
+  cover crop, and bare fallow explicitly.
+- A cell-level evidence ledger covers all 230 numeric/boolean entries: 59 published generic,
+  2 published local, 32 regional proxies, 10 derived assumptions, 113 model assumptions,
+  and 14 policy values. Model choices are not represented as empirical observations.
+- Structural validation and real-water-engine integration pass for all ten profiles.
 
-## Crop table readiness: INCOMPLETE
+## What completion means
 
-Ten crop identifiers are present. Only unambiguous FAO-56 scalar Kc, depletion, and salinity
-entries have been populated. Source references live in each row. No crop is model-ready yet.
-Every blank remains unavailable; never replace missing values with zero during loading.
+The table is computationally complete for prototype scenarios, not agronomically calibrated.
+The documented assumptions replace absent numeric configuration; they do not manufacture
+missing observations. The source record explicitly keeps validated_for_farmer_advice=false.
+Read H2_MODEL_ASSUMPTIONS.md before interpreting any result. In particular, eight thermal
+eligibility gates are explicitly disabled until compatible cultivar heat requirements exist.
+The rye overwinter curve, barley/silage yield-response proxies and safflower salinity proxy
+are model scenarios that need sensitivity checks, not newly established crop science.
 
-- All crops: local planting dates, stage lengths, base temperature, required GDD,
-  frost-free days, classifications, and custom soil-score rubric need regional evidence.
-- Root depths: FAO gives ranges; a selected scalar requires a documented regional assumption.
-- ky: requires verified FAO yield-response source and crop/season interpretation.
-- Wheat Kc end, corn Kc end, sorghum Kc mid, safflower Kc mid: source gives a range;
-  selection depends on harvest/crop/climate assumptions, so left blank.
-- Alfalfa uses Table 12 averaged-cutting Kc, not individual-cutting Kc. Total-season timing
-  remains unresolved; do not copy a single cutting duration as the annual growing season.
-- Corn silage: forage salinity entry used, not grain maize salinity. Kc/timing still unresolved.
-- Safflower: Table 23 gives no numerical salinity threshold/slope, so both remain blank.
-- Cover crop: species/mixture unspecified; no single species parameter set can be justified.
-- Fallow: management and bare-soil evaporation need explicit engine treatment, not fake crop science.
+## Run checks
 
-## Run
+From the repository root:
 
-Python 3.12+ is needed for the pinned pyproj release in requirements-crops.txt.
-Use a pipeline virtual environment and install `pip install -r pipeline/requirements-crops.txt`.
-Then run `python -m pipeline.crops`; it downloads 18 years plus neighbour checks.
-truststore uses the operating-system certificate store with TLS verification enabled.
-A partial failure preserves the existing history and exits unsuccessfully; review data/raw reports.
-Run parser tests: `python -m unittest pipeline.tests.test_crops -v`.
+    python -m unittest pipeline.tests.test_crops pipeline.tests.test_crop_provenance -v
+    python -m pipeline.crop_reference
+    python -m pipeline.crop_reference --require-advice-ready
 
-H2 is not finished until the regional assumptions and remaining parameter gaps are resolved.
+The first two checks pass. The last intentionally fails: it is a readiness report and
+is not yet wired into Abdullah's API. Abdullah should enforce the advice gate before
+serving production recommendations. H3 economics and local agronomic validation remain
+separate dependencies; no end-to-end farmer advice is claimed by H2.
 
-## Additional research and parameter-level audit
+## Retrieve history
 
-`data/reference/crop_parameter_provenance.json` covers every numeric/boolean CSV cell,
-including an explicit reason for each blank. Values are tagged published_generic or
-regional_proxy; these are literature parameters, not measured Fallon field properties.
-
-- Added total-season ky for dry beans, grain maize, grain sorghum and safflower from
-  FAO's irrigation-scheduling annex Table 12. Did not substitute grain ky for silage biomass.
-- Added depletion fractions for hay alfalfa and dry beans from FAO-56 Table 22.
-- Added frost-free thresholds from USU Cache Valley's crop screening table. These are
-  regional proxies; site-specific suitability still needs validation.
-- USU's crop-screening GDD numbers do not specify enough heat-unit conventions to be
-  copied directly into Celsius degree-days. Kept those cells blank. Corn's modified
-  method includes temperature limits, so a simple unbounded mean-temperature sum
-  must not be silently equated with that method.
-- Alfalfa ky is a range in the verified annex; wheat depends on spring/winter type.
-  Cover-crop species and fallow-management definitions remain explicit integration decisions.
-
-Handoff: the retrieval and provenance audit are usable now. Model parameterization remains
-incomplete. No farmer recommendation should be generated by filling these gaps with zeros.
-
-## Research handoff (completed audit; model readiness remains incomplete)
-
-Five annual-crop rows now retain FAO-56 Table 11 stage durations and the first month of
-their published planting window as regional proxies. Each cell records its geographic
-context. These are not locally verified Fallon planting schedules; plant_day remains blank.
-The wheat code is explicitly spring wheat throughout this reference table (including ky).
-Eight named crop species have perennial and legume classifications; unspecified cover
-crop and fallow do not acquire invented botanical classifications.
-
-Alfalfa's Intermountain sowing guidance offers spring or August; neither is the green-up
-date of an established stand. A fixed single-cut annual model is inappropriate without
-an agreed season/cutting-cycle approximation. Corn-silage durations are not copied from
-grain maize. Root-depth ranges, local dates, cultivar-specific heat requirements and the
-custom heavy-feeder/soil-score rubric remain unavailable or unresolved, with a reason per cell.
-
-The H2 research artifacts are ready for review, but this is not a model-ready crop table.
-Abdullah must not fill blanks with zero to make water.simulate run. Regional proxies need
-an explicit acceptance/calibration step. Do not report eight supported crops or 200 valid
-rotations until the shared readiness check passes with the H3 economics table too.
+Use Python 3.12+ and install pipeline/requirements-crops.txt into a pipeline virtual
+environment. Run python -m pipeline.crops. Requests use EPSG:5070 and verified system TLS.
+Raw responses are in gitignored data/raw/cdl/nv-fallon-01/; partial failures preserve
+existing history. Four matching neighbours do not prove parcel boundaries or ownership.

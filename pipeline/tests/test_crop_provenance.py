@@ -1,42 +1,56 @@
-"""Guard against treating blanks/proxies as measured crop parameters."""
-import csv
-import json
+"""Prototype completeness, provenance and real-engine compatibility."""
+import copy
 import unittest
-from pathlib import Path
+from pipeline.crop_reference import load_reference,validate
 
-ROOT=Path(__file__).resolve().parents[2]
-
-class ParameterEvidenceTests(unittest.TestCase):
+class CompleteProfilesTests(unittest.TestCase):
     @classmethod
-    def setUpClass(cls):
-        with (ROOT/'data/reference/crops.csv').open(encoding='utf-8',newline='') as f:
-            cls.rows=list(csv.DictReader(f))
-        cls.evidence=json.loads((ROOT/'data/reference/crop_parameter_provenance.json').read_text(encoding='utf-8'))['parameters']
+    def setUpClass(cls): cls.rows,cls.evidence=load_reference()
 
-    def test_every_parameter_has_evidence_or_missing_reason(self):
-        self.assertEqual(len(self.rows),10)
-        for row in self.rows:
-            for column,value in row.items():
-                if column in ('crop','source'): continue
-                with self.subTest(crop=row['crop'],column=column):
-                    record=self.evidence[row['crop']][column]
-                    if value=='':
-                        self.assertIsNone(record['value'])
-                        self.assertEqual(record['status'],'unavailable')
-                        self.assertTrue(record['reason'].strip())
-                    else:
-                        self.assertEqual(float(value),record['value'])
-                        self.assertIn(record['status'],('published_generic','regional_proxy'))
-                        self.assertTrue(record['source'])
+    def test_all_ten_profiles_are_numerically_complete(self):
+        report=validate(self.rows,self.evidence)
+        self.assertEqual(report['errors'],[])
+        self.assertEqual(report['crop_count'],10)
 
-    def test_proxy_and_yield_type_are_not_hidden(self):
-        self.assertEqual(self.evidence['corn']['frost_free_days_min']['status'],'regional_proxy')
-        self.assertEqual(self.evidence['corn']['ky']['value'],1.25)
-        self.assertIsNone(self.evidence['corn_silage']['ky']['value'])
+    def test_assumptions_cannot_pass_as_validated_advice(self):
+        report=validate(self.rows,self.evidence,require_advice_ready=True)
+        self.assertFalse(report['validated_for_farmer_advice'])
+        self.assertTrue(report['errors'])
+        spoofed=copy.deepcopy(self.evidence);spoofed['validated_for_farmer_advice']=True
+        self.assertTrue(validate(self.rows,spoofed,require_advice_ready=True)['errors'])
 
-    def test_unresolved_units_and_species_remain_missing(self):
-        for crop in ('corn','barley','safflower'):
-            self.assertIsNone(self.evidence[crop]['gdd_required']['value'])
-        self.assertTrue(all(v['value'] is None for v in self.evidence['cover_crop'].values()))
+    def test_missing_and_unsourced_parameters_fail(self):
+        rows=copy.deepcopy(self.rows);rows[0]['kc_mid']=''
+        self.assertTrue(validate(rows,self.evidence)['errors'])
+        evidence=copy.deepcopy(self.evidence)
+        evidence['parameters']['alfalfa']['kc_mid']['source']=''
+        self.assertTrue(validate(self.rows,evidence)['errors'])
+
+    def test_bad_date_and_invalid_fraction_fail(self):
+        rows=copy.deepcopy(self.rows);rows[0]['plant_month']=13;rows[0]['p_depletion']=1.2
+        self.assertTrue(validate(rows,self.evidence)['errors'])
+
+    def test_disabled_heat_gate_is_explicit(self):
+        for crop,cells in self.evidence['parameters'].items():
+            if cells['gdd_required']['value']==0:
+                self.assertEqual(cells['gdd_required']['status'],'policy')
+                self.assertIn('DISABLE',cells['gdd_required']['reason'])
+        self.assertEqual(self.evidence['parameters']['barley']['base_temp_c']['value'],0)
+        self.assertGreater(self.evidence['parameters']['barley']['gdd_required']['value'],1200)
+
+    def test_real_water_engine_accepts_all_profiles(self):
+        import numpy as np
+        from engine.bundle import load
+        from engine.water import crop_tables,simulate
+        field,ref=load('nv-fallon-01')
+        codes=[r['crop'] for r in self.rows]
+        tables=crop_tables(ref.crops,codes,field.soil)
+        self.assertTrue(np.isfinite(tables['kc']).all())
+        result=simulate(field,[(c,c,c) for c in codes],ref)
+        self.assertEqual(result.etc_mm.shape[0],10)
+        self.assertTrue(np.isfinite(result.eta_mm).all())
+        self.assertTrue((result.eta_mm<=result.etc_mm+1e-8).all())
+        self.assertTrue((result.irrigation_mm>=0).all())
+        self.assertTrue((result.irrigation_mm[codes.index('fallow')]==0).all())
 
 if __name__=='__main__': unittest.main()
