@@ -1,0 +1,15 @@
+[Unit]
+Description=FarmLine Cloudflare quick tunnel to the engine
+After=network-online.target farmline-engine.service
+Wants=network-online.target
+
+[Service]
+User=farmline
+Group=farmline
+ExecStart=/usr/bin/cloudflared tunnel --no-autoupdate --url http://127.0.0.1:8000
+Restart=always
+RestartSec=5
+NoNewPrivileges=true
+
+[Install]
+WantedBy=multi-user.target

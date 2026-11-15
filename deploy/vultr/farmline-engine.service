@@ -1,0 +1,20 @@
+[Unit]
+Description=FarmLine rotation engine (uvicorn, 127.0.0.1:8000)
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+User=farmline
+Group=farmline
+WorkingDirectory=/opt/farmline/app
+EnvironmentFile=/etc/farmline/engine.env
+ExecStart=/opt/farmline/venv/bin/python -m uvicorn engine.app:app --host 127.0.0.1 --port 8000 --workers 1
+Restart=always
+RestartSec=3
+NoNewPrivileges=true
+ProtectSystem=strict
+ReadWritePaths=/opt/farmline/app/data/cache
+PrivateTmp=true
+
+[Install]
+WantedBy=multi-user.target
