@@ -195,4 +195,6 @@ def test_200_rotations_run_fast(fallon):
     r = water.simulate(field, rotations, ref)
     elapsed = time.perf_counter() - start
     assert r.eta_mm.shape == (200, 275, 3)
-    assert elapsed < 4.0, f"{elapsed:.1f}s"
+    # A guard against an accidental slow-down (e.g. a Python loop over rotations), not a
+    # benchmark: about 1 s on a plugged-in laptop, up to 6 s when the same laptop throttles.
+    assert elapsed < 20.0, f"{elapsed:.1f}s"
