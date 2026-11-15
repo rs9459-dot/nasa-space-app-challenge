@@ -78,6 +78,7 @@ flowchart TD
     Y --> K["Ranking (TOPSIS)<br/>weighted by the farmer's priorities"]
     K --> O["3 options<br/>most water saved · most income · safest in drought"]
     K --> H["2021 hindcast<br/>would the advice have held up?"]
+    K --> C["2035 view<br/>same options on the field's own trend"]
 ```
 
 - **Water balance:** reference evapotranspiration from NASA POWER (Hargreaves), crop
@@ -93,6 +94,11 @@ flowchart TD
   and soil health, then weighted by what the farmer asked for.
 - **Hindcast:** the engine plans as if it were 2020, then replays 2021-2023 with the weather
   and water cuts that really happened, and compares the advice with staying in alfalfa.
+- **2035 view:** the engine measures the field's own temperature and rain trend over 2001-2025
+  (Mann-Kendall test, Sen's slope), shifts the weather to 2035 and reruns the three chosen
+  options on it. Each plan says whether the trend is statistically significant. At Fallon it
+  is +0.3 °C and +34 mm of rain per decade, and neither is significant, so the 2035 numbers
+  barely move; FarmLine reports that instead of dressing it up.
 
 ## Data
 
@@ -130,22 +136,42 @@ We checked the water balance against independent satellite data from
 In other words, the model's estimate of how much water the crop uses is within a few percent
 of what satellites measured at this field.
 
+## Tiger Data
+
+The field data also lives in a [Tiger Cloud](https://www.tigerdata.com/) (TimescaleDB)
+database, loaded by `pipeline/tiger.py` from the same files the engine reads:
+
+| Table | Rows (Fallon) | Kind |
+|---|---|---|
+| `weather_daily` | 9,131 | Hypertable: 25 years of NASA POWER |
+| `river_flow_daily` | 9,131 | Hypertable: USGS Carson River flow |
+| `satellite_obs` | 240 | Hypertable, long form: OpenET today, SMAP and IMERG later |
+| `weather_monthly` | 300 | Continuous aggregate over `weather_daily` |
+| `requests` | 0 | Hypertable for farmer questions and plans (not written yet) |
+| `fields`, `crop_history`, `water_allocations`, `county_yields`, `crop_prices` | small | Plain tables |
+
+The schema is in [db/schema.sql](db/schema.sql). Loading a field twice gives the same rows. The
+SMS line does not read from the database yet; it is the store for the dashboard and for
+logging requests.
+
 ## Status
 
 | Part | What works today |
 |---|---|
 | SMS line (`worker/`) | Signed Twilio webhook, per-farmer memory, STOP/HELP, full plan replies; deployed on Cloudflare |
 | Gemini layer (`worker/src/gemini/`) | Message parsing in 6 language forms, checked replies, template fallback, number checker, Hindi speech |
-| Engine (`engine/`) | Token-protected API, water balance, rotations, yields, ranking, hindcast, per-field cache; deployed on Vultr |
+| Engine (`engine/`) | Token-protected API, water balance, rotations, yields, ranking, hindcast, 2035 view, per-field cache; deployed on Vultr |
 | Data (`pipeline/`, `data/`) | Real Fallon weather, soil, crop history, water allocations and charges, river flow, OpenET |
+| Database (`db/`, `pipeline/tiger.py`) | Fallon loaded into Tiger Cloud: 4 hypertables and a monthly continuous aggregate |
 
 **Known limits:** the crop and cost tables are prototypes (see the `docs/H2_*` to `docs/H5_*`
 notes): some yields and prices are regional proxies, the cost budgets are historical, and the
 salinity adjustment may double-count stress already present in USDA yields. Only the Fallon
 field is loaded.
 
-**Next:** NASA satellite signals (SMAP soil moisture, IMERG rainfall), more fields, an officers'
-dashboard, a call-in line, WhatsApp and drought alerts.
+**Next:** NASA satellite signals (SMAP soil moisture, IMERG rainfall), the 2035 view in the SMS
+reply, request logging to Tiger Data, more fields, an officers' dashboard, a call-in line,
+WhatsApp and drought alerts.
 
 ## Repository
 
@@ -155,6 +181,7 @@ engine/      Rotation engine (Python, FastAPI)
 pipeline/    Scripts that fetch each dataset into data/
 data/        Field bundles and reference tables (crops, economics, places)
 contracts/   The JSON the worker and engine exchange, with samples
+db/          Tiger Data (TimescaleDB) schema
 deploy/      Vultr server setup and redeploy scripts
 docs/        Engine build plan, dataset list, crop-slice status notes
 ```
@@ -178,6 +205,13 @@ npm test
 npm run dev    # needs .dev.vars, copied from .dev.vars.example
 ```
 
+**Tiger Data** (needs `DATABASE_URL` in `engine/.env`):
+
+```bash
+engine/.venv/Scripts/python -m pip install -r pipeline/requirements-tiger.txt
+engine/.venv/Scripts/python -m pipeline.tiger nv-fallon-01
+```
+
 **Deploy:**
 
 - Engine on a Vultr Ubuntu server: run `deploy/vultr/setup.sh` once, then
@@ -187,7 +221,7 @@ npm run dev    # needs .dev.vars, copied from .dev.vars.example
   the Worker at it.
 - Worker: `npx wrangler deploy` in `worker/`.
 
-Secrets (Gemini, AI Gateway, Twilio, engine token, OpenET) live in `worker/.dev.vars`,
+Secrets (Gemini, AI Gateway, Twilio, engine token, OpenET, database URL) live in `worker/.dev.vars`,
 `engine/.env` and Wrangler secrets, all outside git. Details:
 [worker/README.md](worker/README.md), [worker/src/gemini/README.md](worker/src/gemini/README.md)
 and [docs/engine-plan/README.md](docs/engine-plan/README.md).
@@ -195,4 +229,5 @@ and [docs/engine-plan/README.md](docs/engine-plan/README.md).
 ## Tech
 
 TypeScript on Cloudflare Workers (Durable Objects, Workers AI, AI Gateway) · Google Gemini ·
-Twilio SMS · Python (FastAPI, NumPy, pandas) · Vultr · Cloudflare Tunnel.
+Twilio SMS · Python (FastAPI, NumPy, pandas) · Vultr · Cloudflare Tunnel · Tiger Data
+(TimescaleDB).
