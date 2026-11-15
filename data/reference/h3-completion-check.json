@@ -1,0 +1,70 @@
+[
+  {
+    "crop": "alfalfa",
+    "ready": false,
+    "reasons": [
+      "provenance not approved"
+    ]
+  },
+  {
+    "crop": "wheat",
+    "ready": false,
+    "reasons": [
+      "missing/invalid yield_per_acre",
+      "missing/invalid price_usd_per_unit",
+      "provenance not approved"
+    ]
+  },
+  {
+    "crop": "barley",
+    "ready": false,
+    "reasons": [
+      "missing/invalid yield_per_acre",
+      "missing/invalid price_usd_per_unit",
+      "provenance not approved"
+    ]
+  },
+  {
+    "crop": "sorghum",
+    "ready": false,
+    "reasons": [
+      "missing/invalid yield_per_acre",
+      "missing/invalid price_usd_per_unit",
+      "provenance not approved"
+    ]
+  },
+  {
+    "crop": "dry_beans",
+    "ready": false,
+    "reasons": [
+      "missing/invalid yield_per_acre",
+      "missing/invalid price_usd_per_unit",
+      "provenance not approved"
+    ]
+  },
+  {
+    "crop": "safflower",
+    "ready": false,
+    "reasons": [
+      "missing/invalid yield_per_acre",
+      "missing/invalid price_usd_per_unit",
+      "provenance not approved"
+    ]
+  },
+  {
+    "crop": "corn_silage",
+    "ready": false,
+    "reasons": [
+      "missing/invalid price_usd_per_unit",
+      "provenance not approved"
+    ]
+  },
+  {
+    "crop": "cover_crop",
+    "ready": false,
+    "reasons": [
+      "missing/invalid cost_usd_per_acre",
+      "provenance not approved"
+    ]
+  }
+]

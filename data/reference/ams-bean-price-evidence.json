@@ -1,0 +1,35 @@
+{
+  "dataset": "USDA AMS Weekly Bean, Pea, and Lentil Market Review",
+  "source": "https://www.ams.usda.gov/mnreports/AMS_2914.pdf",
+  "report_date": "2026-11-09",
+  "page": 2,
+  "review": "PDF page rendered and visually checked",
+  "commodity": "US #1 Pinto Beans Food Grade",
+  "packaging": "Bag / 100lb",
+  "basis": "Del Warehouse (Grower) - Conventional",
+  "observations": [
+    {
+      "region": "Den-Rate",
+      "sale_type": "Bid",
+      "price_low": 43,
+      "price_high": 43,
+      "average": 43
+    },
+    {
+      "region": "Min-Dak",
+      "sale_type": "Bid",
+      "price_low": 38,
+      "price_high": 38,
+      "average": 38
+    }
+  ],
+  "price_unit": "USD/cwt",
+  "freight": "DLVD-T",
+  "delivery": "Current",
+  "farmer_income_ready": false,
+  "limitations": [
+    "Not Fallon quote or annual realized price.",
+    "dry_beans profile has not selected pinto species/class and matching yield/cost evidence.",
+    "Do not treat bids as confirmed completed trades."
+  ]
+}

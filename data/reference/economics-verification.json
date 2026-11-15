@@ -1,0 +1,437 @@
+{
+  "checked_at": "2026-11-15T04:05:30.512285+00:00",
+  "meaning": "Source transcription and arithmetic checks, NOT proof of current/local relevance or farmer-advice readiness.",
+  "sources": [
+    {
+      "status": "retrieved",
+      "url": "https://coststudyfiles.ucdavis.edu/uploads/cs_public/06/bc/06bc592c-7a81-4472-b7f2-42404f401fd5/beans_sc_sv08.pdf",
+      "final_url": "https://coststudyfiles.ucdavis.edu/uploads/cs_public/06/bc/06bc592c-7a81-4472-b7f2-42404f401fd5/beans_sc_sv08.pdf",
+      "sha256": "b656e24a78d105d2dc4477f828c5b561f79679c51157736a236b2ba8901fd9cb",
+      "snapshot": "data\\raw\\economics-verification\\20261115T040518Z\\7e865bc9f4a120e2.pdf",
+      "is_pdf": true
+    },
+    {
+      "status": "retrieved",
+      "url": "https://coststudyfiles.ucdavis.edu/uploads/cs_public/63/a9/63a948b0-8cef-4843-b66c-ac27006f726f/safflowersv2011.pdf",
+      "final_url": "https://coststudyfiles.ucdavis.edu/uploads/cs_public/63/a9/63a948b0-8cef-4843-b66c-ac27006f726f/safflowersv2011.pdf",
+      "sha256": "c4b5bc9ba41af031780c5b41aca30e6d42831965eec63c031abe25783981118a",
+      "snapshot": "data\\raw\\economics-verification\\20261115T040518Z\\2736232f10b71e5e.pdf",
+      "is_pdf": true
+    },
+    {
+      "status": "retrieved",
+      "url": "https://coststudyfiles.ucdavis.edu/uploads/pub/2022/09/28/2022covercropsbenefits.pdf",
+      "final_url": "https://coststudyfiles.ucdavis.edu/uploads/pub/2022/09/28/2022covercropsbenefits.pdf",
+      "sha256": "4dee09e5e1f7e688b24d56f6a5bdc8b98ae1b451cdbe8fc55302ce5f245ee202",
+      "snapshot": "data\\raw\\economics-verification\\20261115T040518Z\\639a3b6bdbc74243.pdf",
+      "is_pdf": true
+    },
+    {
+      "status": "retrieval_failed",
+      "url": "https://extension.usu.edu/apec/files/uploads/Agribusiness-and-Food/Budgets/Crops/Box-Elder/BoxElderCounty2011Crops-DF7-17.pdf",
+      "error": "HTTPError: HTTP Error 403: Forbidden"
+    },
+    {
+      "status": "retrieved",
+      "url": "https://naes.unr.edu/publication.aspx?PubID=2301",
+      "final_url": "https://naes.unr.edu/publication.aspx?PubID=2301",
+      "sha256": "75963247e8cf5393494ad1b94c5642c8759ef850b8c1fe78731ce8cf150aa1cc",
+      "snapshot": "data\\raw\\economics-verification\\20261115T040518Z\\5f2cd4b8fd0ad01f.html",
+      "is_pdf": false
+    },
+    {
+      "status": "retrieved",
+      "url": "https://naes.unr.edu/publication.aspx?PubID=3855",
+      "final_url": "https://naes.unr.edu/publication.aspx?PubID=3855",
+      "sha256": "e7762655696e1f00b567da74ad17cace19be92e940545745f3f8a0d5a0ea12bc",
+      "snapshot": "data\\raw\\economics-verification\\20261115T040518Z\\5711d3829403b12a.html",
+      "is_pdf": false
+    },
+    {
+      "status": "retrieved",
+      "url": "https://www.nass.usda.gov/Quick_Stats/Ag_Overview/stateOverview.php?state=Idaho&year=2024",
+      "final_url": "https://sb.nass.usda.gov/Quick_Stats/Ag_Overview/stateOverview.php?state=Idaho&year=2024",
+      "sha256": "81fc161533021eb2b5e4468f37ef29d439a432c85feddf59f8cce44147d48b9a",
+      "snapshot": "data\\raw\\economics-verification\\20261115T040518Z\\388da2d585f71556.html",
+      "is_pdf": false
+    },
+    {
+      "status": "retrieved",
+      "url": "https://www.nass.usda.gov/Quick_Stats/Ag_Overview/stateOverview.php?state=Kansas&year=2024",
+      "final_url": "https://sb.nass.usda.gov/Quick_Stats/Ag_Overview/stateOverview.php?state=Kansas&year=2024",
+      "sha256": "0757c1f960cfc65f1da19634c731b4d626cb87a3a1b959600274c73319703ea6",
+      "snapshot": "data\\raw\\economics-verification\\20261115T040518Z\\a23b7b3e20896403.html",
+      "is_pdf": false
+    },
+    {
+      "status": "retrieved",
+      "url": "https://www.nass.usda.gov/Quick_Stats/Ag_Overview/stateOverview.php?state=Nevada&year=2022",
+      "final_url": "https://sb.nass.usda.gov/Quick_Stats/Ag_Overview/stateOverview.php?state=Nevada&year=2022",
+      "sha256": "a44c7b6872574b40c473fe126f4bfec304f68917192def0e51f179b75b51581a",
+      "snapshot": "data\\raw\\economics-verification\\20261115T040518Z\\833edfee4464aa32.html",
+      "is_pdf": false
+    },
+    {
+      "status": "retrieved",
+      "url": "https://www.nass.usda.gov/Quick_Stats/Ag_Overview/stateOverview.php?state=Nevada&year=2023",
+      "final_url": "https://sb.nass.usda.gov/Quick_Stats/Ag_Overview/stateOverview.php?state=Nevada&year=2023",
+      "sha256": "37841d9884bf0ff1f150ea670cde8cfba483b90bdab3c66e2ad6f53613f1b159",
+      "snapshot": "data\\raw\\economics-verification\\20261115T040518Z\\ab3afe214d83b075.html",
+      "is_pdf": false
+    },
+    {
+      "status": "retrieved",
+      "url": "https://www.nass.usda.gov/Quick_Stats/Ag_Overview/stateOverview.php?state=Nevada&year=2024",
+      "final_url": "https://sb.nass.usda.gov/Quick_Stats/Ag_Overview/stateOverview.php?state=Nevada&year=2024",
+      "sha256": "821f9fac09c67da698bc47833f3e6cfc2422976dc9baa789d1564ea2db87c543",
+      "snapshot": "data\\raw\\economics-verification\\20261115T040518Z\\94c43f3694ed578b.html",
+      "is_pdf": false
+    },
+    {
+      "status": "retrieved",
+      "url": "https://www.nass.usda.gov/Quick_Stats/Ag_Overview/stateOverview.php?state=Utah&year=2024",
+      "final_url": "https://sb.nass.usda.gov/Quick_Stats/Ag_Overview/stateOverview.php?state=Utah&year=2024",
+      "sha256": "83ae7bf283b272019d24d37e6adabc27616d9031b8cfefb038971387798ba239",
+      "snapshot": "data\\raw\\economics-verification\\20261115T040518Z\\0cc8a47c14d40b47.html",
+      "is_pdf": false
+    }
+  ],
+  "observation_checks": [
+    {
+      "crop": "alfalfa",
+      "geography": "Idaho",
+      "year": 2024,
+      "status": "matches_primary_source",
+      "differences": [],
+      "source": "https://www.nass.usda.gov/Quick_Stats/Ag_Overview/stateOverview.php?state=Idaho&year=2024"
+    },
+    {
+      "crop": "wheat",
+      "geography": "Idaho",
+      "year": 2024,
+      "status": "matches_primary_source",
+      "differences": [],
+      "source": "https://www.nass.usda.gov/Quick_Stats/Ag_Overview/stateOverview.php?state=Idaho&year=2024"
+    },
+    {
+      "crop": "barley",
+      "geography": "Idaho",
+      "year": 2024,
+      "status": "matches_primary_source",
+      "differences": [],
+      "source": "https://www.nass.usda.gov/Quick_Stats/Ag_Overview/stateOverview.php?state=Idaho&year=2024"
+    },
+    {
+      "crop": "corn",
+      "geography": "Idaho",
+      "year": 2024,
+      "status": "matches_primary_source",
+      "differences": [],
+      "source": "https://www.nass.usda.gov/Quick_Stats/Ag_Overview/stateOverview.php?state=Idaho&year=2024"
+    },
+    {
+      "crop": "corn_silage",
+      "geography": "Idaho",
+      "year": 2024,
+      "status": "matches_primary_source",
+      "differences": [],
+      "source": "https://www.nass.usda.gov/Quick_Stats/Ag_Overview/stateOverview.php?state=Idaho&year=2024"
+    },
+    {
+      "crop": "safflower",
+      "geography": "Idaho",
+      "year": 2024,
+      "status": "matches_primary_source",
+      "differences": [],
+      "source": "https://www.nass.usda.gov/Quick_Stats/Ag_Overview/stateOverview.php?state=Idaho&year=2024"
+    },
+    {
+      "crop": "corn",
+      "geography": "Kansas",
+      "year": 2024,
+      "status": "matches_primary_source",
+      "differences": [],
+      "source": "https://www.nass.usda.gov/Quick_Stats/Ag_Overview/stateOverview.php?state=Kansas&year=2024"
+    },
+    {
+      "crop": "corn_silage",
+      "geography": "Kansas",
+      "year": 2024,
+      "status": "matches_primary_source",
+      "differences": [],
+      "source": "https://www.nass.usda.gov/Quick_Stats/Ag_Overview/stateOverview.php?state=Kansas&year=2024"
+    },
+    {
+      "crop": "sorghum",
+      "geography": "Kansas",
+      "year": 2024,
+      "status": "matches_primary_source",
+      "differences": [],
+      "source": "https://www.nass.usda.gov/Quick_Stats/Ag_Overview/stateOverview.php?state=Kansas&year=2024"
+    },
+    {
+      "crop": "alfalfa",
+      "geography": "Kansas",
+      "year": 2024,
+      "status": "matches_primary_source",
+      "differences": [],
+      "source": "https://www.nass.usda.gov/Quick_Stats/Ag_Overview/stateOverview.php?state=Kansas&year=2024"
+    },
+    {
+      "crop": "barley",
+      "geography": "Kansas",
+      "year": 2024,
+      "status": "matches_primary_source",
+      "differences": [],
+      "source": "https://www.nass.usda.gov/Quick_Stats/Ag_Overview/stateOverview.php?state=Kansas&year=2024"
+    },
+    {
+      "crop": "alfalfa",
+      "geography": "Nevada",
+      "year": 2022,
+      "status": "matches_primary_source",
+      "differences": [],
+      "source": "https://www.nass.usda.gov/Quick_Stats/Ag_Overview/stateOverview.php?state=Nevada&year=2022"
+    },
+    {
+      "crop": "corn_silage",
+      "geography": "Nevada",
+      "year": 2022,
+      "status": "matches_primary_source",
+      "differences": [],
+      "source": "https://www.nass.usda.gov/Quick_Stats/Ag_Overview/stateOverview.php?state=Nevada&year=2022"
+    },
+    {
+      "crop": "alfalfa",
+      "geography": "Nevada",
+      "year": 2023,
+      "status": "matches_primary_source",
+      "differences": [],
+      "source": "https://www.nass.usda.gov/Quick_Stats/Ag_Overview/stateOverview.php?state=Nevada&year=2023"
+    },
+    {
+      "crop": "corn_silage",
+      "geography": "Nevada",
+      "year": 2023,
+      "status": "matches_primary_source",
+      "differences": [],
+      "source": "https://www.nass.usda.gov/Quick_Stats/Ag_Overview/stateOverview.php?state=Nevada&year=2023"
+    },
+    {
+      "crop": "alfalfa",
+      "geography": "Nevada",
+      "year": 2024,
+      "status": "matches_primary_source",
+      "differences": [],
+      "source": "https://www.nass.usda.gov/Quick_Stats/Ag_Overview/stateOverview.php?state=Nevada&year=2024"
+    },
+    {
+      "crop": "corn_silage",
+      "geography": "Nevada",
+      "year": 2024,
+      "status": "matches_primary_source",
+      "differences": [],
+      "source": "https://www.nass.usda.gov/Quick_Stats/Ag_Overview/stateOverview.php?state=Nevada&year=2024"
+    },
+    {
+      "crop": "alfalfa",
+      "geography": "Utah",
+      "year": 2024,
+      "status": "matches_primary_source",
+      "differences": [],
+      "source": "https://www.nass.usda.gov/Quick_Stats/Ag_Overview/stateOverview.php?state=Utah&year=2024"
+    },
+    {
+      "crop": "corn",
+      "geography": "Utah",
+      "year": 2024,
+      "status": "matches_primary_source",
+      "differences": [],
+      "source": "https://www.nass.usda.gov/Quick_Stats/Ag_Overview/stateOverview.php?state=Utah&year=2024"
+    },
+    {
+      "crop": "corn_silage",
+      "geography": "Utah",
+      "year": 2024,
+      "status": "matches_primary_source",
+      "differences": [],
+      "source": "https://www.nass.usda.gov/Quick_Stats/Ag_Overview/stateOverview.php?state=Utah&year=2024"
+    },
+    {
+      "crop": "barley",
+      "geography": "Utah",
+      "year": 2024,
+      "status": "matches_primary_source",
+      "differences": [],
+      "source": "https://www.nass.usda.gov/Quick_Stats/Ag_Overview/stateOverview.php?state=Utah&year=2024"
+    },
+    {
+      "crop": "safflower",
+      "geography": "Utah",
+      "year": 2024,
+      "status": "matches_primary_source",
+      "differences": [],
+      "source": "https://www.nass.usda.gov/Quick_Stats/Ag_Overview/stateOverview.php?state=Utah&year=2024"
+    }
+  ],
+  "budget_checks": [
+    {
+      "crop": "alfalfa",
+      "source": "https://naes.unr.edu/publication.aspx?PubID=3855",
+      "currency_year": 2008,
+      "approved_for_current_income": false,
+      "status": "publisher_html_values_located",
+      "original_pdf_verified": false,
+      "manual_review": {
+        "transcription_status": "publisher_html_confirmed_original_pdf_not_verified",
+        "irrigation_kind": "water_plus_parcel_fee_plus_ditch_maintenance",
+        "water_only_deduction": 100,
+        "retained_irrigation_overhead": 11,
+        "calculation": "111 - (8 parcels * 50 USD / 400 acres) - 10 ditch maintenance = 100 USD/acre water component, in 2008 dollars.",
+        "interpretation": "Only the 100 USD water component would be replaced if water.json charges water purchase alone; preserve 1 parcel fee and 10 ditch maintenance. Still requires a common money-year and farm match.",
+        "source": "https://naes.unr.edu/publication.aspx?PubID=3855",
+        "location": "Production irrigation narrative and Table 2",
+        "caveat": "Publisher HTML Table 2 is incorrectly captioned wine grapes; body and table describe alfalfa. Do not call original PDF verified.",
+        "reviewed_at": "2026-11-15T04:05:30.512285+00:00",
+        "approved_for_current_income": false,
+        "source_sha256": "e7762655696e1f00b567da74ad17cace19be92e940545745f3f8a0d5a0ea12bc"
+      }
+    },
+    {
+      "crop": "barley",
+      "source": "https://naes.unr.edu/publication.aspx?PubID=2301",
+      "currency_year": 2008,
+      "approved_for_current_income": false,
+      "status": "publisher_html_values_located",
+      "original_pdf_verified": false,
+      "manual_review": {
+        "transcription_status": "publisher_html_confirmed_original_pdf_not_verified",
+        "irrigation_kind": "pumping_power",
+        "water_only_deduction": 0,
+        "retained_irrigation_overhead": 56,
+        "interpretation": "The 56 USD/acre is power. Do not remove it when replacing only purchased-water cost; well/pivot budget is not a gravity-delivery Fallon budget.",
+        "source": "https://naes.unr.edu/publication.aspx?PubID=2301",
+        "location": "Irrigation narrative and Table 1",
+        "caveat": "Malting barley premium and production system do not match generic feed barley automatically.",
+        "reviewed_at": "2026-11-15T04:05:30.512285+00:00",
+        "approved_for_current_income": false,
+        "source_sha256": "75963247e8cf5393494ad1b94c5642c8759ef850b8c1fe78731ce8cf150aa1cc"
+      }
+    },
+    {
+      "crop": "wheat",
+      "source": "https://extension.usu.edu/apec/files/uploads/Agribusiness-and-Food/Budgets/Crops/Box-Elder/BoxElderCounty2011Crops-DF7-17.pdf",
+      "currency_year": 2011,
+      "approved_for_current_income": false,
+      "status": "not_reverified",
+      "error": "HTTPError: HTTP Error 403: Forbidden",
+      "manual_review": {
+        "transcription_status": "web_extraction_previously_checked_local_refetch_403",
+        "irrigation_kind": "unspecified_annual_irrigation_charge",
+        "water_only_deduction": null,
+        "interpretation": "Local refetch of the USU PDF returned 403; leave unverified in this run. Cannot split water versus power/labor from an annual label alone.",
+        "reviewed_at": "2026-11-15T04:05:30.512285+00:00",
+        "approved_for_current_income": false
+      }
+    },
+    {
+      "crop": "corn_silage",
+      "source": "https://extension.usu.edu/apec/files/uploads/Agribusiness-and-Food/Budgets/Crops/Box-Elder/BoxElderCounty2011Crops-DF7-17.pdf",
+      "currency_year": 2011,
+      "approved_for_current_income": false,
+      "status": "not_reverified",
+      "error": "HTTPError: HTTP Error 403: Forbidden",
+      "manual_review": {
+        "transcription_status": "web_extraction_previously_checked_local_refetch_403",
+        "irrigation_kind": "unspecified_annual_irrigation_charge",
+        "water_only_deduction": null,
+        "interpretation": "Local refetch of the USU PDF returned 403; leave unverified in this run. Does not establish a current silage transaction price.",
+        "reviewed_at": "2026-11-15T04:05:30.512285+00:00",
+        "approved_for_current_income": false
+      }
+    },
+    {
+      "crop": "dry_beans",
+      "source": "https://coststudyfiles.ucdavis.edu/uploads/cs_public/06/bc/06bc592c-7a81-4472-b7f2-42404f401fd5/beans_sc_sv08.pdf",
+      "currency_year": 2008,
+      "approved_for_current_income": false,
+      "status": "numeric_strings_located_needs_visual_check",
+      "page": 11,
+      "numbers_located": [
+        "999",
+        "85"
+      ],
+      "manual_review": {
+        "transcription_status": "original_pdf_visually_confirmed",
+        "page": 11,
+        "irrigation_kind": "water_separate_from_labor",
+        "water_only_deduction": 85,
+        "interpretation": "Table 2 shows total cost 999 and a water-only line 85; irrigation labor remains in labor costs. Nominal 2008 dollars.",
+        "source": "https://coststudyfiles.ucdavis.edu/uploads/cs_public/06/bc/06bc592c-7a81-4472-b7f2-42404f401fd5/beans_sc_sv08.pdf",
+        "caveat": "Commodity includes lima/blackeye types; match species and contemporary market before use.",
+        "reviewed_at": "2026-11-15T04:05:30.512285+00:00",
+        "approved_for_current_income": false,
+        "source_sha256": "b656e24a78d105d2dc4477f828c5b561f79679c51157736a236b2ba8901fd9cb"
+      }
+    },
+    {
+      "crop": "safflower",
+      "source": "https://coststudyfiles.ucdavis.edu/uploads/cs_public/63/a9/63a948b0-8cef-4843-b66c-ac27006f726f/safflowersv2011.pdf",
+      "currency_year": 2011,
+      "approved_for_current_income": false,
+      "status": "numeric_strings_located_needs_visual_check",
+      "page": 10,
+      "numbers_located": [
+        "350",
+        "11"
+      ],
+      "manual_review": {
+        "transcription_status": "original_pdf_visually_confirmed",
+        "page": 10,
+        "irrigation_kind": "water_separate_from_labor",
+        "water_only_deduction": 11,
+        "interpretation": "Table 2 shows total cost 350 and water 11; amounts are rounded 2011-dollar table values, not current quotes.",
+        "source": "https://coststudyfiles.ucdavis.edu/uploads/cs_public/63/a9/63a948b0-8cef-4843-b66c-ac27006f726f/safflowersv2011.pdf",
+        "reviewed_at": "2026-11-15T04:05:30.512285+00:00",
+        "approved_for_current_income": false,
+        "source_sha256": "c4b5bc9ba41af031780c5b41aca30e6d42831965eec63c031abe25783981118a"
+      }
+    },
+    {
+      "crop": "cover_crop",
+      "source": "https://coststudyfiles.ucdavis.edu/uploads/pub/2022/09/28/2022covercropsbenefits.pdf",
+      "currency_year": 2022,
+      "approved_for_current_income": false,
+      "status": "numeric_strings_located_needs_visual_check",
+      "page": 7,
+      "numbers_located": [
+        "156",
+        "22"
+      ],
+      "manual_review": {
+        "transcription_status": "original_pdf_visually_confirmed",
+        "page": 7,
+        "irrigation_kind": "water_separate_from_labor",
+        "water_only_deduction": 22,
+        "retained_irrigation_overhead": 22,
+        "interpretation": "Tables 1/2 show 156 operating cost, including 22 water and 22 irrigation labor. Retain labor. Not a full ownership-cost budget.",
+        "source": "https://coststudyfiles.ucdavis.edu/uploads/pub/2022/09/28/2022covercropsbenefits.pdf",
+        "caveat": "Vetch/pea/rye mix has a nitrogen credit; do not assign it to sole cereal rye.",
+        "reviewed_at": "2026-11-15T04:05:30.512285+00:00",
+        "approved_for_current_income": false,
+        "source_sha256": "4dee09e5e1f7e688b24d56f6a5bdc8b98ae1b451cdbe8fc55302ce5f245ee202"
+      }
+    }
+  ],
+  "summary": {
+    "observations": 22,
+    "observations_matching": 22,
+    "budgets": 7,
+    "retrieval_failures": 1,
+    "budget_pdfs_visually_checked": 3,
+    "budget_publisher_html_checked": 2,
+    "budgets_not_retrieved_this_run": 2,
+    "current_income_rows_approved": 0
+  },
+  "current_income_ready": false
+}
