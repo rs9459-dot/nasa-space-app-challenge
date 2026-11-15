@@ -77,3 +77,30 @@ export function numbersKept(original: string, translated: string): boolean {
   }
   return true;
 }
+
+
+/** Ask Gemini (through Cloudflare AI Gateway when GEMINI_BASE_URL is set) for a short plain-text answer. */
+export async function askGemini(env: Env, system: string, user: string, timeoutMs = 8000): Promise<string | null> {
+  if (!env.GEMINI_API_KEY) return null;
+  const base = (env.GEMINI_BASE_URL || "https://generativelanguage.googleapis.com").replace(/\/$/, "");
+  const model = env.GEMINI_MODEL || "gemini-2.5-flash";
+  try {
+    const res = await fetch(`${base}/v1beta/models/${model}:generateContent`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json", "x-goog-api-key": env.GEMINI_API_KEY },
+      body: JSON.stringify({
+        systemInstruction: { parts: [{ text: system }] },
+        contents: [{ role: "user", parts: [{ text: user }] }],
+        generationConfig: { temperature: 0.2, maxOutputTokens: 400, thinkingConfig: { thinkingBudget: 0 } },
+      }),
+      signal: AbortSignal.timeout(timeoutMs),
+    });
+    if (!res.ok) { console.error("gemini answer failed", res.status, (await res.text()).slice(0, 200)); return null; }
+    const j = (await res.json()) as { candidates?: { content?: { parts?: { text?: string }[] } }[] };
+    const text = (j.candidates?.[0]?.content?.parts ?? []).map((p) => p.text ?? "").join("").trim();
+    return text || null;
+  } catch (e) {
+    console.error("gemini answer failed", e);
+    return null;
+  }
+}

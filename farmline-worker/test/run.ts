@@ -75,6 +75,11 @@ globalThis.fetch = (async (input: RequestInfo | URL, init?: RequestInit) => {
     if (name === "Fallon") return json({ results: [{ name: "Fallon", latitude: 39.47, longitude: -118.78, country_code: "US", admin1: "Nevada" }] });
     return json({ generationtime_ms: 0.1 });
   }
+  if (u.includes("generativelanguage.googleapis.com") && JSON.parse(String(init?.body)).systemInstruction) {
+    const user = JSON.parse(String(init?.body)).contents[0].parts[0].text as string;
+    const pctm = user.match(/\((\d+)% of normal\)/);
+    return json({ candidates: [{ content: { parts: [{ text: geminiBreaksNumbers ? "Rain is 777% of normal." : `This year has been dry: rain is ${pctm?.[1]}% of normal. Water early in the day.` }] } }] });
+  }
   if (u.includes("generativelanguage.googleapis.com")) {
     const prompt = JSON.parse(String(init?.body)).contents[0].parts[0].text as string;
     const english = prompt.split("Reply:\n<<<")[1].replace(/>>>$/, "");
@@ -373,7 +378,7 @@ const wait = () => new Promise((res) => setTimeout(res, 60));
   check("STOP ALERTS -> alerts off", off.includes("Alerts are off") && e.DB.raw.prepare(`SELECT alerts FROM farmers WHERE phone = '${me}'`).get()?.alerts === 0, off);
   check("option 3 -> type your question", (await say("3")).includes("Type your question."), "");
   const nope = await say("blah");
-  check("not understood -> MENU hint (no AI bound)", nope.includes("Sorry, I did not understand. Reply MENU."), nope);
+  check("ask anything with no AI bound -> the farmer's NASA numbers, not a dead end", nope.includes("NASA") && nope.includes("Nakuru") && !nope.includes("did not understand"), nope);
   check("LANG -> language menu", (await say("LANG")).includes("Choose your language"), "");
   const hiMenu = await say("2");
   check("choose Hindi -> Hindi welcome asking where the farm is", hiMenu.includes("FarmLine में आपका स्वागत है") && hiMenu.includes("पिन कोड"), hiMenu);
@@ -453,7 +458,7 @@ const wait = () => new Promise((res) => setTimeout(res, 60));
   const e3 = cf();
   for (const b of ["hi", "1", "Kenya Nakuru", "1", "3"]) await post("/sms", { Body: b, From: "+15550007780" }, { e: e3 });
   const plain = await post("/sms", { Body: "my wheat leaves are turning yellow", From: "+15550007780" }, { e: e3 });
-  check("without Workers AI or Vectorize, FarmLine still replies (MENU hint)", plain.text.includes("did not understand"), plain.text);
+  check("without Workers AI or Vectorize, FarmLine still replies with NASA data", plain.text.includes("NASA") && !plain.text.includes("did not understand"), plain.text);
   const lock = await app.request("/admin/library/rebuild", {}, e);
   check("library rebuild is admin-only", lock.status === 503 || lock.status === 302, String(lock.status));
 }
@@ -664,6 +669,21 @@ const wait = () => new Promise((res) => setTimeout(res, 60));
   await say("1");
   check("RESTART -> language menu", (await say("RESTART")).includes("1 English"), "");
   check("   after RESTART the farm is forgotten: language -> asks for the place", (await say("1")).includes("Welcome to FarmLine"), "");
+}
+
+// ---- Ask anything: Gemini with the farm's NASA numbers ----
+{
+  const e = { ...cf(), GEMINI_API_KEY: "k" } as any;
+  const me = "+15550124444";
+  const say = async (b: string) => (await post("/sms", { Body: b, From: me }, { e })).text;
+  for (const b of ["hi", "1", "Kenya Nakuru", "1", "3"]) await say(b);
+  const a = await say("how is general weather conditions in my area this year");
+  check("ask anything -> Gemini answers with this farm's NASA rain", a.includes("FarmLine: This year has been dry: rain is 20% of normal.") && a.includes("General advice"), a);
+  geminiBreaksNumbers = true;
+  await say("3");
+  const b = await say("how is general weather conditions in my area this year");
+  check("a Gemini answer with a made-up number is dropped -> NASA summary instead", !b.includes("777") && b.includes("NASA"), b);
+  geminiBreaksNumbers = false;
 }
 console.log(failures ? `\n${failures} FAILED` : "\nALL PASSED");
 process.exit(failures ? 1 : 0);

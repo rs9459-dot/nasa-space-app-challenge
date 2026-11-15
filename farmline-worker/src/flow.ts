@@ -16,7 +16,7 @@ import { askLibrary, libraryReply, type LibraryHit } from "./library";
 import { findPlace } from "./place";
 import { buildSms, cropName, detectLang, findCrop, findPostalCode, footer, replyLang } from "./reply";
 import { displayName, logQuery, rainPct, setAlerts, upsertFarmer, weatherTrace } from "./store";
-import { translateReply } from "./translate";
+import { askGemini, translateReply } from "./translate";
 import type { EngineOption, Env, Lang, Place, Trace } from "./types";
 
 type Step = "lang" | "location" | "confirm" | "village" | "menu" | "crop" | "water" | "outlook" | "soil" | "priority" | "plans" | "ask";
@@ -187,7 +187,9 @@ async function sowAdvice(env: Env, f: Flow, trace: Trace): Promise<{ text: strin
   return { text: lines.join("\n"), why: pct !== null ? L.whyRain(name, pct) : L.noWhy };
 }
 
-/** Option 4: farming library first; if nothing is close, a short, careful AI answer grounded in the library and NASA data. */
+/** Ask anything: farming library first; otherwise Gemini (then Llama) with this farm's NASA numbers.
+ *  Every number in an AI answer must come from the NASA facts we gave it; if not, or if the AI is down,
+ *  the farmer gets their NASA summary instead of "did not understand". */
 async function answerQuestion(env: Env, question: string, f: Flow, trace: Trace): Promise<{ text: string; outcome: string }> {
   const L = FLOW[f.lang];
   const lib = await askLibrary(env, question);
@@ -199,30 +201,44 @@ async function answerQuestion(env: Env, question: string, f: Flow, trace: Trace)
     return out;
   };
   if (lib.entry) return { text: `${await inLang(libraryReply(lib.entry))}\n${L.moreFoot}`, outcome: "library" };
-  if (!env.AI) return { text: L.notUnderstood, outcome: "not_understood" };
-  try {
-    let nasa = "";
-    if (f.place) {
-      const w = await weatherFor(env, f.place.lat, f.place.lon).catch(() => null);
-      const pct = w ? rainPct(w) : null;
-      if (pct !== null) nasa = `NASA data: rain in the last 30 days near ${shortPlace(f.place)} was ${pct}% of normal.`;
+
+  const w = f.place ? await weatherFor(env, f.place.lat, f.place.lon).catch(() => null) : null;
+  if (w) trace.weather = weatherTrace(w);
+  const pct = w ? rainPct(w) : null;
+  const facts = f.place && w
+    ? [
+        `Place: ${placeLabel(f.place)}.`,
+        `NASA POWER rain in the last ${w.days} days: ${Math.round(w.rain30mm)} mm; long-term normal for these days: ${Math.round(w.normal30mm)} mm${pct !== null ? ` (${pct}% of normal)` : ""}.`,
+        `Average daily high: ${Math.round(w.avgHighC)} C.`,
+        w.soilRoot !== undefined ? `NASA root-zone soil moisture: ${Math.round(w.soilRoot * 100)}%.` : "",
+      ].filter(Boolean).join("\n")
+    : "No place known yet.";
+  const notes = lib.hits.slice(0, 3).map((h: LibraryHit) => `- ${h.title} (${h.source})`).join("\n");
+  const system = "You are FarmLine, an SMS helper for small farmers. Answer in plain English, at most 3 short sentences, under 320 characters, no markdown. Use the NASA facts given; only use numbers that appear in those facts. Give only general, widely accepted farming advice. Never invent numbers, products, doses or prices. If unsure, say so and suggest the local agriculture office.";
+  const user = `Farmer's question: ${question}${f.crop ? `\nCrop: ${f.crop}` : ""}\nNASA facts for this farm:\n${facts}\nRelated library topics:\n${notes || "- none"}`;
+  const numbersOk = (a: string) => (a.match(/\d+(?:\.\d+)?/g) ?? []).every((n) => facts.includes(n) || question.includes(n));
+
+  let answer: string | null = await askGemini(env, system, user);
+  let model = "gemini";
+  if (answer && !numbersOk(answer)) { (trace as any).aiRejected = "number not in NASA facts"; answer = null; }
+  if (!answer && env.AI) {
+    try {
+      const out = (await env.AI.run("@cf/meta/llama-3.1-8b-instruct" as any, { messages: [{ role: "system", content: system }, { role: "user", content: user }], max_tokens: 200 })) as { response?: string };
+      answer = (out.response ?? "").trim() || null;
+      model = "llama-3.1-8b-instruct";
+      if (answer && !numbersOk(answer)) answer = null;
+    } catch (e) {
+      console.error("AI answer failed", e);
     }
-    const notes = lib.hits.slice(0, 3).map((h: LibraryHit) => `- ${h.title} (${h.source})`).join("\n");
-    const out = (await env.AI.run("@cf/meta/llama-3.1-8b-instruct" as any, {
-      messages: [
-        { role: "system", content: "You are FarmLine, an SMS farming helper for small farmers. Reply in plain English in at most 2 short sentences, under 280 characters. Give only general, widely accepted farming advice. Never invent numbers, product names, doses or prices. If you are not sure, say so and suggest asking the local agriculture office." },
-        { role: "user", content: `Farmer's question: ${question}\nFarm area: ${f.place ? placeLabel(f.place) : "unknown"}${f.crop ? `\nCrop: ${f.crop}` : ""}\n${nasa}\nRelated topics in our library:\n${notes || "- none"}` },
-      ],
-      max_tokens: 160,
-    })) as { response?: string };
-    const answer = (out.response ?? "").trim().replace(/\s+/g, " ").slice(0, 320);
-    if (!answer) return { text: L.notUnderstood, outcome: "not_understood" };
-    (trace as any).ai = { model: "llama-3.1-8b-instruct" };
-    return { text: `${await inLang(`FarmLine: ${answer}\nGeneral advice; check with your local agriculture office.`)}\n${L.moreFoot}`, outcome: "ai_answer" };
-  } catch (e) {
-    console.error("AI answer failed", e);
-    return { text: L.notUnderstood, outcome: "not_understood" };
   }
+  if (answer) {
+    (trace as any).ai = { model };
+    const clean = answer.replace(/\s+/g, " ").replace(/[*#_`]/g, "").slice(0, 360);
+    return { text: `${await inLang(`FarmLine: ${clean}\nGeneral advice; check with your local agriculture office.`)}\n${L.moreFoot}`, outcome: "ai_answer" };
+  }
+  // No AI answer: the farmer still gets their NASA numbers.
+  if (f.place && w) return { text: `${buildSms(f.place, w, f.lang, f.crop ?? null, null)}\n${L.moreFoot}`, outcome: "weather" };
+  return { text: L.notUnderstood, outcome: "not_understood" };
 }
 
 /** First message that already names a place: answer at once (the original one-message FarmLine). */
