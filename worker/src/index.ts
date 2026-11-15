@@ -3,6 +3,8 @@ import twilio from "twilio";
 import { messageFor, twiml } from "./messages";
 import type { Env as GeminiEnv } from "./env";
 import { handleDev } from "./dev-routes";
+import { answerFarmer, HELP_TEXT } from "./farmer";
+import type { EngineResult } from "./gemini";
 
 // Messaging settings plus the Gemini layer's (AI binding, Gemini key, gateway) from ./env.
 interface Env extends GeminiEnv {
@@ -28,7 +30,7 @@ export default {
   async fetch(request: Request, env: Env): Promise<Response> {
     const url = new URL(request.url);
     if (url.pathname === "/health" && request.method === "GET") {
-      return json({ service: "farmline-messaging", status: "ok", cropEngineConnected: false });
+      return json({ service: "farmline-messaging", status: "ok", cropEngineConnected: !!(env.ENGINE_URL && env.ENGINE_API_TOKEN) });
     }
     // Gemini layer test routes; 404 unless DEV_ROUTES is "1" (local only).
     if (url.pathname.startsWith("/dev/")) return handleDev(request, env);
@@ -65,7 +67,7 @@ export default {
 
 export class FarmerSession extends DurableObject<Env> {
   async receive(message: Incoming): Promise<Response> {
-    return this.ctx.blockConcurrencyWhile(async () => {
+    const handled = await this.ctx.blockConcurrencyWhile(async () => {
       const key = `message:${message.sid}`;
       if (await this.ctx.storage.get(key)) return twiml();
       const result = messageFor(message.body);
@@ -74,8 +76,16 @@ export class FarmerSession extends DurableObject<Env> {
       await this.ctx.storage.put(key, { ...message, receivedAt: Date.now() } satisfies StoredMessage);
       await this.ctx.storage.setAlarm(Date.now() + 24 * 60 * 60 * 1000);
       if (message.optOutType || optOut !== undefined || await this.ctx.storage.get("optedOut")) return twiml();
-      return twiml(result.reply);
+      if (["HELP", "INFO"].includes(message.body.trim().toUpperCase())) return twiml(HELP_TEXT);
+      return null;
     });
+    if (handled) return handled;
+    // A crop question: Gemini reads it, the engine plans, Gemini writes the reply (src/farmer.ts).
+    // Done outside the lock; the last plan is kept for "tell me more about option 2".
+    const lastResult = await this.ctx.storage.get<EngineResult>("lastResult");
+    const answer = await answerFarmer(this.env, message.body, { from: message.from, lastResult });
+    if (answer.result) await this.ctx.storage.put("lastResult", answer.result);
+    return twiml(answer.text);
   }
 
   async messages(): Promise<{ messages: StoredMessage[]; optedOut: boolean }> {
