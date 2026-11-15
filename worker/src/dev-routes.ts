@@ -6,11 +6,13 @@
  *   POST /dev/reply  { "language": "en", "channel": "sms", "result"?: <engine JSON> }
  *   POST /dev/ask    { "text": "...", "channel"?: "sms" }   parse + sample engine + reply
  *   POST /dev/speak  { "text": "..." }                       -> audio/wav
+ *   POST /dev/plan   { "text": "...", "channel"?: "sms" }   parse + REAL engine + reply
  *
- * Until the engine exists, /dev/reply and /dev/ask use the made-up Fallon sample.
+ * /dev/reply and /dev/ask use the made-up Fallon sample; /dev/plan calls the engine at ENGINE_URL.
  */
 import type { Env } from "./env";
 import { composeReply, parseMessage, speak, type EngineResult } from "./gemini";
+import { callEngine, toEngineRequest } from "./engine";
 import sample from "../test/fixtures/fallon-sample.json";
 
 const SAMPLE = sample as unknown as EngineResult;
@@ -51,6 +53,21 @@ export async function handleDev(req: Request, env: Env): Promise<Response> {
           option_number: parsed.option_number,
         });
         return Response.json({ parsed, reply });
+      }
+
+      case "/dev/plan": {
+        const parsed = await parseMessage(env, String(body.text ?? ""), { country: body.country });
+        const request = toEngineRequest(parsed);
+        const started = Date.now();
+        const result = "error" in request ? request : await callEngine(env, request);
+        const engine_ms = Date.now() - started;
+        const reply = await composeReply(env, result, {
+          language: parsed.language,
+          language_name: parsed.language_name,
+          channel: body.channel ?? "sms",
+          option_number: parsed.option_number,
+        });
+        return Response.json({ parsed, request, engine_ms, result, reply });
       }
 
       case "/dev/speak": {
