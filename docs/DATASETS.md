@@ -21,3 +21,14 @@ end of the table). The Space Apps submission lists these.
 | University enterprise cost-and-return budgets (active prototype cost inputs) | University of Nevada, Reno Extension; UC Davis / UCCE | Seven published full crop-enterprise costs less identified water charges; nominal 2008-2016 USD/acre, not inflation adjusted; cover crop unavailable | Full citations, budget year, table and water subtraction in data/reference/university-costs.json and economics.csv source_cost | pipeline/university_costs.py via pipeline/economics.py build | 2026-11-14 |
 
 | USDA NASS 2022 Census county/state and Idaho annual bean records | USDA NASS | Suppression evidence, derived Nevada spring-wheat/barley yields and labeled Idaho bean proxy; no forecast records averaged | QuickStats API, sanitized raw JSON and source columns retained | pipeline/nevada_census.py; pipeline/regional_economics.py | 2026-11-15 |
+
+## H6 satellite acquisition (2026-11-15; pending observations)
+
+| Dataset | Product/version | Access | Processing and limitations |
+|---|---|---|---|
+| SMAP enhanced radiometer soil moisture | SPL3SMP_E.006, 9 km, daily AM/PM | https://doi.org/10.5067/M20OXIZHY3RJ | AppEEARS job submitted; moisture m3/m3, retain recommended retrieval quality only; surface measurement, not root-zone moisture. |
+| HLS reflectance | HLSL30.020 and HLSS30.020, 30 m | https://hls.gsfc.nasa.gov/ | AppEEARS job submitted; NDVI red B04, NIR B05 (L30) or B8A (S30); mask clouds, adjacency, shadow, snow, water and high aerosol. Download scaling must be verified. |
+| ECOSTRESS ET | ECO_L3T_JET.002, 70 m | https://doi.org/10.5067/ECOSTRESS/ECO_L3T_JET.002 | AppEEARS job submitted; ETdaily plus cloud mask. Unit discrepancy unresolved; no mm/day values asserted. |
+| SRTM elevation | SRTMGL1_NC.003, 30 m | https://doi.org/10.5067/MEaSUREs/SRTM/SRTMGL1_NC.003 | Separate static-date job submitted with five points. Derived slope awaits elevations and actual sample spacing. |
+| GPM IMERG monthly Final | GPM_3IMERGM V07, 0.1 degree | https://cmr.earthdata.nasa.gov/search/collections.json?short_name=GPM_3IMERGM | Collection identified; not downloaded. Native precipitation units and month duration must be verified before monthly totals. |
+| NLDAS Noah monthly | NLDAS_NOAH0125_M V2.0, 0.125 degree | https://cmr.earthdata.nasa.gov/search/collections.json?short_name=NLDAS_NOAH0125_M | Collection identified; not downloaded. Layer storage/depth conversion required for 0–100 cm volumetric aggregate. |
