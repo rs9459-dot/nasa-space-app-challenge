@@ -1,0 +1,14 @@
+{
+  "aws_0_100_cm": 12,
+  "aws_0_150_cm": 18,
+  "fc_top_vol_pct": 30,
+  "wp_top_vol_pct": 15,
+  "drainage": "SAMPLE",
+  "slope_pct": 1,
+  "organic_matter_pct": 2,
+  "clay_pct": 25,
+  "ph": 7,
+  "ec_ds_m": 3,
+  "map_unit": "SAMPLE-NOT-SSURGO",
+  "source": "SYNTHETIC H1 fixture; invented values, not NASA or USDA observations"
+}

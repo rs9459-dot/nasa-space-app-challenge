@@ -1,0 +1,13 @@
+{
+  "field_id": "nv-fallon-01-sample",
+  "name": "SAMPLE Fallon development field",
+  "place": "Fallon, Churchill County, Nevada",
+  "lat": 39.38,
+  "lon": -118.77,
+  "county": "Churchill",
+  "state": "NV",
+  "country": "US",
+  "zip": "89406",
+  "provenance": "sample",
+  "notes": "Coordinates are a development location, not a verified farm boundary. All observations in this bundle are synthetic."
+}

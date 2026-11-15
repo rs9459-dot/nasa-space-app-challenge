@@ -1,0 +1,20 @@
+[
+  {
+    "year": 2023,
+    "cdl_code": null,
+    "crop": "alfalfa",
+    "source": "SYNTHETIC H1 fixture; invented values, not NASA or USDA observations"
+  },
+  {
+    "year": 2024,
+    "cdl_code": null,
+    "crop": "barley",
+    "source": "SYNTHETIC H1 fixture; invented values, not NASA or USDA observations"
+  },
+  {
+    "year": 2025,
+    "cdl_code": null,
+    "crop": "sorghum",
+    "source": "SYNTHETIC H1 fixture; invented values, not NASA or USDA observations"
+  }
+]
