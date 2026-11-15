@@ -43,7 +43,7 @@ fi
 echo "Waiting for the tunnel address..."
 URL=""
 for _ in $(seq 1 60); do
-  URL="$("${SSH[@]}" "journalctl -u farmline-tunnel --since '-6h' --no-pager -o cat | grep -oE 'https://[a-z0-9-]+\.trycloudflare\.com' | tail -1" || true)"
+  URL="$("${SSH[@]}" "journalctl -u farmline-tunnel --no-pager -o cat | grep -oE 'https://[a-z0-9-]+\.trycloudflare\.com' | tail -1" || true)"
   [ -n "$URL" ] && curl -fsS -m 5 "$URL/health" >/dev/null 2>&1 && break
   URL=""; sleep 2
 done
