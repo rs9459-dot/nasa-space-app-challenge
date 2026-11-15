@@ -43,6 +43,10 @@ def build(root=ROOT):
         if crop=='cover_crop':
             row.update(yield_per_acre=0,price_usd_per_unit=0,unit='no_sale',years_averaged='policy',source_yield='POLICY: no harvested sale; not measured biomass',source_price='POLICY: terminated cover crop has no sale revenue')
         rows.append(row)
+    census_path=root/'data/reference/quickstats-nevada-census-2022.json'
+    if census_path.exists():
+        from pipeline.nevada_census import apply_nevada_census
+        rows,ledger=apply_nevada_census(rows,ledger,json.loads(census_path.read_text()))
     target=root/'data/reference/economics-strict.csv'
     with target.open('w',newline='',encoding='utf-8') as f:
         w=csv.DictWriter(f,fieldnames=HEADERS);w.writeheader();w.writerows(rows)

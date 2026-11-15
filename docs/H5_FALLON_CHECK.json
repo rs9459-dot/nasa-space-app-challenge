@@ -1,0 +1,27 @@
+{
+  "prototype": true,
+  "rotations": 21,
+  "water_shape": [
+    21,
+    275,
+    3
+  ],
+  "yield_fraction_shape": [
+    21,
+    275,
+    3
+  ],
+  "net_return_shape": [
+    21,
+    275
+  ],
+  "finite_yield_fractions": true,
+  "net_return_available_count": 0,
+  "reason": "Actual water_cost_usd_per_af is missing; net return unavailable rather than zero-priced water.",
+  "example": {
+    "label": "Prototype net return; historical costs and regional proxies",
+    "status": "estimate unavailable",
+    "value": null,
+    "unit": "USD/acre/year"
+  }
+}

@@ -157,6 +157,8 @@ def build_reference():
     import shutil
     rows,ledger=build(ROOT)
     ref=ROOT/'data/reference'
+    from pipeline.regional_economics import apply_regional
+    rows,ledger=apply_regional(rows,ledger,ROOT)
     from pipeline.university_costs import apply_costs
     rows,ledger=apply_costs(rows,ledger,json.loads((ref/'university-costs.json').read_text(encoding='utf-8')))
     order=json.loads((ref/'university-costs.json').read_text())['priority']
