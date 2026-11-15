@@ -1,0 +1,9 @@
+crop,perennial,heavy_feeder,legume,plant_month,plant_day,stage_ini_days,stage_dev_days,stage_mid_days,stage_late_days,kc_ini,kc_mid,kc_end,root_depth_m,p_depletion,ky,ece_threshold_ds_m,salinity_slope_pct,base_temp_c,gdd_required,frost_free_days_min,residue_score,deep_roots,cover_benefit,source
+alfalfa,,,,,,,,,,,,,,,,,,,,,,,,PROVISIONAL - replace in H2/H3; numeric values unavailable pending sourced research
+wheat,,,,,,,,,,,,,,,,,,,,,,,,PROVISIONAL - replace in H2/H3; numeric values unavailable pending sourced research
+barley,,,,,,,,,,,,,,,,,,,,,,,,PROVISIONAL - replace in H2/H3; numeric values unavailable pending sourced research
+sorghum,,,,,,,,,,,,,,,,,,,,,,,,PROVISIONAL - replace in H2/H3; numeric values unavailable pending sourced research
+dry_beans,,,,,,,,,,,,,,,,,,,,,,,,PROVISIONAL - replace in H2/H3; numeric values unavailable pending sourced research
+safflower,,,,,,,,,,,,,,,,,,,,,,,,PROVISIONAL - replace in H2/H3; numeric values unavailable pending sourced research
+corn_silage,,,,,,,,,,,,,,,,,,,,,,,,PROVISIONAL - replace in H2/H3; numeric values unavailable pending sourced research
+cover_crop,,,,,,,,,,,,,,,,,,,,,,,,PROVISIONAL - replace in H2/H3; numeric values unavailable pending sourced research
