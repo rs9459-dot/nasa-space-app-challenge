@@ -12,24 +12,34 @@ internet, and gets back a crop rotation plan for their exact field: what to plan
 Built for the **NASA Space Apps Challenge 2026**, challenge *Field Shift: Adapting Farms with
 NASA Data*.
 
+**Live:** the SMS line runs end to end: Twilio → Cloudflare Worker → Gemini → rotation engine
+on a Vultr server → reply. Health check:
+[farmline-messaging.rs9459.workers.dev/health](https://farmline-messaging.rs9459.workers.dev/health).
+
+> **Prototype.** The numbers come from real public data, but the crop and cost tables still
+> contain labelled regional proxies and assumptions. FarmLine demonstrates the method; it is
+> not validated farm advice yet.
+
 ## Why
 
 Farmers have to choose rotations years ahead while rain, heat and water supplies shift. The
-data that could guide them (25 years of weather, soil surveys, satellite soil moisture, water
+data that could guide them (25 years of weather, soil surveys, satellite crop maps, water
 allocations) sits in archives and dashboards they never open. Many farms have no internet,
 but every farmer can send a text.
 
 What makes FarmLine different from a "pick a field on a map" website:
 
-- **Text first.** Plain SMS on any phone. A call-in line and WhatsApp are planned on top.
+- **Text first.** Plain SMS on any phone. Replies in English, Hindi, Urdu (both also in Latin
+  letters) and Swahili from fixed templates, and in other languages through checked
+  translation.
 - **Field memory.** The USDA Cropland Data Layer knows what grew on the field since 2008, so
   the farmer only sends a ZIP code or town.
-- **Stress-tested.** Every rotation is replayed through 25 years of real NASA weather and
-  the water allocations farmers actually received, so the answer covers a bad year, not just an
-  average one.
+- **Stress-tested.** Every rotation is replayed through 25 years of NASA weather and the water
+  allocations farmers actually received, so the answer covers a bad year, not just an average
+  one.
 - **The farmer decides.** Three options, not one instruction.
-- **No made-up numbers.** The model computes; Gemini only words the result, and a checker
-  blocks any reply containing a number the model didn't produce.
+- **No made-up numbers.** The engine computes; Gemini only words the result, and a checker
+  blocks any reply containing a number the engine didn't produce.
 
 ## How it works
 
@@ -38,7 +48,7 @@ flowchart LR
     F["Farmer<br/>any phone"] -- SMS --> T[Twilio]
     T -- signed webhook --> W["Cloudflare Worker<br/>worker/"]
     W -- "1. read the message" --> G["Gemini<br/>via AI Gateway<br/>(Workers AI fallback)"]
-    W -- "2. ask for a plan" --> E["Rotation engine<br/>Python, engine/"]
+    W -- "2. ask for a plan" --> E["Rotation engine<br/>Python on Vultr<br/>engine/"]
     D[("Field data<br/>NASA + USDA<br/>data/")] --> E
     E -- "3 options (JSON)" --> W
     W -- "3. word the reply" --> G
@@ -46,16 +56,17 @@ flowchart LR
     T -- SMS --> F
 ```
 
-1. **Twilio** delivers the SMS to a **Cloudflare Worker**, which verifies the signature and
-   keeps a small memory per farmer (so "tell me more about option 2" works).
+1. **Twilio** delivers the SMS to a **Cloudflare Worker**, which checks the signature and keeps
+   a small memory per farmer in a Durable Object (so "tell me more about option 2" works).
 2. **Gemini** turns the free-form text into structured facts: crop, place, whether water is
    being cut, and what the farmer cares about most. Only the message text is sent, never the
    phone number.
-3. The **rotation engine** loads that field's data, tries about 200 three-year rotations and
-   returns the best 3.
-4. **Gemini** writes the reply from the engine's numbers only. English is written by the
-   model and checked; Hindi, Urdu and Swahili use fixed templates; other languages are
-   translated and rejected if any number changes.
+3. The **rotation engine** loads that field's data, scores every allowed three-year rotation of
+   the crops that fit, and returns the best 3. Each field is prepared once and cached, so the
+   engine answers a text in milliseconds.
+4. **Gemini** writes the reply from the engine's numbers only. If the model is slow or a check
+   fails, a fixed, number-checked template goes out instead, so the farmer always gets an
+   answer inside Twilio's time limit.
 
 ### Inside the engine
 
@@ -64,18 +75,24 @@ flowchart TD
     B["Field bundle<br/>weather · soil · water · crop history"] --> R["Rotations<br/>crops that fit + agronomy rules"]
     R --> WB["Daily water balance<br/>crop need vs. water available<br/>25 weather years x real allocations"]
     WB --> Y["Yield and income<br/>water stress · salinity · prices · costs"]
-    Y --> K["Ranking<br/>weighted by the farmer's priorities"]
-    S["NASA signals<br/>soil moisture · rainfall · slope"] --> WB
+    Y --> K["Ranking (TOPSIS)<br/>weighted by the farmer's priorities"]
     K --> O["3 options<br/>most water saved · most income · safest in drought"]
+    K --> H["2021 hindcast<br/>would the advice have held up?"]
 ```
 
 - **Water balance:** reference evapotranspiration from NASA POWER (Hargreaves), crop
   coefficients from FAO-56, a soil-water bucket sized by the USDA soil survey. Irrigation stops
   when the year's water allocation runs out, which is how a drought reaches the field.
-- **Yield and income:** water stress (FAO-33) and soil salinity (FAO-29) cut yields; county
-  yields and market prices turn them into dollars.
-- **Ranking:** each rotation is scored on water, income, bad-year income (10th percentile)
+- **Rotations:** only crops with sourced parameters that pass the field's heat and frost-free
+  checks; no heavy feeder after a heavy feeder, no annual crop three years running, at most
+  one fallow year.
+- **Yield and income:** water stress (FAO-33) and soil salinity (FAO-29) cut yields; USDA yields
+  and prices, university enterprise budgets and the district's water charge turn them into
+  dollars per acre.
+- **Ranking:** each rotation is scored on water use, income, bad-year income (10th percentile)
   and soil health, then weighted by what the farmer asked for.
+- **Hindcast:** the engine plans as if it were 2020, then replays 2021-2023 with the weather
+  and water cuts that really happened, and compares the advice with staying in alfalfa.
 
 ## Data
 
@@ -83,44 +100,63 @@ flowchart TD
 |---|---|---|---|
 | NASA POWER | NASA | 25 years of daily weather; drives the water balance and the stress test | In use |
 | SSURGO soils | USDA NRCS | Water-holding capacity, salinity, slope | In use |
+| Cropland Data Layer | USDA NASS | What grew on the field each year, 2008-2025 | In use |
 | Newlands Project allocations | TCID, press and board minutes | The share of their water right farmers received each year | In use (11 sourced years) |
+| TCID water charges | TCID rate schedule | Water cost per acre in the income model | In use |
 | NWIS streamflow | USGS | Carson River flow; independent check on drought years | In use |
-| Cropland Data Layer | USDA | What grew on the field each year | Planned |
-| FAO-56 / 33 / 29 crop tables | FAO | Crop water need, yield response, salt tolerance | Planned |
-| NASS QuickStats, AMS Market News | USDA | County yields and prices | Planned |
+| OpenET | OpenET | Satellite-measured crop water use, to check the water balance | In use (validation) |
+| FAO-56 / 33 / 29 crop tables | FAO | Crop water need, yield response, salt tolerance | In use (partial; gaps left blank) |
+| NASS QuickStats and state overviews | USDA NASS | Yields and prices | In use (some labelled regional proxies) |
+| University enterprise budgets | UNR Extension, UC Davis / UCCE | Production costs per acre | In use (historical, labelled) |
 | SMAP, GPM IMERG, HLS NDVI, SRTM, ECOSTRESS | NASA | Current soil moisture, rainfall check, crop vigor, slope | Planned |
-| OpenET | OpenET | Measured crop water use, to calibrate the model | Planned |
 
 Every number has a source, and years or values with no source are left out, not estimated.
-See [docs/DATASETS.md](docs/DATASETS.md).
+Full list with URLs and access dates: [docs/DATASETS.md](docs/DATASETS.md).
 
 **Demo field:** an alfalfa field south of Fallon, Nevada, on the Newlands irrigation project.
 Its soil is salty clay, it gets 78 to 307 mm of rain a year, and its water allocation fell to
 20% in 2015 and 70% in 2021.
 
+## Does the model hold up?
+
+We checked the water balance against independent satellite data from
+[OpenET](https://openetdata.org/) for 2016-2025 (`pipeline/openet_check.py`):
+
+| Check | Result |
+|---|---|
+| Our reference ET (Hargreaves, NASA POWER) vs. gridMET reference ET | +5.7% per year, r = 0.992 |
+| Our alfalfa water use vs. the OpenET ensemble, full-allocation years | +1.6% on average, worst year +12.4% |
+
+In other words, the model's estimate of how much water the crop uses is within a few percent
+of what satellites measured at this field.
+
 ## Status
 
 | Part | What works today |
 |---|---|
-| SMS webhook (`worker/`) | Signed Twilio webhook, per-farmer memory, STOP/HELP handling |
-| Gemini layer (`worker/src/gemini/`) | Message parsing in 6 language forms, checked replies, number checker, Hindi speech; tested live |
-| Engine (`engine/`) | API with token auth, data loader, daily water balance, ranking, contract checks on every answer |
-| Data (`pipeline/`, `data/`) | Real Fallon weather, soil, water allocations and river flow |
+| SMS line (`worker/`) | Signed Twilio webhook, per-farmer memory, STOP/HELP, full plan replies; deployed on Cloudflare |
+| Gemini layer (`worker/src/gemini/`) | Message parsing in 6 language forms, checked replies, template fallback, number checker, Hindi speech |
+| Engine (`engine/`) | Token-protected API, water balance, rotations, yields, ranking, hindcast, per-field cache; deployed on Vultr |
+| Data (`pipeline/`, `data/`) | Real Fallon weather, soil, crop history, water allocations and charges, river flow, OpenET |
 
-**Not finished yet:** the crop tables, rotations and yield model (the engine uses clearly
-labelled stand-ins until they land, and marks such answers `sample_data`), connecting the SMS
-webhook to the engine, deployment, the Tiger Data store, the officers' dashboard, the call-in
-line, WhatsApp and drought alerts.
+**Known limits:** the crop and cost tables are prototypes (see the `docs/H2_*` to `docs/H5_*`
+notes): some yields and prices are regional proxies, the cost budgets are historical, and the
+salinity adjustment may double-count stress already present in USDA yields. Only the Fallon
+field is loaded.
+
+**Next:** NASA satellite signals (SMAP soil moisture, IMERG rainfall), more fields, an officers'
+dashboard, a call-in line, WhatsApp and drought alerts.
 
 ## Repository
 
 ```
-worker/      Cloudflare Worker (TypeScript): SMS webhook + Gemini layer
+worker/      Cloudflare Worker (TypeScript): SMS webhook, Gemini layer, engine client
 engine/      Rotation engine (Python, FastAPI)
 pipeline/    Scripts that fetch each dataset into data/
-data/        Field bundles and reference tables
+data/        Field bundles and reference tables (crops, economics, places)
 contracts/   The JSON the worker and engine exchange, with samples
-docs/        Engine build plan, dataset list, dashboard style spec
+deploy/      Vultr server setup and redeploy scripts
+docs/        Engine build plan, dataset list, crop-slice status notes
 ```
 
 ## Run it
@@ -142,13 +178,21 @@ npm test
 npm run dev    # needs .dev.vars, copied from .dev.vars.example
 ```
 
-Secrets (Gemini, AI Gateway, Twilio, engine token) live in `.dev.vars` and `.env`, which are
-gitignored. Details: [worker/README.md](worker/README.md),
-[worker/src/gemini/README.md](worker/src/gemini/README.md) and
-[docs/engine-plan/README.md](docs/engine-plan/README.md).
+**Deploy:**
+
+- Engine on a Vultr Ubuntu server: run `deploy/vultr/setup.sh` once, then
+  `bash deploy/vultr/push.sh` to ship the latest `main`. It runs as a systemd service behind a
+  Cloudflare Tunnel, and the firewall allows SSH only.
+- Engine on a laptop instead: `engine/start-local.ps1` starts the engine and a tunnel and points
+  the Worker at it.
+- Worker: `npx wrangler deploy` in `worker/`.
+
+Secrets (Gemini, AI Gateway, Twilio, engine token, OpenET) live in `worker/.dev.vars`,
+`engine/.env` and Wrangler secrets, all outside git. Details:
+[worker/README.md](worker/README.md), [worker/src/gemini/README.md](worker/src/gemini/README.md)
+and [docs/engine-plan/README.md](docs/engine-plan/README.md).
 
 ## Tech
 
 TypeScript on Cloudflare Workers (Durable Objects, Workers AI, AI Gateway) · Google Gemini ·
-Twilio SMS · Python (FastAPI, NumPy, pandas) · planned: Vultr for the engine, Tiger Data
-(TimescaleDB) for time series, Cloudflare Pages for the dashboard.
+Twilio SMS · Python (FastAPI, NumPy, pandas) · Vultr · Cloudflare Tunnel.
