@@ -1,0 +1,79 @@
+name = "farmline"
+main = "src/index.ts"
+compatibility_date = "2024-11-01"
+compatibility_flags = ["nodejs_compat"]
+
+# ---- Cloudflare products FarmLine uses (create them with the commands in README.md) ----
+
+# Workers AI: Llama backup translator
+[ai]
+binding = "AI"
+
+# R2: daily drought reports (create once: npx wrangler r2 bucket create farmline-reports)
+[[r2_buckets]]
+binding = "REPORTS"
+bucket_name = "farmline-reports"
+
+# Vectorize: the farming library for "Ask anything" (create once: npx wrangler vectorize create farmline-kb --dimensions=1024 --metric=cosine)
+[[vectorize]]
+binding = "KB"
+index_name = "farmline-kb"
+
+# KV: cache of NASA POWER and location lookups
+[[kv_namespaces]]
+binding = "CACHE"
+id = "dd8f636760bc4c0d819812c26c28e0dc"
+
+# D1: farmers who asked for drought alerts + anonymous question log for the live dashboard
+[[d1_databases]]
+binding = "DB"
+database_name = "farmline"
+database_id = "780f63aa-cfed-438d-b3d5-4cb5fde1e9c5"
+
+# Durable Objects: one FarmerSession per phone number (remembers the last answer for "1", "2", "3")
+[[durable_objects.bindings]]
+name = "FARMER"
+class_name = "FarmerSession"
+
+[[migrations]]
+tag = "v1"
+new_sqlite_classes = ["FarmerSession"]
+
+# Queues: one drought check per farmer, fanned out by the daily cron
+[[queues.producers]]
+binding = "ALERTS"
+queue = "farmline-alerts"
+
+[[queues.consumers]]
+queue = "farmline-alerts"
+max_batch_size = 10
+
+# Cron Trigger: daily NASA drought check at 12:07 UTC
+[triggers]
+crons = ["7 12 * * *"]
+
+[observability]
+enabled = true
+
+[vars]
+# Admin login (Auth0). Also run: npx wrangler secret put AUTH0_CLIENT_SECRET  and  npx wrangler secret put SESSION_SECRET
+AUTH0_DOMAIN = "dev-ltcrzbz4gf73niku.us.auth0.com"
+AUTH0_CLIENT_ID = "UbPS4qPSGf0OmzJzofO7wRq4G5LarImo"
+ADMIN_EMAILS = "rs9459@nyu.edu, cd3983@nyu.edu, as19305@nyu.edu, ha3167@nyu.edu"
+# Your Twilio phone number in E.164 form, e.g. "+17025550123"
+TWILIO_NUMBER = "+14066424428"
+# Leave empty until the Vultr engine is running; then set e.g. "https://engine.yourdomain/rotations"
+# Set to "false" only while testing locally with curl (never in the demo)
+VALIDATE_TWILIO_SIGNATURE = "true"
+# Optional: exact Twilio <Say> voice names for Swahili and Urdu calls (empty = that language continues by SMS)
+SW_VOICE = ""
+UR_VOICE = ""
+# Optional: Gemini model, and AI Gateway base URL so every Gemini call shows in the AI Gateway dashboard:
+#   https://gateway.ai.cloudflare.com/v1/<ACCOUNT_ID>/<GATEWAY_NAME>/google-ai-studio
+GEMINI_MODEL = "gemini-2.5-flash"
+GEMINI_BASE_URL = "https://gateway.ai.cloudflare.com/v1/ea7a82d2fe0297879a0ad3b621dac5e7/farmline/google-ai-studio"
+
+# Secrets (set with: npx wrangler secret put NAME)
+#   TWILIO_ACCOUNT_SID
+#   TWILIO_AUTH_TOKEN
+#   GEMINI_API_KEY   (optional)
