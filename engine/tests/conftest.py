@@ -43,10 +43,19 @@ def write_bundle(root: Path, field_id: str = FIELD_ID, *, provenance: str = "sam
     return folder
 
 
+# TEST VALUES, not crop science: round numbers chosen to make the tests easy to reason about.
+# The real table is data/reference/crops.csv (Hareem, task H2).
+TEST_CROPS_CSV = """crop,perennial,plant_month,plant_day,stage_ini_days,stage_dev_days,stage_mid_days,stage_late_days,kc_ini,kc_mid,kc_end,root_depth_m,p_depletion,source
+alfalfa,true,4,1,10,30,150,10,0.4,1.0,0.9,1.5,0.5,TEST
+barley,false,3,15,20,30,50,30,0.3,1.1,0.3,1.0,0.5,TEST
+fallow,false,1,1,0,0,0,0,0.2,0.2,0.2,0.5,0.5,TEST
+"""
+
+
 def write_reference(root: Path) -> None:
     ref = root / "reference"
     ref.mkdir(parents=True, exist_ok=True)
-    (ref / "crops.csv").write_text("crop,perennial,kc_mid,source\nalfalfa,true,1.2,TEST\nbarley,false,1.15,TEST\n")
+    (ref / "crops.csv").write_text(TEST_CROPS_CSV)
     (ref / "economics.csv").write_text("crop,region,yield_per_acre,unit,price_usd_per_unit,cost_usd_per_acre\nalfalfa,Test,5,tons,200,500\n")
     (ref / "places.csv").write_text(f"key,kind,country,lat,lon,field_id\n89406,zip,US,39.38,-118.77,{FIELD_ID}\nTestville,town,US,39.38,-118.77,{FIELD_ID}\n")
 

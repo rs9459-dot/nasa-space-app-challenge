@@ -5,6 +5,9 @@
   "land_class": "bottom",
   "land_class_note": "ASSUMED bottom land (the lower duty, so the cautious choice). TCID's bench/bottom map for this parcel has not been checked; bench land would be 4.5 AF/acre.",
   "duty_source": "Alpine decree (United States v. Alpine Land & Reservoir Co., 503 F. Supp. 877, D. Nev. 1980), as applied in 43 CFR 418 (Newlands Project OCAP): maximum annual water duty 3.5 AF/acre for bottom lands and 4.5 AF/acre for bench lands",
+  "consumptive_use_af_per_acre": 2.99,
+  "application_efficiency": 0.854,
+  "efficiency_source": "Alpine decree: net consumptive use of 2.99 AF/acre for Newlands Project irrigation (as cited in Pyramid Lake Paiute Tribe v. Nevada, 9th Cir. 2013). Efficiency = 2.99 divided by the duty; a derived figure, not a measured one.",
   "allocation_fraction_by_year": {
     "2013": 0.75,
     "2014": 0.45,

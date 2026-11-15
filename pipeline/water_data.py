@@ -74,6 +74,13 @@ def build_water_json(land: str = "bottom") -> dict:
         "land_class_note": "ASSUMED bottom land (the lower duty, so the cautious choice). TCID's bench/bottom "
                            "map for this parcel has not been checked; bench land would be 4.5 AF/acre.",
         "duty_source": DUTY["source"],
+        # Of each acre-foot delivered to the farm, how much the crop consumes. The rest is
+        # lost on the way to the roots (runoff, deep percolation in flood irrigation).
+        "consumptive_use_af_per_acre": 2.99,
+        "application_efficiency": round(2.99 / duty, 3),
+        "efficiency_source": "Alpine decree: net consumptive use of 2.99 AF/acre for Newlands Project irrigation "
+                             "(as cited in Pyramid Lake Paiute Tribe v. Nevada, 9th Cir. 2013). Efficiency = 2.99 "
+                             "divided by the duty; a derived figure, not a measured one.",
         "allocation_fraction_by_year": {str(y): final / 100 for y, (_start, final, _note, _src) in sorted(ALLOCATIONS.items())},
         "allocation_detail": [
             {"year": y, "start_pct": start, "final_pct": final, "note": note, "source": src}
