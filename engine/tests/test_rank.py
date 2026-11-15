@@ -92,8 +92,22 @@ def test_fallow_baseline_does_not_divide_by_zero(field):
 
 
 def test_fewer_than_three_rotations_is_refused(field):
-    with pytest.raises(ValueError, match="at least 3"):
+    with pytest.raises(bundle.BundleError, match="3 are needed"):
         rank.choose(outcomes([THIRSTY, FRUGAL]), BASE, EVEN, field)
+
+
+def test_rotations_without_an_income_estimate_are_never_offered(field):
+    unknown = (("barley", "barley", "fallow"), 0.5, [float("nan")] * 5, 9.0)
+    result = rank.choose(outcomes([THIRSTY, FRUGAL, STEADY, unknown]), BASE, EVEN, field)
+    assert ["barley", "barley", "fallow"] not in [o["rotation"] for o in result["options"]]
+
+
+def test_farmer_crop_without_an_estimate_is_reported_as_unavailable(field):
+    base = outcomes([(("barley",) * 3, 3.0, [float("nan")] * 5, 5.0)])
+    result = rank.choose(outcomes([THIRSTY, FRUGAL, STEADY]), base, EVEN, field)
+    assert result["baseline"]["income_usd_per_acre"] is None
+    assert result["baseline"]["bad_year_income_usd_per_acre"] is None
+    assert contract.problems(result) == []
 
 
 def test_result_carries_sources_years_and_sample_flag(field):

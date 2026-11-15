@@ -35,8 +35,9 @@ export interface EngineResult {
   /** What the farmer's current rotation does, so "saves 32%" has a reference. */
   baseline: {
     water_af_per_acre: number;
-    income_usd_per_acre: number;
-    bad_year_income_usd_per_acre: number;
+    /** null = estimate unavailable (no yield, price or cost for the farmer's crop). */
+    income_usd_per_acre: number | null;
+    bad_year_income_usd_per_acre: number | null;
   };
   options: RotationOption[];
   years_tested: number;

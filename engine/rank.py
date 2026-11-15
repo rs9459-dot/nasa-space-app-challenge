@@ -18,6 +18,7 @@ from __future__ import annotations
 
 import numpy as np
 
+from engine.bundle import BundleError
 from engine.types import Field, Outcomes
 
 SOIL_WEIGHT = 0.1
@@ -79,9 +80,20 @@ def acre_feet(x: float) -> float:
 
 def choose(outcomes: Outcomes, baseline_outcomes: Outcomes, priorities: dict, field: Field, *,
            years_tested: int | None = None, sources: list[str] | None = None) -> dict:
-    """An EngineResult (contract B). Needs at least 3 different rotations."""
+    """An EngineResult (contract B). Needs at least 3 different rotations with an income estimate.
+
+    A rotation whose income is unknown (NaN: a crop with no yield, price or cost) is never
+    offered; the farmer's own rotation without one is reported with income null
+    ("estimate unavailable").
+    """
+    known = ~np.isnan(np.asarray(outcomes.income_usd, dtype=float)).any(axis=1)
+    if not known.all():
+        rows = np.flatnonzero(known)
+        outcomes = Outcomes([outcomes.rotations[i] for i in rows], outcomes.yield_frac[rows],
+                            outcomes.income_usd[rows], outcomes.water_af[rows], np.asarray(outcomes.soil_score)[rows])
     if len(set(outcomes.rotations)) < 3:
-        raise ValueError("need at least 3 different rotations to offer 3 options")
+        raise BundleError("no_data", f"Only {len(set(outcomes.rotations))} rotations have an income estimate; "
+                                     "3 are needed (crops without a yield, price or cost can't be compared)")
     c = criteria(outcomes)
     matrix = np.column_stack([c["water"], c["income"], c["bad_year"], c["soil"]])
     closeness = topsis(matrix, weights(priorities), [False, True, True, True])
@@ -109,8 +121,9 @@ def choose(outcomes: Outcomes, baseline_outcomes: Outcomes, priorities: dict, fi
         "field": {"id": field.field_id, "place": field.place, "current_rotation": list(baseline_outcomes.rotations[0])},
         "baseline": {
             "water_af_per_acre": base_water,
-            "income_usd_per_acre": usd(base["income"][0]),
-            "bad_year_income_usd_per_acre": usd(base["bad_year"][0]),
+            # null = "estimate unavailable" (the farmer's crop has no yield, price or cost)
+            "income_usd_per_acre": None if np.isnan(base["income"][0]) else usd(base["income"][0]),
+            "bad_year_income_usd_per_acre": None if np.isnan(base["bad_year"][0]) else usd(base["bad_year"][0]),
         },
         "options": options,
         "years_tested": int(years_tested if years_tested is not None else field.weather.index.year.nunique()),

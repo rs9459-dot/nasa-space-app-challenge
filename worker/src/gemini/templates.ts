@@ -29,8 +29,8 @@ interface Strings {
 
 const sign = (pct: number) => (pct >= 0 ? "-" : "+");
 const abs = Math.abs;
-/** Dollars as a farmer reads them: $780, -$40 (never $-40). */
-const usd = (n: number) => (n < 0 ? `-$${-n}` : `$${n}`);
+/** Dollars as a farmer reads them: $780, -$40 (never $-40); null (no estimate for the current crop) is "n/a". */
+const usd = (n: number | null) => (n == null ? "n/a" : n < 0 ? `-$${-n}` : `$${n}`);
 
 const S: Record<BuiltInLang, Strings> = {
   en: {

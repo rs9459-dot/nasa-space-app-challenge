@@ -32,6 +32,10 @@ DUTY = {
               "bottom lands and 4.5 AF/acre for bench lands",
 }
 
+# TCID per-acre charges, Section H fee schedule (Management Policies 2025): O&M $53.00 per acre
+# over 7.17 acres + District General $6.84 per acre.
+TCID_CHARGE_PER_ACRE = 53.00 + 6.84
+
 # year -> (percent at the start of the season, final percent, what happened, source)
 ALLOCATIONS: dict[int, tuple[int | None, int, str, str]] = {
     2013: (None, 75, "Reduced to 75%; deliveries ended in September, two months early.",
@@ -87,9 +91,18 @@ def build_water_json(land: str = "bottom") -> dict:
             for y, (start, final, note, src) in sorted(ALLOCATIONS.items())
         ],
         "years_without_a_source": [y for y in range(2001, 2026) if y not in ALLOCATIONS],
-        "water_cost_usd_per_af": None,
-        "water_cost_note": "Not found. TCID charges an annual O&M assessment per acre (tcid.org fee schedule); "
-                           "the figure is published as an image/PDF that was not retrieved.",
+        # TCID charges per water-righted acre, not per acre-foot used. The engine's yields
+        # step takes a per-AF price, so the per-acre charge is spread over the 3.5 AF duty.
+        "water_charge_usd_per_acre": TCID_CHARGE_PER_ACRE,
+        "water_cost_usd_per_af": round(TCID_CHARGE_PER_ACRE / duty, 2),
+        "water_cost_note": (
+            "TCID fee schedule (Section H, Management Policies 2025, tcid.org): O&M charge $53.00 per acre "
+            "over 7.17 acres plus District General $6.84 per acre = $59.84 per water-righted acre per year. "
+            "Expressed per acre-foot over the assumed 3.5 AF bottom-land duty ($17.10/AF) because the model "
+            "charges per AF delivered; TCID actually bills per acre whether or not the water is used, so "
+            "fallowing does not save this charge. A Fallon Post report says O&M rises to $57 from July 2026 "
+            "(not in the official schedule yet)."),
+        "water_cost_source": "https://www.tcid.org/files/6e0d267c5/SECTION+H+-+MGMT+POLICIES+2025.pdf",
     }
 
 

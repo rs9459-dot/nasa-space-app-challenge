@@ -116,6 +116,8 @@
     2017,
     2018
   ],
-  "water_cost_usd_per_af": null,
-  "water_cost_note": "Not found. TCID charges an annual O&M assessment per acre (tcid.org fee schedule); the figure is published as an image/PDF that was not retrieved."
+  "water_charge_usd_per_acre": 59.84,
+  "water_cost_usd_per_af": 17.1,
+  "water_cost_note": "TCID fee schedule (Section H, Management Policies 2025, tcid.org): O&M charge $53.00 per acre over 7.17 acres plus District General $6.84 per acre = $59.84 per water-righted acre per year. Expressed per acre-foot over the assumed 3.5 AF bottom-land duty ($17.10/AF) because the model charges per AF delivered; TCID actually bills per acre whether or not the water is used, so fallowing does not save this charge. A Fallon Post report says O&M rises to $57 from July 2026 (not in the official schedule yet).",
+  "water_cost_source": "https://www.tcid.org/files/6e0d267c5/SECTION+H+-+MGMT+POLICIES+2025.pdf"
 }

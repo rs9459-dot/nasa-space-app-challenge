@@ -39,8 +39,8 @@
           "required": ["water_af_per_acre", "income_usd_per_acre", "bad_year_income_usd_per_acre"],
           "properties": {
             "water_af_per_acre": { "$ref": "#/$defs/acreFeet" },
-            "income_usd_per_acre": { "$ref": "#/$defs/usd10" },
-            "bad_year_income_usd_per_acre": { "$ref": "#/$defs/usd10" }
+            "income_usd_per_acre": { "anyOf": [{ "$ref": "#/$defs/usd10" }, { "type": "null" }], "description": "Null = estimate unavailable (no yield, price or cost for the current crop)." },
+            "bad_year_income_usd_per_acre": { "anyOf": [{ "$ref": "#/$defs/usd10" }, { "type": "null" }] }
           }
         },
         "options": {
