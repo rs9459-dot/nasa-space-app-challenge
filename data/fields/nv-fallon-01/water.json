@@ -1,0 +1,118 @@
+{
+  "source": "Newlands Project allocations (TCID)",
+  "project": "Newlands Project, Carson Division, operated by the Truckee-Carson Irrigation District (TCID)",
+  "full_allocation_af_per_acre": 3.5,
+  "land_class": "bottom",
+  "land_class_note": "ASSUMED bottom land (the lower duty, so the cautious choice). TCID's bench/bottom map for this parcel has not been checked; bench land would be 4.5 AF/acre.",
+  "duty_source": "Alpine decree (United States v. Alpine Land & Reservoir Co., 503 F. Supp. 877, D. Nev. 1980), as applied in 43 CFR 418 (Newlands Project OCAP): maximum annual water duty 3.5 AF/acre for bottom lands and 4.5 AF/acre for bench lands",
+  "allocation_fraction_by_year": {
+    "2013": 0.75,
+    "2014": 0.45,
+    "2015": 0.2,
+    "2016": 0.75,
+    "2019": 1.0,
+    "2020": 1.0,
+    "2021": 0.7,
+    "2022": 0.85,
+    "2023": 1.0,
+    "2024": 1.0,
+    "2025": 1.0
+  },
+  "allocation_detail": [
+    {
+      "year": 2013,
+      "start_pct": null,
+      "final_pct": 75,
+      "note": "Reduced to 75%; deliveries ended in September, two months early.",
+      "source": "Nevada Appeal, 2015 drought coverage recapping 2013 (nevadaappeal.com/news/2015/mar/26/dry-conditions-equals-short-water-season)"
+    },
+    {
+      "year": 2014,
+      "start_pct": 40,
+      "final_pct": 45,
+      "note": "Set at 40% in March, raised to 50%, cut back to 45% in May.",
+      "source": "Associated Press, 9 May 2014, 'Drought prompts irrigation water cuts in Fallon'; Nevada Appeal, 11 Mar 2014, 'Drought limits water season'"
+    },
+    {
+      "year": 2015,
+      "start_pct": 20,
+      "final_pct": 20,
+      "note": "Set at 20% for both divisions, the lowest on record (previous low 28% in 1994).",
+      "source": "Northern Nevada Business Weekly, 9 Mar 2015, 'Drought is a big concern for farmers'; Nevada Appeal, 26 Mar 2015"
+    },
+    {
+      "year": 2016,
+      "start_pct": 70,
+      "final_pct": 75,
+      "note": "Set at 70% in March, later 85%, reduced to 75% on 5 July.",
+      "source": "Fernley Reporter, 7 Jul 2016, 'TCID announces allocation, delivery amendments'; Nevada Appeal, 3 Mar and 7 Jul 2016"
+    },
+    {
+      "year": 2019,
+      "start_pct": 100,
+      "final_pct": 100,
+      "note": "Set at 100% on 5 February.",
+      "source": "The Fallon Post, 21 Feb 2019, 'TCID sets 100% water year for farmers'"
+    },
+    {
+      "year": 2020,
+      "start_pct": 95,
+      "final_pct": 100,
+      "note": "Set at 95% in March, raised to 100% by August.",
+      "source": "The Fallon Post, 10 Mar 2020, 'TCID sets water allocation' and 3 Aug 2020, 'High demand for water in Lahontan Reservoir'"
+    },
+    {
+      "year": 2021,
+      "start_pct": 90,
+      "final_pct": 70,
+      "note": "Set at 90% in March, cut to 70% on 5 May as the snowmelt forecast fell.",
+      "source": "The Fallon Post, 5 Mar 2021, 'Forecast optimistic, TCID sets allocation' and 7 May 2021, 'TCID water allocation set at 70%'; TCID board minutes, 8 Mar 2022"
+    },
+    {
+      "year": 2022,
+      "start_pct": 70,
+      "final_pct": 85,
+      "note": "Set at 70% in March, raised to 85% on 21 June after April storms; still 85% in September.",
+      "source": "The Fallon Post, 11 Mar 2022, 24 Jun 2022 'TCID raises the water allocation' and 9 Sep 2022"
+    },
+    {
+      "year": 2023,
+      "start_pct": 100,
+      "final_pct": 100,
+      "note": "Set at 100% for the Carson Division.",
+      "source": "The Fallon Post, 16 Mar 2023, 'TCID sets water allocation'"
+    },
+    {
+      "year": 2024,
+      "start_pct": null,
+      "final_pct": 100,
+      "note": "Projected at 100% at the 12 March board meeting (a projection in the source, not a quoted board vote).",
+      "source": "The Fallon Post, 23 Mar 2024, 'Good news for TCID water users: 100% allocations ahead'"
+    },
+    {
+      "year": 2025,
+      "start_pct": 100,
+      "final_pct": 100,
+      "note": "Board voted 100% for both divisions.",
+      "source": "The Fallon Post, 14 Mar 2025, 'TCID announces 100% water supply, irrigation begins March 15'"
+    }
+  ],
+  "years_without_a_source": [
+    2001,
+    2002,
+    2003,
+    2004,
+    2005,
+    2006,
+    2007,
+    2008,
+    2009,
+    2010,
+    2011,
+    2012,
+    2017,
+    2018
+  ],
+  "water_cost_usd_per_af": null,
+  "water_cost_note": "Not found. TCID charges an annual O&M assessment per acre (tcid.org fee schedule); the figure is published as an image/PDF that was not retrieved."
+}
