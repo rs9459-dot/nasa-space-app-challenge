@@ -65,6 +65,12 @@ export interface Hindcast {
   allocation_pct_by_year: Record<string, number>;
   safest_rotation: string[];
   safest_water_af_per_acre: number;
+  /** Share of the safest rotation's crop water need met in those years (whole percent). */
+  safest_need_met_pct?: number;
+  /** What the field grew before the drought, and how carrying on with it would have gone. */
+  current_crop?: string;
+  current_crop_water_af_per_acre?: number;
+  current_crop_need_met_pct?: number;
   /** What the field actually grew in `years` (CDL), null where unknown. */
   actual_crops: (string | null)[];
   /** One sentence for the slide. */

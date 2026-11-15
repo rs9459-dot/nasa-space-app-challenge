@@ -30,6 +30,18 @@ def stand_ins() -> list[str]:
     return [name for name in ("signals", "rotations", "yields") if optional(name) is None]
 
 
+def candidate_rotations(field: Field, ref: Reference) -> list[Rotation]:
+    """Every rotation worth testing on this field (Hareem's rules, or the stand-in)."""
+    module = optional("rotations")
+    if module:
+        rotations = module.enumerate_rotations(module.candidate_crops(field, ref), ref)
+    else:
+        rotations = fakes.fake_rotations(field, ref)
+    if len(set(rotations)) < 3:
+        raise BundleError("no_data", f"Only {len(set(rotations))} rotations fit this field; 3 are needed")
+    return rotations
+
+
 def current_crop(request: dict, field: Field, signals: Signals) -> str:
     """The farmer's crop: what they said, else the field's latest CropScape crop if we trust it."""
     if request.get("current_crop"):
@@ -62,20 +74,24 @@ def make_plan(request: dict) -> dict:
     """A contract-valid EngineResult, or BundleError / RuntimeError('engine_failed')."""
     field, ref = bundle.load(bundle.resolve(request))
 
-    signals_module, rotations_module = optional("signals"), optional("rotations")
+    signals_module = optional("signals")
     signals = signals_module.compute(field) if signals_module else Signals()
-    if rotations_module:
-        rotations = rotations_module.enumerate_rotations(rotations_module.candidate_crops(field, ref), ref)
-    else:
-        rotations = fakes.fake_rotations(field, ref)
-    if len(set(rotations)) < 3:
-        raise BundleError("no_data", f"Only {len(set(rotations))} rotations fit this field; 3 are needed")
+    rotations = candidate_rotations(field, ref)
 
     baseline: Rotation = (current_crop(request, field, signals),) * 3
     outcomes, baseline_outcomes = evaluate(field, ref, signals, rotations, baseline)
 
     result = rank.choose(outcomes, baseline_outcomes, request["priorities"], field,
                          sources=[*field.sources, *signals.sources])
+    # The drought replay is an extra: if this field lacks what it needs, the plan still goes out.
+    from engine import hindcast  # imported here because hindcast uses this module
+    try:
+        replay = hindcast.run(field, ref, signals, rotations=rotations)
+    except BundleError:
+        replay = None
+    if replay:
+        result["hindcast"] = replay
+
     used = stand_ins()
     if used:
         result["sample_data"] = True

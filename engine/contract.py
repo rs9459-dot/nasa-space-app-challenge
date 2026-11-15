@@ -64,6 +64,8 @@ def contract_problems(doc: dict) -> list[str]:
             found.append("temp trend must be 1 decimal")
     if "hindcast" in doc:
         acre_feet.append(doc["hindcast"]["safest_water_af_per_acre"])
+        if "current_crop_water_af_per_acre" in doc["hindcast"]:
+            acre_feet.append(doc["hindcast"]["current_crop_water_af_per_acre"])
     if not all(one_decimal(x) for x in acre_feet):
         found.append(f"acre-feet must be 1 decimal: {acre_feet}")
 
