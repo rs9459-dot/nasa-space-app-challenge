@@ -31,7 +31,7 @@ def test_water_json_shape():
     # years with no source are listed, not filled in
     assert set(map(str, w["years_without_a_source"])).isdisjoint(fractions)
     assert len(fractions) + len(w["years_without_a_source"]) == 25
-    assert w["water_cost_usd_per_af"] is None and w["water_cost_note"]
+    assert w["water_charge_usd_per_acre"] == 59.84 and w["water_cost_usd_per_af"] == round(59.84 / 3.5, 2) and "tcid.org" in w["water_cost_source"]
 
 
 def test_nwis_json_becomes_a_table():

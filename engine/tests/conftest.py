@@ -20,7 +20,7 @@ def write_bundle(root: Path, field_id: str = FIELD_ID, *, provenance: str = "sam
     folder = root / "fields" / field_id
     folder.mkdir(parents=True, exist_ok=True)
     (folder / "field.json").write_text(json.dumps({
-        "field_id": field_id, "name": "Test field", "place": "Testville, NV", "lat": lat, "lon": lon,
+        "field_id": field_id, "name": "Test field", "place": "Testville, Nevada", "lat": lat, "lon": lon,
         "county": "Test", "state": "NV", "country": "US", "zip": "89406", "provenance": provenance,
     }))
     days = pd.date_range(start, end, freq="D")
@@ -33,11 +33,11 @@ def write_bundle(root: Path, field_id: str = FIELD_ID, *, provenance: str = "sam
         "rh_pct": 40.0, "wind_ms": 3.0,
     }).to_csv(folder / "weather_daily.csv", index=False)
     (folder / "soil.json").write_text(json.dumps({
-        "aws_0_100_cm": 14.0, "aws_0_150_cm": 17.0, "ec_ds_m": 6.0, "slope_pct": 0.5, "source": "TEST soil",
+        "aws_0_100_cm": 14.0, "aws_0_150_cm": 17.0, "ec_ds_m": 2.0, "slope_pct": 0.5, "source": "TEST soil",
     }))
     (folder / "water.json").write_text(json.dumps({
         "source": "TEST allocations", "full_allocation_af_per_acre": 3.5,
-        "allocation_fraction_by_year": {"2001": 1.0, "2002": 0.5},
+        "allocation_fraction_by_year": {"2001": 1.0, "2002": 0.5}, "water_cost_usd_per_af": 10.0,
     }))
     (folder / "crop_history.json").write_text(json.dumps([{"year": 2024, "cdl_code": 36, "crop": "alfalfa"}]))
     return folder
@@ -45,10 +45,16 @@ def write_bundle(root: Path, field_id: str = FIELD_ID, *, provenance: str = "sam
 
 # TEST VALUES, not crop science: round numbers chosen to make the tests easy to reason about.
 # The real table is data/reference/crops.csv (Hareem, task H2).
-TEST_CROPS_CSV = """crop,perennial,plant_month,plant_day,stage_ini_days,stage_dev_days,stage_mid_days,stage_late_days,kc_ini,kc_mid,kc_end,root_depth_m,p_depletion,source
-alfalfa,true,4,1,10,30,150,10,0.4,1.0,0.9,1.5,0.5,TEST
-barley,false,3,15,20,30,50,30,0.3,1.1,0.3,1.0,0.5,TEST
-fallow,false,1,1,0,0,0,0,0.2,0.2,0.2,0.5,0.5,TEST
+# Columns follow contracts/field-bundle.md so Hareem's rotations.py and yields.py accept them;
+# heat/frost checks are off (0) and salt thresholds sit above the test soil's EC.
+TEST_CROPS_CSV = """crop,perennial,heavy_feeder,legume,plant_month,plant_day,stage_ini_days,stage_dev_days,stage_mid_days,stage_late_days,kc_ini,kc_mid,kc_end,root_depth_m,p_depletion,ky,ece_threshold_ds_m,salinity_slope_pct,base_temp_c,gdd_required,frost_free_days_min,residue_score,deep_roots,cover_benefit,source
+alfalfa,1,0,1,4,1,10,30,150,10,0.4,1.0,0.9,1.5,0.5,1.1,8,7,5,0,0,2,3,2,TEST
+barley,0,0,0,3,15,20,30,50,30,0.3,1.1,0.3,1.0,0.5,1.15,8,5,0,0,0,3,2,1,TEST
+fallow,0,0,0,1,1,0,0,0,0,0.2,0.2,0.2,0.5,0.5,0,0,0,0,0,0,0,0,0,TEST
+"""
+TEST_ECONOMICS_CSV = """crop,region,yield_per_acre,unit,price_usd_per_unit,cost_usd_per_acre
+alfalfa,US-NV,5,tons,200,500
+barley,US-NV,80,bushel,7,350
 """
 
 
@@ -56,7 +62,7 @@ def write_reference(root: Path) -> None:
     ref = root / "reference"
     ref.mkdir(parents=True, exist_ok=True)
     (ref / "crops.csv").write_text(TEST_CROPS_CSV)
-    (ref / "economics.csv").write_text("crop,region,yield_per_acre,unit,price_usd_per_unit,cost_usd_per_acre\nalfalfa,Test,5,tons,200,500\n")
+    (ref / "economics.csv").write_text(TEST_ECONOMICS_CSV)
     (ref / "places.csv").write_text(f"key,kind,country,lat,lon,field_id\n89406,zip,US,39.38,-118.77,{FIELD_ID}\nTestville,town,US,39.38,-118.77,{FIELD_ID}\n")
 
 

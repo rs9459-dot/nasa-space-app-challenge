@@ -50,7 +50,7 @@ def test_plan_computes_a_contract_valid_answer(client, request_body):
     assert r.status_code == 200, r.text
     doc = r.json()
     assert contract.problems(doc) == []
-    assert doc["field"] == {"id": FIELD_ID, "place": "Testville, NV", "current_rotation": ["alfalfa"] * 3}
+    assert doc["field"] == {"id": FIELD_ID, "place": "Testville, Nevada", "current_rotation": ["alfalfa"] * 3}
     assert doc["years_tested"] == 2
     assert doc["data_sources"] == [bundle.SAMPLE_SOURCE, "TEST soil", "TEST allocations"]
     assert doc["sample_data"] is True  # the test bundle is a sample

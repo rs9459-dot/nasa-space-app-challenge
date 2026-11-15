@@ -14,7 +14,7 @@ from engine.types import Field, Reference, Signals
 def test_loads_a_bundle(data_root):
     field, ref = bundle.load(FIELD_ID)
     assert isinstance(field, Field) and isinstance(ref, Reference)
-    assert field.provenance == "sample" and field.place == "Testville, NV"
+    assert field.provenance == "sample" and field.place == "Testville, Nevada"
     assert list(field.weather.columns) == bundle.WEATHER_COLUMNS
     assert len(field.weather) == 730 and field.weather.index.name == "day"
     assert field.water["allocation_fraction_by_year"]["2002"] == 0.5

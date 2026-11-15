@@ -20,7 +20,8 @@ def drought_root(tmp_path, monkeypatch):
     folder = write_bundle(tmp_path, FIELD, provenance="real", end="2025-12-31")
     write_reference(tmp_path)
     (folder / "water.json").write_text(json.dumps({
-        "source": "TEST allocations", "full_allocation_af_per_acre": 3.5, "allocation_fraction_by_year": ALLOCATIONS}))
+        "source": "TEST allocations", "full_allocation_af_per_acre": 3.5, "allocation_fraction_by_year": ALLOCATIONS,
+        "water_cost_usd_per_af": 10.0}))
     (folder / "crop_history.json").write_text(json.dumps(HISTORY))
     monkeypatch.setenv("ENGINE_DATA_DIR", str(tmp_path))
     return tmp_path
