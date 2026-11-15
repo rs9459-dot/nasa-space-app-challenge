@@ -11,3 +11,6 @@ __pycache__/
 
 # Large raw downloads (rebuild with pipeline/ scripts)
 data/raw/
+
+# Engine cache (rebuilt automatically from data/ and engine/)
+data/cache/

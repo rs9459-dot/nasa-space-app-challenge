@@ -6,6 +6,10 @@
 
 Every answer is checked against the contract before it is sent; an answer that fails is
 replaced by an `engine_failed` error, never sent as it is.
+
+On start, every field in reference/places.csv is prepared in the background (cache.py), so
+texts are answered in well under a second; /health shows each field's state. Set
+ENGINE_WARMUP=0 to skip that.
 """
 from __future__ import annotations
 
@@ -13,17 +17,27 @@ import hmac
 import json
 import logging
 import os
+from contextlib import asynccontextmanager
 
 from fastapi import FastAPI, Request
+from fastapi.concurrency import run_in_threadpool
 from fastapi.responses import JSONResponse
 
-from engine import contract, plan as planner
+from engine import cache, contract, plan as planner
 from engine.bundle import BundleError
 
 log = logging.getLogger("farmline.engine")
 STATUS = {"unauthorized": 401, "bad_request": 400, "field_not_found": 404, "no_data": 422, "engine_failed": 500}
 
-app = FastAPI(title="FarmLine engine", docs_url=None, redoc_url=None)
+
+@asynccontextmanager
+async def lifespan(_app: FastAPI):
+    if os.environ.get("ENGINE_WARMUP", "1") != "0":
+        cache.warm_up()
+    yield
+
+
+app = FastAPI(title="FarmLine engine", docs_url=None, redoc_url=None, lifespan=lifespan)
 
 
 def error(code: str, message: str) -> JSONResponse:
@@ -38,6 +52,7 @@ def health() -> dict:
         "status": "ok",
         "token_configured": bool(os.environ.get("ENGINE_API_TOKEN")),
         "model": "live" if not missing else "stand-ins: " + ", ".join(missing),
+        "fields": dict(cache.status),  # field_id -> warming | ready | <error code>: ...
     }
 
 
@@ -58,7 +73,8 @@ async def plan(request: Request) -> JSONResponse:
         return error("bad_request", "; ".join(found[:3]))
 
     try:
-        return JSONResponse(planner.make_plan(body))
+        # In a worker thread, so a field still being prepared doesn't hold up other requests.
+        return JSONResponse(await run_in_threadpool(planner.make_plan, body))
     except BundleError as err:
         return error(err.code, err.message)
     except Exception:  # a bug or a contract failure: log it, tell the caller nothing internal
