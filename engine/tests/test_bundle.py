@@ -22,8 +22,16 @@ def test_loads_a_bundle(data_root):
     assert "crop" in ref.economics.columns
 
 
-def test_sources_come_from_the_files_present(data_root):
+def test_a_sample_bundle_never_cites_real_datasets(data_root):
+    """Made-up files are no evidence of NASA POWER or CropScape, whatever they are called."""
     field, _ = bundle.load(FIELD_ID)
+    assert field.sources == [bundle.SAMPLE_SOURCE, "TEST soil", "TEST allocations"]
+
+
+def test_a_real_bundle_cites_the_datasets_its_files_come_from(tmp_path, monkeypatch):
+    write_bundle(tmp_path, "real-field", provenance="real", end="2025-12-31")
+    monkeypatch.setenv("ENGINE_DATA_DIR", str(tmp_path))
+    field = bundle.load_field("real-field")
     assert field.sources == ["NASA POWER", "USDA CropScape", "TEST soil", "TEST allocations"]
 
 

@@ -60,6 +60,15 @@ def write_reference(root: Path) -> None:
     (ref / "places.csv").write_text(f"key,kind,country,lat,lon,field_id\n89406,zip,US,39.38,-118.77,{FIELD_ID}\nTestville,town,US,39.38,-118.77,{FIELD_ID}\n")
 
 
+@pytest.fixture(autouse=True)
+def fresh_cache():
+    """Each test starts with nothing prepared in memory (disk caches live in each tmp dir)."""
+    from engine import cache
+    cache.clear()
+    yield
+    cache.clear()
+
+
 @pytest.fixture
 def data_root(tmp_path, monkeypatch) -> Path:
     write_bundle(tmp_path)

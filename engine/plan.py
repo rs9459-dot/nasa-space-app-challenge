@@ -2,12 +2,16 @@
 
     bundle -> signals -> rotations -> water -> yields -> rank -> checked EngineResult
 
+Everything before `rank` is the same for every farmer at a field, so cache.py does it once
+per field and make_plan only picks the farmer's baseline and ranks.
+
 The crops-slice steps (signals, rotations, yields) use Hareem's modules when they exist and
 the labelled stand-ins in fakes.py when they don't. Any stand-in makes the answer
 `sample_data: true` with a `_note` naming it.
 """
 from __future__ import annotations
 
+import copy
 import importlib
 from dataclasses import replace
 
@@ -59,11 +63,16 @@ def take(result: WaterResult, rows: slice) -> WaterResult:
                    eta_mm=result.eta_mm[rows], irrigation_mm=result.irrigation_mm[rows])
 
 
+def yields_function():
+    """Hareem's yields.evaluate, or the stand-in."""
+    yields = optional("yields")
+    return yields.evaluate if yields else fakes.fake_outcomes
+
+
 def evaluate(field: Field, ref: Reference, signals: Signals, rotations: list[Rotation], baseline: Rotation,
              **water_overrides) -> tuple[Outcomes, Outcomes]:
     """(outcomes for the rotations, outcomes for the baseline), through the same sequences."""
-    yields = optional("yields")
-    evaluate_yields = yields.evaluate if yields else fakes.fake_outcomes
+    evaluate_yields = yields_function()
     simulated = water.simulate(field, [*rotations, baseline], ref, signals, **water_overrides)
     n = len(rotations)
     return (evaluate_yields(field, take(simulated, slice(0, n)), ref, signals),
@@ -72,25 +81,18 @@ def evaluate(field: Field, ref: Reference, signals: Signals, rotations: list[Rot
 
 def make_plan(request: dict) -> dict:
     """A contract-valid EngineResult, or BundleError / RuntimeError('engine_failed')."""
-    field, ref = bundle.load(bundle.resolve(request))
+    # The heavy, same-for-everyone part (every rotation simulated, each crop's baseline, the
+    # hindcast) is prepared once per field by cache.py; only the farmer's part runs here.
+    from engine import cache  # imported here because cache uses this module
+    prep = cache.prepared(bundle.resolve(request))
+    field, signals = prep.field, prep.signals
 
-    signals_module = optional("signals")
-    signals = signals_module.compute(field) if signals_module else Signals()
-    rotations = candidate_rotations(field, ref)
-
-    baseline: Rotation = (current_crop(request, field, signals),) * 3
-    outcomes, baseline_outcomes = evaluate(field, ref, signals, rotations, baseline)
-
-    result = rank.choose(outcomes, baseline_outcomes, request["priorities"], field,
+    crop = current_crop(request, field, signals)
+    result = rank.choose(prep.outcomes, cache.baseline(prep, crop), request["priorities"], field,
                          sources=[*field.sources, *signals.sources])
-    # The drought replay is an extra: if this field lacks what it needs, the plan still goes out.
-    from engine import hindcast  # imported here because hindcast uses this module
-    try:
-        replay = hindcast.run(field, ref, signals, rotations=rotations)
-    except BundleError:
-        replay = None
-    if replay:
-        result["hindcast"] = replay
+    # The drought replay is an extra: if this field lacked what it needs, the plan still goes out.
+    if prep.hindcast:
+        result["hindcast"] = copy.deepcopy(prep.hindcast)
 
     used = stand_ins()
     if used:
