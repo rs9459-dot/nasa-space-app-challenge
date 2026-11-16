@@ -16,6 +16,10 @@ NASA Data*.
 on a Vultr server → reply. Health check:
 [farmline-messaging.rs9459.workers.dev/health](https://farmline-messaging.rs9459.workers.dev/health).
 
+**Live dashboard:** [farmline.rs9459.workers.dev](https://farmline.rs9459.workers.dev) shows the
+questions answered, languages and places, with no phone numbers. It belongs to the second Worker,
+which adds a call-in line and drought alerts (see [Phone line, alerts and dashboard](#phone-line-alerts-and-dashboard)).
+
 > **Prototype.** The numbers come from real public data, but the crop and cost tables still
 > contain labelled regional proxies and assumptions. FarmLine demonstrates the method; it is
 > not validated farm advice yet.
@@ -154,11 +158,31 @@ The schema is in [db/schema.sql](db/schema.sql). Loading a field twice gives the
 SMS line does not read from the database yet; it is the store for the dashboard and for
 logging requests.
 
+## Phone line, alerts and dashboard
+
+A second Cloudflare Worker, in [farmline-worker/](farmline-worker/), takes FarmLine beyond the
+one demo field. It answers texts and calls for any US ZIP code, Indian PIN code or town name.
+
+- **Call-in line.** A farmer calls, picks a language, keys in a ZIP or PIN code and says their
+  crop and problem. They hear the answer and get the same answer by SMS.
+- **NASA weather for any place.** The last 30 days of rain and heat from NASA POWER, compared
+  with the normal for those months. Where the rotation engine has the field's data, the reply
+  adds the three plans. Where it does not, the reply gives the weather only and never claims a plan.
+- **Drought alerts.** Farmers who reply `ALERT` are checked every day (Cron Triggers and Queues).
+- **Ask anything.** General farming questions are matched by meaning to short answers that name
+  their source (Workers AI and Vectorize).
+- **Dashboard and admin view.** The public dashboard is the Worker's home page. An admin view
+  behind a login (Auth0) shows each conversation and how its answer was made.
+
+It also uses D1, KV, R2 and Durable Objects, and keeps the NASA readings it fetches in Tiger
+Data. Setup, languages and SMS commands are in [farmline-worker/README.md](farmline-worker/README.md).
+
 ## Status
 
 | Part | What works today |
 |---|---|
 | SMS line (`worker/`) | Signed Twilio webhook, per-farmer memory, STOP/HELP, full plan replies; deployed on Cloudflare |
+| Phone line, alerts, dashboard (`farmline-worker/`) | Voice line, guided SMS, NASA weather for any place, daily drought alerts, farming library, public dashboard, admin view; deployed on Cloudflare |
 | Gemini layer (`worker/src/gemini/`) | Message parsing in 6 language forms, checked replies, template fallback, number checker, Hindi speech |
 | Engine (`engine/`) | Token-protected API, water balance, rotations, yields, ranking, hindcast, 2035 view, per-field cache; deployed on Vultr |
 | Data (`pipeline/`, `data/`) | Real Fallon weather, soil, crop history, water allocations and charges, river flow, OpenET |
@@ -170,13 +194,14 @@ salinity adjustment may double-count stress already present in USDA yields. Only
 field is loaded.
 
 **Next:** NASA satellite signals (SMAP soil moisture, IMERG rainfall), the 2035 view in the SMS
-reply, request logging to Tiger Data, more fields, an officers' dashboard, a call-in line,
-WhatsApp and drought alerts.
+reply, request logging to Tiger Data, more fields with full rotation plans, joining the two
+Workers into one line, and WhatsApp.
 
 ## Repository
 
 ```
 worker/      Cloudflare Worker (TypeScript): SMS webhook, Gemini layer, engine client
+farmline-worker/  Second Worker: call-in line, drought alerts, farming library, dashboard
 engine/      Rotation engine (Python, FastAPI)
 pipeline/    Scripts that fetch each dataset into data/
 data/        Field bundles and reference tables (crops, economics, places)
