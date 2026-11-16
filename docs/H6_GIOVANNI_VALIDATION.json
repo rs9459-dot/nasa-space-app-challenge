@@ -1,0 +1,38 @@
+{
+  "imerg_monthly_precip_mm": {
+    "count": 297,
+    "first": "2001-01",
+    "last": "2025-09",
+    "rejected": 0,
+    "raw_sha256": "6a274b60f8aeb630447d1c9fb7818f19a4c3d975aa270933ecac47c89ab35e8c",
+    "metadata": {
+      "Title": "Time Series, Area-Averaged of Merged satellite-gauge precipitation estimate - Final Run (recommended for general use) (monthly)",
+      "User Start Date": "2001-01-01T00:00:00Z",
+      "User End Date": "2025-09-30T23:59:59Z",
+      "User Bounding Box": "-118.771,39.379,-118.769,39.381",
+      "Data Bounding Box": "-118.75,39.35,-118.75,39.35",
+      "URL to Reproduce Results": "https://giovanni.gsfc.nasa.gov/giovanni/#service=ArAvTs&starttime=2001-01-01T00:00:00Z&endtime=2025-09-30T23:59:59Z&bbox=-118.771,39.379,-118.769,39.381&data=GPM_3IMERGM_07_precipitation&dataKeyword=GPM_3IMERGM&portal=GIOVANNI&format=json",
+      "Fill Value (mean_GPM_3IMERGM_07_precipitation)": "-9999.9"
+    },
+    "native_unit": "mm/hr",
+    "output_unit": "mm/month"
+  },
+  "nldas_soil_moisture": {
+    "count": 300,
+    "first": "2001-01",
+    "last": "2025-12",
+    "rejected": 0,
+    "raw_sha256": "3688f52aba6bdd90283b76ce2a9476ed17d2cb828def799d39f17086a23c41f3",
+    "metadata": {
+      "Title": "Time Series, Area-Averaged of Soil moisture content (0-100cm) monthly 0.125 deg. [NLDAS Model (monthly)",
+      "User Start Date": "2001-01-01T00:00:00Z",
+      "User End Date": "2025-12-31T23:59:59Z",
+      "User Bounding Box": "-118.771,39.379,-118.769,39.381",
+      "Data Bounding Box": "-118.812,39.4375,-118.812,39.4375",
+      "URL to Reproduce Results": "https://giovanni.gsfc.nasa.gov/giovanni/#service=ArAvTs&starttime=2001-01-01T00:00:00Z&endtime=2025-12-31T23:59:59Z&bbox=-118.771,39.379,-118.769,39.381&data=NLDAS_NOAH0125_M_2_0_SoilM_0_100cm&portal=GIOVANNI&format=json",
+      "Fill Value (mean_NLDAS_NOAH0125_M_2_0_SoilM_0_100cm)": "-9999"
+    },
+    "native_unit": "kg/m2",
+    "output_unit": "m3/m3"
+  }
+}

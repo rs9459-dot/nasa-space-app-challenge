@@ -4,13 +4,13 @@
     {
       "task_id": "6935203f-0a90-4846-8a99-eccd74bd0ee2",
       "name": "FarmLine Fallon H6 2015-2025",
-      "status": "processing",
+      "status": "done; archive downloaded and validated; see docs/H6_FULL_VALIDATION.json",
       "request": "fallon-timeseries-request.json"
     },
     {
       "task_id": "2abbfbc7-cb15-4a7a-9811-624c73bfb118",
       "name": "FarmLine Fallon H6 SRTM slope",
-      "status": "pending",
+      "status": "done; archive downloaded and validated; see docs/H6_FULL_VALIDATION.json",
       "request": "fallon-srtm-request.json"
     }
   ],

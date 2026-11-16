@@ -1,7 +1,7 @@
 {
   "start_depletion_frac": 0.0,
-  "rain_scale": 1.0,
-  "erosion_weight": 1.1,
+  "rain_scale": 1.0338678449815533,
+  "erosion_weight": 1.2094270000162641,
   "history_confirmed": null,
   "drought_years": [
     2001,
@@ -14,8 +14,9 @@
   "sources": [
     "H7 historical as-of 2025-12-31; neutral defaults are no signal, not measurements",
     "Moisture unavailable/stale/depth-incomparable: start depletion remains neutral 0",
-    "No complete overlapping IMERG/POWER years: rain_scale neutral 1",
-    "USDA NRCS Soil Data Access, map unit 643787, retrieved 2026-11-14; ordinal slope weight, not measured erosion",
+    "https://doi.org/10.5067/GPM/IMERG/3B-MONTH/07",
+    "IMERG/POWER complete common years=24; raw ratio=1.03387; clamp [0.5,2]",
+    "https://doi.org/10.5067/MEaSUREs/SRTM/SRTMGL1_NC.003; ordinal slope weight, not measured erosion",
     "HLS-CDL agreement unknown: reviewed seasonal comparison unavailable",
     "Newlands Project allocations (TCID); allocation <0.5",
     "USGS NWIS bundle nwis_flow.csv; annual calendar-year mean, complete days; bottom quartile; threshold 141.96609289617487 cfs"
