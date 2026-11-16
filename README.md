@@ -28,6 +28,11 @@ its answer was made.
 > **Prototype.** The numbers come from real public data, but the crop and cost tables still
 > contain labelled regional proxies and assumptions. FarmLine demonstrates the method; it is
 > not validated farm advice yet.
+>
+> **How we will fix this.** Each proxy is labelled in the data, so it can be replaced one at a
+> time. Next we will swap them for county-level USDA yields and prices and current university
+> cost budgets, have a local extension agronomist review the crop tables, and check the plans
+> against real farm records before calling the results advice.
 
 ## Why
 
