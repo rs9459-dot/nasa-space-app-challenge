@@ -128,7 +128,9 @@ flowchart TD
 | FAO-56 / 33 / 29 crop tables | FAO | Crop water need, yield response, salt tolerance | In use (partial; gaps left blank) |
 | NASS QuickStats and state overviews | USDA NASS | Yields and prices | In use (some labelled regional proxies) |
 | University enterprise budgets | UNR Extension, UC Davis / UCCE | Production costs per acre | In use (historical, labelled) |
-| SMAP, GPM IMERG, HLS NDVI, SRTM, ECOSTRESS | NASA | Current soil moisture, rainfall check, crop vigor, slope | Planned |
+| GPM IMERG | NASA | Monthly satellite rainfall, 2001-2025; checks and scales the POWER rain | In use |
+| SRTM elevation | NASA | Field slope, for the erosion weight in the soil score | In use |
+| SMAP, HLS NDVI, NLDAS, ECOSTRESS | NASA | Soil moisture, crop greenness, evapotranspiration, 2015-2025 | Downloaded and checked; not used in the plans yet |
 
 Every number has a source, and years or values with no source are left out, not estimated.
 Full list with URLs and access dates: [docs/DATASETS.md](docs/DATASETS.md).
@@ -203,7 +205,8 @@ notes): some yields and prices are regional proxies, the cost budgets are histor
 salinity adjustment may double-count stress already present in USDA yields. Only the Fallon
 field is loaded.
 
-**Next:** NASA satellite signals (SMAP soil moisture, IMERG rainfall), the 2035 view in the SMS
+**Next:** using SMAP soil moisture and HLS greenness in the plans (the data is loaded; see
+[docs/H6_STATUS.md](docs/H6_STATUS.md) for what is still unresolved), the 2035 view in the SMS
 reply, request logging to Tiger Data, more fields with full rotation plans, joining the two
 Workers into one line, and WhatsApp.
 
