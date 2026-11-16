@@ -20,6 +20,11 @@ on a Vultr server → reply. Health check:
 questions answered, languages and places, with no phone numbers. It belongs to the second Worker,
 which adds a call-in line and drought alerts (see [Phone line, alerts and dashboard](#phone-line-alerts-and-dashboard)).
 
+**Team dashboard, demo view for judges:**
+[farmline.rs9459.workers.dev/demo/cb2bd5d1970edc3bb6af80e7](https://farmline.rs9459.workers.dev/demo/cb2bd5d1970edc3bb6af80e7).
+No sign-in needed. It is read-only and hides phone numbers. It shows every conversation and how
+its answer was made.
+
 > **Prototype.** The numbers come from real public data, but the crop and cost tables still
 > contain labelled regional proxies and assumptions. FarmLine demonstrates the method; it is
 > not validated farm advice yet.
