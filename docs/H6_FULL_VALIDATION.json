@@ -1,0 +1,101 @@
+{
+  "request_id": "6935203f-0a90-4846-8a99-eccd74bd0ee2",
+  "raw_sha256": {
+    "2015-2025\\FarmLine-Fallon-H6-2015-2025-ECO-L3T-JET-002-metadata.xml": "de0bd9fa63c2ccd65430f4cec2234c693d51da3248aa2e47d05c6c6fa7e79349",
+    "2015-2025\\FarmLine-Fallon-H6-2015-2025-ECO-L3T-JET-002-results.csv": "9a6f48704aff02839fd358c5f027ca78710375d5e10b8b86f2e4d34f3974a8a9",
+    "2015-2025\\FarmLine-Fallon-H6-2015-2025-granule-list.txt": "785290914df01360c196e8ed3730eba92ae754b6ba2c64ca6f5f1740480ba2be",
+    "2015-2025\\FarmLine-Fallon-H6-2015-2025-HLSL30-020-metadata.xml": "030756e3e6e241a56e6f1c4caf2d0ca64960653deae36899656a90d82c325c58",
+    "2015-2025\\FarmLine-Fallon-H6-2015-2025-HLSL30-020-results.csv": "82573753e28f6e5f897a7824870160a77442dfc55e35a28e07dd42e8beb39401",
+    "2015-2025\\FarmLine-Fallon-H6-2015-2025-HLSS30-020-metadata.xml": "ef1ecc65aaa8854d54fa0d44f8a3d362c080ee55c9309ca91b87dbcf789ff4b4",
+    "2015-2025\\FarmLine-Fallon-H6-2015-2025-HLSS30-020-results.csv": "9243290e364744ad478a7b752f3627aef67f40d29c20068294f52ad8f141781d",
+    "2015-2025\\FarmLine-Fallon-H6-2015-2025-request.json": "f7e6106fb870605b2e1640f02ece93d15cac4a708592b687e2c74e1c82f97308",
+    "2015-2025\\FarmLine-Fallon-H6-2015-2025-SPL3SMP-E-006-metadata.xml": "d01925f9b941bf9f1f9870ac32f93d05b4d65a57e4aebce50103a0e8b05a0d8a",
+    "2015-2025\\FarmLine-Fallon-H6-2015-2025-SPL3SMP-E-006-results.csv": "1a03e3868a0a2e055590070187a4d23c961acc02bd78fbf4c541e738f7516297",
+    "2015-2025\\README.md": "973526ec0f5f97291059306a953ae855ae4455bc650143e17df9874cc7a9cfe3",
+    "srtm\\FarmLine-Fallon-H6-SRTM-slope-granule-list.txt": "4760663ac16cf3baf1e8c8ec0c6c92a12cf8ce3939e580433f6be9f300cc8e82",
+    "srtm\\FarmLine-Fallon-H6-SRTM-slope-request.json": "0b17c954739734cfb0d02696a06758e4f2dd898aa06f308a6439af8916e46bcd",
+    "srtm\\FarmLine-Fallon-H6-SRTM-slope-SRTMGL1-NC-003-metadata.xml": "ab6487bdfd40ba12cecb2afbc1f57a816f5739ce417671ca6a6006b9dcf6a44a",
+    "srtm\\FarmLine-Fallon-H6-SRTM-slope-SRTMGL1-NC-003-results.csv": "ebdac23c6b34fd9d5e81245a3aa1872d5f44bffa1e2e4fd895402aa1c731714b",
+    "srtm\\README.md": "d59fa4092451ef23a2a6b1545b09434e5870ae70c35c20b67a9ed3014328e6d3"
+  },
+  "products": {
+    "SMAP": {
+      "raw_date_rows": 3845,
+      "accepted_AM_PM_observations": 3002,
+      "note": "AM and PM are distinct observations; no daily averaging or root-zone conversion."
+    },
+    "HLSL30": {
+      "raw_rows": 332,
+      "accepted": 195,
+      "reflectance_scale_applied": 1,
+      "scale_evidence": "Download README section 3: AppEEARS point values are already scaled; verified reflectance values in CSV."
+    },
+    "HLSS30": {
+      "raw_rows": 591,
+      "accepted": 375,
+      "reflectance_scale_applied": 1,
+      "scale_evidence": "Download README section 3: AppEEARS point values are already scaled; verified reflectance values in CSV."
+    },
+    "SRTM": {
+      "value": 1.0471350000813202,
+      "unit": "percent",
+      "quality": "accepted",
+      "source": "https://doi.org/10.5067/MEaSUREs/SRTM/SRTMGL1_NC.003",
+      "product": "SRTMGL1_NC.003",
+      "day": "2000-02-11",
+      "method": "Neighborhood central differences, actual pixel-index spacing on 1 arcsecond grid; spherical local distance",
+      "east_west_m": 190.99734034720265,
+      "north_south_m": 185.32513372255485,
+      "center_elevation_m": 1199.0,
+      "limitations": "DEM neighborhood gradient, not surveyed parcel slope; center depression is not resolved by central differences."
+    },
+    "ECOSTRESS": {
+      "raw_rows": 708,
+      "finite_clear_rows_quarantined": 290,
+      "reason": "V002 catalog/user-guide report W/m2, other literature reports mm/day. No conversion or engine use until authoritative resolution; cloud-only screening is not full quality validation."
+    },
+    "smap_soil_moisture_coverage": {
+      "count": 3002,
+      "first": "2015-04-01",
+      "last": "2025-12-31",
+      "years": [
+        2015,
+        2016,
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    },
+    "ndvi_coverage": {
+      "count": 570,
+      "first": "2015-01-02",
+      "last": "2025-12-26",
+      "years": [
+        2015,
+        2016,
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024,
+        2025
+      ]
+    }
+  },
+  "limitations": [
+    "IMERG and NLDAS not retrieved; their lists remain empty, not zero observations.",
+    "SMAP 0-5 cm depth is not comparable to SSURGO 0-18 cm horizon without validated method; H7 keeps depletion neutral.",
+    "No automatic crop/cutting confirmation from NDVI; reviewed comparison pending.",
+    "ECOSTRESS unit ambiguity preserved; mm/day series remains empty.",
+    "Eleven-year request window does not mean daily valid observations for all products."
+  ]
+}

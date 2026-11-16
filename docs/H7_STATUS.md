@@ -1,3 +1,7 @@
+# H7 update after full satellite extraction
+
+SRTM is now present in the real bundle and consumed by compute(field): slope 1.047135% yields erosion weight 1.209427. This replaces the earlier SSURGO-only fallback of 1.1. H7_FALLON_CHECK.json has been regenerated. SMAP is present but depth-incomparable to top-horizon FC/WP, so depletion remains neutral; no IMERG correction exists yet; HLS history confirmation remains unknown. 35 combined tests pass, including the full extraction checks. The following earlier notes retain design details but acquisition/status statements are superseded by this update and H6_STATUS.md.
+
 # H7 status â€” local module implemented; H6-dependent validation pending
 
 engine/signals.py exposes compute(field) -> Signals without editing shared types or Abdullah-owned code. Thirteen H7 tests and 30 combined H4/H5/H6/H7 tests passed. Tests include water.simulate responses to moisture/rain changes and yields.evaluate response to erosion weighting.
